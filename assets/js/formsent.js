@@ -37,7 +37,7 @@ function sendMail() {
         twitter: twitter,
         youtube: youtube
     };
-    emailjs.send('service_8j95bn4', 'template_dqap9ev', template)
+    emailjs.send('service_plh1e6e', 'template_wf6smzg', template)
         .then(function (res) {
             console.log('SUCCESS!', res.status, res.text);
             document.getElementById("fname").value = "";
