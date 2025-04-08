@@ -20,12 +20,21 @@ function sendMail() {
         return; // Prevent form submission if fields are missing
     }
     var template = {
-        form_name: form_name,
-        form_email: form_email,
-        form_phone: form_phone,
-        subject: subject,
-        message: message
+        form_name: full_name,
+        form_email: email,
+        form_phone: phone,
+        subject: "Ravlink Contact Form",
+        message: `
+          Company Name: ${company_name}
+          Website: ${website}
+          LinkedIn: ${linkedin}
+          Facebook: ${facebook}
+          Instagram: ${instagram}
+          Twitter: ${twitter}
+          YouTube: ${youtube}
+        `
     };
+
     emailjs.send('service_plh1e6e', 'template_wf6smzg', template)
         .then(function (res) {
             console.log('SUCCESS!', res.status, res.text);

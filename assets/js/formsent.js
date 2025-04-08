@@ -26,17 +26,21 @@ function sendMail() {
         return; // Prevent form submission if fields are missing
     }
     var template = {
-        full_name: full_name,
-        company_name: company_name,
-        email: email,
-        phone: phone,
-        website: website,
-        linkedin: linkedin,
-        facebook: facebook,
-        instagram: instagram,
-        twitter: twitter,
-        youtube: youtube
+        form_name: full_name,
+        form_email: email,
+        form_phone: phone,
+        subject: "Website Contact Form",
+        message: `
+          Company Name: ${company_name}
+          Website: ${website}
+          LinkedIn: ${linkedin}
+          Facebook: ${facebook}
+          Instagram: ${instagram}
+          Twitter: ${twitter}
+          YouTube: ${youtube}
+        `
     };
+
     emailjs.send('service_plh1e6e', 'template_wf6smzg', template)
         .then(function (res) {
             console.log('SUCCESS!', res.status, res.text);
