@@ -1318,6 +1318,7 @@ p {
 }
 
 .checked-list li {
+  color: #000;
   margin-top: 10px;
   position: relative;
   font-size: 18px;
@@ -4930,6 +4931,11 @@ header.header-3 .main-menu ul>li>ul ul {
   font-size: 18px;
 }
 
+.section-title p {
+  color: #000;
+  font-size: 20px;
+}
+
 .section-title h2 {
   font-size: 48px;
   text-transform: capitalize;
@@ -4992,6 +4998,10 @@ header.header-3 .main-menu ul>li>ul ul {
 .section-title h6::after {
   right: 0;
   left: auto;
+}
+
+.section-title ul li {
+  color: #000;
 }
 
 .section-bg {
@@ -5396,22 +5406,22 @@ header.header-3 .main-menu ul>li>ul ul {
   visibility: visible;
 }
 
-.single-service-top-icon:hover .icon img {
+/* .single-service-top-icon:hover .icon img {
   -webkit-filter: invert(100);
   filter: invert(100);
-}
+} */
 
-.single-service-top-icon:hover h4 a {
+/* .single-service-top-icon:hover h4 a {
   color: #FFF;
-}
+} */
 
-.single-service-top-icon:hover h4 a:hover {
+/* .single-service-top-icon:hover h4 a:hover {
   color: #E14D2A;
-}
+} */
 
-.single-service-top-icon:hover p {
+/* .single-service-top-icon:hover p {
   color: #FFF;
-}
+} */
 
 .single-service-top-icon .icon {
   display: inline-block;
