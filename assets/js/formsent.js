@@ -4,12 +4,6 @@ function sendMail() {
     var company_name = document.getElementById("cname").value;
     var email = document.getElementById("email").value;
     var phone = document.getElementById("phone").value;
-    var website = document.getElementById("website-text").value;
-    var linkedin = document.getElementById("linkedin-text").value;
-    var facebook = document.getElementById("facebook-text").value;
-    var instagram = document.getElementById("instagram-text").value;
-    var twitter = document.getElementById("twitter-text").value;
-    var youtube = document.getElementById("youtube-text").value;
 
 
     // Check if required fields are filled
@@ -26,19 +20,11 @@ function sendMail() {
         return; // Prevent form submission if fields are missing
     }
     var template = {
+        subject: "Website Contact Form",
         form_name: full_name,
         form_email: email,
         form_phone: phone,
-        subject: "Website Contact Form",
-        message: `
-          Company Name: ${company_name}
-          Website: ${website}
-          LinkedIn: ${linkedin}
-          Facebook: ${facebook}
-          Instagram: ${instagram}
-          Twitter: ${twitter}
-          YouTube: ${youtube}
-        `
+        message: `${company_name}`
     };
 
     emailjs.send('service_plh1e6e', 'template_wf6smzg', template)
@@ -48,18 +34,6 @@ function sendMail() {
             document.getElementById("cname").value = "";
             document.getElementById("email").value = "";
             document.getElementById("phone").value = "";
-            document.getElementById("website-text").value = "";
-            document.getElementById("linkedin-text").value = "";
-            document.getElementById("facebook-text").value = "";
-            document.getElementById("instagram-text").value = "";
-            document.getElementById("twitter-text").value = "";
-            document.getElementById("youtube-text").value = "";
-            document.getElementById("website").checked = false;
-            document.getElementById("linkedin").checked = false;
-            document.getElementById("facebook-business").checked = false;
-            document.getElementById("instagram-business").checked = false;
-            document.getElementById("twitter").checked = false;
-            document.getElementById("youtube").checked = false;
 
             Toastify({
                 text: "Your message sent successfully!",
