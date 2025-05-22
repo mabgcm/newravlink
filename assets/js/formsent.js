@@ -44,6 +44,9 @@ function sendMail() {
                 backgroundColor: "#001253",
                 stopOnFocus: true,
             }).showToast();
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17095407004/success'
+            });
         }, function (error) {
             console.log('FAILED...', error);
         });
