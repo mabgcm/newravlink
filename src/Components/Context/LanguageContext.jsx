@@ -19,6 +19,9 @@ export const LanguageProvider = ({ children }) => {
         i18n.changeLanguage(language);
         if (typeof window !== "undefined") {
             window.localStorage.setItem("language", language);
+            const url = new URL(window.location.href);
+            url.searchParams.set("lng", language);
+            window.history.replaceState(null, "", url.toString());
         }
     }, [language]);
 
