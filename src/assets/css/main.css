@@ -456,6 +456,38 @@ ul {
     width: 100%;
 }
 
+.form .select-wrap {
+    position: relative;
+}
+
+.form .select-wrap select {
+    -webkit-appearance: none;
+    appearance: none;
+    padding-right: 84px;
+}
+
+.form .select-wrap .select-arrow {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    pointer-events: none;
+}
+
+.form .select-wrap .select-arrow.icon-circle {
+    width: 42px;
+    height: 42px;
+    font-size: var(--font-size-4xl);
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border: 1px solid #000000;
+}
+
+.form .select-wrap:hover .select-arrow.icon-circle {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
 body.lightmode .form input,
 body.lightmode .form textarea,
 body.lightmode .form select {

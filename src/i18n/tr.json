@@ -31,6 +31,70 @@
     "viewAllArticles": "Tüm İçerikleri Gör",
     "readMore": "Devamını Keşfet"
   },
+  "contactForm": {
+    "title": "Bir Sonraki Projenizi Konuşalım",
+    "successMessage": "Teşekkürler! Mesajınız başarıyla gönderildi.",
+    "errorMessage": "Lütfen geçerli bir e-posta adresi girin.",
+    "submit": "Mesaj Gönder",
+    "labels": {
+      "fullName": "Ad Soyad",
+      "phone": "Telefon",
+      "email": "E-posta",
+      "businessName": "İşletme Adı",
+      "websiteOrSocial": "Web sitesi veya sosyal medya linki",
+      "businessType": "Sektör / İşletme Türü",
+      "monthlyAdBudget": "Aylık reklam bütçesi",
+      "goal": "Ana hedefiniz nedir?",
+      "servicesInterested": "İlgi duyduğunuz hizmetler",
+      "location": "İşletme konumu (şehir / bölge)",
+      "currentlyRunningAds": "Şu anda reklam veriyor musunuz?",
+      "message": "Mesaj"
+    },
+    "placeholders": {
+      "fullName": "Adınız ve soyadınız",
+      "phone": "Tercih ettiğiniz telefon numarası",
+      "email": "E-posta adresiniz",
+      "businessName": "İşletmenizin adı",
+      "websiteOrSocial": "Web siteniz veya Instagram/Facebook sayfanızın linki",
+      "location": "İşletmenizin bulunduğu şehir / bölge",
+      "message": "Bize kısaca işinizi ve neye ihtiyaç duyduğunuzu anlatın (opsiyonel)",
+      "select": "Seçiniz"
+    },
+    "options": {
+      "businessType": {
+        "localBusiness": "Yerel işletme (kafe, restoran, kuaför, vb.)",
+        "ecommerce": "E-ticaret",
+        "serviceIndustry": "Hizmet sektörü (ajans, danışmanlık, hukuk, vb.)",
+        "healthBeauty": "Sağlık ve güzellik",
+        "other": "Diğer"
+      },
+      "monthlyAdBudget": {
+        "notSure": "Reklama yeni başlıyorum / emin değilim",
+        "range1": "0 – 500 CAD",
+        "range2": "500 – 1.500 CAD",
+        "range3": "1.500 – 5.000 CAD",
+        "range4": "5.000+ CAD"
+      },
+      "goal": {
+        "moreCustomers": "Daha fazla müşteri ve randevu",
+        "brandAwareness": "Marka bilinirliğini artırmak",
+        "increaseOnlineSales": "Online satışları artırmak",
+        "growSocialMedia": "Sosyal medya hesabımı büyütmek"
+      },
+      "servicesInterested": {
+        "socialMediaManagement": "Sosyal medya yönetimi",
+        "metaAds": "Reklam yönetimi (Meta Ads)",
+        "seo": "SEO",
+        "websiteLanding": "Web sitesi / landing page",
+        "emailMarketing": "E-posta pazarlama"
+      },
+      "currentlyRunningAds": {
+        "yesActive": "Evet, aktif reklamlarım var",
+        "sometimes": "Ara sıra reklam veriyorum",
+        "no": "Hayır, şu anda reklam vermiyorum"
+      }
+    }
+  },
   "home": {
     "headTitle": "Anasayfa - Ravlink - Dijital Pazarlama Ajansi",
     "banner": {

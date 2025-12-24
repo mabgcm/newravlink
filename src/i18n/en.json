@@ -31,6 +31,70 @@
     "viewAllArticles": "View All Articles",
     "readMore": "Read More"
   },
+  "contactForm": {
+    "title": "Let's Talk About Your Next Project",
+    "successMessage": "Thank you! Message sent successfully.",
+    "errorMessage": "Oops! Please enter a valid email.",
+    "submit": "Send a Message",
+    "labels": {
+      "fullName": "Full Name",
+      "phone": "Phone",
+      "email": "Email",
+      "businessName": "Business Name",
+      "websiteOrSocial": "Website or social media link",
+      "businessType": "Industry / Business Type",
+      "monthlyAdBudget": "Monthly ad budget",
+      "goal": "What is your primary goal?",
+      "servicesInterested": "Services you're interested in",
+      "location": "Business location (city / region)",
+      "currentlyRunningAds": "Are you currently running ads?",
+      "message": "Message"
+    },
+    "placeholders": {
+      "fullName": "Your full name",
+      "phone": "Preferred phone number",
+      "email": "Your email address",
+      "businessName": "Your business name",
+      "websiteOrSocial": "Your website or Instagram/Facebook link",
+      "location": "City / region where your business is located",
+      "message": "Briefly tell us about your business and what you need (optional)",
+      "select": "Select an option"
+    },
+    "options": {
+      "businessType": {
+        "localBusiness": "Local business (cafe, restaurant, salon, etc.)",
+        "ecommerce": "E-commerce",
+        "serviceIndustry": "Service industry (agency, consulting, legal, etc.)",
+        "healthBeauty": "Health & beauty",
+        "other": "Other"
+      },
+      "monthlyAdBudget": {
+        "notSure": "New to ads / not sure",
+        "range1": "0 – 500 CAD",
+        "range2": "500 – 1,500 CAD",
+        "range3": "1,500 – 5,000 CAD",
+        "range4": "5,000+ CAD"
+      },
+      "goal": {
+        "moreCustomers": "Get more customers and appointments",
+        "brandAwareness": "Increase brand awareness",
+        "increaseOnlineSales": "Increase online sales",
+        "growSocialMedia": "Grow my social media account"
+      },
+      "servicesInterested": {
+        "socialMediaManagement": "Social media management",
+        "metaAds": "Ad management (Meta Ads)",
+        "seo": "SEO",
+        "websiteLanding": "Website / landing page",
+        "emailMarketing": "Email marketing"
+      },
+      "currentlyRunningAds": {
+        "yesActive": "Yes, I have active ads",
+        "sometimes": "I run ads occasionally",
+        "no": "No, I am not running ads right now"
+      }
+    }
+  },
   "home": {
     "headTitle": "Home - Ravlink - Digital Marketing Agency",
     "banner": {
