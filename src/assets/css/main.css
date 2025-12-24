@@ -734,7 +734,12 @@ body.lightmode .form select {
 }
 
 .sidebar-header .logo {
-    width: 75%;
+    width: 160px;
+}
+
+.sidebar-header .logo img {
+    width: 100%;
+    height: auto;
 }
 
 .close-btn {
@@ -1086,6 +1091,14 @@ body.lightmode .keep-dark .btn-accent {
     order: 2;
     border: none;
     color: var(--primary);
+}
+
+.sidebar-header .lang-switch {
+    order: 2;
+}
+
+.sidebar-header .close-btn {
+    order: 1;
 }
 
 .lang-switch span {

@@ -80,7 +80,7 @@
         height: 53px;
     }
     .logo-container{
-        width: 30%;
+        width: 55%;
     }
     .service-recent{
         width: 50%;
@@ -458,6 +458,9 @@
     }
     .logo-container{
         width: 100%;
+    }
+    .logo-container img{
+        width: 70%;
     }
     .heading-container{
         max-width: 100%;

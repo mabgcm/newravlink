@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "../Language/LanguageSwitcher";
 
 function Sidebar() {
     const overlayRef = useRef(null);
@@ -73,7 +74,10 @@ function Sidebar() {
                 <div className="logo">
                     <img src="/assets/images/marko-logo.png" className="site-logo img-fluid logo" alt="Logo" />
                 </div>
-                <button className="close-btn"><span>X</span></button>
+                <div className="d-flex align-items-center gspace-2">
+                    <button className="close-btn"><span>X</span></button>
+                    <LanguageSwitcher />
+                </div>
             </div>
             <ul className="menu">
                 <li><a href="/">{t("nav.home")}</a></li>
