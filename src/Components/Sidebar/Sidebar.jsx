@@ -85,9 +85,19 @@ function Sidebar() {
             </div>
             <ul className="menu">
                 <li><NavLink to="/" onClick={closeSidebar}>{t("nav.home")}</NavLink></li>
-                <li><NavLink to="/service" onClick={closeSidebar}>{t("nav.services")}</NavLink></li>
-                <li><NavLink to="/case_studies" onClick={closeSidebar}>{t("nav.caseStudies")}</NavLink></li>
-                <li><NavLink to="/testimonial" onClick={closeSidebar}>{t("nav.testimonials")}</NavLink></li>
+                <li className="sidebar-dropdown">
+                    <div className="dropdown-header">
+                        <a href="#">{t("nav.about")}</a>
+                        <button className="sidebar-dropdown-btn">
+                            <i className="fa-solid fa-angle-down"></i>
+                        </button>
+                    </div>
+                    <ul className="sidebar-dropdown-menu">
+                        <li><NavLink to="/service" onClick={closeSidebar}>{t("nav.services")}</NavLink></li>
+                        <li><NavLink to="/case_studies" onClick={closeSidebar}>{t("nav.caseStudies")}</NavLink></li>
+                        <li><NavLink to="/testimonial" onClick={closeSidebar}>{t("nav.testimonials")}</NavLink></li>
+                    </ul>
+                </li>
                 <li><NavLink to="/pricing" onClick={closeSidebar}>{t("nav.pricing")}</NavLink></li>
                 <li><NavLink to="/blog" onClick={closeSidebar}>{t("nav.blog")}</NavLink></li>
                 <li><NavLink to="/contact" onClick={closeSidebar}>{t("nav.contact")}</NavLink></li>

@@ -40,22 +40,33 @@ function Navbar() {
                                 </NavLink>
                             </li>
 
-                            <li className="nav-item">
-                                <NavLink to="/service" className="nav-link">
-                                    {t("nav.services")}
-                                </NavLink>
-                            </li>
-
-                            <li className="nav-item">
-                                <NavLink to="/case_studies" className="nav-link">
-                                    {t("nav.caseStudies")}
-                                </NavLink>
-                            </li>
-
-                            <li className="nav-item">
-                                <NavLink to="/testimonial" className="nav-link">
-                                    {t("nav.testimonials")}
-                                </NavLink>
+                            <li className="nav-item dropdown">
+                                <a
+                                    className="nav-link dropdown-toggle"
+                                    href="#"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    {t("nav.about")} <i className="fa-solid fa-angle-down accent-color"></i>
+                                </a>
+                                <ul className="dropdown-menu">
+                                    <li>
+                                        <NavLink to="/service" className="dropdown-item">
+                                            {t("nav.services")}
+                                        </NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to="/case_studies" className="dropdown-item">
+                                            {t("nav.caseStudies")}
+                                        </NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to="/testimonial" className="dropdown-item">
+                                            {t("nav.testimonials")}
+                                        </NavLink>
+                                    </li>
+                                </ul>
                             </li>
 
                             <li className="nav-item">
