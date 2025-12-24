@@ -11,7 +11,6 @@ import TestimonialSection from "../../Components/Testimonial/testimonial";
 import DigitalProcessSection from "../../Components/DigitalProcess/digitalstep";
 import PricingPlanSection from "../../Components/Pricing/Pricing";
 // import PartnershipSection from "../../Components/Partnership/Partnership";
-import NewsletterSection from "../../Components/Form/Newsletter";
 import BlogSection from "../../Components/Blog/blog";
 
 function HomePage() {
@@ -29,7 +28,6 @@ function HomePage() {
             <TestimonialSection />
             <DigitalProcessSection />
             <PricingPlanSection />
-            <NewsletterSection />
             <BlogSection />
         </>
     );

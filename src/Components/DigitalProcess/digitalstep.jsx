@@ -18,40 +18,39 @@ const DigitalProcessSection = () => {
                                         <div className="d-flex flex-column gspace-2">
                                             <div className="sub-heading">
                                                 <i className="fa-regular fa-circle-dot"></i>
-                                                <span>How it Work</span>
+                                                <span>How it Works</span>
                                             </div>
-                                            <h2 className="title-heading">Simple Steps to Digital Success</h2>
+                                            <h2 className="title-heading">Simple Steps to Real Growth</h2>
                                         </div>
                                     </AnimateOnScroll>
                                 </div>
-                            <div className="col">
-                                <AnimateOnScroll animation="fadeInDown" speed="normal">
-                                    <div className="d-flex flex-column gspace-2 justify-content-end h-100">
-                                        <p>
-                                            Our streamlined process ensures your digital growth is seamless and effective. ipsum dolor sit amet,
-                                            consectetur adipiscing elit. In ex ligula, varius at rutrum et, finibus sed felis.
-                                        </p>
-                                        <div className="link-wrapper">
-                                            <a href="./contact">Get Started Now</a>
-                                            <i className="fa-solid fa-arrow-circle-right"></i>
+                                <div className="col">
+                                    <AnimateOnScroll animation="fadeInDown" speed="normal">
+                                        <div className="d-flex flex-column gspace-2 justify-content-end h-100">
+                                            <p>
+                                                We follow a clear, proven process to help brands grow their business using powerful online tools. From strategy to execution, every step is designed to deliver measurable results — not guesswork.
+                                            </p>
+                                            <div className="link-wrapper">
+                                                <a href="./contact">Get Started Now</a>
+                                                <i className="fa-solid fa-arrow-circle-right"></i>
+                                            </div>
                                         </div>
-                                    </div>
-                                </AnimateOnScroll>
-                            </div>
+                                    </AnimateOnScroll>
+                                </div>
                             </div>
 
                             <div className="digital-process-steps-wrapper">
                                 <div className="digital-process-steps">
                                     <div className="row row-cols-lg-4 row-cols-md-2 row-cols-1">
-                                    {digitalSteps.map((item, index) => (
-                                        <DigitalStepCard
-                                            key={index}
-                                            icon={item.icon}
-                                            step={item.step}
-                                            title={item.title}
-                                            content={item.content}
-                                            isFirst={index === 0}
-                                        />
+                                        {digitalSteps.map((item, index) => (
+                                            <DigitalStepCard
+                                                key={index}
+                                                icon={item.icon}
+                                                step={item.step}
+                                                title={item.title}
+                                                content={item.content}
+                                                isFirst={index === 0}
+                                            />
                                         ))}
                                     </div>
                                 </div>
@@ -59,7 +58,7 @@ const DigitalProcessSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className="spacer"></div>  
+                <div className="spacer"></div>
             </div>
         </div>
     );

@@ -1,8 +1,8 @@
 import React from "react";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 
-function PricingPlanSection(){
-    return(
+function PricingPlanSection() {
+    return (
         <div className="section">
             <div className="hero-container">
                 <div className="d-flex flex-column justify-content-center text-center gspace-5">
@@ -13,7 +13,7 @@ function PricingPlanSection(){
                                 <span>Our Core Services</span>
                             </div>
                             <h2 className="title-heading heading-container heading-container-short">
-                                Flexible Pricing Plans for Every Business
+                                Simple, Transparent Pricing
                             </h2>
                         </div>
                     </AnimateOnScroll>
@@ -24,10 +24,10 @@ function PricingPlanSection(){
                                     <div className="card card-pricing-title">
                                         <div className="spacer" />
                                         <div className="content">
-                                            <h3 className="title-heading">Let's Find the Right Strategy for You!</h3>
+                                            <h3 className="title-heading">Let’s Find the Right Plan for Your Business</h3>
                                             <div className="link-wrapper">
-                                            <a href="./contact">Book a Free Consultation</a>
-                                            <i className="fa-solid fa-arrow-circle-right"></i>
+                                                <a href="./contact">Book a Free Consultation</a>
+                                                <i className="fa-solid fa-arrow-circle-right"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -36,9 +36,9 @@ function PricingPlanSection(){
                                 <AnimateOnScroll animation="fadeInUp" speed="normal">
                                     <div className="card card-pricing">
                                         <h4>Starter</h4>
-                                        <p>Perfect for startups & small businesses</p>
+                                        <p>For small local businesses building trust online</p>
                                         <div className="d-flex flex-row gspace-1 align-items-center h-100">
-                                            <h3>$99</h3>
+                                            <h3>C$600</h3>
                                             <p>/Month</p>
                                         </div>
                                         <a href="#" className="btn btn-accent">
@@ -50,9 +50,9 @@ function PricingPlanSection(){
                                             </div>
                                         </a>
                                         <ul className="check-list">
-                                            <li><a href="./single_services">Basic SEO & Marketing</a></li>
-                                            <li><a href="./single_services">Social Media Management (1 Platform)</a></li>
-                                            <li><a href="./single_services">Monthly Performance Report</a></li>
+                                            <li><a href="./single_services">8 posts / month (static or carousel)</a></li>
+                                            <li><a href="./single_services">Captions + profile optimization</a></li>
+                                            <li><a href="./single_services">Monthly performance report</a></li>
                                         </ul>
                                     </div>
                                 </AnimateOnScroll>
@@ -62,10 +62,10 @@ function PricingPlanSection(){
                             <AnimateOnScroll animation="fadeInUp" speed="slow">
                                 <div className="card card-pricing pricing-highlight">
                                     <div className="spacer" />
-                                    <h4>Enterprise</h4>
-                                    <p>Full scale marketing for maximum impact</p>
+                                    <h4>Growth</h4>
+                                    <p>Content + ads for consistent leads</p>
                                     <div className="d-flex flex-row gspace-1 align-items-center">
-                                        <h3>$399</h3>
+                                        <h3>C$1,000</h3>
                                         <p>/Month</p>
                                     </div>
                                     <a href="#" className="btn btn-accent">
@@ -80,25 +80,25 @@ function PricingPlanSection(){
                                     <div className="core-benefits">
                                         <div className="benefit">
                                             <i className="fa-solid fa-brain"></i>
-                                            <a href="#">Dedicated Account Manager</a>
+                                            <a href="#">Content Plan & Brand Messaging</a>
                                         </div>
                                         <div className="benefit">
                                             <i className="fa-brands fa-accessible-icon"></i>
-                                            <a href="#">Priority Support 24/7</a>
+                                            <a href="#">Meta Ads Setup & Optimization</a>
                                         </div>
                                         <div className="benefit">
                                             <i className="fa-solid fa-bug"></i>
-                                            <a href="#">Customized Growth Strength</a>
+                                            <a href="#">Conversion Tracking & Reporting</a>
                                         </div>
                                     </div>
 
                                     <ul className="check-list">
-                                        <li><a href="#">Complate Digital Marketing Suite</a></li>
-                                        <li><a href="#">Paid Ads Management</a></li>
-                                        <li><a href="#">Dedicated Account Manager</a></li>
-                                        <li><a href="#">Email Marketing & Automation</a></li>
-                                        <li><a href="#">Dedicated Account Manager</a></li>
-                                        <li><a href="#">Weekly Performance insights</a></li>
+                                        <li><a href="#">12–16 posts / month (mix of reels + static)</a></li>
+                                        <li><a href="#">Monthly strategy & content calendar</a></li>
+                                        <li><a href="#">Meta ads management (ad spend not included)</a></li>
+                                        <li><a href="#">Audience testing & optimization</a></li>
+                                        <li><a href="#">Monthly reporting + next-step plan</a></li>
+                                        <li><a href="#">Support via WhatsApp</a></li>
                                     </ul>
                                 </div>
                             </AnimateOnScroll>
@@ -111,15 +111,15 @@ function PricingPlanSection(){
                                             <h5>Your Growth, Our Priority!</h5>
                                             <div className="d-flex flex-column gspace-2">
                                                 <div className="pricing-highlights">
-                                                    <a href="#">Data-Driven Digital Marketing</a>
+                                                    <a href="#">Fair, clear monthly packages</a>
                                                     <i className="fa-solid fa-arrow-circle-right"></i>
                                                 </div>
                                                 <div className="pricing-highlights">
-                                                    <a href="#">Proven Strategies for Higher</a>
+                                                    <a href="#">Designed for Ontario businesses</a>
                                                     <i className="fa-solid fa-arrow-circle-right"></i>
                                                 </div>
                                                 <div className="pricing-highlights">
-                                                    <a href="#">Scalable Solution for Every Business</a>
+                                                    <a href="#">Built for long-term partnerships</a>
                                                     <i className="fa-solid fa-arrow-circle-right"></i>
                                                 </div>
                                             </div>
@@ -130,10 +130,10 @@ function PricingPlanSection(){
 
                                 <AnimateOnScroll animation="fadeInUp" speed="normal">
                                     <div className="card card-pricing">
-                                        <h4>Growth</h4>
-                                        <p>Best for growing businesses ready</p>
+                                        <h4>Scale</h4>
+                                        <p>For brands ready to scale performance</p>
                                         <div className="d-flex flex-row gspace-1 align-items-center h-100">
-                                            <h3>$299</h3>
+                                            <h3>C$1,700</h3>
                                             <p>/Month</p>
                                         </div>
                                         <a href="#" className="btn btn-accent">
@@ -145,9 +145,9 @@ function PricingPlanSection(){
                                             </div>
                                         </a>
                                         <ul className="check-list">
-                                            <li><a href="./single_services">Basic SEO & Marketing</a></li>
-                                            <li><a href="./single_services">Social Media Management (1 Platform)</a></li>
-                                            <li><a href="./single_services">Monthly Performance Report</a></li>
+                                            <li><a href="./single_services">Weekly reels + advanced creative testing</a></li>
+                                            <li><a href="./single_services">Priority optimization & scaling</a></li>
+                                            <li><a href="./single_services">Monthly strategy call + KPI tracking</a></li>
                                         </ul>
                                     </div>
                                 </AnimateOnScroll>
