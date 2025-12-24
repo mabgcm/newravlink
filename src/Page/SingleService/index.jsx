@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import HeadTitle from "../../Components/Head/HeadTitle";
 import BannerInnerSection from "../../Components/Banner/Inner";
 import NewsletterSection from "../../Components/Form/Newsletter";
@@ -7,10 +8,15 @@ import FaqSection from "../../Components/FAQs/faq";
 import SingleServiceSection from "../../Components/Services/singleservice";
 
 function SingleServicePage(){
+    const { t } = useTranslation();
+
     return(
         <>
-            <HeadTitle title="Single Service - Marko - Digital Marketing Agency" />
-            <BannerInnerSection title="Social Media Marketing" currentPage="Services Details" />
+            <HeadTitle title={t("pageTitles.singleService")} />
+            <BannerInnerSection
+                title={t("pageBanners.singleService.title")}
+                currentPage={t("pageBanners.singleService.currentPage")}
+            />
             <SingleServiceSection />
             <TestimonialSection />
             <NewsletterSection />

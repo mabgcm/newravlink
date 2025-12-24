@@ -1,7 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 
 function BlogCard({ blog }) {
+    const { t } = useTranslation();
     const handleClick = () => {
         window.location.href = blog.link;
     };
@@ -32,7 +34,7 @@ function BlogCard({ blog }) {
                         </a>
                         <p>{blog.excerpt}</p>
                         <a href={blog.link} className="read-more">
-                            Read More
+                            {t("common.readMore")}
                         </a>
                     </div>
                 </div>

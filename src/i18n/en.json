@@ -1,0 +1,410 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "caseStudies": "Case Studies",
+    "testimonials": "Testimonials",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "footer": {
+    "tagline": "Driving Digital Growth with Innovation & Strategy",
+    "description": "We help brands grow with smart digital strategies, creative execution, and measurable results that build trust and drive revenue.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contactInfo": "Contact Info",
+    "socialMedia": "Social Media",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "copyright": "© {{year}} Ravlink. All Rights Reserved."
+  },
+  "common": {
+    "getStarted": "Get Started",
+    "getFreeConsultation": "Get Free Consultation",
+    "letsTalkStrategy": "Let's Talk Strategy",
+    "viewDetails": "View Details",
+    "bookFreeConsultation": "Book a Free Consultation",
+    "getFreeStrategyCall": "Get a Free Strategy Call",
+    "getStartedNow": "Get Started Now",
+    "viewAllArticles": "View All Articles",
+    "readMore": "Read More"
+  },
+  "home": {
+    "headTitle": "Home - Ravlink - Digital Marketing Agency",
+    "banner": {
+      "title": "We build brands, websites, and ads that convert.",
+      "videoText": "Learn why modern businesses need a strong online presence to compete, grow, and earn customer trust.",
+      "description": "Ravlink is a full-service digital agency delivering websites, advertising, branding, and online visibility solutions that help businesses attract customers and grow confidently.",
+      "awardWinning": "Award Winning",
+      "agency": "Agency"
+    },
+    "expertise": {
+      "cardTitle": "Ready to Elevate Your Digital Presence?",
+      "cardText": "Let's create a custom strategy that fits your business goals.",
+      "subHeading": "Our Expertise",
+      "heading": "Marketing Decisions That Drive Real Growth",
+      "description": "At Ravlink, we make smart marketing decisions backed by data to drive real business growth and keep your brand competitive online.",
+      "listTitle": "What We Do Best",
+      "list": [
+        "Performance Marketing",
+        "Social Media Growth",
+        "Proven SEO Strategy",
+        "Content Marketing",
+        "PPC & Paid Ads",
+        "Brand Strategy",
+        "Conversion Optimization"
+      ],
+      "counterTitle": "Years of Experience on Digital Marketing Services",
+      "counterText": "Helping businesses grow through proven strategies, creative execution, and measurable digital marketing results across competitive industries."
+    },
+    "chooseUs": {
+      "subHeading": "Why Choose Ravlink",
+      "heading": "Your Success is Our Mission",
+      "description": "In the fast-paced digital world, choosing the right marketing partner makes all the difference. At Ravlink, we do not just create campaigns, we craft strategies that deliver measurable success.",
+      "ctaTitle": "Partner with Ravlink and take your brand to the next level.",
+      "ctaLink": "Let's Talk Strategy"
+    },
+    "guide": {
+      "heading": "Transform Your Business with Ravlink!",
+      "description": "Take your digital marketing to the next level with data-driven strategies and innovative solutions. Let's create something amazing together!"
+    },
+    "services": {
+      "subHeading": "Our Core Services",
+      "heading": "Digital Solutions That Drive Real Results",
+      "footerText": "Need a custom solution? Let's create a strategy tailored for your business."
+    },
+    "caseStudies": {
+      "subHeading": "Case Studies",
+      "heading": "See How We Help Businesses Thrive",
+      "description": "We do not just talk about results, we deliver them. Here are some of our most impactful case studies showcasing how our digital marketing strategies drive success."
+    },
+    "testimonials": {
+      "positive": "2.7k Positive",
+      "reviews": "Reviews",
+      "improvedProject": "Improved Project",
+      "newProject": "New Project",
+      "focusOne": "Social Media Growth",
+      "focusTwo": "Performance Marketing",
+      "subHeading": "What Our Client Says",
+      "heading": "Hear from Our Satisfied Clients, Real Success Stories",
+      "description": "Discover how businesses like yours achieved outstanding growth with Ravlink's expert digital marketing solutions."
+    },
+    "digitalProcess": {
+      "subHeading": "How it Works",
+      "heading": "Simple Steps to Real Growth",
+      "description": "We follow a clear, proven process to help brands grow their business using powerful online tools. From strategy to execution, every step is designed to deliver measurable results, not guesswork."
+    },
+    "pricing": {
+      "subHeading": "Our Core Services",
+      "heading": "Simple, Transparent Pricing",
+      "introTitle": "Let's Find the Right Plan for Your Business",
+      "starter": {
+        "name": "Starter",
+        "description": "For small local businesses building trust online",
+        "priceSuffix": "/Month",
+        "features": [
+          "8 posts / month (static or carousel)",
+          "Captions + profile optimization",
+          "Monthly performance report"
+        ]
+      },
+      "growth": {
+        "name": "Growth",
+        "description": "Content + ads for consistent leads",
+        "priceSuffix": "/Month",
+        "benefits": [
+          "Content Plan & Brand Messaging",
+          "Meta Ads Setup & Optimization",
+          "Conversion Tracking & Reporting"
+        ],
+        "features": [
+          "12-16 posts / month (mix of reels + static)",
+          "Monthly strategy & content calendar",
+          "Meta ads management (ad spend not included)",
+          "Audience testing & optimization",
+          "Monthly reporting + next-step plan",
+          "Support via WhatsApp"
+        ]
+      },
+      "highlight": {
+        "title": "Your Growth, Our Priority!",
+        "items": [
+          "Fair, clear monthly packages",
+          "Designed for Ontario businesses",
+          "Built for long-term partnerships"
+        ]
+      },
+      "scale": {
+        "name": "Scale",
+        "description": "For brands ready to scale performance",
+        "priceSuffix": "/Month",
+        "features": [
+          "Weekly reels + advanced creative testing",
+          "Priority optimization & scaling",
+          "Monthly strategy call + KPI tracking"
+        ]
+      }
+    },
+    "blog": {
+      "subHeading": "Insights & Trends",
+      "heading": "Latest Digital Marketing Strategies & Tips",
+      "description": "Explore our latest blog articles covering industry trends, expert insights, and actionable strategies to elevate your digital marketing game."
+    }
+  },
+  "about": {
+    "coreValues": {
+      "subHeading": "Our Core Values",
+      "heading": "The Principles That Define Us",
+      "description": "In the fast-paced digital world, choosing the right marketing partner makes all the difference. At Ravlink, we do not just create campaigns, we craft strategies that deliver measurable success.",
+      "ctaTitle": "Partner with Ravlink and take your brand to the next level."
+    }
+  },
+  "pageTitles": {
+    "about": "About - Ravlink - Digital Marketing Agency",
+    "blog": "Blog - Ravlink - Digital Marketing Agency",
+    "caseStudies": "Case Studies - Ravlink - Digital Marketing Agency",
+    "contact": "Contact - Ravlink - Digital Marketing Agency",
+    "faqs": "FAQs - Ravlink - Digital Marketing Agency",
+    "notFound": "Error 404 - Ravlink - Digital Marketing Agency",
+    "partnership": "Partnership - Ravlink - Digital Marketing Agency",
+    "pricing": "Pricing - Ravlink - Digital Marketing Agency",
+    "service": "Services - Ravlink - Digital Marketing Agency",
+    "singlePost": "Single Post - Ravlink - Digital Marketing Agency",
+    "singleService": "Single Service - Ravlink - Digital Marketing Agency",
+    "team": "Our Team - Ravlink - Digital Marketing Agency",
+    "testimonial": "Testimonials - Ravlink - Digital Marketing Agency"
+  },
+  "pageBanners": {
+    "about": {
+      "title": "About Ravlink",
+      "currentPage": "About Us"
+    },
+    "blog": {
+      "title": "Our Blog",
+      "currentPage": "Blog"
+    },
+    "caseStudies": {
+      "title": "Case Studies",
+      "currentPage": "Case Studies"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "currentPage": "Contact Us"
+    },
+    "faqs": {
+      "title": "Simple, Direct, and Friendly",
+      "currentPage": "FAQ"
+    },
+    "partnership": {
+      "title": "Partnership",
+      "currentPage": "Partnership"
+    },
+    "pricing": {
+      "title": "Pricing Plan",
+      "currentPage": "Pricing Plan"
+    },
+    "service": {
+      "title": "Our Services",
+      "currentPage": "Services"
+    },
+    "singlePost": {
+      "title": "Growth Strategies for Digital Business",
+      "currentPage": "Single Post"
+    },
+    "singleService": {
+      "title": "Social Media Marketing",
+      "currentPage": "Service Details"
+    },
+    "team": {
+      "title": "Meet Our Team",
+      "currentPage": "Our Team"
+    },
+    "testimonial": {
+      "title": "Testimonials",
+      "currentPage": "Testimonials"
+    }
+  },
+  "data": {
+    "chooseUs": [
+      {
+        "title": "Measurable Results",
+        "content": "Clear data, real numbers, and transparent reporting that show exactly how your marketing drives leads, sales, and growth."
+      },
+      {
+        "title": "Expert Expertise",
+        "content": "A seasoned team managing ads, SEO, and strategy, so every decision is informed, tested, and built to outperform competitors."
+      },
+      {
+        "title": "Total Peace",
+        "content": "We handle strategy, execution, optimization, and reporting, so you stay focused on running your business without marketing stress."
+      },
+      {
+        "title": "Innovation & Integrity",
+        "content": "Every decision is backed by real-time analytics for maximum impact."
+      },
+      {
+        "title": "Collaboration",
+        "content": "Cutting-edge marketing techniques to keep you ahead of the competition."
+      },
+      {
+        "title": "Result Driven",
+        "content": "Clear insights and performance tracking, so you always know your ROI."
+      }
+    ],
+    "services": [
+      {
+        "title": "Social Media Marketing",
+        "content": "Strategically manage and optimize your social platforms to grow awareness, engagement, and customer trust."
+      },
+      {
+        "title": "Content Marketing",
+        "content": "Create valuable, conversion-focused content that attracts, educates, and turns your audience into customers."
+      },
+      {
+        "title": "SEO Management",
+        "content": "We improve your website's visibility on search engines to attract high-intent customers organically and consistently."
+      },
+      {
+        "title": "Email Marketing",
+        "content": "Build direct, personalized communication that nurtures leads and drives repeat business."
+      },
+      {
+        "title": "Branding & Design",
+        "content": "Develop a strong, consistent brand identity that builds credibility, recognition, and emotional connection."
+      },
+      {
+        "title": "Web Development",
+        "content": "Design and build fast, scalable websites focused on user experience, performance, and conversion."
+      }
+    ],
+    "caseStudies": [
+      {
+        "title": "Local Business Digital Transformation",
+        "description": "5x ROI on social media campaigns and 80% increase in customer engagement.",
+        "tags": [
+          "Social",
+          "Influencer",
+          "Retargeting",
+          "Google",
+          "Video",
+          "Local",
+          "Community"
+        ]
+      },
+      {
+        "title": "Construction Contract Success",
+        "description": "150% increase of success in getting high-ticket contracts.",
+        "tags": [
+          "Content",
+          "LinkedIn Ads",
+          "Email",
+          "Webinar",
+          "Landing",
+          "CRM",
+          "Retargeting"
+        ]
+      },
+      {
+        "title": "E-Commerce Growth Boost",
+        "description": "3x increase in organic traffic and 2x revenue growth in 6 months.",
+        "tags": [
+          "SEO",
+          "PPC Ads",
+          "CRO",
+          "Analytics",
+          "Influencer",
+          "A/B Testing",
+          "Email"
+        ]
+      },
+      {
+        "title": "Startup Brand Awareness Expansion",
+        "description": "200% increase in brand mentions and 60% higher engagement rates.",
+        "tags": [
+          "Viral",
+          "Partnership",
+          "PR",
+          "Growth",
+          "UGC",
+          "Media",
+          "Branding"
+        ]
+      }
+    ],
+    "digitalSteps": [
+      {
+        "title": "Discovery & Audit",
+        "content": "We start by understanding your business, audience, and current social presence. This includes a quick audit of your content, competitors, and growth opportunities."
+      },
+      {
+        "title": "Strategy & Planning",
+        "content": "We create a tailored social media plan combining content, ads, and messaging that fits your brand and budget."
+      },
+      {
+        "title": "Launch & Optimize",
+        "content": "Your content and campaigns go live. We monitor performance closely, test variations, and optimize for engagement and conversions."
+      },
+      {
+        "title": "Result & Growth",
+        "content": "We analyze what works, scale the best-performing strategies, and refine your presence for consistent growth."
+      }
+    ],
+    "testimonials": [
+      {
+        "title": "CEO Nexatech",
+        "content": "Ravlink completely transformed our online presence! Their digital marketing strategies helped us double our revenue in just six months."
+      },
+      {
+        "title": "Marketing Director",
+        "content": "We've worked with many agencies before, but Ravlink stands out. Their data-driven approach and creative solutions gave us an edge over competitors."
+      },
+      {
+        "title": "Founder",
+        "content": "From SEO to paid ads, Ravlink nailed every aspect of our campaign. Our website traffic skyrocketed, and lead generation has never been better!"
+      },
+      {
+        "title": "COO, BrightWave",
+        "content": "Highly professional and results-oriented. Ravlink's expertise in branding and content marketing helped us build a strong online identity."
+      },
+      {
+        "title": "CEO Nexatech",
+        "content": "Ravlink completely transformed our online presence! Their digital marketing strategies helped us double our revenue in just six months."
+      },
+      {
+        "title": "Marketing Director",
+        "content": "We've worked with many agencies before, but Ravlink stands out. Their data-driven approach and creative solutions gave us an edge over competitors."
+      },
+      {
+        "title": "Founder",
+        "content": "From SEO to paid ads, Ravlink nailed every aspect of our campaign. Our website traffic skyrocketed, and lead generation has never been better!"
+      },
+      {
+        "title": "COO, BrightWave",
+        "content": "Highly professional and results-oriented. Ravlink's expertise in branding and content marketing helped us build a strong online identity."
+      }
+    ],
+    "blogs": [
+      {
+        "date": "April 14, 2025",
+        "category": "Social Media",
+        "title": "Mastering Instagram and Facebook Ads",
+        "excerpt": "Lorem ipsum dolor si consectetur adipiscing elit ut elit tellus luctus nec ullamcorper mattis pulvinar dapibus leo."
+      },
+      {
+        "date": "April 14, 2025",
+        "category": "SEO",
+        "title": "Growth Strategies for Digital Business",
+        "excerpt": "Lorem ipsum dolor si consectetur adipiscing elit ut elit tellus luctus nec ullamcorper mattis pulvinar dapibus leo."
+      }
+    ],
+    "footerServices": [
+      "Social Media Marketing",
+      "SEO Optimization",
+      "PPC Advertising",
+      "Content Marketing",
+      "Branding Strategy",
+      "Email Marketing"
+    ]
+  }
+}

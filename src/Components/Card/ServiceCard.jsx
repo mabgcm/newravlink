@@ -1,7 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 
 const ServiceCard = ({icon, title, content, link, speed = ""}) => {
+    const { t } = useTranslation();
+
     return(
         <>
             <AnimateOnScroll animation="fadeInLeft" speed={speed}>
@@ -21,7 +24,7 @@ const ServiceCard = ({icon, title, content, link, speed = ""}) => {
                     <p>{content}</p>
                     <a href={link} className="btn btn-accent">
                         <div className="btn-title">
-                            <span>View Details</span>
+                            <span>{t("common.viewDetails")}</span>
                         </div>
                         <div className="icon-circle">
                             <i className="fa-solid fa-arrow-right"></i>

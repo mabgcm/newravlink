@@ -1,7 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 
 const BannerInnerSection = ({ title, currentPage }) => {
+    const { t } = useTranslation();
+
     return (
         <div className="section-banner">
             <div className="banner-layout-wrapper banner-inner">
@@ -13,7 +16,7 @@ const BannerInnerSection = ({ title, currentPage }) => {
                             </h2>
                         </AnimateOnScroll>
                         <nav className="breadcrumb">
-                            <a href="/" className="gspace-2">Home</a>
+                            <a href="/" className="gspace-2">{t("nav.home")}</a>
                             <span className="separator-link">/</span>
                             <p className="current-page">{currentPage}</p>
                         </nav>

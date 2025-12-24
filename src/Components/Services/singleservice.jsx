@@ -1,8 +1,11 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { services } from "../../Data/ServiceData";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 
 const SingleServiceSection = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="section pb-0">
             <div className="hero-container">
@@ -146,7 +149,7 @@ const SingleServiceSection = () => {
                                     {services.map((service) => (
                                         <li key={service.id}>
                                         <a href={service.link} className="hover:underline">
-                                            {service.title}
+                                            {t(service.titleKey)}
                                         </a>
                                         </li>
                                     ))}

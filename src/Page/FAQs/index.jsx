@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import HeadTitle from "../../Components/Head/HeadTitle";
 import FaqSection from "../../Components/FAQs/faq";
 import BannerInnerSection from "../../Components/Banner/Inner";
@@ -7,10 +8,15 @@ import ModalVideoSection from "../../Components/Video/video";
 import TestimonialSection from "../../Components/Testimonial/testimonial";
 
 function FaqPage(){
+    const { t } = useTranslation();
+
     return(
         <>  
-            <HeadTitle title="FAQs - Marko - Digital Marketing Agency" />
-            <BannerInnerSection title="Simple, Direct, and Friendly" currentPage="FAQ" />
+            <HeadTitle title={t("pageTitles.faqs")} />
+            <BannerInnerSection
+                title={t("pageBanners.faqs.title")}
+                currentPage={t("pageBanners.faqs.currentPage")}
+            />
             <FaqSection />
             <GuideBannerSection />
             <ModalVideoSection />

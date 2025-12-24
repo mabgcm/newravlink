@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { testimonials } from "../../Data/TestimonialData";
 import TestimonialCard from "../Card/TestimonialCard";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
@@ -7,6 +8,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 const TestimonialSection = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="section">
             <div className="hero-container">
@@ -25,8 +28,8 @@ const TestimonialSection = () => {
                                                     <img src="/assets/images/t4.jpg" alt="Testimonial Reviewer" className="avatar" />
                                                 </div>
                                                 <div className="detail">
-                                                    <h6>2.7k Positive</h6>
-                                                    <h6>Reviews</h6>
+                                                    <h6>{t("home.testimonials.positive")}</h6>
+                                                    <h6>{t("home.testimonials.reviews")}</h6>
                                                 </div>
                                             </div>
                                             <div className="testimonial-rating-container">
@@ -39,7 +42,7 @@ const TestimonialSection = () => {
                                                             suffixClassName="counter-detail"
                                                         />
                                                     </div>
-                                                    <p>Improved Project</p>
+                                                    <p>{t("home.testimonials.improvedProject")}</p>
                                                 </div>
                                                 <div className="underline-vertical"></div>
                                                 <div className="d-flex flex-column justify-content-center align-items-center gspace-1">
@@ -51,18 +54,18 @@ const TestimonialSection = () => {
                                                             suffixClassName="counter-detail"
                                                         />
                                                     </div>
-                                                    <p>New Project</p>
+                                                    <p>{t("home.testimonials.newProject")}</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="d-flex flex-column flex-md-row flex-lg-column justify-content-center gspace-2">
                                             <div className="testimonial-header-link-wrapper">
                                                 <i className="fa-regular fa-circle-check accent-color"></i>
-                                                <a href="#">Social Media Growth</a>
+                                                <a href="#">{t("home.testimonials.focusOne")}</a>
                                             </div>
                                             <div className="testimonial-header-link-wrapper">
                                                 <i className="fa-regular fa-circle-check accent-color"></i>
-                                                <a href="#">Performance Marketing</a>
+                                                <a href="#">{t("home.testimonials.focusTwo")}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -75,10 +78,10 @@ const TestimonialSection = () => {
                                     <div className="card-testimonial-header-title">
                                         <div className="sub-heading">
                                             <i className="fa-regular fa-circle-dot"></i>
-                                            <span>What Our Client Says</span>
+                                            <span>{t("home.testimonials.subHeading")}</span>
                                         </div>
-                                        <h2 className="title-heading">Hear from Our Satisfied Clients, Real Success Stories</h2>
-                                        <p>Discover how businesses like yours achieved outstanding growth with Ravlink's expert digital marketing solutions.</p>
+                                        <h2 className="title-heading">{t("home.testimonials.heading")}</h2>
+                                        <p>{t("home.testimonials.description")}</p>
                                     </div>
                                 </div>
                             </AnimateOnScroll>
@@ -105,7 +108,11 @@ const TestimonialSection = () => {
                                     className="swiperTestimonial">
                                     {testimonials.map((item) => (
                                         <SwiperSlide key={item.id}>
-                                            <TestimonialCard {...item} />
+                                            <TestimonialCard
+                                                {...item}
+                                                title={t(item.titleKey)}
+                                                content={t(item.contentKey)}
+                                            />
                                         </SwiperSlide>
                                     ))}
                                 </Swiper>

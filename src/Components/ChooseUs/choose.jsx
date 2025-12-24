@@ -1,9 +1,12 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { whychooseus } from "../../Data/ChooseUsData";
 import ChooseUsCard from "../Card/ChoooseUsCard";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 
 function ChooseUsSection() {
+    const { t } = useTranslation();
+
     return (
         <>
             <div className="section">
@@ -15,8 +18,8 @@ function ChooseUsSection() {
                                     <ChooseUsCard
                                         key={item.id}
                                         icon={item.icon}
-                                        title={item.title}
-                                        content={item.content}
+                                        title={t(item.titleKey)}
+                                        content={t(item.contentKey)}
                                         link={item.link}
                                     />
                                 ))}
@@ -28,10 +31,10 @@ function ChooseUsSection() {
                                     <div className="d-flex flex-column gspace-2">
                                         <div className="sub-heading">
                                             <i className="fa-regular fa-circle-dot"></i>
-                                            <span>Why Choose Ravlink</span>
+                                            <span>{t("home.chooseUs.subHeading")}</span>
                                         </div>
-                                        <h2 className="title-heading">Your Success is Our Mission</h2>
-                                        <p className="mb-0">In the fast-paced digital world, choosing the right marketing partner makes all the difference. At Ravlink, we don’t just create campaigns—we craft strategies that deliver measurable success.</p>
+                                        <h2 className="title-heading">{t("home.chooseUs.heading")}</h2>
+                                        <p className="mb-0">{t("home.chooseUs.description")}</p>
                                     </div>
                                 </AnimateOnScroll>
                                 <div className="image-container">
@@ -44,9 +47,9 @@ function ChooseUsSection() {
                                                 <AnimateOnScroll animation="fadeInUp" speed="normal">
 
                                                     <div className="card card-chooseus-cta">
-                                                        <h5>Partner with Ravlink & take your brand to the next level.</h5>
+                                                        <h5>{t("home.chooseUs.ctaTitle")}</h5>
                                                         <div className="link-wrapper">
-                                                            <a href="./contact">Let's Talk Strategy</a>
+                                                            <a href="./contact">{t("common.letsTalkStrategy")}</a>
                                                             <i className="fa-solid fa-circle-arrow-right"></i>
                                                         </div>
                                                     </div>

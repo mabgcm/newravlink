@@ -1,7 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { blogs } from "../../Data/BlogPostData";
 
 const BlogPostSection = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="section">
         <div className="hero-container">
@@ -18,17 +21,17 @@ const BlogPostSection = () => {
                                     <div className="image-container">
                                     <img
                                         src={blog.image}
-                                        alt={blog.title}
+                                        alt={t(blog.titleKey)}
                                         className="img-fluid"
                                     />
                                     </div>
                                     <div className="d-grid">
                                         <div className="d-flex flex-row gspace-1 align-items-center">
                                             <i className="fa-solid fa-calendar accent-color"></i>
-                                            <span className="meta-data-post">{blog.date}</span>
+                                            <span className="meta-data-post">{t(blog.dateKey)}</span>
                                         </div>
                                         <a href={blog.link} className="blog-link-post">
-                                            {blog.title}
+                                            {t(blog.titleKey)}
                                         </a>
                                     </div>
                                 </div>

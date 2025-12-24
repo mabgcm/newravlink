@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import HeadTitle from "../../Components/Head/HeadTitle";
 import BannerHomeSection from "../../Components/Banner";
 import ExpertiseSection from "../../Components/Expertise/expertise";
@@ -14,9 +15,11 @@ import PricingPlanSection from "../../Components/Pricing/Pricing";
 import BlogSection from "../../Components/Blog/blog";
 
 function HomePage() {
+    const { t } = useTranslation();
+
     return (
         <>
-            <HeadTitle title="Home - Ravlink - Digital Marketing Agency" />
+            <HeadTitle title={t("home.headTitle")} />
             <BannerHomeSection />
             <ExpertiseSection />
             {/* <PartnershipSection /> */}

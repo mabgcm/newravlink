@@ -25,7 +25,7 @@ function AppRouter(){
             <Route path="team" element={<TeamPage />}/>
             <Route path="partnership" element={<PartnershipPage />}/>      
             <Route path="pricing" element={<PricingPage />}/>
-            <Route path="Testimonial" element={<TestimonialPage />}/>
+            <Route path="testimonial" element={<TestimonialPage />}/>
             <Route path="faq" element={<FaqPage />}/>
             <Route path="blog" element={<BlogPage />}/>
             <Route path="single_post" element={<SinglePostPage />}/>

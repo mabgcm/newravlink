@@ -1,8 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 import CounterOnScroll from "../Hooks/CounterOnScroll";
 
 function ExpertiseSection() {
+    const { t } = useTranslation();
 
     return (
         <>
@@ -23,10 +25,10 @@ function ExpertiseSection() {
                                         <div className="card-expertise-wrapper">
                                             <AnimateOnScroll animation="fadeInDown" speed="normal">
                                                 <div className="card card-expertise">
-                                                    <h4>Ready to Elevate Your Digital Presence?</h4>
-                                                    <p>Let's create a custom strategy that fits your business goals.</p>
+                                                    <h4>{t("home.expertise.cardTitle")}</h4>
+                                                    <p>{t("home.expertise.cardText")}</p>
                                                     <div className="d-flex align-items-center flex-row gspace-2 expertise-link">
-                                                        <a href="./contact">Get Free Consultation</a>
+                                                        <a href="./contact">{t("common.getFreeConsultation")}</a>
                                                         <i className="fa-solid fa-circle-arrow-right"></i>
                                                     </div>
                                                 </div>
@@ -42,29 +44,27 @@ function ExpertiseSection() {
                             <AnimateOnScroll animation="fadeInRight" speed="normal">
                                 <div className="sub-heading">
                                     <i className="fa-regular fa-circle-dot"></i>
-                                    <span>Our Expertise</span>
+                                    <span>{t("home.expertise.subHeading")}</span>
                                 </div>
                             </AnimateOnScroll>
 
                             <AnimateOnScroll animation="fadeInRight" speed="normal">
                                 <h2 className="title-heading">
-                                    Marketing Decisions That Drive Real Growth
+                                    {t("home.expertise.heading")}
                                 </h2>
                             </AnimateOnScroll>
                             <p>
-                                At Ravlink, we make smart marketing decisions backed by data to drive real business growth and keep your brand competitive online.
+                                {t("home.expertise.description")}
                             </p>
                             <div className="d-flex flex-column flex-md-row gspace-2">
                                 <div className="expertise-list">
-                                    <h5>What We Do Best</h5>
+                                    <h5>{t("home.expertise.listTitle")}</h5>
                                     <ul className="check-list">
-                                        <li><a href="./single_services">Performance Marketing</a></li>
-                                        <li><a href="./single_services">Social Media Growth</a></li>
-                                        <li><a href="./single_services">Proven SEO Strategy</a></li>
-                                        <li><a href="./single_services">Content Marketing</a></li>
-                                        <li><a href="./single_services">PPC & Paid Ads</a></li>
-                                        <li><a href="./single_services">Brand Strategy</a></li>
-                                        <li><a href="./single_services">Conversion Optimization</a></li>
+                                        {t("home.expertise.list", { returnObjects: true }).map((item, index) => (
+                                            <li key={index}>
+                                                <a href="./single_services">{item}</a>
+                                            </li>
+                                        ))}
                                     </ul>
                                 </div>
 
@@ -79,10 +79,10 @@ function ExpertiseSection() {
                                                     suffixClassName="counter-detail"
                                                 />
                                             </div>
-                                            <h6>Years of Experience on Digital Marketing Services</h6>
+                                            <h6>{t("home.expertise.counterTitle")}</h6>
                                         </div>
                                         <p>
-                                            Helping businesses grow through proven strategies, creative execution, and measurable digital marketing results across competitive industries.
+                                            {t("home.expertise.counterText")}
                                         </p>
                                     </div>
                                 </AnimateOnScroll>

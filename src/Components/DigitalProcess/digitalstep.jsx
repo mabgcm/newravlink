@@ -1,10 +1,12 @@
 
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { digitalSteps } from "../../Data/DigitalProcessData";
 import DigitalStepCard from "../Card/DigitalStepCard";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 
 const DigitalProcessSection = () => {
+    const { t } = useTranslation();
 
     return (
         <div className="section-wrapper-digital-process">
@@ -18,9 +20,9 @@ const DigitalProcessSection = () => {
                                         <div className="d-flex flex-column gspace-2">
                                             <div className="sub-heading">
                                                 <i className="fa-regular fa-circle-dot"></i>
-                                                <span>How it Works</span>
+                                                <span>{t("home.digitalProcess.subHeading")}</span>
                                             </div>
-                                            <h2 className="title-heading">Simple Steps to Real Growth</h2>
+                                            <h2 className="title-heading">{t("home.digitalProcess.heading")}</h2>
                                         </div>
                                     </AnimateOnScroll>
                                 </div>
@@ -28,10 +30,10 @@ const DigitalProcessSection = () => {
                                     <AnimateOnScroll animation="fadeInDown" speed="normal">
                                         <div className="d-flex flex-column gspace-2 justify-content-end h-100">
                                             <p>
-                                                We follow a clear, proven process to help brands grow their business using powerful online tools. From strategy to execution, every step is designed to deliver measurable results — not guesswork.
+                                                {t("home.digitalProcess.description")}
                                             </p>
                                             <div className="link-wrapper">
-                                                <a href="./contact">Get Started Now</a>
+                                                <a href="./contact">{t("common.getStartedNow")}</a>
                                                 <i className="fa-solid fa-arrow-circle-right"></i>
                                             </div>
                                         </div>
@@ -47,8 +49,8 @@ const DigitalProcessSection = () => {
                                                 key={index}
                                                 icon={item.icon}
                                                 step={item.step}
-                                                title={item.title}
-                                                content={item.content}
+                                                title={t(item.titleKey)}
+                                                content={t(item.contentKey)}
                                                 isFirst={index === 0}
                                             />
                                         ))}

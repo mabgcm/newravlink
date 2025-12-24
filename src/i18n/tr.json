@@ -1,0 +1,411 @@
+{
+  "nav": {
+    "home": "Anasayfa",
+    "services": "Çözümlerimiz",
+    "caseStudies": "Örnek Projeler",
+    "testimonials": "Müşteri Yorumları",
+    "pricing": "Fiyatlar",
+    "blog": "Blog",
+    "contact": "Iletisim"
+  },
+  "footer": {
+    "tagline": "Stratejiyle Büyüyen Markalar",
+    "description": "Markaların dijitalde güven kazanmasını, daha fazla müşteriye ulaşmasını ve ölçülebilir sonuçlarla sürdürülebilir büyüme yakalamasını sağlıyoruz.",
+    "quickLinks": "Hızlı Erişim",
+    "services": "Çözümlerimiz",
+    "contactInfo": "İletişim",
+    "socialMedia": "Bizi Takip Edin",
+    "terms": "Kullanım Şartları",
+    "privacy": "Gizlilik Politikası",
+    "copyright": "© {{year}} Ravlink. Tüm hakları saklıdır."
+  },
+  "common": {
+    "getStarted": "Hemen Başlayın",
+    "getFreeConsultation": "Ücretsiz Ön Görüşme Alın",
+    "letsTalkStrategy": "Stratejinizi Konuşalım",
+    "viewDetails": "Detayları İncele",
+    "bookFreeConsultation": "Ücretsiz Görüşme Planla",
+    "getFreeStrategyCall": "Ücretsiz Strateji Görüşmesi",
+    "getStartedNow": "Hemen Başlayın",
+    "viewAllArticles": "Tüm İçerikleri Gör",
+    "readMore": "Devamını Keşfet"
+  },
+  "home": {
+    "headTitle": "Anasayfa - Ravlink - Dijital Pazarlama Ajansi",
+    "banner": {
+      "title": "Markaları büyüten web siteleri ve satışa dönüşen reklamlar üretiyoruz.",
+      "videoText": "Güçlü bir dijital varlığın, modern işletmeler için nasıl daha fazla müşteri, daha fazla güven ve sürdürülebilir büyüme sağladığını keşfedin.",
+      "description": "Ravlink, markaların dijitalde görünürlük kazanmasını, doğru müşterilere ulaşmasını ve ölçülebilir sonuçlarla büyümesini sağlayan tam hizmet dijital ajanstır.",
+      "awardWinning": "Ödüllü",
+      "agency": "Dijital Ajans"
+    },
+    "expertise": {
+      "cardTitle": "Dijitalde Bir Üst Seviyeye Çıkmaya Hazır mısınız?",
+      "cardText": "İş hedeflerinize özel, sonuç odaklı bir strateji oluşturalım.",
+      "subHeading": "Uzmanlığımız",
+      "heading": "Gerçek Büyümeyi Getiren Pazarlama Kararları",
+      "description": "Ravlink’te pazarlama kararlarını veriye dayalı alır, markaların dijitalde rekabet gücünü artıran ve gerçek iş büyümesi sağlayan stratejiler geliştiririz.",
+      "listTitle": "Güçlü Olduğumuz Alanlar",
+      "list": [
+        "Performans Odaklı Pazarlama",
+        "Sosyal Medyada Büyüme",
+        "Kanıtlanmış SEO Stratejileri",
+        "İçerik Pazarlaması",
+        "PPC ve Ücretli Reklam Yönetimi",
+        "Marka Konumlandırma & Strateji",
+        "Dönüşüm Oranı Optimizasyonu"
+      ],
+      "counterTitle": "Yıllık Dijital Pazarlama Deneyimi",
+      "counterText": "Kanıtlanmış stratejiler ve ölçülebilir sonuçlarla, işletmelerin dijitalde sürdürülebilir şekilde büyümesine katkı sağlıyoruz."
+    },
+    "chooseUs": {
+      "subHeading": "Neden Ravlink?",
+      "heading": "Başarınız, Odak Noktamız",
+      "description": "Hızla değişen dijital dünyada doğru pazarlama partneriyle çalışmak fark yaratır. Ravlink’te yalnızca kampanyalar üretmeyiz; markanıza ölçülebilir sonuçlar ve sürdürülebilir büyüme sağlayan stratejiler kurarız.",
+      "ctaTitle": "Ravlink ile stratejik bir ortaklık kurun, markanızı bir üst seviyeye taşıyın.",
+      "ctaLink": "Stratejinizi Konuşalım"
+    },
+    "guide": {
+      "heading": "İşinizi Ravlink ile Büyütün",
+      "description": "Veriye dayalı stratejiler ve sonuç odaklı çözümlerle dijital pazarlamanızı bir üst seviyeye taşıyın. Şimdi harekete geçin."
+    },
+    "services": {
+      "subHeading": "Temel Çözümlerimiz",
+      "heading": "Gerçek Sonuçlar Üreten Dijital Çözümler",
+      "footerText": "İşinize özel bir çözüm mü arıyorsunuz? Hedeflerinize uygun stratejiyi birlikte kuralım."
+    },
+    "caseStudies": {
+      "subHeading": "Başarı Hikâyeleri",
+      "heading": "Markalara Nasıl Değer Kattığımızı Görün",
+      "description": "Sonuçları sadece anlatmıyoruz, üretiyoruz. Dijital pazarlama stratejilerimizin markalara nasıl gerçek büyüme sağladığını gösteren başarı hikâyelerimizi inceleyin."
+    },
+    "testimonials": {
+      "positive": "2,700+ Olumlu Geri Bildirim",
+      "reviews": "Yorum",
+      "improvedProject": "Geliştirilen Proje",
+      "newProject": "Yeni Proje",
+      "focusOne": "Sosyal Medyada Büyüme",
+      "focusTwo": "Performans Odaklı Pazarlama",
+      "subHeading": "Müşterilerimiz Ne Diyor?",
+      "heading": "Gerçek Sonuçlar Elde Eden Markalar",
+      "description": "Ravlink’in uzman dijital pazarlama çözümleriyle, işletmelerin nasıl sürdürülebilir şekilde büyüdüğünü keşfedin."
+    },
+    "digitalProcess": {
+      "subHeading": "Nasıl Çalışır?",
+      "heading": "Gerçek Büyümeye Giden Net Adımlar",
+      "description": "Markaların dijitalde büyümesini sağlayan, kanıtlanmış ve şeffaf bir süreç izleriz. Stratejiden uygulamaya kadar attığımız her adım, ölçülebilir sonuçlar üretmek için tasarlanır."
+    },
+    "pricing": {
+      "subHeading": "Paketler & Fiyatlandırma",
+      "heading": "Şeffaf, Net ve Büyümeye Odaklı Fiyatlama",
+      "introTitle": "İşinize En Uygun Paketi Birlikte Belirleyelim",
+      "starter": {
+        "name": "Başlangıç",
+        "description": "Dijitalde güven oluşturmak ve düzenli görünürlük kazanmak isteyen yerel işletmeler için",
+        "priceSuffix": "/Ay",
+        "features": [
+          "Ayda 8 paylaşım (statik veya carousel)",
+          "Metinler, hashtag’ler ve profil optimizasyonu",
+          "Aylık performans özeti"
+        ]
+      },
+      "growth": {
+        "name": "Büyüme",
+        "description": "Daha fazla erişim, lead ve satış hedefleyen markalar için içerik + reklam odaklı paket",
+        "priceSuffix": "/Ay",
+        "benefits": [
+          "Net marka mesajı ve içerik stratejisi",
+          "Meta reklamlarının kurulumu ve sürekli optimizasyonu",
+          "Dönüşüm takibi ve performans analizi"
+        ],
+        "features": [
+          "Ayda 12–16 paylaşım (reels + statik karışımı)",
+          "Aylık strateji toplantısı ve içerik takvimi",
+          "Meta reklam yönetimi (reklam bütçesi hariç)",
+          "Hedef kitle testleri ve optimizasyon",
+          "Detaylı aylık rapor + aksiyon planı",
+          "WhatsApp üzerinden hızlı destek"
+        ]
+      },
+      "highlight": {
+        "title": "Büyüme Odaklı Yaklaşım",
+        "items": [
+          "Gizli ücret yok, net aylık paketler",
+          "Ontario’daki işletmeler için özel olarak kurgulandı",
+          "Kısa vadeli iş değil, uzun vadeli iş ortaklığı"
+        ]
+      },
+      "scale": {
+        "name": "Ölçekleme",
+        "description": "Reklam performansını agresif şekilde büyütmeye hazır markalar için",
+        "priceSuffix": "/Ay",
+        "features": [
+          "Haftalık reels üretimi ve ileri seviye kreatif testler",
+          "Öncelikli optimizasyon ve bütçe ölçeklendirme",
+          "Aylık strateji görüşmesi, KPI takibi ve büyüme planı"
+        ]
+      }
+    },
+    "blog": {
+      "subHeading": "İçgörüler & Trendler",
+      "heading": "Dijital Pazarlamada Güncel Stratejiler ve Pratik İpuçları",
+      "description": "Sektörde öne çıkan trendleri, uzman içgörülerini ve işinize doğrudan uygulayabileceğiniz stratejileri paylaştığımız güncel içeriklerimizi keşfedin."
+    }
+  },
+  "about": {
+    "coreValues": {
+      "subHeading": "Temel Değerlerimiz",
+      "heading": "Nasıl Düşünüyor, Nasıl Çalışıyoruz",
+      "description": "Dijital dünyada başarı, doğru strateji ve doğru partnerle mümkün olur. Ravlink’te odağımız; kısa vadeli kampanyalar değil, markalara ölçülebilir sonuçlar ve sürdürülebilir büyüme kazandıran uzun vadeli stratejiler üretmektir.",
+      "ctaTitle": "Ravlink ile stratejik bir ortaklık kurun, markanızı bir üst seviyeye taşıyın."
+    }
+  },
+  "pageTitles": {
+  "about": "Ravlink Hakkında | Sonuç Odaklı Dijital Pazarlama Ajansı",
+  "blog": "Dijital Pazarlama Blogu | Ravlink’ten Stratejiler ve İçgörüler",
+  "caseStudies": "Başarı Hikâyeleri | Ravlink Dijital Pazarlama Ajansı",
+  "contact": "İletişim | Ravlink ile Dijitalde Büyümeye Başlayın",
+  "faqs": "Sıkça Sorulan Sorular | Ravlink Dijital Pazarlama",
+  "notFound": "Sayfa Bulunamadı (404) | Ravlink",
+  "partnership": "İş Ortaklığı | Ravlink ile Stratejik Büyüme",
+  "pricing": "Fiyatlandırma | Ravlink Dijital Pazarlama Paketleri",
+  "service": "Dijital Pazarlama Çözümleri | Ravlink",
+  "singlePost": "Dijital Pazarlama Rehberi | Ravlink Blog",
+  "singleService": "Hizmet Detayı | Ravlink Dijital Çözümleri",
+  "team": "Ekibimiz | Ravlink Dijital Pazarlama Uzmanları",
+  "testimonial": "Müşteri Yorumları | Ravlink ile Gerçek Sonuçlar"
+}
+,
+  "pageBanners": {
+    "about": {
+      "title": "Ravlink Kimdir?",
+      "currentPage": "Hakkımızda"
+    },
+    "blog": {
+      "title": "İçgörüler ve Stratejiler",
+      "currentPage": "Blog"
+    },
+    "caseStudies": {
+      "title": "Başarı Hikâyeleri",
+      "currentPage": "Başarı Hikâyeleri"
+    },
+    "contact": {
+      "title": "Bizimle İletişime Geçin",
+      "currentPage": "İletişim"
+    },
+    "faqs": {
+      "title": "Merak Ettikleriniz",
+      "currentPage": "SSS"
+    },
+    "partnership": {
+      "title": "Stratejik İş Ortaklığı",
+      "currentPage": "İş Ortaklığı"
+    },
+    "pricing": {
+      "title": "Paketler ve Fiyatlandırma",
+      "currentPage": "Fiyatlandırma"
+    },
+    "service": {
+      "title": "Dijital Çözümlerimiz",
+      "currentPage": "Hizmetler"
+    },
+    "singlePost": {
+      "title": "Dijital İşletmeler İçin Büyüme Stratejileri",
+      "currentPage": "Blog"
+    },
+    "singleService": {
+      "title": "Sosyal Medya Pazarlaması",
+      "currentPage": "Hizmet Detayı"
+    },
+    "team": {
+      "title": "Ekibimizle Tanışın",
+      "currentPage": "Ekibimiz"
+    },
+    "testimonial": {
+      "title": "Müşteri Yorumları",
+      "currentPage": "Yorumlar"
+    }
+  },
+  "data": {
+    "chooseUs": [
+      {
+        "title": "Ölçülebilir Sonuçlar",
+        "content": "Pazarlama çalışmalarınızın lead, satış ve büyümeye etkisini net veriler ve şeffaf raporlarla görürsünüz. Ne yaptığımızı değil, ne kazandırdığımızı gösteririz."
+      },
+      {
+        "title": "Stratejik Uzmanlık",
+        "content": "Reklam, SEO ve performans stratejilerini yöneten deneyimli bir ekip. Her karar veriyle alınır, test edilir ve sizi rakiplerin önüne taşımak için optimize edilir."
+      },
+      {
+        "title": "Gönül Rahatlığı",
+        "content": "Stratejiden uygulamaya, optimizasyondan raporlamaya kadar tüm süreci biz yönetiriz. Siz işinizi büyütmeye odaklanırsınız."
+      },
+      {
+        "title": "Şeffaflık ve Güven",
+        "content": "Tüm kararlar gerçek zamanlı verilerle desteklenir. Ne yaptığımızı, neden yaptığımızı ve ne sonuç aldığımızı açıkça paylaşıyoruz."
+      },
+      {
+        "title": "Gerçek İş Birliği",
+        "content": "Klasik müşteri-ajans ilişkisinin ötesine geçeriz. Hedeflerinizi sahiplenir, birlikte büyüyeceğimiz uzun vadeli bir ortaklık kurarız."
+      },
+      {
+        "title": "Sonuç Odaklı Yaklaşım",
+        "content": "Net içgörüler ve sürekli performans takibi sayesinde yatırımınızın geri dönüşünü (ROI) her zaman kontrol altında tutarsınız."
+      }
+    ],
+    "services": [
+      {
+        "title": "Sosyal Medya Pazarlaması",
+        "content": "Sosyal medya kanallarınızı stratejik olarak yönetir, marka bilinirliğini artıran, etkileşim yaratan ve gerçek müşterilere dönüşen bir yapı kurarız."
+      },
+      {
+        "title": "İçerik Pazarlaması",
+        "content": "Hedef kitlenizin dikkatini çeken, güven oluşturan ve satın almaya yönlendiren içerikler üretiriz."
+      },
+      {
+        "title": "SEO Yönetimi",
+        "content": "Arama motorlarında görünürlüğünüzü artırarak, satın almaya hazır yüksek niyetli kullanıcıları organik ve sürdürülebilir şekilde sitenize çekeriz."
+      },
+      {
+        "title": "E-posta Pazarlaması",
+        "content": "Potansiyel müşterileri besleyen, ilişkileri güçlendiren ve tekrar eden satışları artıran kişiselleştirilmiş e-posta akışları oluştururuz."
+      },
+      {
+        "title": "Marka & Tasarım",
+        "content": "Güven veren, akılda kalan ve hedef kitlenizle duygusal bağ kuran tutarlı bir marka kimliği inşa ederiz."
+      },
+      {
+        "title": "Web Geliştirme",
+        "content": "Hızlı, ölçeklenebilir ve dönüşüm odaklı web siteleriyle ziyaretçileri müşteriye dönüştüren güçlü bir dijital altyapı kurarız."
+      }
+    ],
+    "caseStudies": [
+      {
+        "title": "Yerel İşletmeler İçin Dijital Büyüme",
+        "description": "Stratejik sosyal medya kampanyalarıyla 5 kat ROI elde edildi, müşteri etkileşimi %80 artırıldı.",
+        "tags": [
+          "Sosyal Medya",
+          "Influencer Pazarlama",
+          "Yeniden Hedefleme",
+          "Google Ads",
+          "Video İçerik",
+          "Yerel Pazarlama",
+          "Topluluk Yönetimi"
+        ]
+      },
+      {
+        "title": "İnşaat Sektöründe Yüksek Değerli Sözleşme Büyümesi",
+        "description": "Hedefli B2B pazarlama stratejileriyle yüksek bütçeli sözleşmelerin kazanılma oranı %150 artırıldı.",
+        "tags": [
+          "İçerik Pazarlaması",
+          "LinkedIn Reklamları",
+          "E-posta Pazarlaması",
+          "Webinar",
+          "Landing Page",
+          "CRM Entegrasyonu",
+          "Yeniden Hedefleme"
+        ]
+      },
+      {
+        "title": "E-Ticarette Hızlı ve Ölçeklenebilir Büyüme",
+        "description": "SEO ve performans pazarlaması çalışmalarıyla 6 ayda organik trafik 3 katına, gelir ise 2 katına çıkarıldı.",
+        "tags": [
+          "SEO",
+          "PPC Reklamları",
+          "Dönüşüm Oranı Optimizasyonu (CRO)",
+          "Analitik",
+          "Influencer Pazarlama",
+          "A/B Testleri",
+          "E-posta Pazarlaması"
+        ]
+      },
+      {
+        "title": "Startup’lar İçin Marka Bilinirliği Ölçekleme",
+        "description": "Stratejik büyüme ve PR çalışmalarıyla marka anılmaları %200 artırıldı, etkileşim oranları %60 yükseltildi.",
+        "tags": [
+          "Viral Pazarlama",
+          "Stratejik İş Ortaklıkları",
+          "PR & Medya",
+          "Büyüme Stratejisi",
+          "Kullanıcı Üretimli İçerik (UGC)",
+          "Medya Planlama",
+          "Marka Konumlandırma"
+        ]
+      }
+    ],
+    "digitalSteps": [
+  {
+    "title": "Keşif ve Analiz",
+    "content": "İşinizi, hedef kitlenizi ve mevcut dijital varlığınızı derinlemesine analiz ederiz. İçeriklerinizi, rakiplerinizi ve büyüme potansiyelinizi net şekilde ortaya koyarız."
+  },
+  {
+    "title": "Strateji ve Planlama",
+    "content": "Hedeflerinize ve bütçenize uygun; içerik, reklam ve mesajlaşmayı bir araya getiren, sonuç odaklı bir sosyal medya stratejisi oluştururuz."
+  },
+  {
+    "title": "Yayına Alma ve Optimizasyon",
+    "content": "İçerikler ve kampanyalar yayına alınır. Performansı anlık olarak takip eder, testler yapar ve etkileşim ile dönüşümü artırmak için sürekli optimize ederiz."
+  },
+  {
+    "title": "Ölçümleme ve Büyüme",
+    "content": "Elde edilen verileri analiz eder, en iyi performans gösteren stratejileri ölçekler ve sürdürülebilir büyüme için süreci sürekli geliştiririz."
+  }
+],
+    "testimonials": [
+  {
+    "title": "CEO, Nexatech",
+    "content": "Ravlink dijital varlığımızı baştan sona yeniden konumlandırdı. Uyguladıkları stratejiler sayesinde yalnızca altı ayda gelirlerimizi iki katına çıkardık."
+  },
+  {
+    "title": "Pazarlama Direktörü",
+    "content": "Birçok ajansla çalıştık ancak Ravlink yaklaşımıyla net şekilde ayrışıyor. Veri odaklı kararları ve yaratıcı çözümleri sayesinde pazarda gerçek bir rekabet avantajı elde ettik."
+  },
+  {
+    "title": "Kurucu",
+    "content": "SEO’dan ücretli reklamlara kadar tüm süreci uçtan uca yönettikleri bir yapı kurdular. Web sitemizin trafiği hızla arttı ve lead üretimi hiç olmadığı kadar güçlü hale geldi."
+  },
+  {
+    "title": "COO, BrightWave",
+    "content": "Son derece profesyonel ve sonuç odaklı bir ekip. Ravlink’in marka ve içerik pazarlamasındaki uzmanlığı, güçlü ve tutarlı bir dijital kimlik oluşturmamıza yardımcı oldu."
+  },
+  {
+    "title": "CEO, Nexatech",
+    "content": "Ravlink ile çalışmaya başladıktan sonra dijital yatırımlarımız ölçülebilir hale geldi. Stratejik yaklaşımları kısa sürede somut ticari sonuçlar üretti."
+  },
+  {
+    "title": "Pazarlama Direktörü",
+    "content": "Sadece kampanya yönetmiyorlar, süreci gerçekten sahipleniyorlar. Test, analiz ve optimizasyon sayesinde performansımız sürekli yükseldi."
+  },
+  {
+    "title": "Kurucu",
+    "content": "Ekibimizin bir uzantısı gibi çalıştılar. Trafik artışı, lead kalitesi ve dönüşüm oranlarında çok kısa sürede ciddi fark yarattılar."
+  },
+  {
+    "title": "COO, BrightWave",
+    "content": "Ravlink ile çalışmak bize netlik ve kontrol kazandırdı. Ne yaptığımızı, neden yaptığımızı ve hangi sonucu aldığımızı her zaman biliyoruz."
+  }
+],
+    "blogs": [
+      {
+  "date": "14 Nisan 2025",
+  "category": "Sosyal Medya",
+  "title": "Instagram ve Facebook Reklamlarında Daha Yüksek Dönüşüm Nasıl Sağlanır?",
+  "excerpt": "Bütçenizi boşa harcamadan, Meta reklamlarını daha fazla lead ve satış üretecek şekilde nasıl optimize edebileceğinizi adım adım öğrenin."
+},
+{
+  "date": "14 Nisan 2025",
+  "category": "SEO",
+  "title": "Dijital İşletmeler İçin Sürdürülebilir Büyüme Stratejileri",
+  "excerpt": "SEO’yu sadece trafik değil, gelir üreten bir kanala dönüştüren stratejileri ve uzun vadeli büyüme yaklaşımını keşfedin."
+}
+    ],
+    "footerServices": [
+      "Sosyal Medya Pazarlama",
+      "SEO Optimizasyonu",
+      "PPC Reklamlari",
+      "Icerik Pazarlama",
+      "Marka Stratejisi",
+      "E-posta Pazarlama"
+    ]
+  }
+}

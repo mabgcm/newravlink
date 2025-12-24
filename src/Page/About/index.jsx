@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import HeadTitle from "../../Components/Head/HeadTitle";
 import BannerInnerSection from "../../Components/Banner/Inner";
 import AboutSection from "../../Components/About/about";
@@ -11,10 +12,15 @@ import DigitalProcessSection from "../../Components/DigitalProcess/digitalstep";
 import TestimonialSection from "../../Components/Testimonial/testimonial";
 
 function AboutPage(){
+    const { t } = useTranslation();
+
     return(
         <>
-            <HeadTitle title="About - Marko - Digital Marketing Agency"/>
-            <BannerInnerSection title="About Marko" currentPage="About Us" />
+            <HeadTitle title={t("pageTitles.about")} />
+            <BannerInnerSection
+                title={t("pageBanners.about.title")}
+                currentPage={t("pageBanners.about.currentPage")}
+            />
             <AboutSection />
             <PartnershipSection />
             <ChooseUsAboutSection />

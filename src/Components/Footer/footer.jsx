@@ -1,6 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+    const { t } = useTranslation();
+    const footerServices = t("data.footerServices", { returnObjects: true });
+
     return (
         <div className="section-footer">
             <div className="bg-footer-wrapper">
@@ -13,51 +17,51 @@ const Footer = () => {
                                         <div className="logo-container-footer">
                                             <img src="/assets/images/marko-logo.png" alt="Logo" className="site-logo img-fluid" />
                                         </div>
-                                        <h4>Driving Digital Growth with Innovation & Strategy</h4>
+                                        <h4>{t("footer.tagline")}</h4>
                                         <p>
-                                            Lorem ipsum dolor si consectetur adipiscing elit ut elit tellus luctus nec ullamcorper mattis pulvinar dapibus leo.
+                                            {t("footer.description")}
                                         </p>
                                     </div>
                                 </div>
 
                                 <div className="col col-lg-2">
                                     <div className="footer-quick-links">
-                                        <h5>Quick Links</h5>
+                                        <h5>{t("footer.quickLinks")}</h5>
                                         <ul className="footer-list">
-                                            <li><a href="/">Home</a></li>
-                                            <li><a href="/about">About Us</a></li>
-                                            <li><a href="/service">Service</a></li>
-                                            <li><a href="/case_studies">Case Studies</a></li>
-                                            <li><a href="/blog">Blog</a></li>
-                                            <li><a href="/contact">Contact Us</a></li>
+                                            <li><a href="/">{t("nav.home")}</a></li>
+                                            <li><a href="/service">{t("nav.services")}</a></li>
+                                            <li><a href="/case_studies">{t("nav.caseStudies")}</a></li>
+                                            <li><a href="/testimonial">{t("nav.testimonials")}</a></li>
+                                            <li><a href="/pricing">{t("nav.pricing")}</a></li>
+                                            <li><a href="/blog">{t("nav.blog")}</a></li>
+                                            <li><a href="/contact">{t("nav.contact")}</a></li>
                                         </ul>
                                     </div>
                                 </div>
 
                                 <div className="col col-lg-3">
                                     <div className="footer-services-container">
-                                        <h5>Services</h5>
+                                        <h5>{t("footer.services")}</h5>
                                         <ul className="footer-list">
-                                            <li><a href="/single_services">Social Media Marketing</a></li>
-                                            <li><a href="/single_services">SEO Optimization</a></li>
-                                            <li><a href="/single_services">PPC Advertising</a></li>
-                                            <li><a href="/single_services">Content Marketing</a></li>
-                                            <li><a href="/single_services">Branding Strategy</a></li>
-                                            <li><a href="/single_services">Email Marketing</a></li>
+                                            {footerServices.map((service, index) => (
+                                                <li key={index}>
+                                                    <a href="/single_services">{service}</a>
+                                                </li>
+                                            ))}
                                         </ul>
                                     </div>
                                 </div>
 
                                 <div className="col col-lg-3">
                                     <div className="footer-contact-container">
-                                        <h5>Contact Info</h5>
+                                        <h5>{t("footer.contactInfo")}</h5>
                                         <ul className="contact-list">
                                             <li>info@ravlink.ca</li>
                                             <li>(437) 219-6444</li>
                                             <li>10 Honeycrisp Cres, Vaughan, Ontario L4K 0M7</li>
                                         </ul>
                                         <div className="d-flex flex-column gspace-1">
-                                            <h5>Social Media</h5>
+                                            <h5>{t("footer.socialMedia")}</h5>
                                             <div className="social-container">
                                                 <div className="social-item-wrapper">
                                                     <a href="https://www.facebook.com/ravlinkinc/" className="social-item">
@@ -84,10 +88,10 @@ const Footer = () => {
                         </div>
 
                         <div className="copyright-container">
-                            <span className="copyright">© {new Date().getFullYear()} Ravlink. All Rights Reserved.</span>
+                            <span className="copyright">{t("footer.copyright", { year: new Date().getFullYear() })}</span>
                             <div className="d-flex flex-row gspace-2">
-                                <a href="#" className="legal-link">Terms of Service</a>
-                                <a href="#" className="legal-link">Privacy Policy</a>
+                                <a href="#" className="legal-link">{t("footer.terms")}</a>
+                                <a href="#" className="legal-link">{t("footer.privacy")}</a>
                             </div>
                         </div>
 

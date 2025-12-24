@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import VideoButton from "../Video/VideoButton";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 
 function BannerHomeSection() {
+    const { t } = useTranslation();
 
     const playerRef = useRef(null);
     const videoContainerRef = useRef(null);
@@ -108,7 +110,7 @@ function BannerHomeSection() {
                         <div className="d-flex flex-column gspace-2">
                             <AnimateOnScroll animation="fadeInLeft" speed="normal">
                                 <h1 className="title-heading-banner">
-                                    We build brands, websites, and ads that convert.
+                                    {t("home.banner.title")}
                                 </h1>
                             </AnimateOnScroll>
                             <div className="banner-heading">
@@ -118,7 +120,7 @@ function BannerHomeSection() {
                                         <div className="d-flex flex-column flex-lg-row text-lg-start text-center align-items-center gspace-5">
                                             <VideoButton videoUrl="https://www.youtube.com/embed/_dT3-aAdV9Q?autoplay=1" />
                                             <p>
-                                                Learn why modern businesses need a strong online presence to compete, grow, and earn customer trust.
+                                                {t("home.banner.videoText")}
                                             </p>
                                         </div>
                                     </div>
@@ -127,12 +129,12 @@ function BannerHomeSection() {
                                 <AnimateOnScroll animation="fadeInRight" speed="normal">
                                     <div className="banner-content order-lg-2 order-1">
                                         <p>
-                                            Ravlink is a full-service digital agency delivering websites, advertising, branding, and online visibility solutions that help businesses attract customers and grow confidently.
+                                            {t("home.banner.description")}
                                         </p>
                                         <div className="d-flex flex-md-row flex-column justify-content-center justify-content-lg-start align-self-center align-self-lg-start gspace-3">
                                             <a href="./about" className="btn btn-accent">
                                                 <div className="btn-title">
-                                                    <span>Get Started</span>
+                                                    <span>{t("common.getStarted")}</span>
                                                 </div>
                                                 <div className="icon-circle">
                                                     <i className="fa-solid fa-arrow-right"></i>
@@ -145,8 +147,8 @@ function BannerHomeSection() {
                                                     <img src="/assets/images/shorty.jpg" alt="Reviewer" className="avatar" />
                                                 </div>
                                                 <div className="detail">
-                                                    <span>Award Winning</span>
-                                                    <span>Agency</span>
+                                                    <span>{t("home.banner.awardWinning")}</span>
+                                                    <span>{t("home.banner.agency")}</span>
                                                 </div>
                                             </div>
                                         </div>

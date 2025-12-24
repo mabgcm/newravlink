@@ -1,8 +1,11 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 // import VideoButton from "../Video/VideoButton";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 
 function GuideBannerSection() {
+    const { t } = useTranslation();
+
     return (
         <>
             <div className="section-guide">
@@ -12,15 +15,15 @@ function GuideBannerSection() {
                             <div className="guide-content">
                                 <a href="./about" className="btn btn-accent">
                                     <div className="btn-title">
-                                        <span>Get Started</span>
+                                        <span>{t("common.getStarted")}</span>
                                     </div>
                                     <div className="icon-circle">
                                         <i className="fa-solid fa-arrow-right"></i>
                                     </div>
                                 </a>
                                 <div className="d-flex flex-column gspace-2">
-                                    <h3 className="title-heading">Transform Your Business with Ravlink!</h3>
-                                    <p>Take your digital marketing to the next level with data-driven strategies and innovative solutions. Let's create something amazing together!</p>
+                                    <h3 className="title-heading">{t("home.guide.heading")}</h3>
+                                    <p>{t("home.guide.description")}</p>
                                 </div>
                             </div>
                         </AnimateOnScroll>

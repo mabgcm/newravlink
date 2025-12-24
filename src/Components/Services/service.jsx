@@ -1,9 +1,11 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { services } from "../../Data/ServiceData";
 import ServiceCard from "../Card/ServiceCard";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 
 function ServiceSection(){
+    const { t } = useTranslation();
 
     return(
         <>
@@ -14,13 +16,13 @@ function ServiceSection(){
                             <AnimateOnScroll animation="fadeInDown" speed="normal">    
                                 <div className="sub-heading align-self-center">
                                     <i className="fa-regular fa-circle-dot"></i>
-                                    <span>Our Core Services</span>
+                                    <span>{t("home.services.subHeading")}</span>
                                 </div>
                             </AnimateOnScroll>
 
                             <AnimateOnScroll animation="fadeInDown" speed="normal">
                                 <h2 className="title-heading heading-container heading-container-medium">
-                                    Digital Solutions That Drive Real Results
+                                    {t("home.services.heading")}
                                 </h2>
                             </AnimateOnScroll>
                         </div>
@@ -30,8 +32,8 @@ function ServiceSection(){
                                     <div className="col" key={item.id}>
                                         <ServiceCard 
                                             icon={item.icon}
-                                            title={item.title}
-                                            content={item.content}
+                                            title={t(item.titleKey)}
+                                            content={t(item.contentKey)}
                                             speed={item.speed}
                                             link={item.link}
                                         />
@@ -41,8 +43,8 @@ function ServiceSection(){
                         </div>
                         <div className="service-link-footer">
                             <p>
-                                Need a custom solution? Let&apos;s create a strategy tailored for your business.
-                                <a href="./contact"> Get a Free Strategy Call</a>
+                                {t("home.services.footerText")}
+                                <a href="./contact"> {t("common.getFreeStrategyCall")}</a>
                             </p>
                         </div>
                     </div>
