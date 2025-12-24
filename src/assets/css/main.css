@@ -1264,6 +1264,25 @@ body.lightmode .banner-layout-wrapper::before {
     text-align: start;
 }
 
+.banner-content .btn.btn-accent {
+    display: inline-flex;
+    align-self: flex-start;
+    width: auto;
+    gap: 12px;
+    padding: 4px 6px;
+}
+
+.banner-content .btn.btn-accent .btn-title {
+    width: auto;
+    padding: 12px 16px;
+}
+
+.banner-content .btn.btn-accent .icon-circle {
+    width: 46px;
+    height: 46px;
+    font-size: var(--font-size-4xl);
+}
+
 .banner-reviewer {
     display: flex;
     flex-direction: row;

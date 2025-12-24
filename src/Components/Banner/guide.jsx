@@ -13,11 +13,11 @@ function GuideBannerSection() {
                     <div className="hero-container">
                         <AnimateOnScroll animation="fadeInUp" speed="normal">
                             <div className="guide-content">
-                                <a href="./about" className="btn btn-accent">
+                                <a href="./about" className="btn btn-accent w-50">
                                     <div className="btn-title">
                                         <span>{t("common.getStarted")}</span>
                                     </div>
-                                    <div className="icon-circle">
+                                    <div className="icon-circle" >
                                         <i className="fa-solid fa-arrow-right"></i>
                                     </div>
                                 </a>

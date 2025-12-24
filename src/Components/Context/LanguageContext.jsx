@@ -8,6 +8,10 @@ export const LanguageProvider = ({ children }) => {
         if (typeof window === "undefined") {
             return "en";
         }
+        const urlLanguage = new URLSearchParams(window.location.search).get("lng");
+        if (urlLanguage === "tr" || urlLanguage === "en") {
+            return urlLanguage;
+        }
         return window.localStorage.getItem("language") || "en";
     });
 

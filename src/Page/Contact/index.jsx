@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import HeadTitle from "../../Components/Head/HeadTitle";
 import BannerInnerSection from "../../Components/Banner/Inner";
 import ContactSection from "../../Components/Contact/contact";
-import MapsSection from "../../Components/Maps/map";
 
 function ContactPage(){
     const { t } = useTranslation();
@@ -16,7 +15,6 @@ function ContactPage(){
                 currentPage={t("pageBanners.contact.currentPage")}
             />
             <ContactSection />
-            <MapsSection />
         </>
     );
 }

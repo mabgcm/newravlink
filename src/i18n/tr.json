@@ -162,21 +162,20 @@
     }
   },
   "pageTitles": {
-  "about": "Ravlink Hakkında | Sonuç Odaklı Dijital Pazarlama Ajansı",
-  "blog": "Dijital Pazarlama Blogu | Ravlink’ten Stratejiler ve İçgörüler",
-  "caseStudies": "Başarı Hikâyeleri | Ravlink Dijital Pazarlama Ajansı",
-  "contact": "İletişim | Ravlink ile Dijitalde Büyümeye Başlayın",
-  "faqs": "Sıkça Sorulan Sorular | Ravlink Dijital Pazarlama",
-  "notFound": "Sayfa Bulunamadı (404) | Ravlink",
-  "partnership": "İş Ortaklığı | Ravlink ile Stratejik Büyüme",
-  "pricing": "Fiyatlandırma | Ravlink Dijital Pazarlama Paketleri",
-  "service": "Dijital Pazarlama Çözümleri | Ravlink",
-  "singlePost": "Dijital Pazarlama Rehberi | Ravlink Blog",
-  "singleService": "Hizmet Detayı | Ravlink Dijital Çözümleri",
-  "team": "Ekibimiz | Ravlink Dijital Pazarlama Uzmanları",
-  "testimonial": "Müşteri Yorumları | Ravlink ile Gerçek Sonuçlar"
-}
-,
+    "about": "Ravlink Hakkında | Sonuç Odaklı Dijital Pazarlama Ajansı",
+    "blog": "Dijital Pazarlama Blogu | Ravlink’ten Stratejiler ve İçgörüler",
+    "caseStudies": "Başarı Hikâyeleri | Ravlink Dijital Pazarlama Ajansı",
+    "contact": "İletişim | Ravlink ile Dijitalde Büyümeye Başlayın",
+    "faqs": "Sıkça Sorulan Sorular | Ravlink Dijital Pazarlama",
+    "notFound": "Sayfa Bulunamadı (404) | Ravlink",
+    "partnership": "İş Ortaklığı | Ravlink ile Stratejik Büyüme",
+    "pricing": "Fiyatlandırma | Ravlink Dijital Pazarlama Paketleri",
+    "service": "Dijital Pazarlama Çözümleri | Ravlink",
+    "singlePost": "Dijital Pazarlama Rehberi | Ravlink Blog",
+    "singleService": "Hizmet Detayı | Ravlink Dijital Çözümleri",
+    "team": "Ekibimiz | Ravlink Dijital Pazarlama Uzmanları",
+    "testimonial": "Müşteri Yorumları | Ravlink ile Gerçek Sonuçlar"
+  },
   "pageBanners": {
     "about": {
       "title": "Ravlink Kimdir?",
@@ -335,70 +334,70 @@
       }
     ],
     "digitalSteps": [
-  {
-    "title": "Keşif ve Analiz",
-    "content": "İşinizi, hedef kitlenizi ve mevcut dijital varlığınızı derinlemesine analiz ederiz. İçeriklerinizi, rakiplerinizi ve büyüme potansiyelinizi net şekilde ortaya koyarız."
-  },
-  {
-    "title": "Strateji ve Planlama",
-    "content": "Hedeflerinize ve bütçenize uygun; içerik, reklam ve mesajlaşmayı bir araya getiren, sonuç odaklı bir sosyal medya stratejisi oluştururuz."
-  },
-  {
-    "title": "Yayına Alma ve Optimizasyon",
-    "content": "İçerikler ve kampanyalar yayına alınır. Performansı anlık olarak takip eder, testler yapar ve etkileşim ile dönüşümü artırmak için sürekli optimize ederiz."
-  },
-  {
-    "title": "Ölçümleme ve Büyüme",
-    "content": "Elde edilen verileri analiz eder, en iyi performans gösteren stratejileri ölçekler ve sürdürülebilir büyüme için süreci sürekli geliştiririz."
-  }
-],
+      {
+        "title": "Keşif ve Analiz",
+        "content": "İşinizi, hedef kitlenizi ve mevcut dijital varlığınızı derinlemesine analiz ederiz. İçeriklerinizi, rakiplerinizi ve büyüme potansiyelinizi net şekilde ortaya koyarız."
+      },
+      {
+        "title": "Strateji ve Planlama",
+        "content": "Hedeflerinize ve bütçenize uygun; içerik, reklam ve mesajlaşmayı bir araya getiren, sonuç odaklı bir sosyal medya stratejisi oluştururuz."
+      },
+      {
+        "title": "Yayına Alma ve Optimizasyon",
+        "content": "İçerikler ve kampanyalar yayına alınır. Performansı anlık olarak takip eder, testler yapar ve etkileşim ile dönüşümü artırmak için sürekli optimize ederiz."
+      },
+      {
+        "title": "Ölçümleme ve Büyüme",
+        "content": "Elde edilen verileri analiz eder, en iyi performans gösteren stratejileri ölçekler ve sürdürülebilir büyüme için süreci sürekli geliştiririz."
+      }
+    ],
     "testimonials": [
-  {
-    "title": "CEO, Nexatech",
-    "content": "Ravlink dijital varlığımızı baştan sona yeniden konumlandırdı. Uyguladıkları stratejiler sayesinde yalnızca altı ayda gelirlerimizi iki katına çıkardık."
-  },
-  {
-    "title": "Pazarlama Direktörü",
-    "content": "Birçok ajansla çalıştık ancak Ravlink yaklaşımıyla net şekilde ayrışıyor. Veri odaklı kararları ve yaratıcı çözümleri sayesinde pazarda gerçek bir rekabet avantajı elde ettik."
-  },
-  {
-    "title": "Kurucu",
-    "content": "SEO’dan ücretli reklamlara kadar tüm süreci uçtan uca yönettikleri bir yapı kurdular. Web sitemizin trafiği hızla arttı ve lead üretimi hiç olmadığı kadar güçlü hale geldi."
-  },
-  {
-    "title": "COO, BrightWave",
-    "content": "Son derece profesyonel ve sonuç odaklı bir ekip. Ravlink’in marka ve içerik pazarlamasındaki uzmanlığı, güçlü ve tutarlı bir dijital kimlik oluşturmamıza yardımcı oldu."
-  },
-  {
-    "title": "CEO, Nexatech",
-    "content": "Ravlink ile çalışmaya başladıktan sonra dijital yatırımlarımız ölçülebilir hale geldi. Stratejik yaklaşımları kısa sürede somut ticari sonuçlar üretti."
-  },
-  {
-    "title": "Pazarlama Direktörü",
-    "content": "Sadece kampanya yönetmiyorlar, süreci gerçekten sahipleniyorlar. Test, analiz ve optimizasyon sayesinde performansımız sürekli yükseldi."
-  },
-  {
-    "title": "Kurucu",
-    "content": "Ekibimizin bir uzantısı gibi çalıştılar. Trafik artışı, lead kalitesi ve dönüşüm oranlarında çok kısa sürede ciddi fark yarattılar."
-  },
-  {
-    "title": "COO, BrightWave",
-    "content": "Ravlink ile çalışmak bize netlik ve kontrol kazandırdı. Ne yaptığımızı, neden yaptığımızı ve hangi sonucu aldığımızı her zaman biliyoruz."
-  }
-],
+      {
+        "title": "CEO, Nexatech",
+        "content": "Ravlink dijital varlığımızı baştan sona yeniden konumlandırdı. Uyguladıkları stratejiler sayesinde yalnızca altı ayda gelirlerimizi iki katına çıkardık."
+      },
+      {
+        "title": "Pazarlama Direktörü",
+        "content": "Birçok ajansla çalıştık ancak Ravlink yaklaşımıyla net şekilde ayrışıyor. Veri odaklı kararları ve yaratıcı çözümleri sayesinde pazarda gerçek bir rekabet avantajı elde ettik."
+      },
+      {
+        "title": "Kurucu",
+        "content": "SEO’dan ücretli reklamlara kadar tüm süreci uçtan uca yönettikleri bir yapı kurdular. Web sitemizin trafiği hızla arttı ve lead üretimi hiç olmadığı kadar güçlü hale geldi."
+      },
+      {
+        "title": "COO, BrightWave",
+        "content": "Son derece profesyonel ve sonuç odaklı bir ekip. Ravlink’in marka ve içerik pazarlamasındaki uzmanlığı, güçlü ve tutarlı bir dijital kimlik oluşturmamıza yardımcı oldu."
+      },
+      {
+        "title": "CEO, Nexatech",
+        "content": "Ravlink ile çalışmaya başladıktan sonra dijital yatırımlarımız ölçülebilir hale geldi. Stratejik yaklaşımları kısa sürede somut ticari sonuçlar üretti."
+      },
+      {
+        "title": "Pazarlama Direktörü",
+        "content": "Sadece kampanya yönetmiyorlar, süreci gerçekten sahipleniyorlar. Test, analiz ve optimizasyon sayesinde performansımız sürekli yükseldi."
+      },
+      {
+        "title": "Kurucu",
+        "content": "Ekibimizin bir uzantısı gibi çalıştılar. Trafik artışı, lead kalitesi ve dönüşüm oranlarında çok kısa sürede ciddi fark yarattılar."
+      },
+      {
+        "title": "COO, BrightWave",
+        "content": "Ravlink ile çalışmak bize netlik ve kontrol kazandırdı. Ne yaptığımızı, neden yaptığımızı ve hangi sonucu aldığımızı her zaman biliyoruz."
+      }
+    ],
     "blogs": [
       {
-  "date": "14 Nisan 2025",
-  "category": "Sosyal Medya",
-  "title": "Instagram ve Facebook Reklamlarında Daha Yüksek Dönüşüm Nasıl Sağlanır?",
-  "excerpt": "Bütçenizi boşa harcamadan, Meta reklamlarını daha fazla lead ve satış üretecek şekilde nasıl optimize edebileceğinizi adım adım öğrenin."
-},
-{
-  "date": "14 Nisan 2025",
-  "category": "SEO",
-  "title": "Dijital İşletmeler İçin Sürdürülebilir Büyüme Stratejileri",
-  "excerpt": "SEO’yu sadece trafik değil, gelir üreten bir kanala dönüştüren stratejileri ve uzun vadeli büyüme yaklaşımını keşfedin."
-}
+        "date": "14 Nisan 2025",
+        "category": "Sosyal Medya",
+        "title": "Instagram ve Facebook Reklamlarında Daha Yüksek Dönüşüm Nasıl Sağlanır?",
+        "excerpt": "Bütçenizi boşa harcamadan, Meta reklamlarını daha fazla lead ve satış üretecek şekilde nasıl optimize edebileceğinizi adım adım öğrenin."
+      },
+      {
+        "date": "14 Nisan 2025",
+        "category": "SEO",
+        "title": "Dijital İşletmeler İçin Sürdürülebilir Büyüme Stratejileri",
+        "excerpt": "SEO’yu sadece trafik değil, gelir üreten bir kanala dönüştüren stratejileri ve uzun vadeli büyüme yaklaşımını keşfedin."
+      }
     ],
     "footerServices": [
       "Sosyal Medya Pazarlama",
