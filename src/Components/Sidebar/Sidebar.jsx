@@ -8,6 +8,16 @@ function Sidebar() {
     const sidebarRef = useRef(null);
     const { t } = useTranslation();
 
+    const closeSidebar = () => {
+        const overlay = overlayRef.current;
+        const sidebar = sidebarRef.current;
+
+        sidebar?.classList.remove("active");
+        setTimeout(() => {
+            overlay?.classList.remove("active");
+        }, 200);
+    };
+
     useEffect(() => {
         const menuBtn = document.querySelector(".nav-btn");
         const closeBtn = sidebarRef.current?.querySelector(".close-btn");
@@ -18,13 +28,6 @@ function Sidebar() {
         overlay.classList.add("active");
         setTimeout(() => {
             sidebar.classList.add("active");
-        }, 200);
-        }
-
-        function closeSidebar() {
-        sidebar.classList.remove("active");
-        setTimeout(() => {
-            overlay.classList.remove("active");
         }, 200);
         }
 
@@ -76,18 +79,18 @@ function Sidebar() {
                     <img src="/assets/images/marko-logo.png" className="site-logo img-fluid logo" alt="Logo" />
                 </div>
                 <div className="d-flex align-items-center gspace-2">
-                    <button className="close-btn"><span>X</span></button>
+                    <button className="close-btn" onClick={closeSidebar}><span>X</span></button>
                     <LanguageSwitcher />
                 </div>
             </div>
             <ul className="menu">
-                <li><NavLink to="/">{t("nav.home")}</NavLink></li>
-                <li><NavLink to="/service">{t("nav.services")}</NavLink></li>
-                <li><NavLink to="/case_studies">{t("nav.caseStudies")}</NavLink></li>
-                <li><NavLink to="/testimonial">{t("nav.testimonials")}</NavLink></li>
-                <li><NavLink to="/pricing">{t("nav.pricing")}</NavLink></li>
-                <li><NavLink to="/blog">{t("nav.blog")}</NavLink></li>
-                <li><NavLink to="/contact">{t("nav.contact")}</NavLink></li>
+                <li><NavLink to="/" onClick={closeSidebar}>{t("nav.home")}</NavLink></li>
+                <li><NavLink to="/service" onClick={closeSidebar}>{t("nav.services")}</NavLink></li>
+                <li><NavLink to="/case_studies" onClick={closeSidebar}>{t("nav.caseStudies")}</NavLink></li>
+                <li><NavLink to="/testimonial" onClick={closeSidebar}>{t("nav.testimonials")}</NavLink></li>
+                <li><NavLink to="/pricing" onClick={closeSidebar}>{t("nav.pricing")}</NavLink></li>
+                <li><NavLink to="/blog" onClick={closeSidebar}>{t("nav.blog")}</NavLink></li>
+                <li><NavLink to="/contact" onClick={closeSidebar}>{t("nav.contact")}</NavLink></li>
             </ul>
         </div>
         </div>
