@@ -1,5 +1,4 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 import HeadTitle from "../../Components/Head/HeadTitle";
 import BannerInnerSection from "../../Components/Banner/Inner";
 import AboutSection from "../../Components/About/about";
@@ -11,16 +10,11 @@ import ModalVideoSection from "../../Components/Video/video";
 import DigitalProcessSection from "../../Components/DigitalProcess/digitalstep";
 import TestimonialSection from "../../Components/Testimonial/testimonial";
 
-function AboutPage(){
-    const { t } = useTranslation();
-
-    return(
+function AboutPage() {
+    return (
         <>
-            <HeadTitle title={t("pageTitles.about")} />
-            <BannerInnerSection
-                title={t("pageBanners.about.title")}
-                currentPage={t("pageBanners.about.currentPage")}
-            />
+            <HeadTitle title="About - Ravlink - Digital Marketing Agency" />
+            <BannerInnerSection title="About Ravlink" currentPage="About Us" />
             <AboutSection />
             <PartnershipSection />
             <ChooseUsAboutSection />

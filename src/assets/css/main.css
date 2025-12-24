@@ -1568,15 +1568,20 @@ body.lightmode .title-heading {
     background-image: linear-gradient(284deg, var(--primary) 100%, var(--primary) 100%);
 }
 
-body.lightmode .title-heading-banner {
-    background-image: linear-gradient(284deg, #000000 100%, #000000 100%);
-}
-
 .title-heading,
 .title-heading-banner {
     background-image: none;
     -webkit-text-fill-color: var(--primary);
     color: var(--primary);
+}
+
+body.lightmode .section-banner .banner-video-container {
+    color: #000000;
+}
+
+body.lightmode .section-banner .banner-video-container .title-heading-banner {
+    -webkit-text-fill-color: #000000;
+    color: #000000;
 }
 
 .banner-heading {
