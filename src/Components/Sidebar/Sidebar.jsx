@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "../Language/LanguageSwitcher";
 
@@ -80,13 +81,13 @@ function Sidebar() {
                 </div>
             </div>
             <ul className="menu">
-                <li><a href="/">{t("nav.home")}</a></li>
-                <li><a href="/service">{t("nav.services")}</a></li>
-                <li><a href="/case_studies">{t("nav.caseStudies")}</a></li>
-                <li><a href="/testimonial">{t("nav.testimonials")}</a></li>
-                <li><a href="/pricing">{t("nav.pricing")}</a></li>
-                <li><a href="/blog">{t("nav.blog")}</a></li>
-                <li><a href="/contact">{t("nav.contact")}</a></li>
+                <li><NavLink to="/">{t("nav.home")}</NavLink></li>
+                <li><NavLink to="/service">{t("nav.services")}</NavLink></li>
+                <li><NavLink to="/case_studies">{t("nav.caseStudies")}</NavLink></li>
+                <li><NavLink to="/testimonial">{t("nav.testimonials")}</NavLink></li>
+                <li><NavLink to="/pricing">{t("nav.pricing")}</NavLink></li>
+                <li><NavLink to="/blog">{t("nav.blog")}</NavLink></li>
+                <li><NavLink to="/contact">{t("nav.contact")}</NavLink></li>
             </ul>
         </div>
         </div>
