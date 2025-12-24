@@ -17,6 +17,15 @@ function App(){
                         <Sidebar />
                         <AppRouter />
                         <Footer />
+                        <a
+                            className="whatsapp-float"
+                            href="https://wa.me/15063493512"
+                            aria-label="Chat on WhatsApp"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <i className="fa-brands fa-whatsapp"></i>
+                        </a>
                     </ModalVideoProvider>
                 </NavProvider>
             </LanguageProvider>

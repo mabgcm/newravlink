@@ -60,6 +60,21 @@
     .navbar-icon-wrapper{
         display: none;
     }
+    .sidebar{
+        width: 85vw;
+        max-width: 360px;
+        left: -85vw;
+        padding: 0px 24px 24px 16px;
+    }
+    .sidebar.active{
+        transform: translateX(85vw);
+    }
+    .sidebar-header{
+        padding: 24px 24px 16px 24px;
+    }
+    .menu{
+        margin-top: 30px;
+    }
     .banner-video-content{
         width: 100%;
     }

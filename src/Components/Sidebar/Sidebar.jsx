@@ -20,7 +20,6 @@ function Sidebar() {
 
     useEffect(() => {
         const menuBtn = document.querySelector(".nav-btn");
-        const closeBtn = sidebarRef.current?.querySelector(".close-btn");
         const overlay = overlayRef.current;
         const sidebar = sidebarRef.current;
 
@@ -32,22 +31,25 @@ function Sidebar() {
         }
 
         menuBtn?.addEventListener("click", openSidebar);
-        closeBtn?.addEventListener("click", closeSidebar);
         overlay?.addEventListener("click", closeSidebar);
 
         return () => {
         menuBtn?.removeEventListener("click", openSidebar);
-        closeBtn?.removeEventListener("click", closeSidebar);
         overlay?.removeEventListener("click", closeSidebar);
         };
     }, []);
 
     useEffect(() => {
-        const dropdownBtns = sidebarRef.current?.querySelectorAll(".sidebar-dropdown-btn");
+        const dropdownBtns = sidebarRef.current?.querySelectorAll(
+            ".sidebar-dropdown-btn, .sidebar-dropdown-toggle"
+        );
 
         function handleDropdownClick(e) {
+        e.preventDefault();
         const btn = e.currentTarget;
-        const dropdownMenu = btn.parentElement.nextElementSibling;
+        const dropdownHeader = btn.closest(".dropdown-header");
+        const dropdownMenu = dropdownHeader?.nextElementSibling;
+        if (!dropdownMenu) return;
         const isOpen = dropdownMenu.classList.contains("active");
 
         sidebarRef.current
@@ -79,7 +81,6 @@ function Sidebar() {
                     <img src="/assets/images/marko-logo.png" className="site-logo img-fluid logo" alt="Logo" />
                 </div>
                 <div className="d-flex align-items-center gspace-2">
-                    <button className="close-btn" onClick={closeSidebar}><span>X</span></button>
                     <LanguageSwitcher />
                 </div>
             </div>
@@ -87,7 +88,7 @@ function Sidebar() {
                 <li><NavLink to="/" onClick={closeSidebar}>{t("nav.home")}</NavLink></li>
                 <li className="sidebar-dropdown">
                     <div className="dropdown-header">
-                        <a href="#">{t("nav.about")}</a>
+                        <a href="#" className="sidebar-dropdown-toggle">{t("nav.about")}</a>
                         <button className="sidebar-dropdown-btn">
                             <i className="fa-solid fa-angle-down"></i>
                         </button>
@@ -101,6 +102,14 @@ function Sidebar() {
                 <li><NavLink to="/pricing" onClick={closeSidebar}>{t("nav.pricing")}</NavLink></li>
                 <li><NavLink to="/blog" onClick={closeSidebar}>{t("nav.blog")}</NavLink></li>
                 <li><NavLink to="/contact" onClick={closeSidebar}>{t("nav.contact")}</NavLink></li>
+                <li className="sidebar-phone">
+                    <a href="tel:+14372196444" aria-label="Call (437) 219-6444">
+                        <span className="icon-circle">
+                            <i className="fa-solid fa-phone-volume"></i>
+                        </span>
+                        <span>(437) 219-6444</span>
+                    </a>
+                </li>
             </ul>
         </div>
         </div>

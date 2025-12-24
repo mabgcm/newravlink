@@ -20,18 +20,6 @@ function Navbar() {
                         </NavLink>
                     </div>
 
-                    <button
-                        className="navbar-toggler nav-btn"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav"
-                        aria-controls="navbarNav"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <i className="fa-solid fa-bars"></i>
-                    </button>
-
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav mx-auto">
                             <li className="nav-item">
@@ -95,12 +83,17 @@ function Navbar() {
                             <ThemeSwitcher />
                             <LanguageSwitcher />
                         </div>
-                        <a className="navbar-icon-wrapper" href="tel:+14372196444" aria-label="Call (437) 219-6444">
-                            <div className="icon-circle">
-                                <i className="fa-solid fa-phone-volume"></i>
-                            </div>
-                            <h6>(437) 219-6444</h6>
-                        </a>
+                        <button
+                            className="navbar-toggler nav-btn"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav"
+                            aria-controls="navbarNav"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <i className="fa-solid fa-bars"></i>
+                        </button>
                     </div>
                 </div>
             </nav>
