@@ -18,6 +18,7 @@ function ExpertiseSection() {
                                         src="/assets/images/team.jpg"
                                         alt="Expertise Image"
                                         className="img-fluid"
+                                        style={{ transform: "scaleX(-1)" }}
                                     />
                                 </AnimateOnScroll>
                                 <div className="expertise-layout">
