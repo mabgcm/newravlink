@@ -14,9 +14,9 @@ const SingleServiceSection = () => {
                 <div className="d-flex flex-column gspace-5">
                     <div className="image-container">
                         <img
-                        src="/assets/images/dummy-img-600x400.jpg"
-                        alt="Service Image"
-                        className="single-service-img"
+                            src="/assets/images/servicehero.jpeg"
+                            alt="Service Image"
+                            className="single-service-img"
                         />
                         <div className="single-service-title-layout">
                             <div>
@@ -64,20 +64,20 @@ const SingleServiceSection = () => {
                                 <div className="row row-cols-md-2 row-cols-1 grid-spacer-2 grid-spacer-md-3">
                                     <div className="col">
                                         <div className="image-container">
-                                        <img
-                                            src="/assets/images/dummy-img-600x400.jpg"
-                                            alt="Service Image"
-                                            className="img-fluid"
-                                        />
+                                            <img
+                                                src="/assets/images/service1.jpeg"
+                                                alt="Service Image"
+                                                className="img-fluid"
+                                            />
                                         </div>
                                     </div>
                                     <div className="col">
                                         <div className="image-container">
-                                        <img
-                                            src="/assets/images/dummy-img-600x400.jpg"
-                                            alt="Service Image"
-                                            className="img-fluid"
-                                        />
+                                            <img
+                                                src="/assets/images/service2.jpeg"
+                                                alt="Service Image"
+                                                className="img-fluid"
+                                            />
                                         </div>
                                     </div>
                                 </div>
@@ -154,24 +154,24 @@ const SingleServiceSection = () => {
                         <div className="col col-lg-4">
                             <div className="d-flex flex-column flex-md-row flex-lg-column justify-content-between gspace-5">
                                 <div className="card service-recent">
-                                <h4>Recent Services</h4>
-                                <div className="underline-accent-short"></div>
-                                <ul className="single-service-list">
-                                    {services.map((service) => (
-                                        <li key={service.id}>
-                                        <a href={service.link} className="hover:underline">
-                                            {t(service.titleKey)}
-                                        </a>
-                                        </li>
-                                    ))}
-                                </ul>
+                                    <h4>Recent Services</h4>
+                                    <div className="underline-accent-short"></div>
+                                    <ul className="single-service-list">
+                                        {services.map((service) => (
+                                            <li key={service.id}>
+                                                <a href={service.link} className="hover:underline">
+                                                    {t(service.titleKey)}
+                                                </a>
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
                                 <div className="cta-service-banner">
                                     <div className="spacer"></div>
                                     <h3 className="title-heading">{t("singleServicePage.ctaTitle")}</h3>
                                     <p>{t("singleServicePage.ctaDescription")}</p>
                                     <div className="link-wrapper">
-                                        <a href="about">{t("singleServicePage.ctaLink")}</a>
+                                        <a href="contact">{t("singleServicePage.ctaLink")}</a>
                                         <i className="fa-solid fa-circle-arrow-right"></i>
                                     </div>
                                 </div>

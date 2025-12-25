@@ -230,38 +230,38 @@
   },
   "singleServicePage": {
     "subHeading": "Uzmanlığımız",
-    "title": "İşinizi Büyüten Dijital Hizmetler",
-    "description": "Lead, satış ve uzun vadeli marka değeri üreten 6 temel hizmetimizi keşfedin.",
+    "title": "İşinizi Büyüten Dijital Çözümler",
+    "description": "Satış, lead ve uzun vadeli marka değeri yaratan stratejik hizmetlerimizi keşfedin.",
     "overviewTitle": "Genel Bakış",
-    "overviewDescription": "Uçtan uca performans odaklı dijital pazarlama sunuyoruz. Her hizmet hedeflerinize göre özelleştirilir ve ölçülebilir sonuçlara odaklanır.",
+    "overviewDescription": "Uçtan uca performans odaklı dijital pazarlama sunuyoruz. Her hizmet işletmenizin hedeflerine göre uyarlanır ve ölçülebilir büyüme üretir.",
     "services": [
       {
-        "title": "Performans Odaklı Pazarlama",
-        "description": "Nitelikli lead ve satış getiren reklam stratejisi ve optimizasyon."
+        "title": "Performans Pazarlaması",
+        "description": "Satış ve lead odaklı kampanyalarla hızlı ve ölçülebilir büyüme sağlarız."
       },
       {
-        "title": "Sosyal Medyada Büyüme",
-        "description": "Dikkat ve güven oluşturan içerik, topluluk ve platform stratejisi."
+        "title": "Sosyal Medya Büyümesi",
+        "description": "Topluluk oluşturan, güven kazandıran ve marka bilinirliğini artıran içerik stratejileri tasarlarız."
       },
       {
         "title": "SEO Stratejisi",
-        "description": "Organik görünürlüğü ve talebi artıran teknik ve içerik SEO."
+        "description": "Organik görünürlüğünüzü artırır, satın almaya hazır kullanıcıyı sitenize çekeriz."
       },
       {
         "title": "İçerik Pazarlaması",
-        "description": "Markanızı tercih edilir kılan mesaj ve kreatif üretimi."
+        "description": "Dikkat çeken, marka tonunu güçlendiren ve dönüşüme teşvik eden kreatif içerikler üretiriz."
       },
       {
         "title": "PPC & Ücretli Reklamlar",
-        "description": "Google ve sosyal platformlarda net ROI takibiyle kampanyalar."
+        "description": "Google ve sosyal platformlarda net ROI odaklı reklam yönetimi yaparız."
       },
       {
         "title": "Marka Stratejisi",
-        "description": "Konumlandırma, teklif netliği ve güçlü marka kimliği."
+        "description": "Konumlandırma, mesaj netliği ve güçlü marka kimliği ile fark yaratırız."
       }
     ],
     "includedTitle": "Neler Dahil?",
-    "includedDescription": "Stratejiden uygulamaya, raporlamadan optimizasyona tam kapsamlı büyüme sistemi.",
+    "includedDescription": "Strateji → üretim → reklam → analiz → optimizasyon döngüsüyle çalışan tam kapsamlı büyüme sistemi.",
     "includedLeft": [
       "Strateji planlama & araştırma",
       "Kreatif üretim & metin yazımı",
@@ -274,28 +274,28 @@
       "Sürekli test & iyileştirme"
     ],
     "whyTitle": "Neden Ravlink?",
-    "whyDescription": "Ölçülebilir büyüme, şeffaf raporlama ve sürdürülebilir performansa odaklanırız.",
+    "whyDescription": "Çünkü büyümeyi şansa bırakmayız. Her adımı veriyle doğrular, şeffaf raporlar ve sürdürülebilir performans üretiriz.",
     "highlights": [
       {
-        "title": "Sonuç Odaklı Strateji",
-        "description": "Her karar veriye ve KPI’lara dayanır."
+        "title": "Sonuç Odaklı Yaklaşım",
+        "description": "Kararlar KPI’lara göre alınır, başarı rakamlarla ölçülür."
       },
       {
         "title": "Uzman Ekip",
-        "description": "Kreatif, reklam ve optimizasyonda uzman kadro."
+        "description": "Kreatif, reklam, strateji ve optimizasyonda deneyimli takım."
       },
       {
-        "title": "Özel Planlar",
-        "description": "Hedefinize, sektörünüze ve bütçenize göre."
+        "title": "İşinize Uygun Planlar",
+        "description": "Her işletme için tek çözüm yok — stratejiyi size göre tasarlarız."
       },
       {
-        "title": "Net Raporlama",
-        "description": "Ne işe yarıyor, neden işe yarıyor net görürsünüz."
+        "title": "Şeffaf Raporlama",
+        "description": "Ne çalışıyor, ne gelişmeli — hepsi net şekilde görünür."
       }
     ],
     "ctaTitle": "Ravlink ile Büyümeye Hazır mısınız?",
-    "ctaDescription": "İşinize özel büyüme planını birlikte oluşturalım.",
-    "ctaLink": "Devamını Oku"
+    "ctaDescription": "Size özel büyüme planını birlikte oluşturalım.",
+    "ctaLink": "Bize Ulaşın"
   },
   "faq": {
     "subHeading": "Sık Sorulan Sorular",
@@ -386,7 +386,7 @@
       "currentPage": "Blog"
     },
     "singleService": {
-      "title": "Sosyal Medya Pazarlaması",
+      "title": "Dijital Pazarlama Nedir?",
       "currentPage": "Hizmet Detayı"
     },
     "team": {

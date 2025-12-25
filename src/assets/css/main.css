@@ -475,9 +475,9 @@ ul {
 }
 
 .form .select-wrap .select-arrow.icon-circle {
-    width: 42px;
-    height: 42px;
-    font-size: var(--font-size-4xl);
+    width: 21px;
+    height: 21px;
+    font-size: var(--font-size-xl);
     background-color: var(--accent-color);
     color: #ffffff;
     border: 1px solid #000000;
@@ -4378,7 +4378,7 @@ body.lightmode .accordion-button:not(.collapsed)::after {
 /* ================== 53. CTA Service Banner Components ================== */
 
 .cta-service-banner {
-    background-image: url('/assets/images/dummy-img-1920x900.jpg');
+    background-image: url('/assets/images/ctabg.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
