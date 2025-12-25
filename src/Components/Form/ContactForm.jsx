@@ -7,20 +7,8 @@ const ContactForm = () => {
   const [successMessageVisible, setSuccessMessageVisible] = useState(false);
   const [errorMessageVisible, setErrorMessageVisible] = useState(false);
 
-  const validateEmail = (email) => {
-    const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return pattern.test(email);
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (!validateEmail(email)) {
-      setErrorMessageVisible(true);
-      setSuccessMessageVisible(false);
-      setTimeout(() => setErrorMessageVisible(false), 3000);
-      return;
-    }
 
     const formData = new FormData(e.target);
     const payload = Object.fromEntries(formData.entries());
@@ -102,7 +90,7 @@ const ContactForm = () => {
                         <div className="col">
                             <label htmlFor="email">{t("contactForm.labels.email")}</label>
                             <input
-                                type="email"
+                                type="text"
                                 name="email"
                                 id="email"
                                 placeholder={t("contactForm.placeholders.email")}

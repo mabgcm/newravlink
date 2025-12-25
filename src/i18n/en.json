@@ -37,7 +37,7 @@
   "contactForm": {
     "title": "Let's Talk About Your Next Project",
     "successMessage": "Thank you! Message sent successfully.",
-    "errorMessage": "Oops! Please enter a valid email.",
+    "errorMessage": "Something went wrong. Please try again.",
     "submit": "Send a Message",
     "labels": {
       "fullName": "Full Name",

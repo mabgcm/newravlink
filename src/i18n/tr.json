@@ -37,7 +37,7 @@
   "contactForm": {
     "title": "Bir Sonraki Projenizi Konuşalım",
     "successMessage": "Teşekkürler! Mesajınız başarıyla gönderildi.",
-    "errorMessage": "Lütfen geçerli bir e-posta adresi girin.",
+    "errorMessage": "Bir hata oluştu. Lütfen tekrar deneyin.",
     "submit": "Mesaj Gönder",
     "labels": {
       "fullName": "Ad Soyad",
