@@ -22,11 +22,29 @@ const ContactForm = () => {
       return;
     }
 
-    setSuccessMessageVisible(true);
-    setErrorMessageVisible(false);
-    e.target.reset();
-    setEmail(""); 
-    setTimeout(() => setSuccessMessageVisible(false), 3000);
+    const formData = new FormData(e.target);
+    const payload = Object.fromEntries(formData.entries());
+
+    fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Request failed");
+        }
+        setSuccessMessageVisible(true);
+        setErrorMessageVisible(false);
+        e.target.reset();
+        setEmail("");
+        setTimeout(() => setSuccessMessageVisible(false), 3000);
+      })
+      .catch(() => {
+        setErrorMessageVisible(true);
+        setSuccessMessageVisible(false);
+        setTimeout(() => setErrorMessageVisible(false), 3000);
+      });
   };
 
   return (
