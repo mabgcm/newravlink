@@ -23,6 +23,7 @@ function App(){
                             aria-label="Chat on WhatsApp"
                             target="_blank"
                             rel="noreferrer"
+                            data-fbq-event="WhatsAppClick"
                         >
                             <i className="fa-brands fa-whatsapp"></i>
                         </a>

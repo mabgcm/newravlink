@@ -11,7 +11,7 @@ function Navbar() {
             <nav className="navbar navbar-expand-lg">
                 <div className="navbar-container">
                     <div className="logo-container">
-                        <NavLink className="navbar-brand" to="/">
+                        <NavLink className="navbar-brand" to="/" data-fbq-event="NavClick" data-fbq-label="logo">
                             <img
                                 src="/assets/images/ravlink-logo.png"
                                 className="site-logo img-fluid"
@@ -23,7 +23,7 @@ function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav mx-auto">
                             <li className="nav-item">
-                                <NavLink to="/" className="nav-link" end>
+                                <NavLink to="/" className="nav-link" end data-fbq-event="NavClick" data-fbq-label="home">
                                     {t("nav.home")}
                                 </NavLink>
                             </li>
@@ -35,22 +35,24 @@ function Navbar() {
                                     role="button"
                                     data-bs-toggle="dropdown"
                                     aria-expanded="false"
+                                    data-fbq-event="NavClick"
+                                    data-fbq-label="about"
                                 >
                                     {t("nav.about")} <i className="fa-solid fa-angle-down accent-color"></i>
                                 </a>
                                 <ul className="dropdown-menu">
                                     <li>
-                                        <NavLink to="/service" className="dropdown-item">
+                                        <NavLink to="/service" className="dropdown-item" data-fbq-event="NavClick" data-fbq-label="services">
                                             {t("nav.services")}
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/case_studies" className="dropdown-item">
+                                        <NavLink to="/case_studies" className="dropdown-item" data-fbq-event="NavClick" data-fbq-label="case-studies">
                                             {t("nav.caseStudies")}
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/testimonial" className="dropdown-item">
+                                        <NavLink to="/testimonial" className="dropdown-item" data-fbq-event="NavClick" data-fbq-label="testimonials">
                                             {t("nav.testimonials")}
                                         </NavLink>
                                     </li>
@@ -58,19 +60,19 @@ function Navbar() {
                             </li>
 
                             <li className="nav-item">
-                                <NavLink to="/pricing" className="nav-link">
+                                <NavLink to="/pricing" className="nav-link" data-fbq-event="NavClick" data-fbq-label="pricing">
                                     {t("nav.pricing")}
                                 </NavLink>
                             </li>
 
                             <li className="nav-item">
-                                <NavLink to="/blog" className="nav-link">
+                                <NavLink to="/blog" className="nav-link" data-fbq-event="NavClick" data-fbq-label="blog">
                                     {t("nav.blog")}
                                 </NavLink>
                             </li>
 
                             <li className="nav-item">
-                                <NavLink to="/contact" className="nav-link">
+                                <NavLink to="/contact" className="nav-link" data-fbq-event="NavClick" data-fbq-label="contact">
                                     {t("nav.contact")}
                                 </NavLink>
                             </li>

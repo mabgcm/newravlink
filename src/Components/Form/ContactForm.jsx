@@ -240,7 +240,7 @@ const ContactForm = () => {
                 ></textarea>
 
                 <div className="form-button-container">
-                        <button type="submit" className="btn btn-accent">
+                        <button type="submit" className="btn btn-accent" data-fbq-event="FormSubmitClick">
                             <span className="btn-title">
                                 <span>{t("contactForm.submit")}</span>
                             </span>

@@ -29,7 +29,9 @@ function PricingPlanSection() {
                                         <div className="content">
                                             <h3 className="title-heading">{t("home.pricing.introTitle")}</h3>
                                             <div className="link-wrapper">
-                                                <a href="./contact">{t("common.bookFreeConsultation")}</a>
+                                                <a href="./contact" data-fbq-event="ContactCTA" data-fbq-label="pricing-intro">
+                                                    {t("common.bookFreeConsultation")}
+                                                </a>
                                                 <i className="fa-solid fa-arrow-circle-right"></i>
                                             </div>
                                         </div>

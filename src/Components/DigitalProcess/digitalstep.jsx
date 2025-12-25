@@ -33,7 +33,9 @@ const DigitalProcessSection = () => {
                                                 {t("home.digitalProcess.description")}
                                             </p>
                                             <div className="link-wrapper">
-                                                <a href="./contact">{t("common.getStartedNow")}</a>
+                                                <a href="./contact" data-fbq-event="ContactCTA" data-fbq-label="digital-process">
+                                                    {t("common.getStartedNow")}
+                                                </a>
                                                 <i className="fa-solid fa-arrow-circle-right"></i>
                                             </div>
                                         </div>
