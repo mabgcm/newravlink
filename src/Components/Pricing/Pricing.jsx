@@ -41,7 +41,7 @@ function PricingPlanSection() {
                                         <h4>{t("home.pricing.starter.name")}</h4>
                                         <p>{t("home.pricing.starter.description")}</p>
                                         <div className="d-flex flex-row gspace-1 align-items-center h-100">
-                                            <h3>C$600</h3>
+                                            <h3>$600</h3>
                                             <p>{t("home.pricing.starter.priceSuffix")}</p>
                                         </div>
                                         <a href="#" className="btn btn-accent">
@@ -70,7 +70,7 @@ function PricingPlanSection() {
                                     <h4>{t("home.pricing.growth.name")}</h4>
                                     <p>{t("home.pricing.growth.description")}</p>
                                     <div className="d-flex flex-row gspace-1 align-items-center">
-                                        <h3>C$1,000</h3>
+                                        <h3>$1,000</h3>
                                         <p>{t("home.pricing.growth.priceSuffix")}</p>
                                     </div>
                                     <a href="#" className="btn btn-accent">
@@ -127,7 +127,7 @@ function PricingPlanSection() {
                                         <h4>{t("home.pricing.scale.name")}</h4>
                                         <p>{t("home.pricing.scale.description")}</p>
                                         <div className="d-flex flex-row gspace-1 align-items-center h-100">
-                                            <h3>C$1,700</h3>
+                                            <h3>$1,700</h3>
                                             <p>{t("home.pricing.scale.priceSuffix")}</p>
                                         </div>
                                         <a href="#" className="btn btn-accent">

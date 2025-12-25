@@ -70,10 +70,10 @@
       },
       "monthlyAdBudget": {
         "notSure": "New to ads / not sure",
-        "range1": "0 – 500 CAD",
-        "range2": "500 – 1,500 CAD",
-        "range3": "1,500 – 5,000 CAD",
-        "range4": "5,000+ CAD"
+        "range1": "0 – 500 $",
+        "range2": "500 – 1,500 $",
+        "range3": "1,500 – 5,000 $",
+        "range4": "5,000+ $"
       },
       "goal": {
         "moreCustomers": "Get more customers and appointments",
