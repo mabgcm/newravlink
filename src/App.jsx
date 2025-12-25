@@ -1,4 +1,4 @@
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, useLocation } from "react-router-dom";
 import AppRouter from "./Routers";
 import Navbar from "./Components/Header/header";
 import Footer from "./Components/Footer/footer";
@@ -7,16 +7,19 @@ import { ModalVideoProvider } from "./Components/Video/ModalVideoContext";
 import { NavProvider } from "./Components/Context/NavContext";
 import { LanguageProvider } from "./Components/Context/LanguageContext";
 
-function App(){
+function AppLayout() {
+    const location = useLocation();
+    const hideWhatsApp = location.pathname === "/contact";
+
     return (
-        <Router>
-            <LanguageProvider>
-                <NavProvider>    
-                    <ModalVideoProvider>
-                        <Navbar />
-                        <Sidebar />
-                        <AppRouter />
-                        <Footer />
+        <LanguageProvider>
+            <NavProvider>    
+                <ModalVideoProvider>
+                    <Navbar />
+                    <Sidebar />
+                    <AppRouter />
+                    <Footer />
+                    {!hideWhatsApp && (
                         <a
                             className="whatsapp-float"
                             href="https://wa.me/15063493512"
@@ -27,9 +30,17 @@ function App(){
                         >
                             <i className="fa-brands fa-whatsapp"></i>
                         </a>
-                    </ModalVideoProvider>
-                </NavProvider>
-            </LanguageProvider>
+                    )}
+                </ModalVideoProvider>
+            </NavProvider>
+        </LanguageProvider>
+    );
+}
+
+function App(){
+    return (
+        <Router>
+            <AppLayout />
         </Router>
     );
 }

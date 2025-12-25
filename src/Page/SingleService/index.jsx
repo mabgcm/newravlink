@@ -2,7 +2,6 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import HeadTitle from "../../Components/Head/HeadTitle";
 import BannerInnerSection from "../../Components/Banner/Inner";
-import NewsletterSection from "../../Components/Form/Newsletter";
 import TestimonialSection from "../../Components/Testimonial/testimonial";
 import FaqSection from "../../Components/FAQs/faq";
 import SingleServiceSection from "../../Components/Services/singleservice";
@@ -19,7 +18,6 @@ function SingleServicePage(){
             />
             <SingleServiceSection />
             <TestimonialSection />
-            <NewsletterSection />
             <FaqSection />
         </>
     );

@@ -49,7 +49,13 @@ function ChooseUsSection() {
                                                     <div className="card card-chooseus-cta">
                                                         <h5>{t("home.chooseUs.ctaTitle")}</h5>
                                                         <div className="link-wrapper">
-                                                            <a href="./contact" data-fbq-event="ContactCTA" data-fbq-label="chooseus">
+                                                            <a
+                                                                href="https://wa.me/15063493512"
+                                                                data-fbq-event="WhatsAppClick"
+                                                                data-fbq-label="chooseus"
+                                                                target="_blank"
+                                                                rel="noreferrer"
+                                                            >
                                                                 {t("common.letsTalkStrategy")}
                                                             </a>
                                                             <i className="fa-solid fa-circle-arrow-right"></i>

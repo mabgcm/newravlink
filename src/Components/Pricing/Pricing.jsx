@@ -4,6 +4,22 @@ import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 
 function PricingPlanSection() {
     const { t } = useTranslation();
+    const startCheckout = (plan) => async (e) => {
+        e.preventDefault();
+        try {
+            const res = await fetch("/api/checkout", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ plan }),
+            });
+            const data = await res.json();
+            if (data?.url) {
+                window.location.href = data.url;
+            }
+        } catch (error) {
+            // no-op
+        }
+    };
 
     return (
         <div className="section">
@@ -46,9 +62,9 @@ function PricingPlanSection() {
                                             <h3>$600</h3>
                                             <p>{t("home.pricing.starter.priceSuffix")}</p>
                                         </div>
-                                        <a href="#" className="btn btn-accent">
+                                        <a href="#" className="btn btn-accent" onClick={startCheckout("starter")}>
                                             <div className="btn-title">
-                                                <span>{t("common.viewDetails")}</span>
+                                                <span>{t("common.shopNow")}</span>
                                             </div>
                                             <div className="icon-circle">
                                                 <i className="fa-solid fa-arrow-right"></i>
@@ -75,9 +91,9 @@ function PricingPlanSection() {
                                         <h3>$1,000</h3>
                                         <p>{t("home.pricing.growth.priceSuffix")}</p>
                                     </div>
-                                    <a href="#" className="btn btn-accent">
+                                    <a href="#" className="btn btn-accent" onClick={startCheckout("growth")}>
                                         <div className="btn-title">
-                                            <span>{t("common.viewDetails")}</span>
+                                            <span>{t("common.shopNow")}</span>
                                         </div>
                                         <div className="icon-circle">
                                             <i className="fa-solid fa-arrow-right"></i>
@@ -132,9 +148,9 @@ function PricingPlanSection() {
                                             <h3>$1,700</h3>
                                             <p>{t("home.pricing.scale.priceSuffix")}</p>
                                         </div>
-                                        <a href="#" className="btn btn-accent">
+                                        <a href="#" className="btn btn-accent" onClick={startCheckout("scale")}>
                                             <div className="btn-title">
-                                                <span>{t("common.viewDetails")}</span>
+                                                <span>{t("common.shopNow")}</span>
                                             </div>
                                             <div className="icon-circle">
                                                 <i className="fa-solid fa-arrow-right"></i>

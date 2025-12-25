@@ -9,7 +9,7 @@ const DigitalProcessSection = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="section-wrapper-digital-process">
+        <div className="section-wrapper-digital-process" id="digital-process">
             <div className="digital-process-layout">
                 <div className="section digital-process-banner">
                     <div className="hero-container">

@@ -126,7 +126,7 @@ const ContactForm = () => {
                     <div className="col">
                         <label htmlFor="websiteOrSocial">{t("contactForm.labels.websiteOrSocial")}</label>
                         <input
-                          type="url"
+                          type="text"
                           name="websiteOrSocial"
                           id="websiteOrSocial"
                           placeholder={t("contactForm.placeholders.websiteOrSocial")}

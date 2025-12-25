@@ -13,9 +13,14 @@ function GuideBannerSection() {
                     <div className="hero-container">
                         <AnimateOnScroll animation="fadeInUp" speed="normal">
                             <div className="guide-content">
-                                <a href="./about" className="btn btn-accent w-50">
+                                <a
+                                    href="./contact"
+                                    className="btn btn-accent w-50"
+                                    data-fbq-event="ContactCTA"
+                                    data-fbq-label="guide-banner"
+                                >
                                     <div className="btn-title">
-                                        <span>{t("common.getStarted")}</span>
+                                        <span>{t("common.getStarted2")}</span>
                                     </div>
                                     <div className="icon-circle" >
                                         <i className="fa-solid fa-arrow-right"></i>

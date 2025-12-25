@@ -5,6 +5,8 @@ import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 
 const SingleServiceSection = () => {
     const { t } = useTranslation();
+    const serviceDetails = t("singleServicePage.services", { returnObjects: true });
+    const highlights = t("singleServicePage.highlights", { returnObjects: true });
 
     return (
         <div className="section pb-0">
@@ -24,16 +26,16 @@ const SingleServiceSection = () => {
                                         <AnimateOnScroll animation="fadeInRight" speed="slow">
                                             <div className="sub-heading">
                                                 <i className="fa-regular fa-circle-dot"></i>
-                                                <span>Our Expertise</span>
+                                                <span>{t("singleServicePage.subHeading")}</span>
                                             </div>
                                         </AnimateOnScroll>
                                         <AnimateOnScroll animation="fadeInRight" speed="normal">
                                             <h3 className="title-heading">
-                                                Boost Your Brand with Strategic Social Media Marketing
+                                                {t("singleServicePage.title")}
                                             </h3>
                                         </AnimateOnScroll>
                                         <p>
-                                            Maximize engagement, build loyal communities, and drive conversions across all major platforms lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                                            {t("singleServicePage.description")}
                                         </p>
                                     </div>
                                 </div>
@@ -45,10 +47,20 @@ const SingleServiceSection = () => {
                     <div className="row row-cols-lg-2 row-cols-1 grid-spacer-5">
                         <div className="col col-lg-8">
                             <div className="d-flex flex-column gspace-2">
-                                <h4>Overview</h4>
+                                <h4>{t("singleServicePage.overviewTitle")}</h4>
                                 <p>
-                                    At Marko, we help brands grow through custom-tailored social media marketing strategies that connect with your audience. From content creation to campaign optimization, we make sure your presence on platforms like Instagram, Facebook, LinkedIn, and TikTok stands out. Whether you’re launching a new brand or scaling an existing one, our experts turn social media into a powerful growth engine.
+                                    {t("singleServicePage.overviewDescription")}
                                 </p>
+                                <div className="row row-cols-md-2 row-cols-1 grid-spacer-2">
+                                    {serviceDetails.map((item, index) => (
+                                        <div className="col" key={index}>
+                                            <div className="d-flex flex-column gspace-1">
+                                                <h5>{item.title}</h5>
+                                                <p>{item.description}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
                                 <div className="row row-cols-md-2 row-cols-1 grid-spacer-2 grid-spacer-md-3">
                                     <div className="col">
                                         <div className="image-container">
@@ -71,33 +83,32 @@ const SingleServiceSection = () => {
                                 </div>
 
                                 <div className="card service-included">
-                                    <h4>What's Included</h4>
+                                    <h4>{t("singleServicePage.includedTitle")}</h4>
                                     <div className="underline-accent-short"></div>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis ac odio et efficitur. Proin velit neque, sollicitudin nec purus eu, suscipit feugiat tellus.
+                                        {t("singleServicePage.includedDescription")}
                                     </p>
                                     <div className="row row-cols-md-2 row-cols-1 grid-spacer-2">
                                         <div className="col">
                                             <ul className="check-list">
-                                                <li>Platform Strategy & Planning</li>
-                                                <li>Creative Content Production</li>
-                                                <li>Paid Ads Management</li>
-                                                <li>Community engagement</li>
+                                                {t("singleServicePage.includedLeft", { returnObjects: true }).map((item, index) => (
+                                                    <li key={index}>{item}</li>
+                                                ))}
                                             </ul>
                                         </div>
                                         <div className="col">
                                             <ul className="check-list">
-                                                <li>Perfomance Reporting & Analytics</li>
-                                                <li>Influencer Collaborations</li>
-                                                <li>Social Listening & Trend Monitoring</li>
+                                                {t("singleServicePage.includedRight", { returnObjects: true }).map((item, index) => (
+                                                    <li key={index}>{item}</li>
+                                                ))}
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
 
-                                <h4>Why Choose Marko for Social Media Marketing?</h4>
+                                <h4>{t("singleServicePage.whyTitle")}</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis ac odio et efficitur. Proin velit neque, sollicitudin nec purus eu, suscipit feugiat tellus.
+                                    {t("singleServicePage.whyDescription")}
                                 </p>
 
                                 <div className="row row-cols-2">
@@ -106,15 +117,15 @@ const SingleServiceSection = () => {
                                             <div className="d-flex flex-column flex-md-row align-items-center text-center text-md-start gspace-1">
                                                 <i className="fa-regular fa-2x fa-circle-check accent-color"></i>
                                                 <div className="d-flex flex-column gspace-0">
-                                                    <h5>Result-Driven Campaigns</h5>
-                                                    <p>Focused on reach, engagement, and ROI</p>
+                                                    <h5>{highlights[0].title}</h5>
+                                                    <p>{highlights[0].description}</p>
                                                 </div>
                                             </div>
                                             <div className="d-flex flex-column flex-md-row align-items-center text-center text-md-start gspace-1">
                                                 <i className="fa-regular fa-2x fa-circle-check accent-color"></i>
                                                 <div className="d-flex flex-column gspace-0">
-                                                    <h5>Dedicated Team</h5>
-                                                    <p>Experts in every platform you use</p>
+                                                    <h5>{highlights[1].title}</h5>
+                                                    <p>{highlights[1].description}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -124,15 +135,15 @@ const SingleServiceSection = () => {
                                             <div className="d-flex flex-column flex-md-row align-items-center text-center text-md-start gspace-1">
                                                 <i className="fa-regular fa-2x fa-circle-check accent-color"></i>
                                                 <div className="d-flex flex-column gspace-0">
-                                                    <h5>Tailored strategies</h5>
-                                                    <p>No one-size-fits-all, we build for your brand</p>
+                                                    <h5>{highlights[2].title}</h5>
+                                                    <p>{highlights[2].description}</p>
                                                 </div>
                                             </div>
                                             <div className="d-flex flex-column flex-md-row align-items-center text-center text-md-start gspace-1">
                                                 <i className="fa-regular fa-2x fa-circle-check accent-color"></i>
                                                 <div className="d-flex flex-column gspace-0">
-                                                    <h5>Analytics & insights</h5>
-                                                    <p>Make smart decision with real data</p>
+                                                    <h5>{highlights[3].title}</h5>
+                                                    <p>{highlights[3].description}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -157,12 +168,10 @@ const SingleServiceSection = () => {
                                 </div>
                                 <div className="cta-service-banner">
                                     <div className="spacer"></div>
-                                    <h3 className="title-heading">Transform Your Business with Marko!</h3>
-                                    <p>
-                                        Take your digital marketing to the next level with data-driven strategies and innovative solutions. Let's create something amazing together!
-                                    </p>
+                                    <h3 className="title-heading">{t("singleServicePage.ctaTitle")}</h3>
+                                    <p>{t("singleServicePage.ctaDescription")}</p>
                                     <div className="link-wrapper">
-                                        <a href="about">Read More</a>
+                                        <a href="about">{t("singleServicePage.ctaLink")}</a>
                                         <i className="fa-solid fa-circle-arrow-right"></i>
                                     </div>
                                 </div>

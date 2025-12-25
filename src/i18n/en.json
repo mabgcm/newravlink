@@ -22,6 +22,8 @@
   },
   "common": {
     "getStarted": "Get Started",
+    "getStarted1": "Learn How in 4 Steps",
+    "getStarted2": "Contact Us Now",
     "getFreeConsultation": "Get Free Consultation",
     "letsTalkStrategy": "Let's Talk Strategy",
     "viewDetails": "View Details",
@@ -29,6 +31,7 @@
     "getFreeStrategyCall": "Get a Free Strategy Call",
     "getStartedNow": "Get Started Now",
     "viewAllArticles": "View All Articles",
+    "shopNow": "Shop Now",
     "readMore": "Read More"
   },
   "contactForm": {
@@ -224,6 +227,111 @@
       "description": "In the fast-paced digital world, choosing the right marketing partner makes all the difference. At Ravlink, we do not just create campaigns, we craft strategies that deliver measurable success.",
       "ctaTitle": "Partner with Ravlink and take your brand to the next level."
     }
+  },
+  "singleServicePage": {
+    "subHeading": "Our Expertise",
+    "title": "Digital Services That Grow Your Business",
+    "description": "Explore our six core services built to generate leads, revenue, and long-term brand value.",
+    "overviewTitle": "Overview",
+    "overviewDescription": "We provide end-to-end digital marketing built around performance. Each service is tailored to your goals and aligned to measurable outcomes.",
+    "services": [
+      {
+        "title": "Performance Marketing",
+        "description": "Conversion-focused ad strategy and optimization to drive qualified leads and sales."
+      },
+      {
+        "title": "Social Media Growth",
+        "description": "Content, community, and platform strategy that builds attention and trust."
+      },
+      {
+        "title": "SEO Strategy",
+        "description": "Technical, on-page, and content SEO to increase organic visibility and demand."
+      },
+      {
+        "title": "Content Marketing",
+        "description": "Messaging and creative that turn your brand into the obvious choice."
+      },
+      {
+        "title": "PPC & Paid Ads",
+        "description": "High-intent campaigns across Google and social platforms with clear ROI tracking."
+      },
+      {
+        "title": "Brand Strategy",
+        "description": "Positioning, offer clarity, and brand identity that makes you stand out."
+      }
+    ],
+    "includedTitle": "What's Included",
+    "includedDescription": "A full-stack growth system from strategy to execution, reporting, and iteration.",
+    "includedLeft": [
+      "Strategic planning & research",
+      "Creative production & copywriting",
+      "Paid media setup & management",
+      "Conversion rate optimization"
+    ],
+    "includedRight": [
+      "Analytics & performance reporting",
+      "Landing page / website support",
+      "Ongoing testing & optimization"
+    ],
+    "whyTitle": "Why Choose Ravlink?",
+    "whyDescription": "We focus on measurable growth, transparent reporting, and sustainable performance.",
+    "highlights": [
+      {
+        "title": "Result-Driven Strategy",
+        "description": "Every decision is backed by data and KPIs."
+      },
+      {
+        "title": "Specialist Team",
+        "description": "Experts across creative, ads, and optimization."
+      },
+      {
+        "title": "Custom Plans",
+        "description": "Built around your goals, industry, and budget."
+      },
+      {
+        "title": "Clear Reporting",
+        "description": "Know what is working and why it works."
+      }
+    ],
+    "ctaTitle": "Ready to Scale with Ravlink?",
+    "ctaDescription": "Let’s build a growth plan tailored to your business.",
+    "ctaLink": "Read More"
+  },
+  "faq": {
+    "subHeading": "Frequently Asked Questions",
+    "heading": "Got Questions? We've Got Answers.",
+    "items": [
+      {
+        "id": 1,
+        "question": "What services does Ravlink offer?",
+        "answer": "We specialize in digital marketing, including branding, social media management, content strategy, paid ads, and analytics-driven campaigns."
+      },
+      {
+        "id": 2,
+        "question": "How long does it take to see results?",
+        "answer": "Paid ads can deliver quicker wins, while SEO and content typically show steady growth within 3–6 months."
+      },
+      {
+        "id": 3,
+        "question": "Do you work with businesses of all sizes?",
+        "answer": "Yes. We collaborate with startups, SMEs, and enterprise-level companies across various industries."
+      },
+      {
+        "id": 4,
+        "question": "Can I request a custom digital marketing package?",
+        "answer": "Absolutely. We tailor our services to your business goals, budget, and timeline."
+      },
+      {
+        "id": 5,
+        "question": "How do I know which service is right for me?",
+        "answer": "During our initial consultation, we'll assess your current strategy and recommend the best path forward."
+      },
+      {
+        "id": 6,
+        "question": "Do you provide monthly performance reports?",
+        "answer": "Yes. Every month, you'll receive a clear report outlining progress, key metrics, and next steps."
+      }
+    ]
   },
   "pageTitles": {
     "about": "About - Ravlink - Digital Marketing Agency",

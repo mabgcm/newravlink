@@ -22,6 +22,8 @@
   },
   "common": {
     "getStarted": "Hemen Başlayın",
+    "getStarted1": "4 Adımda Başlayın",
+    "getStarted2": "Hemen Bize Ulaşın",
     "getFreeConsultation": "Ücretsiz Ön Görüşme Alın",
     "letsTalkStrategy": "Stratejinizi Konuşalım",
     "viewDetails": "Detayları İncele",
@@ -29,6 +31,7 @@
     "getFreeStrategyCall": "Ücretsiz Strateji Görüşmesi",
     "getStartedNow": "Hemen Başlayın",
     "viewAllArticles": "Tüm İçerikleri Gör",
+    "shopNow": "Paketi Satın Al",
     "readMore": "Devamını Keşfet"
   },
   "contactForm": {
@@ -224,6 +227,111 @@
       "description": "Dijital dünyada başarı, doğru strateji ve doğru partnerle mümkün olur. Ravlink’te odağımız; kısa vadeli kampanyalar değil, markalara ölçülebilir sonuçlar ve sürdürülebilir büyüme kazandıran uzun vadeli stratejiler üretmektir.",
       "ctaTitle": "Ravlink ile stratejik bir ortaklık kurun, markanızı bir üst seviyeye taşıyın."
     }
+  },
+  "singleServicePage": {
+    "subHeading": "Uzmanlığımız",
+    "title": "İşinizi Büyüten Dijital Hizmetler",
+    "description": "Lead, satış ve uzun vadeli marka değeri üreten 6 temel hizmetimizi keşfedin.",
+    "overviewTitle": "Genel Bakış",
+    "overviewDescription": "Uçtan uca performans odaklı dijital pazarlama sunuyoruz. Her hizmet hedeflerinize göre özelleştirilir ve ölçülebilir sonuçlara odaklanır.",
+    "services": [
+      {
+        "title": "Performans Odaklı Pazarlama",
+        "description": "Nitelikli lead ve satış getiren reklam stratejisi ve optimizasyon."
+      },
+      {
+        "title": "Sosyal Medyada Büyüme",
+        "description": "Dikkat ve güven oluşturan içerik, topluluk ve platform stratejisi."
+      },
+      {
+        "title": "SEO Stratejisi",
+        "description": "Organik görünürlüğü ve talebi artıran teknik ve içerik SEO."
+      },
+      {
+        "title": "İçerik Pazarlaması",
+        "description": "Markanızı tercih edilir kılan mesaj ve kreatif üretimi."
+      },
+      {
+        "title": "PPC & Ücretli Reklamlar",
+        "description": "Google ve sosyal platformlarda net ROI takibiyle kampanyalar."
+      },
+      {
+        "title": "Marka Stratejisi",
+        "description": "Konumlandırma, teklif netliği ve güçlü marka kimliği."
+      }
+    ],
+    "includedTitle": "Neler Dahil?",
+    "includedDescription": "Stratejiden uygulamaya, raporlamadan optimizasyona tam kapsamlı büyüme sistemi.",
+    "includedLeft": [
+      "Strateji planlama & araştırma",
+      "Kreatif üretim & metin yazımı",
+      "Reklam kurulum & yönetimi",
+      "Dönüşüm oranı optimizasyonu"
+    ],
+    "includedRight": [
+      "Analitik & performans raporlama",
+      "Landing page / web desteği",
+      "Sürekli test & iyileştirme"
+    ],
+    "whyTitle": "Neden Ravlink?",
+    "whyDescription": "Ölçülebilir büyüme, şeffaf raporlama ve sürdürülebilir performansa odaklanırız.",
+    "highlights": [
+      {
+        "title": "Sonuç Odaklı Strateji",
+        "description": "Her karar veriye ve KPI’lara dayanır."
+      },
+      {
+        "title": "Uzman Ekip",
+        "description": "Kreatif, reklam ve optimizasyonda uzman kadro."
+      },
+      {
+        "title": "Özel Planlar",
+        "description": "Hedefinize, sektörünüze ve bütçenize göre."
+      },
+      {
+        "title": "Net Raporlama",
+        "description": "Ne işe yarıyor, neden işe yarıyor net görürsünüz."
+      }
+    ],
+    "ctaTitle": "Ravlink ile Büyümeye Hazır mısınız?",
+    "ctaDescription": "İşinize özel büyüme planını birlikte oluşturalım.",
+    "ctaLink": "Devamını Oku"
+  },
+  "faq": {
+    "subHeading": "Sık Sorulan Sorular",
+    "heading": "Sorularınız mı var? Yanıtlarımız hazır.",
+    "items": [
+      {
+        "id": 1,
+        "question": "Ravlink hangi hizmetleri sunuyor?",
+        "answer": "Dijital pazarlama, marka yönetimi, sosyal medya, içerik stratejisi, reklam yönetimi ve performans analitiği alanlarında uzmanız."
+      },
+      {
+        "id": 2,
+        "question": "Sonuçları ne kadar sürede görürüm?",
+        "answer": "Reklamlar daha hızlı sonuç verirken SEO ve içerik çalışmaları genellikle 3–6 ay içinde düzenli büyüme sağlar."
+      },
+      {
+        "id": 3,
+        "question": "Her ölçekte işletmeyle çalışıyor musunuz?",
+        "answer": "Evet. Startup’lardan KOBİ’lere ve kurumsal markalara kadar farklı sektörlerle çalışıyoruz."
+      },
+      {
+        "id": 4,
+        "question": "Özel bir dijital pazarlama paketi isteyebilir miyim?",
+        "answer": "Elbette. Hedeflerinize, bütçenize ve zaman planınıza göre özelleştiriyoruz."
+      },
+      {
+        "id": 5,
+        "question": "Hangi hizmetin bana uygun olduğunu nasıl anlarım?",
+        "answer": "İlk görüşmede mevcut durumunuzu analiz eder ve en doğru stratejiyi öneririz."
+      },
+      {
+        "id": 6,
+        "question": "Aylık performans raporu alıyor muyum?",
+        "answer": "Evet. Her ay performans, metrikler ve sonraki adımları içeren net bir rapor paylaşıyoruz."
+      }
+    ]
   },
   "pageTitles": {
     "about": "Ravlink Hakkında | Sonuç Odaklı Dijital Pazarlama Ajansı",

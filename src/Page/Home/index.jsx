@@ -12,7 +12,7 @@ import TestimonialSection from "../../Components/Testimonial/testimonial";
 import DigitalProcessSection from "../../Components/DigitalProcess/digitalstep";
 import PricingPlanSection from "../../Components/Pricing/Pricing";
 // import PartnershipSection from "../../Components/Partnership/Partnership";
-import BlogSection from "../../Components/Blog/blog";
+// import BlogSection from "../../Components/Blog/blog";
 
 function HomePage() {
     const { t } = useTranslation();
@@ -31,7 +31,7 @@ function HomePage() {
             <TestimonialSection />
             <DigitalProcessSection />
             <PricingPlanSection />
-            <BlogSection />
+            {/* <BlogSection /> */}
         </>
     );
 }

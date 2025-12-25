@@ -1,7 +1,10 @@
 import React from "react";
-import { faqData } from "../../Data/FaqData";
+import { useTranslation } from "react-i18next";
 
 const FaqSection = () => {
+  const { t } = useTranslation();
+  const faqData = t("faq.items", { returnObjects: true });
+
   return (
     <div className="section">
         <div className="hero-container">
@@ -10,9 +13,9 @@ const FaqSection = () => {
                     <div className="faq-title-container">
                         <div className="sub-heading">
                             <i className="fa-regular fa-circle-dot"></i>
-                            <span>Frequently Asked Questions</span>
+                            <span>{t("faq.subHeading")}</span>
                         </div>
-                        <h2 className="title-heading">Got Questions? We've Got Answers.</h2>
+                        <h2 className="title-heading">{t("faq.heading")}</h2>
                     </div>
                 </div>
                 <div className="col col-lg-7">
