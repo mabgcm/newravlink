@@ -1,7 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { partnerships } from "../../Data/PartnershipData";
 
 const PartnershipListSection = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="section">
         <div className="hero-container">
@@ -9,10 +12,10 @@ const PartnershipListSection = () => {
                 <div className="d-flex flex-column gspace-2 justify-content-center align-items-center">
                     <div className="sub-heading">
                         <i className="fa-regular fa-circle-dot"></i>
-                        <span>Client & Partnership</span>
+                        <span>{t("partnershipPage.subHeading")}</span>
                     </div>
                     <h2 className="title-heading heading-container heading-container-wide">
-                    Strong Partnerships, Proven Success
+                    {t("partnershipPage.heading")}
                     </h2>
                 </div>
 

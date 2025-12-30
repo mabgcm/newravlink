@@ -1,10 +1,12 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { partnerships } from "../../Data/PartnershipData";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 const PartnershipSection = () => {
+    const { t } = useTranslation();
 
     return (
         <div className="section-partner">
@@ -16,15 +18,12 @@ const PartnershipSection = () => {
                         <div className="row row-cols-lg-2 row-cols-1 align-items-center px-5 position-relative z-2">
                             <div className="col">
                                 <div className="d-flex flex-column justify-content-start pe-lg-3 pe-0">
-                                    <h3 className="title-heading">Powering Success for Top Brands</h3>
+                                    <h3 className="title-heading">{t("home.partnership.title")}</h3>
                                 </div>
                             </div>
                             <div className="col">
                                 <div className="d-flex flex-column ps-lg-3 ps-0">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ex ligula, varius at rutrum et, finibus sed felis. 
-                                        Quisque eget tincidunt lectus. Sed quis diam sed neque mattis feugiat.
-                                    </p>
+                                    <p>{t("home.partnership.description")}</p>
                                 </div>
                             </div>
                         </div>

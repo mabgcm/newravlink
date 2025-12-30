@@ -126,6 +126,10 @@
       "counterTitle": "Years of Experience on Digital Marketing Services",
       "counterText": "Helping businesses grow through proven strategies, creative execution, and measurable digital marketing results across competitive industries."
     },
+    "partnership": {
+      "title": "Powering Success for Top Brands",
+      "description": "We partner with ambitious businesses to build strong brands, effective campaigns, and long-term growth through measurable digital strategies."
+    },
     "chooseUs": {
       "subHeading": "Why Choose Ravlink",
       "heading": "Your Success is Our Mission",
@@ -397,6 +401,10 @@
       "title": "Testimonials",
       "currentPage": "Testimonials"
     }
+  },
+  "partnershipPage": {
+    "subHeading": "Client & Partnership",
+    "heading": "Strong Partnerships, Proven Success"
   },
   "data": {
     "chooseUs": [

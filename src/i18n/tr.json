@@ -22,7 +22,7 @@
   },
   "common": {
     "getStarted": "Hemen Başlayın",
-    "getStarted1": "4 Adımda Başlayın",
+    "getStarted1": "4 Adımda Nasıl Çalışıyoruz?",
     "getStarted2": "Hemen Bize Ulaşın",
     "getFreeConsultation": "Ücretsiz Ön Görüşme Alın",
     "letsTalkStrategy": "Stratejinizi Konuşalım",
@@ -101,11 +101,11 @@
   "home": {
     "headTitle": "Anasayfa - Ravlink - Dijital Pazarlama Ajansi",
     "banner": {
-      "title": "Markaları büyüten web siteleri ve satışa dönüşen reklamlar üretiyoruz.",
+      "title": "İşini Sen Yap, İngilizce Reklamlarını Biz Yapalım.",
       "videoText": "Güçlü bir dijital varlığın, modern işletmeler için nasıl daha fazla müşteri, daha fazla güven ve sürdürülebilir büyüme sağladığını keşfedin.",
-      "description": "Ravlink, markaların dijitalde görünürlük kazanmasını, doğru müşterilere ulaşmasını ve ölçülebilir sonuçlarla büyümesini sağlayan tam hizmet dijital ajanstır.",
-      "awardWinning": "Ödüllü",
-      "agency": "Dijital Ajans"
+      "description": "Ravlink, ABD ve Kanada’da yaşayan Türk işletme sahipleri içinFacebook / Instagram reklamları, web sitesi ve Google Business yönetimi yapar.Sen işini Türkçe anlat, biz müşterilerine İngilizce tanıtırız.",
+      "awardWinning": "Kanada Merkezli",
+      "agency": "Türk Reklam Ajansı"
     },
     "expertise": {
       "cardTitle": "Dijitalde Bir Üst Seviyeye Çıkmaya Hazır mısınız?",
@@ -125,6 +125,10 @@
       ],
       "counterTitle": "Yıllık Dijital Pazarlama Deneyimi",
       "counterText": "Kanıtlanmış stratejiler ve ölçülebilir sonuçlarla, işletmelerin dijitalde sürdürülebilir şekilde büyümesine katkı sağlıyoruz."
+    },
+    "partnership": {
+      "title": "Kuzey Amerika’daki Türk İşletmeleriyle Büyüyoruz",
+      "description": "Türk esnaf ve işletmelerinin dijitalde daha görünür olması, İngilizce pazarlama bariyerini aşması ve daha fazla müşteriye ulaşması için birlikte çalışıyoruz. Reklam yönetimi, sosyal medya, Google ve içerik süreçlerini uçtan uca biz üstleniyoruz."
     },
     "chooseUs": {
       "subHeading": "Neden Ravlink?",
@@ -159,9 +163,9 @@
       "description": "Ravlink’in uzman dijital pazarlama çözümleriyle, işletmelerin nasıl sürdürülebilir şekilde büyüdüğünü keşfedin."
     },
     "digitalProcess": {
-      "subHeading": "Nasıl Çalışır?",
-      "heading": "Gerçek Büyümeye Giden Net Adımlar",
-      "description": "Markaların dijitalde büyümesini sağlayan, kanıtlanmış ve şeffaf bir süreç izleriz. Stratejiden uygulamaya kadar attığımız her adım, ölçülebilir sonuçlar üretmek için tasarlanır."
+      "subHeading": "Nasıl Çalışıyoruz?",
+      "heading": "İngilizce Bilmene Gerek Yok. Süreci Biz Yönetiyoruz.",
+      "description": "ABD & Kanada’daki Türk işletme sahipleri için reklam ve dijital tanıtımı uçtan uca biz üstleniyoruz. Sen işine odaklan, müşteriyi biz getiriyoruz.."
     },
     "pricing": {
       "subHeading": "Paketler & Fiyatlandırma",
@@ -398,6 +402,10 @@
       "currentPage": "Yorumlar"
     }
   },
+  "partnershipPage": {
+    "subHeading": "Müşteri ve İş Ortaklığı",
+    "heading": "Güçlü Ortaklıklar, Kanıtlanmış Başarı"
+  },
   "data": {
     "chooseUs": [
       {
@@ -507,20 +515,20 @@
     ],
     "digitalSteps": [
       {
-        "title": "Keşif ve Analiz",
-        "content": "İşinizi, hedef kitlenizi ve mevcut dijital varlığınızı derinlemesine analiz ederiz. İçeriklerinizi, rakiplerinizi ve büyüme potansiyelinizi net şekilde ortaya koyarız."
+        "title": "Keşif ve Dinleme",
+        "content": "İşinizi, sunduğunuz hizmetleri ve müşteri kitlenizi Türkçe konuşarak öğreniyoruz. Sorunlarınızı dinliyor, hedefinizi netleştiriyoruz."
       },
       {
         "title": "Strateji ve Planlama",
-        "content": "Hedeflerinize ve bütçenize uygun; içerik, reklam ve mesajlaşmayı bir araya getiren, sonuç odaklı bir sosyal medya stratejisi oluştururuz."
+        "content": "İngilizce reklam metinleri, hedef kitle seçimi ve içerik planını hazırlıyoruz. Size uygun aylık bütçe ve büyüme yol haritası çıkarıyoruz."
       },
       {
-        "title": "Yayına Alma ve Optimizasyon",
-        "content": "İçerikler ve kampanyalar yayına alınır. Performansı anlık olarak takip eder, testler yapar ve etkileşim ile dönüşümü artırmak için sürekli optimize ederiz."
+        "title": "Yayına Alma ve Yönetim",
+        "content": "Facebook/Instagram ve Google reklamlarınızı kuruyor, içerikleri hazırlıyoruz. Yayın sürecini biz takip ediyor, her gün kontrol edip geliştiriyoruz."
       },
       {
         "title": "Ölçümleme ve Büyüme",
-        "content": "Elde edilen verileri analiz eder, en iyi performans gösteren stratejileri ölçekler ve sürdürülebilir büyüme için süreci sürekli geliştiririz."
+        "content": "Gelen mesajları, dönüşümleri ve performansı analiz ediyoruz. Ne işe yarıyorsa onu büyütüyor, ROI’nizi (yatırım geri dönüşünü) artırıyoruz."
       }
     ],
     "testimonials": [
