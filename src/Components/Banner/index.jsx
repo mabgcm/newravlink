@@ -109,7 +109,7 @@ function BannerHomeSection() {
                     <div className="hero-container position-relative">
                         <div className="d-flex flex-column gspace-2">
                             <AnimateOnScroll animation="fadeInLeft" speed="normal">
-                                <h1 className="title-heading-banner" style={{ color: "#000000" }}>
+                                <h1 className="title-heading-banner">
                                     {t("home.banner.title")}
                                 </h1>
                             </AnimateOnScroll>
@@ -119,18 +119,14 @@ function BannerHomeSection() {
                                     <div className="banner-video-content order-lg-1 order-2">
                                         <div className="d-flex flex-column flex-lg-row text-lg-start text-center align-items-center gspace-5">
                                             <VideoButton videoUrl="https://www.youtube.com/embed/_dT3-aAdV9Q?autoplay=1" />
-                                            <p style={{ color: "#000000" }}>
-                                                {t("home.banner.videoText")}
-                                            </p>
+                                            <p>{t("home.banner.videoText")}</p>
                                         </div>
                                     </div>
                                 </AnimateOnScroll>
 
                                 <AnimateOnScroll animation="fadeInRight" speed="normal">
                                     <div className="banner-content order-lg-2 order-1">
-                                        <p style={{ color: "#000000" }}>
-                                            {t("home.banner.description")}
-                                        </p>
+                                        <p>{t("home.banner.description")}</p>
                                         <div className="d-flex flex-md-row flex-column justify-content-center justify-content-lg-start align-self-center align-self-lg-start gspace-3">
                                             <a href="#digital-process" className="btn btn-accent">
                                                 <div className="btn-title">
@@ -147,8 +143,8 @@ function BannerHomeSection() {
                                                     <img src="/assets/images/shorty.jpg" alt="Reviewer" className="avatar" />
                                                 </div>
                                                 <div className="detail">
-                                                    <span style={{ color: "#000000" }}>{t("home.banner.awardWinning")}</span>
-                                                    <span style={{ color: "#000000" }}>{t("home.banner.agency")}</span>
+                                                    <span>{t("home.banner.awardWinning")}</span>
+                                                    <span>{t("home.banner.agency")}</span>
                                                 </div>
                                             </div>
                                         </div>

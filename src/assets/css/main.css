@@ -79,7 +79,7 @@
 :root {
     --primary: #D1D1D1;
     --secondary: #040404;
-    --text-color: #8B8B8B;
+    --text-color: #FFFFFF;
     --accent-color: #5e17eb;
     --accent-color-2: #FFFFFF;
     --accent-color-3: #1F1F1F;
@@ -147,7 +147,7 @@
 .lightmode {
     --primary: #1F1F1F;
     --secondary: #FFFAFA;
-    --text-color: #4A4A4A;
+    --text-color: #000000;
     --accent-color: #5e17eb;
     --accent-color-2: #000000;
     --accent-color-3: #e3caff;
