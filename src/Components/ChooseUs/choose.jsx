@@ -50,7 +50,7 @@ function ChooseUsSection() {
                                                         <h5>{t("home.chooseUs.ctaTitle")}</h5>
                                                         <div className="link-wrapper">
                                                             <a
-                                                                href="https://wa.me/15063493512"
+                                                                href="https://wa.me/17059904504"
                                                                 data-fbq-event="WhatsAppClick"
                                                                 data-fbq-label="chooseus"
                                                                 target="_blank"
