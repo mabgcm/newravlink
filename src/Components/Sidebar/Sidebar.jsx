@@ -103,11 +103,11 @@ function Sidebar() {
                 <li><NavLink to="/blog" onClick={closeSidebar}>{t("nav.blog")}</NavLink></li>
                 <li><NavLink to="/contact" onClick={closeSidebar}>{t("nav.contact")}</NavLink></li>
                 <li className="sidebar-phone">
-                    <a href="tel:+17059904504" aria-label="Call +1(705)9904504">
+                    <a href="tel:+15063493512" aria-label="Call +1(506)3493512">
                         <span className="icon-circle">
                             <i className="fa-solid fa-phone-volume"></i>
                         </span>
-                        <span>+1(705)9904504</span>
+                        <span>+1(506)3493512</span>
                     </a>
                 </li>
             </ul>
