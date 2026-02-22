@@ -58,7 +58,7 @@ const Footer = () => {
                                         <h5>{t("footer.contactInfo")}</h5>
                                         <ul className="contact-list">
                                             <li>info@ravlink.ca</li>
-                                            <li>+1(506)3493512</li>
+                                            <li>+1(437) 219-6444</li>
                                             <li>10 Honeycrisp Cres, Vaughan, Ontario L4K 0M7</li>
                                         </ul>
                                         <div className="d-flex flex-column gspace-1">
