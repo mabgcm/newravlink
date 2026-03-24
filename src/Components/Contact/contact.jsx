@@ -1,10 +1,44 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import ContactForm from "../Form/ContactForm";
 
+const QUESTIONNAIRE_URL = "https://script.google.com/macros/s/AKfycbxedG_GH-sV5clLOAJi_k7NBAF5uvtSfgSvFhZBlfCFw3k25BCx0E6WmWU58a-82WAJ/exec";
+
 const ContactSection = () => {
+    const { t } = useTranslation();
     return (
         <div className="section">
             <div className="hero-container">
+
+                {/* Questionnaire banner */}
+                <div className="form-layout-wrapper" style={{ marginBottom: "40px" }}>
+                    <div className="card form-layout" style={{ flexDirection: "row", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "20px" }}>
+                        <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                            <div className="sub-heading" style={{ alignSelf: "flex-start" }}>
+                                <i className="fa-regular fa-circle-dot"></i>
+                                <span>{t("questionnaire.badge")}</span>
+                            </div>
+                            <h4 className="title-heading">{t("questionnaire.heading")}</h4>
+                            <p style={{ margin: 0 }}>{t("questionnaire.description")}</p>
+                        </div>
+                        <a
+                            href={QUESTIONNAIRE_URL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn btn-accent"
+                            data-fbq-event="QuestionnaireCTA"
+                            data-fbq-label="contact-page"
+                        >
+                            <div className="btn-title">
+                                <span>{t("questionnaire.button")}</span>
+                            </div>
+                            <div className="icon-circle">
+                                <i className="fa-solid fa-arrow-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
                 <div className="row row-cols-lg-2 row-cols-1 g-5">
                     <div className="col col-lg-5">
                         <div className="contact-title-wrapper">

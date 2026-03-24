@@ -20,6 +20,12 @@
     "privacy": "Gizlilik Politikası",
     "copyright": "© {{year}} Ravlink. Tüm hakları saklıdır."
   },
+  "questionnaire": {
+    "badge": "Yeni Müşteri",
+    "heading": "Anketimizi Doldurun",
+    "description": "İşletmenizi daha iyi anlayabilmemiz için anketimizi doldurun. Sadece 3–5 dakika sürer.",
+    "button": "Ankete Başla"
+  },
   "common": {
     "getStarted": "Hemen Başlayın",
     "getStarted1": "4 Adımda Nasıl Çalışıyoruz?",

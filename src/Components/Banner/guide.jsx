@@ -14,9 +14,11 @@ function GuideBannerSection() {
                         <AnimateOnScroll animation="fadeInUp" speed="normal">
                             <div className="guide-content">
                                 <a
-                                    href="./contact"
+                                    href="https://script.google.com/macros/s/AKfycbxedG_GH-sV5clLOAJi_k7NBAF5uvtSfgSvFhZBlfCFw3k25BCx0E6WmWU58a-82WAJ/exec"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="btn btn-accent w-50"
-                                    data-fbq-event="ContactCTA"
+                                    data-fbq-event="QuestionnaireCTA"
                                     data-fbq-label="guide-banner"
                                 >
                                     <div className="btn-title">

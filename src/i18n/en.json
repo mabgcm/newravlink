@@ -20,6 +20,12 @@
     "privacy": "Privacy Policy",
     "copyright": "© {{year}} Ravlink. All Rights Reserved."
   },
+  "questionnaire": {
+    "badge": "New Customer",
+    "heading": "Fill Out Our Questionnaire",
+    "description": "Help us understand your business better. Takes just 3–5 minutes.",
+    "button": "Start Questionnaire"
+  },
   "common": {
     "getStarted": "Get Started",
     "getStarted1": "Learn How in 4 Steps",
