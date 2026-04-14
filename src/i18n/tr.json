@@ -178,9 +178,9 @@
       "customerType": {
         "label": "Daha çok kime satış yapıyorsunuz?",
         "options": {
-          "b2c": "Ağırlıklı B2C",
-          "b2b": "Ağırlıklı B2B",
-          "her-ikisi": "Hem B2B hem B2C"
+          "b2c": "Daha çok bireysel müşterilere",
+          "b2b": "Daha çok diğer işletmelere",
+          "her-ikisi": "Hem bireysel müşterilere hem işletmelere"
         }
       },
       "geoTarget": {
@@ -243,10 +243,10 @@
       "hasWebsite": {
         "label": "Web sitenizin durumu nedir?",
         "options": {
-          "yes-happy": "Var ve memnunum",
-          "yes-unhappy": "Var ama geliştirilmesi gerekiyor",
-          "in-progress": "Yapım aşamasında",
-          "no": "Henüz web sitem yok"
+          "yes-happy": "Web sitemiz var ve memnunuz",
+          "yes-unhappy": "Web sitemiz var ama geliştirilmesi gerekiyor",
+          "in-progress": "Web sitemiz şu anda yapılıyor",
+          "no": "Henüz bir web sitemiz yok"
         }
       },
       "socialPlatforms": {

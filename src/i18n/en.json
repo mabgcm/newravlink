@@ -178,9 +178,9 @@
       "customerType": {
         "label": "Who do you sell to?",
         "options": {
-          "b2c": "Mostly B2C",
-          "b2b": "Mostly B2B",
-          "her-ikisi": "Both B2B and B2C"
+          "b2c": "Mostly individual customers",
+          "b2b": "Mostly other businesses",
+          "her-ikisi": "Both individual customers and businesses"
         }
       },
       "geoTarget": {
@@ -243,10 +243,10 @@
       "hasWebsite": {
         "label": "What is your website status?",
         "options": {
-          "yes-happy": "Yes, and it works well",
-          "yes-unhappy": "Yes, but it needs work",
-          "in-progress": "Currently being built",
-          "no": "No website yet"
+          "yes-happy": "We have a website and we are happy with it",
+          "yes-unhappy": "We have a website but it needs work",
+          "in-progress": "Our website is currently being built",
+          "no": "We do not have a website yet"
         }
       },
       "socialPlatforms": {
