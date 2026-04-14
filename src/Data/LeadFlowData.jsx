@@ -151,7 +151,7 @@ export const leadFlowQuestions = [
   {
     id: "urgencyReason",
     step: 3,
-    type: "single",
+    type: "multi",
     required: true,
     options: [
       { value: "yeni-acilis", labelKey: "leadWizard.questions.urgencyReason.options.yeni-acilis" },
@@ -321,7 +321,7 @@ export const leadFlowQuestions = [
   {
     id: "previousAgencyIssue",
     step: 5,
-    type: "single",
+    type: "multi",
     required: false,
     showIf: (answers) => answers.previousAgency === "yes-bad",
     options: [

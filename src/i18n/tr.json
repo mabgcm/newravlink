@@ -230,7 +230,7 @@
         }
       },
       "urgencyReason": {
-        "label": "Bu konunun şimdi öncelikli olmasının sebebi ne?",
+        "label": "Bu konunun şimdi öncelikli olmasının sebepleri neler? Uygun olanların hepsini seçin.",
         "options": {
           "yeni-acilis": "Yeni açılış veya lansman",
           "sezon-basliyor": "Sezon başlıyor",
@@ -335,7 +335,7 @@
         }
       },
       "previousAgencyIssue": {
-        "label": "O ajansla yaşanan temel sorun neydi?",
+        "label": "O ajansla yaşadığınız sorunlar nelerdi? Uygun olanların hepsini seçin.",
         "options": {
           "iletisim-koptu": "İletişim koptu",
           "sonuc-cikmadi": "Sonuç çıkmadı",

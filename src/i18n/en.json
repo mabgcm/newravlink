@@ -230,7 +230,7 @@
         }
       },
       "urgencyReason": {
-        "label": "Why is this urgent now?",
+        "label": "Why is this urgent now? Select all that apply.",
         "options": {
           "yeni-acilis": "New launch or opening",
           "sezon-basliyor": "A season is starting",
@@ -335,7 +335,7 @@
         }
       },
       "previousAgencyIssue": {
-        "label": "What was the main issue with that agency?",
+        "label": "What issues did you have with that agency? Select all that apply.",
         "options": {
           "iletisim-koptu": "Communication broke down",
           "sonuc-cikmadi": "Results did not come",
