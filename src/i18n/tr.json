@@ -104,6 +104,256 @@
       }
     }
   },
+  "leadWizard": {
+    "badge": "Ön Görüşme Akışı",
+    "requiredBadge": "Zorunlu",
+    "progressLabel": "Ön Eleme Formu",
+    "progressTitle": "İşinizi daha net anlamamız için birkaç soru",
+    "stepCounter": "Adım {{current}} / {{total}}",
+    "stageCounter": "Aşama {{current}} / {{total}}",
+    "nav": {
+      "next": "Sonraki",
+      "back": "Geri",
+      "submit": "Gönder",
+      "submitting": "Gönderiliyor..."
+    },
+    "errors": {
+      "required": "{{field}} zorunludur.",
+      "submit": "Yanıtlarınız şu anda gönderilemedi. Lütfen tekrar deneyin."
+    },
+    "result": {
+      "title": "Bilgilerinizi aldık",
+      "message": "İşletmenizle ilgili detaylar bize ulaştı. Akışı inceleyip sizin için doğru sonraki adımla geri döneceğiz."
+    },
+    "steps": {
+      "step1": {
+        "title": "Kimsiniz?",
+        "description": "Önce temel iletişim bilgilerini alalım; bu talebin hangi işletmeye ait olduğunu netleştirelim."
+      },
+      "step2": {
+        "title": "Nasıl bir iş modeliniz var?",
+        "description": "İş modeliniz ve pazar yapınız, sonraki aşamada hangi soruların gerçekten gerekli olduğunu belirler."
+      },
+      "step3": {
+        "title": "Ne başarmak istiyorsunuz?",
+        "description": "Hedefleriniz, hangi büyüme kanallarına ve önceliklere odaklanmamız gerektiğini gösterir."
+      },
+      "step4": {
+        "title": "Mevcut durumunuz ne?",
+        "description": "Şu an neyin kurulu olduğunu, neyin eksik kaldığını ve nerede iyileştirme gerektiğini burada görüyoruz."
+      },
+      "step5": {
+        "title": "Karar süreciniz nasıl işliyor?",
+        "description": "Bütçe, karar alma biçimi ve önceki ajans deneyimi uyumu ve hazırlık seviyesini anlamamıza yardımcı olur."
+      }
+    },
+    "questions": {
+      "name": {
+        "label": "Adınız soyadınız",
+        "placeholder": "Ad Soyad"
+      },
+      "businessName": {
+        "label": "İşletme adı",
+        "placeholder": "Marka veya şirket adı"
+      },
+      "email": {
+        "label": "E-posta adresi",
+        "placeholder": "isim@isletme.com"
+      },
+      "phone": {
+        "label": "Telefon numarası",
+        "placeholder": "Size ulaşabileceğimiz telefon"
+      },
+      "businessType": {
+        "label": "İşletmenizi en iyi hangi kategori tanımlar?",
+        "options": {
+          "local-business": "Yerel işletme",
+          "ecommerce": "E-ticaret",
+          "professional-service": "Profesyonel hizmet",
+          "food-beverage": "Yeme içme",
+          "home-service": "Ev / saha hizmeti",
+          "other": "Diğer"
+        }
+      },
+      "customerType": {
+        "label": "Daha çok kime satış yapıyorsunuz?",
+        "options": {
+          "b2c": "Ağırlıklı B2C",
+          "b2b": "Ağırlıklı B2B",
+          "her-ikisi": "Hem B2B hem B2C"
+        }
+      },
+      "geoTarget": {
+        "label": "Hedef coğrafyanız nedir?",
+        "options": {
+          "local": "Yerel bölge",
+          "national": "Ülke geneli",
+          "international": "Uluslararası"
+        }
+      },
+      "ecommercePlatform": {
+        "label": "Hangi e-ticaret altyapısını kullanıyorsunuz?",
+        "options": {
+          "shopify": "Shopify",
+          "woocommerce": "WooCommerce",
+          "other": "Diğer",
+          "none": "Henüz yayında değil"
+        }
+      },
+      "googleBusiness": {
+        "label": "Google Business profilinizin durumu nedir?",
+        "options": {
+          "active": "Aktif ve yönetiliyor",
+          "inactive": "Var ama aktif kullanılmıyor",
+          "none": "Henüz kurulmadı"
+        }
+      },
+      "goals": {
+        "label": "Şu anda hangi hedefler daha önemli?",
+        "options": {
+          "more-leads": "Daha fazla lead toplamak",
+          "increase-sales": "Satışları artırmak",
+          "brand-awareness": "Marka bilinirliği oluşturmak",
+          "social-media": "Sosyal medyayı büyütmek",
+          "seo": "SEO görünürlüğünü artırmak",
+          "paid-ads": "Ücretli reklamları başlatmak veya iyileştirmek"
+        }
+      },
+      "successMetric": {
+        "label": "Başarıyı hangi ölçüte göre değerlendireceksiniz?",
+        "options": {
+          "lead-count": "Lead sayısı",
+          "sales-revenue": "Satış veya ciro",
+          "follower-growth": "Takipçi artışı",
+          "website-traffic": "Web sitesi trafiği",
+          "bilmiyorum": "Henüz tam emin değilim"
+        }
+      },
+      "urgencyReason": {
+        "label": "Bu konunun şimdi öncelikli olmasının sebebi ne?",
+        "options": {
+          "yeni-acilis": "Yeni açılış veya lansman",
+          "sezon-basliyor": "Sezon başlıyor",
+          "rakip-baskisi": "Rakipler baskı yaratıyor",
+          "buyume-hedefi": "Net bir büyüme hedefimiz var",
+          "onceki-ajans-birakti": "Önceki ajans süreci bıraktı",
+          "other": "Diğer"
+        }
+      },
+      "hasWebsite": {
+        "label": "Web sitenizin durumu nedir?",
+        "options": {
+          "yes-happy": "Var ve memnunum",
+          "yes-unhappy": "Var ama geliştirilmesi gerekiyor",
+          "in-progress": "Yapım aşamasında",
+          "no": "Henüz web sitem yok"
+        }
+      },
+      "socialPlatforms": {
+        "label": "Bugün aktif kullandığınız sosyal platformlar hangileri?",
+        "options": {
+          "instagram": "Instagram",
+          "facebook": "Facebook",
+          "tiktok": "TikTok",
+          "linkedin": "LinkedIn",
+          "none": "Hiçbiri"
+        }
+      },
+      "socialManager": {
+        "label": "Sosyal medyayı şu anda kim yönetiyor?",
+        "options": {
+          "ben-kendim": "Ben yönetiyorum",
+          "ekip-uyesi": "Ekipten biri yönetiyor",
+          "baska-ajans": "Başka bir ajans yönetiyor",
+          "kimse-aktif-degil": "Düzenli yöneten kimse yok"
+        }
+      },
+      "hasRunAds": {
+        "label": "Daha önce reklam çıktınız mı?",
+        "options": {
+          "yes": "Evet",
+          "no": "Hayır"
+        }
+      },
+      "adsResult": {
+        "label": "Bu reklamların sonucu nasıl oldu?",
+        "options": {
+          "cok-iyi": "Oldukça iyiydi",
+          "orta": "Karışıktı / ortaydı",
+          "kotu-para-heba": "Kötüydü, para boşa gitmiş gibi hissettik",
+          "ne-yaptigimi-bilmiyordum": "Net bir strateji olmadan reklam çıktık"
+        }
+      },
+      "contentAssets": {
+        "label": "Elinizde nasıl içerik materyalleri var?",
+        "options": {
+          "evet-profesyonel": "Profesyonel içerik ve marka materyalleri var",
+          "evet-telefon-cekimi": "Daha çok telefon çekimi içerik var",
+          "cok-az": "Çok sınırlı içerik var",
+          "hic-yok": "Neredeyse hiç hazır içerik yok"
+        }
+      },
+      "analyticsSetup": {
+        "label": "Analytics ve takip altyapınız ne durumda?",
+        "options": {
+          "evet-aktif": "Takip aktif çalışıyor",
+          "kurulu-ama-kullanmiyorum": "Kurulu ama doğru kullanılmıyor",
+          "hayir": "Hiç kurulu değil"
+        }
+      },
+      "budgetRange": {
+        "label": "Aylık toplam ne kadar bütçe gerçekçi görünüyor?",
+        "options": {
+          "under-500": "Toplam 500 $ altı",
+          "500-1500": "Toplam 500 $ - 1.500 $",
+          "1500-3000": "Toplam 1.500 $ - 3.000 $",
+          "over-3000": "Toplam 3.000 $ üstü"
+        }
+      },
+      "involvementLevel": {
+        "label": "Süreçte ne kadar dahil olmak istersiniz?",
+        "options": {
+          "hands-off": "Büyük ölçüde bize bırakmak istiyorum",
+          "approval-only": "Ana kararları onaylamak isterim",
+          "collaborative": "Yakın ve ortak çalışmak isterim"
+        }
+      },
+      "decisionMaker": {
+        "label": "Pazarlama kararının son onayı kimde?",
+        "options": {
+          "ben-karar-vericiyim": "Son kararı ben veriyorum",
+          "ortak-var-birlikte-karar": "Ortağımla birlikte karar veriyoruz",
+          "ust-yonetime-danismam-lazim": "Üst yönetim / sahip onayı gerekiyor"
+        }
+      },
+      "previousAgency": {
+        "label": "Daha önce başka bir ajansla çalıştınız mı?",
+        "options": {
+          "no": "Hayır",
+          "yes-good": "Evet, genel olarak iyiydi",
+          "yes-bad": "Evet, kötü bir deneyimdi"
+        }
+      },
+      "previousAgencyIssue": {
+        "label": "O ajansla yaşanan temel sorun neydi?",
+        "options": {
+          "iletisim-koptu": "İletişim koptu",
+          "sonuc-cikmadi": "Sonuç çıkmadı",
+          "fiyat-performans-kotuydu": "Fiyat / performans zayıftı",
+          "sozlesme-sorunu": "Sözleşme veya süreç sorunu vardı",
+          "other": "Diğer"
+        }
+      },
+      "competitorAwareness": {
+        "label": "Rakiplerinizi ne kadar yakından takip ediyorsunuz?",
+        "options": {
+          "evet-onlar-daha-iyi": "Evet, bizden daha ilerideler",
+          "evet-benzer-durumdayiz": "Evet, benzer durumdayız",
+          "hayir-takip-etmiyorum": "Hayır, düzenli takip etmiyorum"
+        }
+      }
+    }
+  },
   "home": {
     "headTitle": "Anasayfa - Ravlink - Dijital Pazarlama Ajansi",
     "banner": {

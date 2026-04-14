@@ -104,6 +104,256 @@
       }
     }
   },
+  "leadWizard": {
+    "badge": "Lead Intake",
+    "requiredBadge": "Required",
+    "progressLabel": "Qualification Flow",
+    "progressTitle": "Tell us how your business is growing",
+    "stepCounter": "Step {{current}} / {{total}}",
+    "stageCounter": "Stage {{current}} / {{total}}",
+    "nav": {
+      "next": "Next",
+      "back": "Back",
+      "submit": "Submit",
+      "submitting": "Sending..."
+    },
+    "errors": {
+      "required": "{{field}} is required.",
+      "submit": "We could not send your answers right now. Please try again."
+    },
+    "result": {
+      "title": "Your answers are in",
+      "message": "We received your business details. We will review the flow and get back to you with the right next step."
+    },
+    "steps": {
+      "step1": {
+        "title": "Who are you?",
+        "description": "Start with the core contact details so we know who this project belongs to."
+      },
+      "step2": {
+        "title": "What kind of business is this?",
+        "description": "We use your business model and market shape to decide which later questions matter."
+      },
+      "step3": {
+        "title": "What do you want to achieve?",
+        "description": "Your goals define which growth channels and priorities should lead the conversation."
+      },
+      "step4": {
+        "title": "What is your current setup?",
+        "description": "This step shows us what already exists and what needs to be built or fixed."
+      },
+      "step5": {
+        "title": "How do you make decisions?",
+        "description": "Budget, ownership, and past agency experience help us understand fit and readiness."
+      }
+    },
+    "questions": {
+      "name": {
+        "label": "Your name",
+        "placeholder": "Full name"
+      },
+      "businessName": {
+        "label": "Business name",
+        "placeholder": "Company or brand name"
+      },
+      "email": {
+        "label": "Email address",
+        "placeholder": "name@business.com"
+      },
+      "phone": {
+        "label": "Phone number",
+        "placeholder": "Best phone number to reach you"
+      },
+      "businessType": {
+        "label": "Which business type best describes you?",
+        "options": {
+          "local-business": "Local business",
+          "ecommerce": "E-commerce",
+          "professional-service": "Professional service",
+          "food-beverage": "Food & beverage",
+          "home-service": "Home service",
+          "other": "Other"
+        }
+      },
+      "customerType": {
+        "label": "Who do you sell to?",
+        "options": {
+          "b2c": "Mostly B2C",
+          "b2b": "Mostly B2B",
+          "her-ikisi": "Both B2B and B2C"
+        }
+      },
+      "geoTarget": {
+        "label": "What is your target geography?",
+        "options": {
+          "local": "Local area",
+          "national": "National",
+          "international": "International"
+        }
+      },
+      "ecommercePlatform": {
+        "label": "Which e-commerce platform are you on?",
+        "options": {
+          "shopify": "Shopify",
+          "woocommerce": "WooCommerce",
+          "other": "Other",
+          "none": "Not live yet"
+        }
+      },
+      "googleBusiness": {
+        "label": "What is the status of your Google Business Profile?",
+        "options": {
+          "active": "Active and managed",
+          "inactive": "Exists but not active",
+          "none": "Not set up"
+        }
+      },
+      "goals": {
+        "label": "Which goals matter right now?",
+        "options": {
+          "more-leads": "Generate more leads",
+          "increase-sales": "Increase sales",
+          "brand-awareness": "Build brand awareness",
+          "social-media": "Grow social media",
+          "seo": "Improve SEO visibility",
+          "paid-ads": "Run or improve paid ads"
+        }
+      },
+      "successMetric": {
+        "label": "How will you judge success?",
+        "options": {
+          "lead-count": "Lead volume",
+          "sales-revenue": "Sales or revenue",
+          "follower-growth": "Follower growth",
+          "website-traffic": "Website traffic",
+          "bilmiyorum": "I am not sure yet"
+        }
+      },
+      "urgencyReason": {
+        "label": "Why is this urgent now?",
+        "options": {
+          "yeni-acilis": "New launch or opening",
+          "sezon-basliyor": "A season is starting",
+          "rakip-baskisi": "Competitors are pushing ahead",
+          "buyume-hedefi": "We have a growth target",
+          "onceki-ajans-birakti": "Our previous agency dropped off",
+          "other": "Other"
+        }
+      },
+      "hasWebsite": {
+        "label": "What is your website status?",
+        "options": {
+          "yes-happy": "Yes, and it works well",
+          "yes-unhappy": "Yes, but it needs work",
+          "in-progress": "Currently being built",
+          "no": "No website yet"
+        }
+      },
+      "socialPlatforms": {
+        "label": "Which social platforms are active today?",
+        "options": {
+          "instagram": "Instagram",
+          "facebook": "Facebook",
+          "tiktok": "TikTok",
+          "linkedin": "LinkedIn",
+          "none": "None of them"
+        }
+      },
+      "socialManager": {
+        "label": "Who manages your social media now?",
+        "options": {
+          "ben-kendim": "I handle it myself",
+          "ekip-uyesi": "A team member handles it",
+          "baska-ajans": "Another agency handles it",
+          "kimse-aktif-degil": "No one is managing it consistently"
+        }
+      },
+      "hasRunAds": {
+        "label": "Have you run ads before?",
+        "options": {
+          "yes": "Yes",
+          "no": "No"
+        }
+      },
+      "adsResult": {
+        "label": "How did those ads perform?",
+        "options": {
+          "cok-iyi": "Very well",
+          "orta": "Mixed or average",
+          "kotu-para-heba": "Poor, it felt like wasted spend",
+          "ne-yaptigimi-bilmiyordum": "We were running ads without clarity"
+        }
+      },
+      "contentAssets": {
+        "label": "What kind of content assets do you already have?",
+        "options": {
+          "evet-profesyonel": "Professional brand assets",
+          "evet-telefon-cekimi": "Mostly phone-shot content",
+          "cok-az": "Very limited content",
+          "hic-yok": "Almost nothing ready"
+        }
+      },
+      "analyticsSetup": {
+        "label": "What is your analytics and tracking status?",
+        "options": {
+          "evet-aktif": "Tracking is active",
+          "kurulu-ama-kullanmiyorum": "Installed, but not used properly",
+          "hayir": "No tracking setup"
+        }
+      },
+      "budgetRange": {
+        "label": "What monthly total budget feels realistic?",
+        "options": {
+          "under-500": "Under $500 total",
+          "500-1500": "$500 - $1,500 total",
+          "1500-3000": "$1,500 - $3,000 total",
+          "over-3000": "$3,000+ total"
+        }
+      },
+      "involvementLevel": {
+        "label": "How involved do you want to be?",
+        "options": {
+          "hands-off": "I want a mostly hands-off setup",
+          "approval-only": "I want to approve key decisions",
+          "collaborative": "I want close collaboration"
+        }
+      },
+      "decisionMaker": {
+        "label": "Who makes the final marketing decision?",
+        "options": {
+          "ben-karar-vericiyim": "I make the final decision",
+          "ortak-var-birlikte-karar": "A partner and I decide together",
+          "ust-yonetime-danismam-lazim": "I need approval from leadership"
+        }
+      },
+      "previousAgency": {
+        "label": "Have you worked with another agency before?",
+        "options": {
+          "no": "No",
+          "yes-good": "Yes, and it was mostly positive",
+          "yes-bad": "Yes, and it was a bad experience"
+        }
+      },
+      "previousAgencyIssue": {
+        "label": "What was the main issue with that agency?",
+        "options": {
+          "iletisim-koptu": "Communication broke down",
+          "sonuc-cikmadi": "Results did not come",
+          "fiyat-performans-kotuydu": "Poor value for the cost",
+          "sozlesme-sorunu": "Contract or process problems",
+          "other": "Other"
+        }
+      },
+      "competitorAwareness": {
+        "label": "How aware are you of your competitors?",
+        "options": {
+          "evet-onlar-daha-iyi": "Yes, they seem ahead of us",
+          "evet-benzer-durumdayiz": "Yes, we are at a similar level",
+          "hayir-takip-etmiyorum": "No, I do not track them closely"
+        }
+      }
+    }
+  },
   "home": {
     "headTitle": "Home - Ravlink - Digital Marketing Agency",
     "banner": {

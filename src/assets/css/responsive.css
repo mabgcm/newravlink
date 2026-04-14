@@ -614,6 +614,47 @@
         width: 100%;
     }
 
+    .wizard-choice-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .wizard-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .wizard-back-button {
+        width: 100%;
+    }
+
+    .form-layout {
+        padding: 28px 20px 28px 20px;
+    }
+
+    .wizard-progress-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .wizard-step-description,
+    .wizard-progress-copy {
+        font-size: var(--font-size-sm);
+    }
+
+    .wizard-choice-card {
+        min-height: 64px;
+        padding: 12px 14px;
+        border-radius: 18px;
+    }
+
+    .wizard-choice-copy {
+        font-size: var(--font-size-xs);
+    }
+
+    .wizard-shell {
+        gap: 20px;
+    }
+
     .logo-container {
         width: 100%;
     }
