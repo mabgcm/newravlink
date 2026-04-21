@@ -13,7 +13,7 @@ function AppLayout() {
 
     return (
         <LanguageProvider>
-            <NavProvider>    
+            <NavProvider>
                 <ModalVideoProvider>
                     <Navbar />
                     <Sidebar />
@@ -22,7 +22,7 @@ function AppLayout() {
                     {!hideWhatsApp && (
                         <a
                             className="whatsapp-float"
-                            href="https://wa.me/15063493512?text=Merhaba%2C%20ABD%20%2F%20Kanada%E2%80%99da%20i%C5%9Fletmem%20var.%20%C4%B0ngilizce%20reklam%20ve%20online%20tan%C4%B1t%C4%B1m%20i%C3%A7in%20bilgi%20almak%20istiyorum."
+                            href="https://wa.me/14372196444?text=Merhaba%2C%20ABD%20%2F%20Kanada%E2%80%99da%20i%C5%9Fletmem%20var.%20%C4%B0ngilizce%20reklam%20ve%20online%20tan%C4%B1t%C4%B1m%20i%C3%A7in%20bilgi%20almak%20istiyorum."
                             aria-label="Chat on WhatsApp"
                             target="_blank"
                             rel="noreferrer"
@@ -37,7 +37,7 @@ function AppLayout() {
     );
 }
 
-function App(){
+function App() {
     return (
         <Router>
             <AppLayout />
