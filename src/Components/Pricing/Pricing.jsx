@@ -1,11 +1,33 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
+import { trackMetaCustom, trackMetaStandard } from "../../analytics/metaPixel";
+
+const PLAN_META = {
+    starter: { name: "Starter", value: 600, currency: "CAD" },
+    growth: { name: "Growth", value: 1000, currency: "CAD" },
+    scale: { name: "Scale", value: 1700, currency: "CAD" },
+};
 
 function PricingPlanSection() {
     const { t } = useTranslation();
     const startCheckout = (plan) => async (e) => {
         e.preventDefault();
+        const planMeta = PLAN_META[plan];
+
+        trackMetaCustom("PricingPlanClick", {
+            plan,
+            plan_name: planMeta?.name,
+            value: planMeta?.value,
+            currency: planMeta?.currency,
+        });
+        trackMetaStandard("InitiateCheckout", {
+            content_name: planMeta?.name,
+            content_category: "pricing_plan",
+            value: planMeta?.value,
+            currency: planMeta?.currency,
+        });
+
         try {
             const res = await fetch("/api/checkout", {
                 method: "POST",
@@ -14,15 +36,30 @@ function PricingPlanSection() {
             });
             const data = await res.json();
             if (data?.url) {
+                trackMetaCustom("CheckoutStarted", {
+                    plan,
+                    plan_name: planMeta?.name,
+                    value: planMeta?.value,
+                    currency: planMeta?.currency,
+                });
                 window.location.href = data.url;
+                return;
             }
-        } catch (error) {
-            // no-op
+
+            trackMetaCustom("FailedCheckout", {
+                plan,
+                reason: data?.message || "missing_checkout_url",
+            });
+        } catch {
+            trackMetaCustom("FailedCheckout", {
+                plan,
+                reason: "request_failed",
+            });
         }
     };
 
     return (
-        <div className="section">
+        <div className="section" data-pixel-section="pricing">
             <div className="hero-container">
                 <div className="d-flex flex-column justify-content-center text-center gspace-5">
                     <AnimateOnScroll animation="fadeInUp" speed="normal">
@@ -62,7 +99,7 @@ function PricingPlanSection() {
                                             <h3>$600</h3>
                                             <p>{t("home.pricing.starter.priceSuffix")}</p>
                                         </div>
-                                        <a href="#" className="btn btn-accent" onClick={startCheckout("starter")}>
+                                        <a href="#" className="btn btn-accent" onClick={startCheckout("starter")} data-fbq-event="PricingCTA" data-fbq-label="starter">
                                             <div className="btn-title">
                                                 <span>{t("common.shopNow")}</span>
                                             </div>
@@ -91,7 +128,7 @@ function PricingPlanSection() {
                                         <h3>$1,000</h3>
                                         <p>{t("home.pricing.growth.priceSuffix")}</p>
                                     </div>
-                                    <a href="#" className="btn btn-accent" onClick={startCheckout("growth")}>
+                                    <a href="#" className="btn btn-accent" onClick={startCheckout("growth")} data-fbq-event="PricingCTA" data-fbq-label="growth">
                                         <div className="btn-title">
                                             <span>{t("common.shopNow")}</span>
                                         </div>
@@ -148,7 +185,7 @@ function PricingPlanSection() {
                                             <h3>$1,700</h3>
                                             <p>{t("home.pricing.scale.priceSuffix")}</p>
                                         </div>
-                                        <a href="#" className="btn btn-accent" onClick={startCheckout("scale")}>
+                                        <a href="#" className="btn btn-accent" onClick={startCheckout("scale")} data-fbq-event="PricingCTA" data-fbq-label="scale">
                                             <div className="btn-title">
                                                 <span>{t("common.shopNow")}</span>
                                             </div>

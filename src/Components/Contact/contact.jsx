@@ -3,7 +3,7 @@ import LeadWizard from "../LeadWizard/LeadWizard";
 
 const ContactSection = () => {
     return (
-        <div className="section">
+        <div className="section" data-pixel-section="contact">
             <div className="hero-container">
                 <div className="row row-cols-lg-2 row-cols-1 g-5">
                     <div className="col col-lg-5 order-2 order-lg-1">
@@ -27,7 +27,9 @@ const ContactSection = () => {
                                     </div>
                                     <div className="d-grid">
                                         <span>Phone Number</span>
-                                        <h5>(437) 219-6444</h5>
+	                                        <h5>
+                                                <a href="tel:+14372196444" data-fbq-label="contact-card-phone">(437) 219-6444</a>
+                                            </h5>
                                     </div>
                                 </div>
                                 <div className="d-flex flex-column flex-md-row align-items-center text-md-start text-center gspace-2">
@@ -40,7 +42,9 @@ const ContactSection = () => {
                                     </div>
                                     <div className="d-grid">
                                         <span>Email Address</span>
-                                        <h5>info@ravlink.ca</h5>
+	                                        <h5>
+                                                <a href="mailto:info@ravlink.ca" data-fbq-label="contact-card-email">info@ravlink.ca</a>
+                                            </h5>
                                     </div>
                                 </div>
                                 <div className="d-flex flex-column flex-md-row align-items-center text-md-start text-center gspace-2">

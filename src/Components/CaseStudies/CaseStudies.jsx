@@ -8,7 +8,7 @@ const CaseStudiesSection = ({ noPadding }) => {
     const { t } = useTranslation();
 
     return (
-        <div className={`section ${noPadding ? "p-0" : ""}`}>
+        <div className={`section ${noPadding ? "p-0" : ""}`} data-pixel-section="case-studies">
             <div className="hero-container">
                 <div className="case-studies-layout">
                     <div className="card card-case-studies">

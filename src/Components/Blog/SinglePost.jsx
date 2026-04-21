@@ -6,7 +6,7 @@ const BlogPostSection = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="section">
+    <div className="section" data-pixel-section="blog-article">
         <div className="hero-container">
             <div className="row row-cols-lg-2 row-cols-1 grid-spacer-5">
                 <div className="col col-lg-4 order-2 order-lg-1">

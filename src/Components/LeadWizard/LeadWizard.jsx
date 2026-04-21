@@ -9,6 +9,7 @@ import {
 } from "../../Data/LeadFlowData";
 import WizardResult from "./WizardResult";
 import WizardStep from "./WizardStep";
+import { trackMetaCustom, trackMetaStandard } from "../../analytics/metaPixel";
 
 const STEP_TRANSITION_MS = 260;
 
@@ -32,6 +33,8 @@ function LeadWizard() {
   const [isComplete, setIsComplete] = useState(false);
   const timeoutRef = useRef(null);
   const frameRef = useRef(null);
+  const hasTrackedStartRef = useRef(false);
+  const hasTrackedFirstInteractionRef = useRef(false);
 
   const totalStages = leadFlowSteps.length;
   const visibleScreens = getVisibleScreens(answers);
@@ -73,6 +76,16 @@ function LeadWizard() {
   }, [answers]);
 
   useEffect(() => {
+    if (!hasTrackedStartRef.current) {
+      hasTrackedStartRef.current = true;
+      trackMetaCustom("LeadWizardStart", {
+        total_screens: totalScreens,
+        total_stages: totalStages,
+      });
+    }
+  }, [totalScreens, totalStages]);
+
+  useEffect(() => {
     return () => {
       if (timeoutRef.current) {
         window.clearTimeout(timeoutRef.current);
@@ -105,6 +118,17 @@ function LeadWizard() {
   };
 
   const handleAnswerChange = (questionId, value) => {
+    if (!hasTrackedFirstInteractionRef.current) {
+      hasTrackedFirstInteractionRef.current = true;
+      trackMetaCustom("ContactFormStart", {
+        form_name: "lead_wizard",
+        first_question_id: questionId,
+      });
+      trackMetaCustom("LeadWizardFirstInteraction", {
+        question_id: questionId,
+      });
+    }
+
     setAnswers((previousAnswers) => ({
       ...previousAnswers,
       [questionId]: value,
@@ -137,7 +161,24 @@ function LeadWizard() {
     });
 
     setErrors(nextErrors);
-    return Object.keys(nextErrors).length === 0;
+    const isValid = Object.keys(nextErrors).length === 0;
+
+    if (!isValid) {
+      trackMetaCustom("LeadWizardValidationError", {
+        screen: currentScreenIndex + 1,
+        stage: currentStage,
+        errors_count: Object.keys(nextErrors).length,
+      });
+
+      if (currentScreenIndex === totalScreens - 1) {
+        trackMetaCustom("ContactFormSubmitFailure", {
+          form_name: "lead_wizard",
+          reason: "validation",
+        });
+      }
+    }
+
+    return isValid;
   };
 
   const handleNext = () => {
@@ -145,6 +186,11 @@ function LeadWizard() {
       return;
     }
 
+    trackMetaCustom("LeadWizardStepComplete", {
+      screen: currentScreenIndex + 1,
+      stage: currentStage,
+      question_id: currentQuestion?.id,
+    });
     moveToStep(currentScreenIndex + 1, "forward");
   };
 
@@ -170,6 +216,13 @@ function LeadWizard() {
       return;
     }
 
+    trackMetaCustom("ContactFormSubmitClick", {
+      form_name: "lead_wizard",
+      total_screens: totalScreens,
+    });
+    trackMetaCustom("LeadWizardFinalSubmitAttempt", {
+      total_screens: totalScreens,
+    });
     setIsSubmitting(true);
     setSubmitError("");
 
@@ -184,8 +237,25 @@ function LeadWizard() {
         throw new Error("Request failed");
       }
 
+      trackMetaStandard("Lead", {
+        content_name: "Lead Wizard",
+        form_name: "lead_wizard",
+      });
+      trackMetaCustom("ContactFormSubmitSuccess", {
+        form_name: "lead_wizard",
+      });
+      trackMetaCustom("LeadWizardSubmitSuccess", {
+        total_screens: totalScreens,
+      });
       setIsComplete(true);
     } catch {
+      trackMetaCustom("ContactFormSubmitFailure", {
+        form_name: "lead_wizard",
+        reason: "request_failed",
+      });
+      trackMetaCustom("LeadWizardSubmitFailure", {
+        reason: "request_failed",
+      });
       setSubmitError("leadWizard.errors.submit");
     } finally {
       setIsSubmitting(false);
@@ -270,7 +340,7 @@ function LeadWizard() {
               type="submit"
               className="btn btn-accent"
               disabled={isTransitioning || isSubmitting}
-              data-fbq-event="LeadWizardSubmitClick"
+              data-fbq-event={currentScreenIndex === totalScreens - 1 ? "LeadWizardSubmitClick" : "LeadWizardNextClick"}
               data-fbq-label={`screen-${currentScreenIndex + 1}`}
             >
               <span className="btn-title">

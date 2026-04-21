@@ -7,7 +7,7 @@ const Footer = () => {
     const footerServices = t("data.footerServices", { returnObjects: true });
 
     return (
-        <div className="section-footer">
+        <div className="section-footer" data-pixel-section="footer">
             <div className="bg-footer-wrapper">
                 <div className="bg-footer">
                     <div className="hero-container position-relative z-2">
@@ -57,8 +57,8 @@ const Footer = () => {
                                     <div className="footer-contact-container">
                                         <h5>{t("footer.contactInfo")}</h5>
                                         <ul className="contact-list">
-                                            <li>info@ravlink.ca</li>
-                                            <li>+1(437) 219-6444</li>
+	                                            <li><a href="mailto:info@ravlink.ca" data-fbq-label="footer-email">info@ravlink.ca</a></li>
+	                                            <li><a href="tel:+14372196444" data-fbq-label="footer-phone">+1(437) 219-6444</a></li>
                                             <li>10 Honeycrisp Cres, Vaughan, Ontario L4K 0M7</li>
                                         </ul>
                                         <div className="d-flex flex-column gspace-1">

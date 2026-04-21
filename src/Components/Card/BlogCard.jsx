@@ -1,10 +1,16 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
+import { trackMetaCustom } from "../../analytics/metaPixel";
 
 function BlogCard({ blog }) {
     const { t } = useTranslation();
     const handleClick = () => {
+        trackMetaCustom("BlogReadMoreClick", {
+            content_name: blog.title,
+            content_category: blog.category,
+            href: blog.link,
+        });
         window.location.href = blog.link;
     };
 
@@ -29,11 +35,11 @@ function BlogCard({ blog }) {
                                 <span className="meta-data">{blog.category}</span>
                             </div>
                         </div>
-                        <a href={blog.link} className="blog-link">
+                        <a href={blog.link} className="blog-link" data-fbq-event="BlogArticleClick" data-fbq-label={blog.title}>
                             {blog.title}
                         </a>
                         <p>{blog.excerpt}</p>
-                        <a href={blog.link} className="read-more">
+                        <a href={blog.link} className="read-more" data-fbq-event="BlogReadMoreClick" data-fbq-label={blog.title}>
                             {t("common.readMore")}
                         </a>
                     </div>

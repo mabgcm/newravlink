@@ -8,7 +8,7 @@ function BlogSection() {
     const { t } = useTranslation();
 
     return (
-        <div className="section">
+        <div className="section" data-pixel-section="blog">
             <div className="hero-container">
                 <div className="d-flex flex-column gspace-5">
                     <div className="row row-cols-lg-2 row-cols-1 grid-spacer-5 m-0">

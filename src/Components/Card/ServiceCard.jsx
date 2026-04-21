@@ -22,7 +22,7 @@ const ServiceCard = ({icon, title, content, link, speed = ""}) => {
                         </div>
                     </div>
                     <p>{content}</p>
-                    <a href={link} className="btn btn-accent">
+                    <a href={link} className="btn btn-accent" data-fbq-event="ServiceCTA" data-fbq-label={title}>
                         <div className="btn-title">
                             <span>{t("common.viewDetails")}</span>
                         </div>

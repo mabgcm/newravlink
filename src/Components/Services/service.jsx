@@ -9,7 +9,7 @@ function ServiceSection(){
 
     return(
         <>
-            <div className="section">
+            <div className="section" data-pixel-section="services">
                 <div className="hero-container">
                     <div className="d-flex flex-column justify-content-center text-center gspace-5">
                         <div className="d-flex flex-column justify-content-center text-center gspace-2">

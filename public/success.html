@@ -4,6 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payment Successful</title>
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '668246525257469');
+      fbq('track', 'PageView');
+
+      const planMap = {
+        starter: { name: 'Starter', value: 600 },
+        growth: { name: 'Growth', value: 1000 },
+        scale: { name: 'Scale', value: 1700 }
+      };
+      const plan = new URLSearchParams(window.location.search).get('plan');
+      const planMeta = planMap[plan] || {};
+
+      fbq('track', 'Purchase', {
+        content_name: planMeta.name || 'Checkout',
+        content_category: 'pricing_plan',
+        value: planMeta.value,
+        currency: 'CAD'
+      });
+      fbq('trackCustom', 'CheckoutCompleted', {
+        plan: plan,
+        plan_name: planMeta.name,
+        value: planMeta.value,
+        currency: 'CAD',
+        page_path: window.location.pathname
+      });
+    </script>
+    <!-- End Meta Pixel Code -->
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -38,6 +74,10 @@
     </style>
   </head>
   <body>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+           src="https://www.facebook.com/tr?id=668246525257469&ev=PageView&noscript=1"/>
+    </noscript>
     <div class="card">
       <h1>Payment Successful</h1>
       <p>Thanks! Your payment has been received. We will reach out shortly.</p>

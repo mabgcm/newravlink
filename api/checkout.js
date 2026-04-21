@@ -8,6 +8,12 @@ const priceMap = {
   scale: process.env.STRIPE_PRICE_SCALE,
 };
 
+const withPlanParam = (url, plan) => {
+  const parsedUrl = new URL(url);
+  parsedUrl.searchParams.set("plan", plan);
+  return parsedUrl.toString();
+};
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ ok: false, message: "Method not allowed" });
@@ -26,12 +32,12 @@ export default async function handler(req, res) {
     const session = await stripe.checkout.sessions.create({
       mode: "subscription",
       line_items: [{ price, quantity: 1 }],
-      success_url: successUrl,
-      cancel_url: cancelUrl,
+      success_url: withPlanParam(successUrl, plan),
+      cancel_url: withPlanParam(cancelUrl, plan),
     });
 
     return res.status(200).json({ ok: true, url: session.url });
-  } catch (error) {
+  } catch {
     return res.status(500).json({ ok: false });
   }
 }

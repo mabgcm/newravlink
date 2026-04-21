@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
+import { trackMetaCustom } from "../../analytics/metaPixel";
 
 function NewsletterSection() {
 
@@ -7,6 +8,7 @@ function NewsletterSection() {
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
+    const hasTrackedStartRef = useRef(false);
 
     const validateEmail = (email) => {
         const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -17,6 +19,10 @@ function NewsletterSection() {
         e.preventDefault();
 
         if (email.trim() === "") {
+            trackMetaCustom("NewsletterSubmitFailure", {
+                form_name: "newsletter",
+                reason: "empty_email",
+            });
             setErrorMessage("This field is required");
             setError(true);
             setSuccess(false);
@@ -24,12 +30,19 @@ function NewsletterSection() {
         }
 
         if (!validateEmail(email)) {
+            trackMetaCustom("NewsletterSubmitFailure", {
+                form_name: "newsletter",
+                reason: "invalid_email",
+            });
             setErrorMessage("Invalid email format");
             setError(true);
             setSuccess(false);
             return;
         }
 
+        trackMetaCustom("NewsletterSubmitSuccess", {
+            form_name: "newsletter",
+        });
         setSuccess(true);
         setError(false);
         setEmail("");
@@ -84,17 +97,25 @@ function NewsletterSection() {
                                             type="email"
                                             name="newsletter-email"
                                             id="newsletter-email"
-                                            placeholder="Give your best email"
-                                            value={email}
-                                            onChange={(e) => setEmail(e.target.value)}
-                                            className={error ? "error-border" : ""}
-                                            required
-                                        />
+	                                            placeholder="Give your best email"
+	                                            value={email}
+	                                            onChange={(e) => {
+                                                    if (!hasTrackedStartRef.current) {
+                                                        hasTrackedStartRef.current = true;
+                                                        trackMetaCustom("NewsletterFormStart", {
+                                                            form_name: "newsletter",
+                                                        });
+                                                    }
+                                                    setEmail(e.target.value);
+                                                }}
+	                                            className={error ? "error-border" : ""}
+	                                            required
+	                                        />
                                         {error && (
                                             <div className="error-text">{errorMessage}</div>
                                         )}
                                     </div>
-                                    <button className="btn btn-accent" type="submit">
+	                                    <button className="btn btn-accent" type="submit" data-fbq-event="NewsletterSubmitClick" data-fbq-label="newsletter">
                                         <span className="btn-title">
                                             <span>Subscribe</span>
                                         </span>
