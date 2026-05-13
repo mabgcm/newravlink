@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { Analytics } from '@vercel/analytics/react'
+import { HelmetProvider } from 'react-helmet-async'
 import App from './App.jsx'
 import { initMetaPixelClickTracking } from './analytics/metaPixel.js'
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -17,8 +18,10 @@ import "animate.css";
 initMetaPixelClickTracking();
 
 createRoot(document.getElementById('root')).render(
-<StrictMode>
-    <App />
-    <Analytics />
-</StrictMode>,
+	<StrictMode>
+	    <HelmetProvider>
+	        <App />
+	        <Analytics />
+	    </HelmetProvider>
+	</StrictMode>,
 )

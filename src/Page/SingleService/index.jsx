@@ -11,7 +11,7 @@ function SingleServicePage(){
 
     return(
         <>
-            <HeadTitle title={t("pageTitles.singleService")} />
+            <HeadTitle seoKey="services" />
             <BannerInnerSection
                 title={t("pageBanners.singleService.title")}
                 currentPage={t("pageBanners.singleService.currentPage")}

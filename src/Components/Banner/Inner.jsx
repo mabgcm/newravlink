@@ -2,8 +2,9 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 
-const BannerInnerSection = ({ title, currentPage }) => {
+const BannerInnerSection = ({ title, currentPage, as = "h1" }) => {
     const { t } = useTranslation();
+    const TitleTag = as;
 
     return (
         <div className="section-banner">
@@ -11,9 +12,9 @@ const BannerInnerSection = ({ title, currentPage }) => {
                 <div className="banner-layout">
                     <div className="d-flex flex-column text-center align-items-center gspace-2">
                         <AnimateOnScroll animation="fadeInRight" speed="normal">
-                            <h2 className="title-heading">
+                            <TitleTag className="title-heading">
                                 {title}
-                            </h2>
+                            </TitleTag>
                         </AnimateOnScroll>
                         <nav className="breadcrumb">
                             <a href="/" className="gspace-2">{t("nav.home")}</a>

@@ -15,7 +15,7 @@ function Navbar() {
                             <img
                                 src="/assets/images/ravlink-logo.png"
                                 className="site-logo img-fluid"
-                                alt="Logo"
+                                alt="Rav Link Inc. logo"
                             />
                         </NavLink>
                     </div>
@@ -29,9 +29,9 @@ function Navbar() {
                             </li>
 
                             <li className="nav-item dropdown">
-                                <a
+                                <button
                                     className="nav-link dropdown-toggle"
-                                    href="#"
+                                    type="button"
                                     role="button"
                                     data-bs-toggle="dropdown"
                                     aria-expanded="false"
@@ -39,15 +39,15 @@ function Navbar() {
                                     data-fbq-label="about"
                                 >
                                     {t("nav.about")} <i className="fa-solid fa-angle-down accent-color"></i>
-                                </a>
+                                </button>
                                 <ul className="dropdown-menu">
                                     <li>
-                                        <NavLink to="/service" className="dropdown-item" data-fbq-event="NavClick" data-fbq-label="services">
+                                        <NavLink to="/services" className="dropdown-item" data-fbq-event="NavClick" data-fbq-label="services">
                                             {t("nav.services")}
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/case_studies" className="dropdown-item" data-fbq-event="NavClick" data-fbq-label="case-studies">
+                                        <NavLink to="/case-studies" className="dropdown-item" data-fbq-event="NavClick" data-fbq-label="case-studies">
                                             {t("nav.caseStudies")}
                                         </NavLink>
                                     </li>

@@ -138,9 +138,9 @@ function BannerHomeSection() {
                                             </a>
                                             <div className="banner-reviewer">
                                                 <div className="d-flex flex-row align-items-center">
-                                                    <img src="/assets/images/webby.png" alt="Reviewer" className="avatar" />
-                                                    <img src="/assets/images/clio.png" alt="Reviewer" className="avatar" />
-                                                    <img src="/assets/images/shorty.jpg" alt="Reviewer" className="avatar" />
+                                                    <img src="/assets/images/webby.png" alt="Digital marketing award badge" className="avatar" loading="lazy" />
+                                                    <img src="/assets/images/clio.png" alt="Creative marketing award badge" className="avatar" loading="lazy" />
+                                                    <img src="/assets/images/shorty.jpg" alt="Social media marketing recognition badge" className="avatar" loading="lazy" />
                                                 </div>
                                                 <div className="detail">
                                                     <span>{t("home.banner.awardWinning")}</span>

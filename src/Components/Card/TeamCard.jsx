@@ -5,7 +5,7 @@ const   TeamCard = ({ name, title, image, socials }) => {
     <div className="col">
         <div className="d-flex flex-column">
             <div className="image-team">
-                <img src={image} alt={name} className="img-fluid" />
+                <img src={image} alt={`${name}, ${title} at Rav Link`} className="img-fluid" loading="lazy" />
                 <div className="social-team-wrapper">
                     <div className="social-team-spacer"></div>
                     <div className="d-flex flex-column align-items-end">

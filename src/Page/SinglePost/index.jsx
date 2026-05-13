@@ -9,7 +9,7 @@ function SinglePostPage(){
 
     return(
         <>
-            <HeadTitle title={t("pageTitles.singlePost")} />
+            <HeadTitle seoKey="blog" />
             <BannerInnerSection
                 title={t("pageBanners.singlePost.title")}
                 currentPage={t("pageBanners.singlePost.currentPage")}

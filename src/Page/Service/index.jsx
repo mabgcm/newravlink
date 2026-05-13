@@ -12,9 +12,9 @@ function ServicePage(){
 
     return(
         <>
-            <HeadTitle title={t("pageTitles.service")} />
+            <HeadTitle seoKey="services" />
             <BannerInnerSection
-                title={t("pageBanners.service.title")}
+                title="Digital Marketing Services"
                 currentPage={t("pageBanners.service.currentPage")}
             />
             <ServiceSection />

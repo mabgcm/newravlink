@@ -11,7 +11,7 @@ const TestimonialCard = ({ name, title, content, rating, image }) => {
         <div className="d-flex flex-row align-items-center justify-content-between">
             <div className="d-flex flex-row gspace-2">
                 <div className="testimonial-image">
-                    <img src={image} alt={`Testimonial ${name}`} className="img-fluid" />
+                    <img src={image} alt={`Rav Link client testimonial from ${name}`} className="img-fluid" loading="lazy" />
                 </div>
                 <div className="d-flex flex-column">
                     <span className="profile-name">{name}</span>

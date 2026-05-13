@@ -78,7 +78,7 @@ function Sidebar() {
             <div ref={sidebarRef} className="sidebar">
                 <div className="sidebar-header">
                     <div className="logo">
-                        <img src="/assets/images/marko-logo.png" className="site-logo img-fluid logo" alt="Logo" />
+                        <img src="/assets/images/ravlink-logo.png" className="site-logo img-fluid logo" alt="Rav Link Inc. logo" />
                     </div>
                     <div className="d-flex align-items-center gspace-2">
                         <LanguageSwitcher />
@@ -88,14 +88,14 @@ function Sidebar() {
                     <li><NavLink to="/" onClick={closeSidebar}>{t("nav.home")}</NavLink></li>
                     <li className="sidebar-dropdown">
                         <div className="dropdown-header">
-                            <a href="#" className="sidebar-dropdown-toggle">{t("nav.about")}</a>
+                            <button type="button" className="sidebar-dropdown-toggle">{t("nav.about")}</button>
                             <button className="sidebar-dropdown-btn">
                                 <i className="fa-solid fa-angle-down"></i>
                             </button>
                         </div>
                         <ul className="sidebar-dropdown-menu">
-                            <li><NavLink to="/service" onClick={closeSidebar}>{t("nav.services")}</NavLink></li>
-                            <li><NavLink to="/case_studies" onClick={closeSidebar}>{t("nav.caseStudies")}</NavLink></li>
+                            <li><NavLink to="/services" onClick={closeSidebar}>{t("nav.services")}</NavLink></li>
+                            <li><NavLink to="/case-studies" onClick={closeSidebar}>{t("nav.caseStudies")}</NavLink></li>
                             <li><NavLink to="/testimonial" onClick={closeSidebar}>{t("nav.testimonials")}</NavLink></li>
                         </ul>
                     </li>
@@ -103,7 +103,7 @@ function Sidebar() {
                     <li><NavLink to="/blog" onClick={closeSidebar}>{t("nav.blog")}</NavLink></li>
                     <li><NavLink to="/contact" onClick={closeSidebar}>{t("nav.contact")}</NavLink></li>
                     <li className="sidebar-phone">
-                        <a href="tel:+15063493512" aria-label="Call +1(506)3493512">
+                        <a href="tel:+14372196444" aria-label="Call +1(437)2196444">
                             <span className="icon-circle">
                                 <i className="fa-solid fa-phone-volume"></i>
                             </span>

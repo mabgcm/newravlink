@@ -11,7 +11,7 @@ function TestimonialPage(){
 
     return(
         <>
-            <HeadTitle title={t("pageTitles.testimonial")} />
+            <HeadTitle title={t("pageTitles.testimonial")} description="Client feedback and success stories from Rav Link digital marketing projects." />
             <BannerInnerSection
                 title={t("pageBanners.testimonial.title")}
                 currentPage={t("pageBanners.testimonial.currentPage")}

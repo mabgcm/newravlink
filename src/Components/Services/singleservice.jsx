@@ -15,8 +15,9 @@ const SingleServiceSection = () => {
                     <div className="image-container">
                         <img
                             src="/assets/images/servicehero.jpeg"
-                            alt="Service Image"
+                            alt="Digital marketing services for Ontario businesses"
                             className="single-service-img"
+                            loading="lazy"
                         />
                         <div className="single-service-title-layout">
                             <div>
@@ -66,8 +67,9 @@ const SingleServiceSection = () => {
                                         <div className="image-container">
                                             <img
                                                 src="/assets/images/service1.jpeg"
-                                                alt="Service Image"
+                                                alt="SEO and website strategy session"
                                                 className="img-fluid"
+                                                loading="lazy"
                                             />
                                         </div>
                                     </div>
@@ -75,8 +77,9 @@ const SingleServiceSection = () => {
                                         <div className="image-container">
                                             <img
                                                 src="/assets/images/service2.jpeg"
-                                                alt="Service Image"
+                                                alt="Paid ads and local marketing campaign planning"
                                                 className="img-fluid"
+                                                loading="lazy"
                                             />
                                         </div>
                                     </div>

@@ -1,7 +1,7 @@
 export const faqData = [
     {
 		id: 1,
-		question: "What services does Marko offer?",
+		question: "What services does Rav Link offer?",
 		answer: "We specialize in digital marketing, including branding, social media management, content strategy, paid ads, and analytics-driven campaigns.",
     },
     {

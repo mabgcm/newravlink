@@ -275,7 +275,7 @@
         width: 100%;
     }
 
-    .cs-component a {
+    .cs-component span {
         font-size: var(--font-size-sm);
     }
 
@@ -457,7 +457,7 @@
         border-radius: 0px 0px 35px 35px;
     }
 
-    .cs-component a {
+    .cs-component span {
         font-size: var(--font-size-xs);
     }
 

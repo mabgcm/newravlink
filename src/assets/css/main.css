@@ -1,5 +1,5 @@
 /* ======================================================================== */
-/* Marko HTML5 Template */
+/* Rav Link site styles */
 /* ======================================================================== */
 
 /* ================== Table Of Content ================== */
@@ -894,6 +894,7 @@ body.lightmode .form select {
     line-height: var(--line-height-loose);
     color: var(--primary);
     background-color: transparent;
+    border: 0;
     padding: 8px 16px 8px 16px !important;
 }
 
@@ -1042,6 +1043,22 @@ body.lightmode .form select {
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-medium);
     text-transform: capitalize;
+}
+
+.menu button.sidebar-dropdown-toggle {
+    color: var(--primary);
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+    display: block;
+    border: 0;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    text-transform: capitalize;
+    background: transparent;
+    width: 100%;
+    text-align: left;
 }
 
 .sidebar-phone a {
@@ -2957,7 +2974,7 @@ body.lightmode .case-studies-content::before {
     transform: rotateZ(5deg);
 }
 
-.cs-component a {
+.cs-component span {
     color: var(--primary);
     font-size: var(--font-size-base);
 }
@@ -3371,13 +3388,13 @@ body.lightmode .card-blog {
     align-items: center;
 }
 
-.pricing-highlights a,
+.pricing-highlights span,
 .pricing-highlights i {
     color: var(--text-color);
     transition: all 0.3s ease;
 }
 
-.pricing-highlights:hover a,
+.pricing-highlights:hover span,
 .pricing-highlights:hover i {
     color: var(--accent-color);
 }
@@ -3447,12 +3464,12 @@ body.lightmode .card-blog {
     color: var(--primary);
 }
 
-.benefit a {
+.benefit span {
     color: var(--text-color);
     transition: all 0.3s ease;
 }
 
-.benefit a:hover {
+.benefit span:hover {
     color: var(--primary);
 }
 

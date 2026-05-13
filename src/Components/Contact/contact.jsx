@@ -15,7 +15,7 @@ const ContactSection = () => {
                                 </div>
                                 <h2 className="title-heading">Get in Touch</h2>
                                 <p>
-                                    Reach out to us for tailored digital solutions that drive results sollicitudin nec.
+                                    Reach out for tailored SEO, website design, paid ads, and local marketing support across Ontario and the Greater Toronto Area.
                                 </p>
                                 <div className="d-flex flex-column flex-md-row align-items-center text-md-start text-center gspace-2">
                                     <div>
@@ -57,7 +57,7 @@ const ContactSection = () => {
                                     </div>
                                     <div className="d-grid">
                                         <span>Office Address</span>
-                                        <h5>10 Honeycrisp Cres, Vaughan, Ontario L4K 0M7 Canada</h5>
+                                        <h5>Serving businesses across Ontario remotely and on-site, including the GTA, Toronto, Vaughan, Markham, Mississauga, Brampton, Barrie, and Simcoe County.</h5>
                                     </div>
                                 </div>
                             </div>

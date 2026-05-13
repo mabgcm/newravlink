@@ -9,7 +9,7 @@ function ContactPage(){
 
     return(
         <>
-            <HeadTitle title={t("pageTitles.contact")} />
+            <HeadTitle seoKey="contact" />
             <BannerInnerSection
                 title={t("pageBanners.contact.title")}
                 currentPage={t("pageBanners.contact.currentPage")}

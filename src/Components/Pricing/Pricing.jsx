@@ -99,18 +99,18 @@ function PricingPlanSection() {
                                             <h3>$600</h3>
                                             <p>{t("home.pricing.starter.priceSuffix")}</p>
                                         </div>
-                                        <a href="#" className="btn btn-accent" onClick={startCheckout("starter")} data-fbq-event="PricingCTA" data-fbq-label="starter">
+                                        <button type="button" className="btn btn-accent" onClick={startCheckout("starter")} data-fbq-event="PricingCTA" data-fbq-label="starter">
                                             <div className="btn-title">
                                                 <span>{t("common.shopNow")}</span>
                                             </div>
                                             <div className="icon-circle">
                                                 <i className="fa-solid fa-arrow-right"></i>
                                             </div>
-                                        </a>
+                                        </button>
                                         <ul className="check-list">
                                             {t("home.pricing.starter.features", { returnObjects: true }).map((item, index) => (
                                                 <li key={index}>
-                                                    <a href="./single_services">{item}</a>
+                                                    <a href="/services/meta-ads-management">{item}</a>
                                                 </li>
                                             ))}
                                         </ul>
@@ -128,14 +128,14 @@ function PricingPlanSection() {
                                         <h3>$1,000</h3>
                                         <p>{t("home.pricing.growth.priceSuffix")}</p>
                                     </div>
-                                    <a href="#" className="btn btn-accent" onClick={startCheckout("growth")} data-fbq-event="PricingCTA" data-fbq-label="growth">
+                                    <button type="button" className="btn btn-accent" onClick={startCheckout("growth")} data-fbq-event="PricingCTA" data-fbq-label="growth">
                                         <div className="btn-title">
                                             <span>{t("common.shopNow")}</span>
                                         </div>
                                         <div className="icon-circle">
                                             <i className="fa-solid fa-arrow-right"></i>
                                         </div>
-                                    </a>
+                                    </button>
 
                                     <div className="core-benefits">
                                         {t("home.pricing.growth.benefits", { returnObjects: true }).map((item, index) => (
@@ -143,7 +143,7 @@ function PricingPlanSection() {
                                                 {index === 0 && <i className="fa-solid fa-brain"></i>}
                                                 {index === 1 && <i className="fa-brands fa-accessible-icon"></i>}
                                                 {index === 2 && <i className="fa-solid fa-bug"></i>}
-                                                <a href="#">{item}</a>
+                                                <span>{item}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -151,7 +151,7 @@ function PricingPlanSection() {
                                     <ul className="check-list">
                                         {t("home.pricing.growth.features", { returnObjects: true }).map((item, index) => (
                                             <li key={index}>
-                                                <a href="#">{item}</a>
+                                                <span>{item}</span>
                                             </li>
                                         ))}
                                     </ul>
@@ -167,7 +167,7 @@ function PricingPlanSection() {
                                             <div className="d-flex flex-column gspace-2">
                                                 {t("home.pricing.highlight.items", { returnObjects: true }).map((item, index) => (
                                                     <div className="pricing-highlights" key={index}>
-                                                        <a href="#">{item}</a>
+                                                        <span>{item}</span>
                                                         <i className="fa-solid fa-arrow-circle-right"></i>
                                                     </div>
                                                 ))}
@@ -185,18 +185,18 @@ function PricingPlanSection() {
                                             <h3>$1,700</h3>
                                             <p>{t("home.pricing.scale.priceSuffix")}</p>
                                         </div>
-                                        <a href="#" className="btn btn-accent" onClick={startCheckout("scale")} data-fbq-event="PricingCTA" data-fbq-label="scale">
+                                        <button type="button" className="btn btn-accent" onClick={startCheckout("scale")} data-fbq-event="PricingCTA" data-fbq-label="scale">
                                             <div className="btn-title">
                                                 <span>{t("common.shopNow")}</span>
                                             </div>
                                             <div className="icon-circle">
                                                 <i className="fa-solid fa-arrow-right"></i>
                                             </div>
-                                        </a>
+                                        </button>
                                         <ul className="check-list">
                                             {t("home.pricing.scale.features", { returnObjects: true }).map((item, index) => (
                                                 <li key={index}>
-                                                    <a href="./single_services">{item}</a>
+                                                    <a href="/services/contractor-marketing">{item}</a>
                                                 </li>
                                             ))}
                                         </ul>

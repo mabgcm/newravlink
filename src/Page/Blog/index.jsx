@@ -9,7 +9,7 @@ function BlogPage(){
 
     return(
         <>
-            <HeadTitle title={t("pageTitles.blog")} />
+            <HeadTitle seoKey="blog" />
             <BannerInnerSection
                 title={t("pageBanners.blog.title")}
                 currentPage={t("pageBanners.blog.currentPage")}

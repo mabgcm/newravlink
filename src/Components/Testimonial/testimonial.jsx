@@ -22,10 +22,10 @@ const TestimonialSection = () => {
                                         <div className="d-flex flex-column flex-md-row flex-lg-column justify-content-between gspace-3">
                                             <div className="testimonial-reviewer">
                                                 <div className="avatar-container">
-                                                    <img src="/assets/images/t1.jpg" alt="Testimonial Reviewer" className="avatar" />
-                                                    <img src="/assets/images/t2.jpg" alt="Testimonial Reviewer" className="avatar" />
-                                                    <img src="/assets/images/t3.jpg" alt="Testimonial Reviewer" className="avatar" />
-                                                    <img src="/assets/images/t4.jpg" alt="Testimonial Reviewer" className="avatar" />
+                                                    <img src="/assets/images/t1.jpg" alt="Rav Link client reviewer" className="avatar" loading="lazy" />
+                                                    <img src="/assets/images/t2.jpg" alt="Rav Link client reviewer" className="avatar" loading="lazy" />
+                                                    <img src="/assets/images/t3.jpg" alt="Rav Link client reviewer" className="avatar" loading="lazy" />
+                                                    <img src="/assets/images/t4.jpg" alt="Rav Link client reviewer" className="avatar" loading="lazy" />
                                                 </div>
                                                 <div className="detail">
                                                     <h6>{t("home.testimonials.positive")}</h6>
@@ -61,11 +61,11 @@ const TestimonialSection = () => {
                                         <div className="d-flex flex-column flex-md-row flex-lg-column justify-content-center gspace-2">
                                             <div className="testimonial-header-link-wrapper">
                                                 <i className="fa-regular fa-circle-check accent-color"></i>
-                                                <a href="#">{t("home.testimonials.focusOne")}</a>
+                                                <span>{t("home.testimonials.focusOne")}</span>
                                             </div>
                                             <div className="testimonial-header-link-wrapper">
                                                 <i className="fa-regular fa-circle-check accent-color"></i>
-                                                <a href="#">{t("home.testimonials.focusTwo")}</a>
+                                                <span>{t("home.testimonials.focusTwo")}</span>
                                             </div>
                                         </div>
                                     </div>

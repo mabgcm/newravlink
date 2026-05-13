@@ -11,7 +11,7 @@ function PricingPage(){
 
     return(
         <>
-            <HeadTitle title={t("pageTitles.pricing")} />
+            <HeadTitle title={t("pageTitles.pricing")} description="Review Rav Link digital marketing packages for Ontario businesses." />
             <BannerInnerSection
                 title={t("pageBanners.pricing.title")}
                 currentPage={t("pageBanners.pricing.currentPage")}

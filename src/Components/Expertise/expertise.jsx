@@ -16,8 +16,9 @@ function ExpertiseSection() {
                                 <AnimateOnScroll animation="fadeInUp" speed="normal">
                                     <img
                                         src="/assets/images/team.jpg"
-                                        alt="Expertise Image"
+                                        alt="Rav Link digital marketing planning for Ontario businesses"
                                         className="img-fluid"
+                                        loading="lazy"
                                         style={{ transform: "scaleX(-1)" }}
                                     />
                                 </AnimateOnScroll>
@@ -65,7 +66,7 @@ function ExpertiseSection() {
                                     <ul className="check-list">
                                         {t("home.expertise.list", { returnObjects: true }).map((item, index) => (
                                             <li key={index}>
-                                                <a href="./single_services">{item}</a>
+                                                <a href="/services">{item}</a>
                                             </li>
                                         ))}
                                     </ul>

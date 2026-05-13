@@ -11,20 +11,20 @@ const CaseStudyCard = ({ title, description, tags, className, size }) => {
                         <div className={`case-studies-component ${size} align-self-end justify-content-end align-items-end`}>
                             {tags.map((tag, index) => (
                                 <div key={index} className="cs-component">
-                                    <a href="">{tag}</a>
+                                    <span>{tag}</span>
                                 </div>
                             ))}
                         </div>
                     )}
                     <div className="d-flex flex-column gspace-2">
-	                        <a className="case-studies-title" data-fbq-event="CaseStudyClick" data-fbq-label={title}><h4>{title}</h4></a>
+	                        <h4 className="case-studies-title" data-fbq-event="CaseStudyClick" data-fbq-label={title}>{title}</h4>
                         <p>{description}</p>
                     </div>
                     {size === "small" && (
                         <div className={`case-studies-component ${size} align-self-end justify-content-end align-items-end`}>
                             {tags.map((tag, index) => (
                                 <div key={index} className="cs-component">
-                                    <a href="#">{tag}</a>
+                                    <span>{tag}</span>
                                 </div>
                             ))}
                         </div>

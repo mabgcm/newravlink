@@ -5,7 +5,7 @@ export const services = [
         titleKey: "data.services.0.title",
         contentKey: "data.services.0.content",
         speed: "slow",
-        link: "single_services",
+        link: "/services/meta-ads-management",
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ export const services = [
         titleKey: "data.services.1.title",
         contentKey: "data.services.1.content",
         speed: "normal",
-        link: "single_services",
+        link: "/services/contractor-marketing",
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ export const services = [
         titleKey: "data.services.2.title",
         contentKey: "data.services.2.content",
         speed: "fast",
-        link: "single_services",
+        link: "/services/seo-barrie",
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ export const services = [
         titleKey: "data.services.3.title",
         contentKey: "data.services.3.content",
         speed: "slow",
-        link: "single_services",
+        link: "/services/meta-ads-management",
     },
     {
         id: 5,
@@ -37,7 +37,7 @@ export const services = [
         titleKey: "data.services.4.title",
         contentKey: "data.services.4.content",
         speed: "normal",
-        link: "single_services",
+        link: "/services/website-design-barrie",
     },
     {
         id: 6,
@@ -45,6 +45,6 @@ export const services = [
         titleKey: "data.services.5.title",
         contentKey: "data.services.5.content",
         speed: "fast",
-        link: "single_services",
+        link: "/services/website-design-barrie",
     },
 ];

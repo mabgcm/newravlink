@@ -11,9 +11,10 @@ function AboutSection(){
                         <div className="image-container about-img">
                             <AnimateOnScroll animation="fadeInUp" speed="normal">
                             <img
-                                src="/assets/images/dummy-img-600x400.jpg"
-                                alt="About Us Image"
+                                src="/assets/images/team.jpg"
+                                alt="Rav Link digital marketing team supporting Ontario businesses"
                                 className="img-fluid"
+                                loading="lazy"
                             />
                             </AnimateOnScroll>
                         
@@ -54,9 +55,9 @@ function AboutSection(){
                             </AnimateOnScroll>
 
                             <p>
-                                At Marko, we specialize in crafting innovative digital marketing strategies
-                                that drive real business growth. Our about ensures your brand stays ahead
-                                in the competitive digital landscape.
+                                Rav Link Inc. builds practical digital marketing systems for businesses
+                                across Ontario and the Greater Toronto Area. We focus on clear positioning,
+                                search visibility, paid campaigns, and websites that support real growth.
                             </p>
                             <p>
                                 Get to know the passionate team behind the strategies, the values that
@@ -66,17 +67,17 @@ function AboutSection(){
                             <div className="d-flex flex-column flex-md-row gspace-1 gspace-md-5">
                                 <div className="about-list">
                                     <ul className="check-list">
-                                        <li><a href="./single_services">PPC & Paid Ads</a></li>
-                                        <li><a href="./single_services">Brand Strategy</a></li>
-                                        <li><a href="./single_services">Conversion Optimization</a></li>
+                                        <li><a href="/services/meta-ads-management">PPC & Paid Ads</a></li>
+                                        <li><a href="/services/website-design-barrie">Brand Strategy</a></li>
+                                        <li><a href="/services/website-design-barrie">Conversion Optimization</a></li>
                                     </ul>
                                 </div>
 
                                 <div className="about-list">
                                     <ul className="check-list">
-                                        <li><a href="./single_services">Performance Marketing</a></li>
-                                        <li><a href="./single_services">Social Media Growth</a></li>
-                                        <li><a href="./single_services">Content Marketing</a></li>
+                                        <li><a href="/services/contractor-marketing">Performance Marketing</a></li>
+                                        <li><a href="/services/meta-ads-management">Social Media Growth</a></li>
+                                        <li><a href="/services/seo-barrie">Content Marketing</a></li>
                                     </ul>
                                 </div>
                             </div>

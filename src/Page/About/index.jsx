@@ -13,7 +13,7 @@ import TestimonialSection from "../../Components/Testimonial/testimonial";
 function AboutPage() {
     return (
         <>
-            <HeadTitle title="About - Ravlink - Digital Marketing Agency" />
+            <HeadTitle seoKey="about" />
             <BannerInnerSection title="About Ravlink" currentPage="About Us" />
             <AboutSection />
             <PartnershipSection />

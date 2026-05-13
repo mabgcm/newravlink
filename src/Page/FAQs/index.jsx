@@ -12,7 +12,7 @@ function FaqPage(){
 
     return(
         <>  
-            <HeadTitle title={t("pageTitles.faqs")} />
+            <HeadTitle title={t("pageTitles.faqs")} description="Answers to common questions about Rav Link digital marketing services in Ontario." />
             <BannerInnerSection
                 title={t("pageBanners.faqs.title")}
                 currentPage={t("pageBanners.faqs.currentPage")}

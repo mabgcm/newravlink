@@ -1,20 +1,20 @@
 export const blogs = [
 	{
 		id: 1,
-		image: "/assets/images/dummy-img-600x400.jpg",
+		image: "/assets/images/local.jpg",
 		dateKey: "data.blogs.0.date",
 		categoryKey: "data.blogs.0.category",
 		titleKey: "data.blogs.0.title",
 		excerptKey: "data.blogs.0.excerpt",
-		link: "/single_post",
+		link: "/blog",
 	},
 	{
 		id: 2,
-		image: "/assets/images/dummy-img-600x400.jpg",
+		image: "/assets/images/servicehero.jpeg",
 		dateKey: "data.blogs.1.date",
 		categoryKey: "data.blogs.1.category",
 		titleKey: "data.blogs.1.title",
 		excerptKey: "data.blogs.1.excerpt",
-		link: "/single_post",
+		link: "/blog",
 	},
 ];  

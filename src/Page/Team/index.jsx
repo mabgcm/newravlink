@@ -11,7 +11,7 @@ function TeamPage(){
 
     return(
         <>
-            <HeadTitle title={t("pageTitles.team")} />
+            <HeadTitle title={t("pageTitles.team")} description="Meet the digital marketing team supporting Rav Link clients across Ontario." />
             <BannerInnerSection
                 title={t("pageBanners.team.title")}
                 currentPage={t("pageBanners.team.currentPage")}

@@ -52,7 +52,7 @@ const PartnershipSection = () => {
                                     {partnerships.concat(partnerships).map((partner) => (
                                     <SwiperSlide key={partner.id + Math.random()}>
                                         <div className="partner-slide">
-                                            <img src={partner.logo} alt="Client" className="partner-logo img-fluid" />
+                                            <img src={partner.logo} alt="Rav Link client logo" className="partner-logo img-fluid" loading="lazy" />
                                         </div>
                                     </SwiperSlide>
                                     ))}

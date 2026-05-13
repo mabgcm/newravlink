@@ -4,9 +4,9 @@ const PartnershipCard = ({ logo }) => {
   return (
     <div className="col partnership-container">
         <div className="partnership-item">
-            <a href="#">
-                <img src={logo} alt="Partner Logo" className="img-fluid" />
-            </a>
+            <div>
+                <img src={logo} alt="Rav Link partner logo" className="img-fluid" loading="lazy" />
+            </div>
         </div>
     </div>
   );

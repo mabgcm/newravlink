@@ -12,7 +12,7 @@ function CaseStudiesPage(){
 
     return(
         <>
-            <HeadTitle title={t("pageTitles.caseStudies")} />
+            <HeadTitle seoKey="caseStudies" />
             <BannerInnerSection
                 title={t("pageBanners.caseStudies.title")}
                 currentPage={t("pageBanners.caseStudies.currentPage")}

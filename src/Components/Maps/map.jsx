@@ -7,9 +7,9 @@ const MapsSection = () => {
             <iframe
             loading="lazy"
             className="maps overflow-hidden"
-            src="https://maps.google.com/maps?q=London%20Eye%2C%20London%2C%20United%20Kingdom&t=m&z=14&output=embed&iwloc=near"
-            title="London Eye, London, United Kingdom"
-            aria-label="London Eye, London, United Kingdom" 
+            src="https://maps.google.com/maps?q=Greater%20Toronto%20Area%2C%20Ontario%2C%20Canada&t=m&z=8&output=embed&iwloc=near"
+            title="Rav Link service area across the Greater Toronto Area and Ontario"
+            aria-label="Rav Link service area across the Greater Toronto Area and Ontario" 
             ></iframe>
         </div>
     </div>

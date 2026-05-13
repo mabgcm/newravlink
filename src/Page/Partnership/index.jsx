@@ -12,7 +12,7 @@ function PartnershipPage(){
 
     return(
         <>
-            <HeadTitle title={t("pageTitles.partnership")} />
+            <HeadTitle title={t("pageTitles.partnership")} description="Partnership information for Rav Link digital marketing services." />
             <BannerInnerSection
                 title={t("pageBanners.partnership.title")}
                 currentPage={t("pageBanners.partnership.currentPage")}

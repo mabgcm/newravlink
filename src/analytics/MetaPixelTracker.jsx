@@ -21,8 +21,14 @@ const VIDEO_PROGRESS = [25, 50, 75, 90];
 const PAGE_META = {
   "/": { name: "Home", category: "home", event: "HomePageView" },
   "/about": { name: "About", category: "company", event: "AboutPageView" },
+  "/services": { name: "Services", category: "services", event: "ServicePageView" },
   "/service": { name: "Services", category: "services", event: "ServicePageView" },
+  "/services/seo-barrie": { name: "SEO Services Barrie", category: "services", event: "ServiceDetailView" },
+  "/services/website-design-barrie": { name: "Website Design Barrie", category: "services", event: "ServiceDetailView" },
+  "/services/meta-ads-management": { name: "Meta Ads Management", category: "services", event: "ServiceDetailView" },
+  "/services/contractor-marketing": { name: "Contractor Marketing", category: "services", event: "ServiceDetailView" },
   "/single_services": { name: "Service Detail", category: "services", event: "ServiceDetailView" },
+  "/case-studies": { name: "Case Studies", category: "case_studies", event: "CaseStudiesPageView" },
   "/case_studies": { name: "Case Studies", category: "case_studies", event: "CaseStudiesPageView" },
   "/team": { name: "Team", category: "company", event: "TeamPageView" },
   "/partnership": { name: "Partnership", category: "company", event: "PartnershipPageView" },
@@ -32,6 +38,12 @@ const PAGE_META = {
   "/blog": { name: "Blog", category: "blog", event: "BlogPageView" },
   "/single_post": { name: "Blog Article", category: "blog", event: "BlogArticleView" },
   "/contact": { name: "Contact", category: "lead", event: "ContactPageView" },
+  "/seo-agency-toronto": { name: "SEO Agency Toronto", category: "local_seo", event: "LocationPageView" },
+  "/seo-agency-vaughan": { name: "SEO Agency Vaughan", category: "local_seo", event: "LocationPageView" },
+  "/seo-agency-barrie": { name: "SEO Agency Barrie", category: "local_seo", event: "LocationPageView" },
+  "/website-design-toronto": { name: "Website Design Toronto", category: "local_seo", event: "LocationPageView" },
+  "/meta-ads-agency-toronto": { name: "Meta Ads Agency Toronto", category: "local_seo", event: "LocationPageView" },
+  "/contractor-marketing-ontario": { name: "Contractor Marketing Ontario", category: "local_seo", event: "LocationPageView" },
 };
 
 const formatSectionEventName = (section) =>
