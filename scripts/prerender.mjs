@@ -1,5 +1,6 @@
 import { spawn } from "node:child_process";
 import fs from "node:fs/promises";
+import net from "node:net";
 import path from "node:path";
 import process from "node:process";
 import chromium from "@sparticuz/chromium";
@@ -27,8 +28,8 @@ const routes = [
 const rootDir = process.cwd();
 const distDir = path.join(rootDir, "dist");
 const host = "127.0.0.1";
-const port = Number(process.env.PRERENDER_PORT || 4173);
-const baseUrl = `http://${host}:${port}`;
+let port = Number(process.env.PRERENDER_PORT || 0);
+let baseUrl = "";
 
 const chromeCandidates = [
     process.env.PUPPETEER_EXECUTABLE_PATH,
@@ -69,6 +70,20 @@ async function getBrowserLaunchConfig() {
 function routeToFile(route) {
     if (route === "/") return path.join(distDir, "index.html");
     return path.join(distDir, route.replace(/^\//, ""), "index.html");
+}
+
+async function getAvailablePort() {
+    if (port) return port;
+
+    return new Promise((resolve, reject) => {
+        const server = net.createServer();
+        server.on("error", reject);
+        server.listen(0, host, () => {
+            const address = server.address();
+            const selectedPort = typeof address === "object" && address ? address.port : 4173;
+            server.close(() => resolve(selectedPort));
+        });
+    });
 }
 
 async function waitForServer(child) {
@@ -112,6 +127,9 @@ async function waitForServer(child) {
 }
 
 async function startPreviewServer() {
+    port = await getAvailablePort();
+    baseUrl = `http://${host}:${port}`;
+
     const child = spawn(
         process.execPath,
         [
@@ -205,6 +223,10 @@ async function prerenderRoute(browser, route) {
                     'meta[name^="twitter:"]',
                 ].join(","),
             )
+            .forEach((node) => node.remove());
+
+        document
+            .querySelectorAll('script[src*="youtube.com/iframe_api"]')
             .forEach((node) => node.remove());
 
         const addMeta = (attribute, name, content) => {

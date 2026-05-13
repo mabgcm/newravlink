@@ -10,16 +10,9 @@ function BannerHomeSection() {
     const videoContainerRef = useRef(null);
 
     useEffect(() => {
-        if (!window.YT) {
-            const tag = document.createElement("script");
-            tag.src = "https://www.youtube.com/iframe_api";
-            const firstScriptTag = document.getElementsByTagName("script")[0];
-            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-        } else {
-            onYouTubeIframeAPIReady();
-        }
-
         window.onYouTubeIframeAPIReady = () => {
+            if (!window.YT?.Player || playerRef.current) return;
+
             playerRef.current = new window.YT.Player("banner-video-background", {
                 videoId: "P68V3iH4TeE",
                 playerVars: {
@@ -42,6 +35,18 @@ function BannerHomeSection() {
                 }
             });
         };
+
+        if (!window.YT?.Player) {
+            const existingScript = document.querySelector('script[src="https://www.youtube.com/iframe_api"]');
+            if (!existingScript) {
+                const tag = document.createElement("script");
+                tag.src = "https://www.youtube.com/iframe_api";
+                const firstScriptTag = document.getElementsByTagName("script")[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            }
+        } else {
+            window.onYouTubeIframeAPIReady();
+        }
 
         function onPlayerReady(event) {
             event.target.playVideo();
