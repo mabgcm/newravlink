@@ -2,7 +2,8 @@ import { spawn } from "node:child_process";
 import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
-import puppeteer from "puppeteer";
+import chromium from "@sparticuz/chromium";
+import puppeteer from "puppeteer-core";
 
 const routes = [
     "/",
@@ -47,11 +48,22 @@ async function fileExists(filePath) {
     }
 }
 
-async function getChromeExecutablePath() {
+async function getBrowserLaunchConfig() {
     for (const candidate of chromeCandidates) {
-        if (await fileExists(candidate)) return candidate;
+        if (await fileExists(candidate)) {
+            return {
+                executablePath: candidate,
+                args: ["--no-sandbox", "--disable-setuid-sandbox"],
+                defaultViewport: { width: 1366, height: 1200 },
+            };
+        }
     }
-    return undefined;
+
+    return {
+        executablePath: await chromium.executablePath(),
+        args: [...chromium.args, "--no-sandbox", "--disable-setuid-sandbox"],
+        defaultViewport: chromium.defaultViewport,
+    };
 }
 
 function routeToFile(route) {
@@ -274,10 +286,10 @@ async function main() {
     let browser;
 
     try {
+        const launchConfig = await getBrowserLaunchConfig();
         browser = await puppeteer.launch({
-            executablePath: await getChromeExecutablePath(),
-            headless: "new",
-            args: ["--no-sandbox", "--disable-setuid-sandbox"],
+            ...launchConfig,
+            headless: true,
         });
 
         const results = [];
