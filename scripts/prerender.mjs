@@ -59,40 +59,44 @@ function routeToFile(route) {
     return path.join(distDir, route.replace(/^\//, ""), "index.html");
 }
 
-function waitForServer(child) {
-    return new Promise((resolve, reject) => {
-        let settled = false;
-        const timeout = setTimeout(() => {
-            settled = true;
-            reject(new Error("Timed out waiting for Vite preview server."));
-        }, 15000);
+async function waitForServer(child) {
+    let exited = false;
+    let exitCode = null;
+    let processError = null;
 
-        const handleOutput = (chunk, stream) => {
-            const text = chunk.toString();
-            stream.write(text);
-            if (!settled && (text.includes("Local:") || text.includes(`http://${host}:${port}`))) {
-                settled = true;
-                clearTimeout(timeout);
-                resolve();
-            }
-        };
-
-        child.stdout.on("data", (chunk) => handleOutput(chunk, process.stdout));
-        child.stderr.on("data", (chunk) => handleOutput(chunk, process.stderr));
-        child.on("error", (error) => {
-            if (settled) return;
-            settled = true;
-            clearTimeout(timeout);
-            reject(error);
-        });
-        child.on("exit", (code) => {
-            if (!settled && code !== null && code !== 0) {
-                settled = true;
-                clearTimeout(timeout);
-                reject(new Error(`Vite preview exited with code ${code}.`));
-            }
-        });
+    child.stdout.on("data", (chunk) => process.stdout.write(chunk.toString()));
+    child.stderr.on("data", (chunk) => process.stderr.write(chunk.toString()));
+    child.on("error", (error) => {
+        processError = error;
     });
+    child.on("exit", (code) => {
+        exited = true;
+        exitCode = code;
+    });
+
+    const deadline = Date.now() + 30000;
+    while (Date.now() < deadline) {
+        if (processError) {
+            throw processError;
+        }
+
+        if (exited) {
+            throw new Error(`Vite preview exited with code ${exitCode}.`);
+        }
+
+        try {
+            const response = await fetch(baseUrl, { method: "HEAD" });
+            if (response.ok || response.status === 404) {
+                return;
+            }
+        } catch {
+            // Keep polling until Vite preview opens its port.
+        }
+
+        await new Promise((resolve) => setTimeout(resolve, 250));
+    }
+
+    throw new Error(`Timed out waiting for Vite preview server at ${baseUrl}.`);
 }
 
 async function startPreviewServer() {
