@@ -2,11 +2,13 @@ import React, { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "../Language/LanguageSwitcher";
+import { useLangPath } from "../Context/LanguageContext";
 
 function Sidebar() {
     const overlayRef = useRef(null);
     const sidebarRef = useRef(null);
     const { t } = useTranslation();
+    const langPath = useLangPath();
 
     const closeSidebar = () => {
         const overlay = overlayRef.current;
@@ -85,7 +87,7 @@ function Sidebar() {
                     </div>
                 </div>
                 <ul className="menu">
-                    <li><NavLink to="/" onClick={closeSidebar}>{t("nav.home")}</NavLink></li>
+                    <li><NavLink to={langPath("/")} onClick={closeSidebar}>{t("nav.home")}</NavLink></li>
                     <li className="sidebar-dropdown">
                         <div className="dropdown-header">
                             <button type="button" className="sidebar-dropdown-toggle">{t("nav.about")}</button>
@@ -94,14 +96,14 @@ function Sidebar() {
                             </button>
                         </div>
                         <ul className="sidebar-dropdown-menu">
-                            <li><NavLink to="/services" onClick={closeSidebar}>{t("nav.services")}</NavLink></li>
-                            <li><NavLink to="/case-studies" onClick={closeSidebar}>{t("nav.caseStudies")}</NavLink></li>
-                            <li><NavLink to="/testimonial" onClick={closeSidebar}>{t("nav.testimonials")}</NavLink></li>
+                            <li><NavLink to={langPath("/services")} onClick={closeSidebar}>{t("nav.services")}</NavLink></li>
+                            <li><NavLink to={langPath("/case-studies")} onClick={closeSidebar}>{t("nav.caseStudies")}</NavLink></li>
+                            <li><NavLink to={langPath("/testimonial")} onClick={closeSidebar}>{t("nav.testimonials")}</NavLink></li>
                         </ul>
                     </li>
-                    <li><NavLink to="/pricing" onClick={closeSidebar}>{t("nav.pricing")}</NavLink></li>
-                    <li><NavLink to="/blog" onClick={closeSidebar}>{t("nav.blog")}</NavLink></li>
-                    <li><NavLink to="/contact" onClick={closeSidebar}>{t("nav.contact")}</NavLink></li>
+                    <li><NavLink to={langPath("/pricing")} onClick={closeSidebar}>{t("nav.pricing")}</NavLink></li>
+                    <li><NavLink to={langPath("/blog")} onClick={closeSidebar}>{t("nav.blog")}</NavLink></li>
+                    <li><NavLink to={langPath("/contact")} onClick={closeSidebar}>{t("nav.contact")}</NavLink></li>
                     <li className="sidebar-phone">
                         <a href="tel:+14372196444" aria-label="Call +1(437)2196444">
                             <span className="icon-circle">

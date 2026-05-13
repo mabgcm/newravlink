@@ -18,34 +18,46 @@ const SinglePostPage = lazy(() => import("./Page/SinglePost"));
 const ServiceDetailPage = lazy(() => import("./Page/ServiceDetail"));
 const LocationLandingPage = lazy(() => import("./Page/LocationLanding"));
 
-function AppRouter(){
+// Shared page routes — rendered relative to parent match (/tr/* or /*)
+function PageRoutes() {
+    return (
+        <Routes>
+            <Route index element={<HomePage />} />
+            <Route path="about" element={<AboutPage />} />
+            <Route path="services" element={<ServicePage />} />
+            <Route path="services/:slug" element={<ServiceDetailPage />} />
+            <Route path="service" element={<ServicePage />} />
+            <Route path="single_services" element={<SingleServicePage />} />
+            <Route path="case-studies" element={<CaseStudiesPage />} />
+            <Route path="case_studies" element={<CaseStudiesPage />} />
+            <Route path="team" element={<TeamPage />} />
+            <Route path="partnership" element={<PartnershipPage />} />
+            <Route path="pricing" element={<PricingPage />} />
+            <Route path="testimonial" element={<TestimonialPage />} />
+            <Route path="faq" element={<FaqPage />} />
+            <Route path="blog" element={<BlogPage />} />
+            <Route path="single_post" element={<SinglePostPage />} />
+            <Route path="contact" element={<ContactPage />} />
+            <Route path="seo-agency-toronto" element={<LocationLandingPage />} />
+            <Route path="seo-agency-vaughan" element={<LocationLandingPage />} />
+            <Route path="seo-agency-barrie" element={<LocationLandingPage />} />
+            <Route path="website-design-toronto" element={<LocationLandingPage />} />
+            <Route path="meta-ads-agency-toronto" element={<LocationLandingPage />} />
+            <Route path="contractor-marketing-ontario" element={<LocationLandingPage />} />
+            <Route path="404_page" element={<NotFoundPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+    );
+}
+
+function AppRouter() {
     return (
         <Suspense fallback={null}>
             <Routes>
-                <Route path="/" element={<HomePage />}/>
-                <Route path="about" element={<AboutPage />}/>
-                <Route path="services" element={<ServicePage />}/>
-                <Route path="services/:slug" element={<ServiceDetailPage />}/>
-                <Route path="service" element={<ServicePage />}/>
-                <Route path="single_services" element={<SingleServicePage />}/>
-                <Route path="case-studies" element={<CaseStudiesPage />}/>
-                <Route path="case_studies" element={<CaseStudiesPage />}/>
-                <Route path="team" element={<TeamPage />}/>
-                <Route path="partnership" element={<PartnershipPage />}/>
-                <Route path="pricing" element={<PricingPage />}/>
-                <Route path="testimonial" element={<TestimonialPage />}/>
-                <Route path="faq" element={<FaqPage />}/>
-                <Route path="blog" element={<BlogPage />}/>
-                <Route path="single_post" element={<SinglePostPage />}/>
-                <Route path="contact" element={<ContactPage />}/>
-                <Route path="seo-agency-toronto" element={<LocationLandingPage />}/>
-                <Route path="seo-agency-vaughan" element={<LocationLandingPage />}/>
-                <Route path="seo-agency-barrie" element={<LocationLandingPage />}/>
-                <Route path="website-design-toronto" element={<LocationLandingPage />}/>
-                <Route path="meta-ads-agency-toronto" element={<LocationLandingPage />}/>
-                <Route path="contractor-marketing-ontario" element={<LocationLandingPage />}/>
-                <Route path="404_page" element={<NotFoundPage />}/>
-                <Route path="*" element={<NotFoundPage />}/>
+                {/* Turkish routes: /tr/* strips the prefix so PageRoutes sees clean paths */}
+                <Route path="tr/*" element={<PageRoutes />} />
+                {/* English routes: catch-all for all other paths */}
+                <Route path="*" element={<PageRoutes />} />
             </Routes>
         </Suspense>
     );

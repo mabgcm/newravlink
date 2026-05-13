@@ -1,9 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useLangPath } from "../Context/LanguageContext";
 
 const Footer = () => {
     const { t } = useTranslation();
+    const langPath = useLangPath();
     const footerServices = [
         { label: "SEO Services", href: "/services/seo-barrie" },
         { label: "Website Design", href: "/services/website-design-barrie" },
@@ -34,13 +36,13 @@ const Footer = () => {
                                     <div className="footer-quick-links">
                                         <h5>{t("footer.quickLinks")}</h5>
                                         <ul className="footer-list">
-                                            <li><NavLink to="/">{t("nav.home")}</NavLink></li>
-                                            <li><NavLink to="/services">{t("nav.services")}</NavLink></li>
-                                            <li><NavLink to="/case-studies">{t("nav.caseStudies")}</NavLink></li>
-                                            <li><NavLink to="/testimonial">{t("nav.testimonials")}</NavLink></li>
-                                            <li><NavLink to="/pricing">{t("nav.pricing")}</NavLink></li>
-                                            <li><NavLink to="/blog">{t("nav.blog")}</NavLink></li>
-                                            <li><NavLink to="/contact">{t("nav.contact")}</NavLink></li>
+                                            <li><NavLink to={langPath("/")}>{t("nav.home")}</NavLink></li>
+                                            <li><NavLink to={langPath("/services")}>{t("nav.services")}</NavLink></li>
+                                            <li><NavLink to={langPath("/case-studies")}>{t("nav.caseStudies")}</NavLink></li>
+                                            <li><NavLink to={langPath("/testimonial")}>{t("nav.testimonials")}</NavLink></li>
+                                            <li><NavLink to={langPath("/pricing")}>{t("nav.pricing")}</NavLink></li>
+                                            <li><NavLink to={langPath("/blog")}>{t("nav.blog")}</NavLink></li>
+                                            <li><NavLink to={langPath("/contact")}>{t("nav.contact")}</NavLink></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -51,7 +53,7 @@ const Footer = () => {
                                         <ul className="footer-list">
                                             {footerServices.map((service) => (
                                                 <li key={service.href}>
-                                                    <NavLink to={service.href}>{service.label}</NavLink>
+                                                    <NavLink to={langPath(service.href)}>{service.label}</NavLink>
                                                 </li>
                                             ))}
                                         </ul>

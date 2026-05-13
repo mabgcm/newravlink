@@ -4,15 +4,9 @@ import en from "./en.json";
 import tr from "./tr.json";
 
 const getInitialLanguage = () => {
-    if (typeof window === "undefined") {
-        return "en";
-    }
-
-    const urlLanguage = new URLSearchParams(window.location.search).get("lng");
-    if (urlLanguage === "tr" || urlLanguage === "en") {
-        return urlLanguage;
-    }
-
+    if (typeof window === "undefined") return "en";
+    // Language is driven by URL path (/tr/...) — localStorage is the fallback for first load
+    if (window.location.pathname.startsWith("/tr")) return "tr";
     return window.localStorage.getItem("language") || "en";
 };
 

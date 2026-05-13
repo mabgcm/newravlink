@@ -3,14 +3,18 @@ import { Link, Navigate, useLocation, useParams } from "react-router-dom";
 import BannerInnerSection from "../../Components/Banner/Inner";
 import HeadTitle from "../../Components/Head/HeadTitle";
 import { getLocationSeo, locationPages } from "../../Data/locationPages";
+import { useLangPath } from "../../Components/Context/LanguageContext";
 
 function LocationLandingPage() {
     const { slug } = useParams();
     const location = useLocation();
-    const pageSlug = slug || location.pathname.replace("/", "");
+    const langPath = useLangPath();
+    // Strip /tr prefix before extracting the slug segment
+    const cleanPath = location.pathname.replace(/^\/tr/, "");
+    const pageSlug = slug || cleanPath.replace(/^\//, "");
     const page = locationPages[pageSlug];
 
-    if (!page) return <Navigate to="/services" replace />;
+    if (!page) return <Navigate to={langPath("/services")} replace />;
 
     return (
         <>
@@ -75,7 +79,7 @@ function LocationLandingPage() {
                                 on-site. Share your service area and goals, and we will recommend the right next step.
                             </p>
                             <div className="link-wrapper">
-                                <Link to="/contact">Start a conversation</Link>
+                                <Link to={langPath("/contact")}>Start a conversation</Link>
                                 <i className="fa-solid fa-circle-arrow-right"></i>
                             </div>
                         </div>

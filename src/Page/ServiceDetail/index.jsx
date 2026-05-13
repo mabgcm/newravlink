@@ -3,12 +3,14 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import BannerInnerSection from "../../Components/Banner/Inner";
 import HeadTitle from "../../Components/Head/HeadTitle";
 import { servicePages, serviceSchema } from "../../Data/servicePages";
+import { useLangPath } from "../../Components/Context/LanguageContext";
 
 function ServiceDetailPage() {
     const { slug } = useParams();
     const page = servicePages[slug];
+    const langPath = useLangPath();
 
-    if (!page) return <Navigate to="/services" replace />;
+    if (!page) return <Navigate to={langPath("/services")} replace />;
 
     return (
         <>
@@ -101,7 +103,7 @@ function ServiceDetailPage() {
                             next practical step for SEO, website, ads, or contractor lead generation.
                         </p>
                         <div className="link-wrapper">
-                            <Link to="/contact">Contact Rav Link</Link>
+                            <Link to={langPath("/contact")}>Contact Rav Link</Link>
                             <i className="fa-solid fa-circle-arrow-right"></i>
                         </div>
                     </div>

@@ -3,15 +3,17 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "../Language/LanguageSwitcher";
 import ThemeSwitcher from "../Theme/themeswitch";
+import { useLangPath } from "../Context/LanguageContext";
 
 function Navbar() {
     const { t } = useTranslation();
+    const langPath = useLangPath();
     return (
         <div className="navbar-wrapper">
             <nav className="navbar navbar-expand-lg">
                 <div className="navbar-container">
                     <div className="logo-container">
-                        <NavLink className="navbar-brand" to="/" data-fbq-event="NavClick" data-fbq-label="logo">
+                        <NavLink className="navbar-brand" to={langPath("/")} data-fbq-event="NavClick" data-fbq-label="logo">
                             <img
                                 src="/assets/images/ravlink-logo.png"
                                 className="site-logo img-fluid"
@@ -23,7 +25,7 @@ function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav mx-auto">
                             <li className="nav-item">
-                                <NavLink to="/" className="nav-link" end data-fbq-event="NavClick" data-fbq-label="home">
+                                <NavLink to={langPath("/")} className="nav-link" end data-fbq-event="NavClick" data-fbq-label="home">
                                     {t("nav.home")}
                                 </NavLink>
                             </li>
@@ -42,17 +44,17 @@ function Navbar() {
                                 </button>
                                 <ul className="dropdown-menu">
                                     <li>
-                                        <NavLink to="/services" className="dropdown-item" data-fbq-event="NavClick" data-fbq-label="services">
+                                        <NavLink to={langPath("/services")} className="dropdown-item" data-fbq-event="NavClick" data-fbq-label="services">
                                             {t("nav.services")}
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/case-studies" className="dropdown-item" data-fbq-event="NavClick" data-fbq-label="case-studies">
+                                        <NavLink to={langPath("/case-studies")} className="dropdown-item" data-fbq-event="NavClick" data-fbq-label="case-studies">
                                             {t("nav.caseStudies")}
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/testimonial" className="dropdown-item" data-fbq-event="NavClick" data-fbq-label="testimonials">
+                                        <NavLink to={langPath("/testimonial")} className="dropdown-item" data-fbq-event="NavClick" data-fbq-label="testimonials">
                                             {t("nav.testimonials")}
                                         </NavLink>
                                     </li>
@@ -60,19 +62,19 @@ function Navbar() {
                             </li>
 
                             <li className="nav-item">
-                                <NavLink to="/pricing" className="nav-link" data-fbq-event="NavClick" data-fbq-label="pricing">
+                                <NavLink to={langPath("/pricing")} className="nav-link" data-fbq-event="NavClick" data-fbq-label="pricing">
                                     {t("nav.pricing")}
                                 </NavLink>
                             </li>
 
                             <li className="nav-item">
-                                <NavLink to="/blog" className="nav-link" data-fbq-event="NavClick" data-fbq-label="blog">
+                                <NavLink to={langPath("/blog")} className="nav-link" data-fbq-event="NavClick" data-fbq-label="blog">
                                     {t("nav.blog")}
                                 </NavLink>
                             </li>
 
                             <li className="nav-item">
-                                <NavLink to="/contact" className="nav-link" data-fbq-event="NavClick" data-fbq-label="contact">
+                                <NavLink to={langPath("/contact")} className="nav-link" data-fbq-event="NavClick" data-fbq-label="contact">
                                     {t("nav.contact")}
                                 </NavLink>
                             </li>
