@@ -61,26 +61,33 @@ function routeToFile(route) {
 
 function waitForServer(child) {
     return new Promise((resolve, reject) => {
+        let settled = false;
         const timeout = setTimeout(() => {
+            settled = true;
             reject(new Error("Timed out waiting for Vite preview server."));
         }, 15000);
 
-        child.stdout.on("data", (chunk) => {
+        const handleOutput = (chunk, stream) => {
             const text = chunk.toString();
-            process.stdout.write(text);
-            if (text.includes("Local:") || text.includes(`http://${host}:${port}`)) {
+            stream.write(text);
+            if (!settled && (text.includes("Local:") || text.includes(`http://${host}:${port}`))) {
+                settled = true;
                 clearTimeout(timeout);
                 resolve();
             }
-        });
+        };
 
-        child.stderr.on("data", (chunk) => process.stderr.write(chunk.toString()));
+        child.stdout.on("data", (chunk) => handleOutput(chunk, process.stdout));
+        child.stderr.on("data", (chunk) => handleOutput(chunk, process.stderr));
         child.on("error", (error) => {
+            if (settled) return;
+            settled = true;
             clearTimeout(timeout);
             reject(error);
         });
         child.on("exit", (code) => {
-            if (code !== null && code !== 0) {
+            if (!settled && code !== null && code !== 0) {
+                settled = true;
                 clearTimeout(timeout);
                 reject(new Error(`Vite preview exited with code ${code}.`));
             }
