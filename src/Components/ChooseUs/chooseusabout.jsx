@@ -48,7 +48,7 @@ function ChooseUsAboutSection(){
                                                     <div className="card card-chooseus-cta">
                                                         <h5>{t("about.coreValues.ctaTitle")}</h5>
                                                         <div className="link-wrapper">
-                                                            <a href="./contact" data-fbq-event="ContactCTA" data-fbq-label="chooseus-about">
+                                                            <a href="/contact" data-fbq-event="ContactCTA" data-fbq-label="chooseus-about">
                                                                 {t("common.letsTalkStrategy")}
                                                             </a>
                                                             <i className="fa-solid fa-circle-arrow-right"></i>

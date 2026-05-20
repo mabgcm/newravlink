@@ -174,7 +174,7 @@ const SingleServiceSection = () => {
                                     <h3 className="title-heading">{t("singleServicePage.ctaTitle")}</h3>
                                     <p>{t("singleServicePage.ctaDescription")}</p>
                                     <div className="link-wrapper">
-                                        <a href="contact">{t("singleServicePage.ctaLink")}</a>
+                                        <a href="/contact">{t("singleServicePage.ctaLink")}</a>
                                         <i className="fa-solid fa-circle-arrow-right"></i>
                                     </div>
                                 </div>

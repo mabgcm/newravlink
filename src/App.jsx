@@ -7,6 +7,7 @@ import { ModalVideoProvider } from "./Components/Video/ModalVideoContext";
 import { NavProvider } from "./Components/Context/NavContext";
 import { LanguageProvider } from "./Components/Context/LanguageContext";
 import MetaPixelTracker from "./analytics/MetaPixelTracker";
+import { openWhatsApp } from "./utils/contactLinks";
 
 function AppLayout() {
     const location = useLocation();
@@ -22,17 +23,16 @@ function AppLayout() {
                     <AppRouter />
                     <Footer />
                     {!hideWhatsApp && (
-                        <a
+                        <button
+                            type="button"
                             className="whatsapp-float"
-                            href="https://wa.me/14372196444?text=Merhaba%2C%20ABD%20%2F%20Kanada%E2%80%99da%20i%C5%9Fletmem%20var.%20%C4%B0ngilizce%20reklam%20ve%20online%20tan%C4%B1t%C4%B1m%20i%C3%A7in%20bilgi%20almak%20istiyorum."
                             aria-label="Chat on WhatsApp"
-                            target="_blank"
-	                            rel="noreferrer"
-	                            data-fbq-event="WhatsAppClick"
-	                            data-fbq-label="floating-whatsapp"
-	                        >
+                            data-fbq-event="WhatsAppClick"
+                            data-fbq-label="floating-whatsapp"
+                            onClick={() => openWhatsApp("floating-whatsapp")}
+                        >
                             <i className="fa-brands fa-whatsapp"></i>
-                        </a>
+                        </button>
                     )}
                 </ModalVideoProvider>
             </NavProvider>

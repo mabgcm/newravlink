@@ -44,7 +44,7 @@ function ServiceSection(){
                         <div className="service-link-footer">
                             <p>
                                 {t("home.services.footerText")}
-                                <a href="./contact" data-fbq-event="ContactCTA" data-fbq-label="services-footer">
+                                <a href="/contact" data-fbq-event="ContactCTA" data-fbq-label="services-footer">
                                     {t("common.getFreeStrategyCall")}
                                 </a>
                             </p>

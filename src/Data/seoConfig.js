@@ -18,6 +18,14 @@ export const areaServed = [
 
 const canonical = (path) => `${SITE_URL}${path}`;
 const googleMapsArticlePath = "/blog/how-toronto-businesses-rank-higher-on-google-maps";
+const servicesOffered = [
+    "SEO Services",
+    "Website Design",
+    "Meta Ads Management",
+    "Google Ads",
+    "Contractor Marketing",
+    "Local Business Marketing",
+];
 
 export const professionalServiceSchema = {
     "@context": "https://schema.org",
@@ -27,15 +35,19 @@ export const professionalServiceSchema = {
     image: DEFAULT_OG_IMAGE,
     email: "info@ravlink.ca",
     telephone: "+1-437-219-6444",
+    address: {
+        "@type": "PostalAddress",
+        addressRegion: "Ontario",
+        addressCountry: "CA",
+    },
     areaServed: areaServed.map((name) => ({ "@type": "Place", name })),
-    serviceType: [
-        "SEO Services",
-        "Website Design",
-        "Meta Ads Management",
-        "Google Ads",
-        "Contractor Marketing",
-        "Local Business Marketing",
-    ],
+    makesOffer: servicesOffered.map((name) => ({
+        "@type": "Offer",
+        itemOffered: {
+            "@type": "Service",
+            name,
+        },
+    })),
     description:
         "Rav Link Inc. is a digital marketing agency serving businesses across Ontario and the Greater Toronto Area remotely and on-site.",
 };

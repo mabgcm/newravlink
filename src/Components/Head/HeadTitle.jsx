@@ -29,7 +29,7 @@ const HeadTitle = ({ title, description, seoKey, seo, schema }) => {
     const canonical = `${SITE_URL}${location.pathname}`;
 
     // Compute hreflang alternates
-    const cleanPath = location.pathname.replace(/^\/tr/, "") || "/";
+    const cleanPath = location.pathname.replace(/^\/tr(?=\/|$)/, "") || "/";
     const hreflangEn = `${SITE_URL}${cleanPath}`;
     const hreflangTr = `${SITE_URL}/tr${cleanPath}`;
 
@@ -38,9 +38,9 @@ const HeadTitle = ({ title, description, seoKey, seo, schema }) => {
             <title>{pageTitle}</title>
             <meta name="description" content={pageDescription} />
             <link rel="canonical" href={canonical} />
-            <link rel="alternate" hreflang="en" href={hreflangEn} />
-            <link rel="alternate" hreflang="tr" href={hreflangTr} />
-            <link rel="alternate" hreflang="x-default" href={hreflangEn} />
+            <link rel="alternate" hrefLang="en" href={hreflangEn} />
+            <link rel="alternate" hrefLang="tr" href={hreflangTr} />
+            <link rel="alternate" hrefLang="x-default" href={hreflangEn} />
             <meta property="og:type" content="website" />
             <meta property="og:title" content={ogTitle} />
             <meta property="og:description" content={ogDescription} />

@@ -3923,6 +3923,8 @@ body.lightmode .newsletter-layout {
 /* ================== 41.6 Floating WhatsApp ================== */
 
 .whatsapp-float {
+    border: 0;
+    cursor: pointer;
     position: fixed;
     right: 24px;
     bottom: 24px;
@@ -4137,7 +4139,16 @@ body.lightmode .newsletter-layout {
     transition: all 0.3s;
 }
 
+.link-wrapper button {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+}
+
 .link-wrapper:hover a,
+.link-wrapper:hover button,
 .link-wrapper:hover i {
     color: var(--primary) !important;
 }

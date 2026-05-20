@@ -12,7 +12,7 @@ const blogRoutes = [...blogDataSource.matchAll(/link:\s*"([^"]+)"/g)]
     .map((match) => match[1])
     .filter((link) => link.startsWith("/blog/"));
 
-const routes = [
+const englishRoutes = [
     "/",
     "/about",
     "/services",
@@ -31,6 +31,8 @@ const routes = [
     "/meta-ads-agency-toronto",
     "/contractor-marketing-ontario",
 ];
+const turkishRoutes = englishRoutes.map((route) => (route === "/" ? "/tr/" : `/tr${route}`));
+const routes = [...englishRoutes, ...turkishRoutes];
 
 const rootDir = process.cwd();
 const distDir = path.join(rootDir, "dist");
@@ -205,6 +207,9 @@ async function prerenderRoute(browser, route) {
             title: document.title,
             description: lastAttribute('meta[name="description"]', "content"),
             canonical: lastAttribute('link[rel="canonical"]', "href"),
+            hreflangEn: lastAttribute('link[rel="alternate"][hreflang="en"]', "href"),
+            hreflangTr: lastAttribute('link[rel="alternate"][hreflang="tr"]', "href"),
+            hreflangDefault: lastAttribute('link[rel="alternate"][hreflang="x-default"]', "href"),
             ogType: lastAttribute('meta[property="og:type"]', "content") || "website",
             ogTitle: lastAttribute('meta[property="og:title"]', "content") || document.title,
             ogDescription:
@@ -226,6 +231,7 @@ async function prerenderRoute(browser, route) {
                     "title",
                     'meta[name="description"]',
                     'link[rel="canonical"]',
+                    'link[rel="alternate"][hreflang]',
                     'meta[property^="og:"]',
                     'meta[name^="twitter:"]',
                 ].join(","),
@@ -256,6 +262,19 @@ async function prerenderRoute(browser, route) {
             canonical.setAttribute("href", finalHead.canonical);
             document.head.appendChild(canonical);
         }
+
+        [
+            ["en", finalHead.hreflangEn],
+            ["tr", finalHead.hreflangTr],
+            ["x-default", finalHead.hreflangDefault],
+        ].forEach(([hreflang, href]) => {
+            if (!href) return;
+            const alternate = document.createElement("link");
+            alternate.setAttribute("rel", "alternate");
+            alternate.setAttribute("hreflang", hreflang);
+            alternate.setAttribute("href", href);
+            document.head.appendChild(alternate);
+        });
 
         addMeta("property", "og:type", finalHead.ogType);
         addMeta("property", "og:title", finalHead.ogTitle);

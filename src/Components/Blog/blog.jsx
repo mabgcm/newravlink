@@ -32,7 +32,7 @@ function BlogSection() {
                                         {t("home.blog.description")}
                                     </p>
                                     <div className="link-wrapper">
-                                        <a href="./blog">{t("common.viewAllArticles")}</a>
+                                        <a href="/blog">{t("common.viewAllArticles")}</a>
                                         <i className="fa-solid fa-circle-arrow-right"></i>
                                     </div>
                                 </div>

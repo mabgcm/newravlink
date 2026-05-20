@@ -30,7 +30,7 @@ function ExpertiseSection() {
                                                     <h4>{t("home.expertise.cardTitle")}</h4>
                                                     <p>{t("home.expertise.cardText")}</p>
                                                     <div className="d-flex align-items-center flex-row gspace-2 expertise-link">
-                                                        <a href="./contact" data-fbq-event="ContactCTA" data-fbq-label="expertise-card">
+                                                        <a href="/contact" data-fbq-event="ContactCTA" data-fbq-label="expertise-card">
                                                             {t("common.getFreeConsultation")}
                                                         </a>
                                                         <i className="fa-solid fa-circle-arrow-right"></i>

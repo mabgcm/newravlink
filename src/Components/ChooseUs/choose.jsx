@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { whychooseus } from "../../Data/ChooseUsData";
 import ChooseUsCard from "../Card/ChoooseUsCard";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
+import { openWhatsApp } from "../../utils/contactLinks";
 
 function ChooseUsSection() {
     const { t } = useTranslation();
@@ -49,15 +50,14 @@ function ChooseUsSection() {
                                                     <div className="card card-chooseus-cta">
                                                         <h5>{t("home.chooseUs.ctaTitle")}</h5>
                                                         <div className="link-wrapper">
-                                                            <a
-                                                                href="https://wa.me/15063493512"
+                                                            <button
+                                                                type="button"
                                                                 data-fbq-event="WhatsAppClick"
                                                                 data-fbq-label="chooseus"
-                                                                target="_blank"
-                                                                rel="noreferrer"
+                                                                onClick={() => openWhatsApp("chooseus")}
                                                             >
                                                                 {t("common.letsTalkStrategy")}
-                                                            </a>
+                                                            </button>
                                                             <i className="fa-solid fa-circle-arrow-right"></i>
                                                         </div>
                                                     </div>
