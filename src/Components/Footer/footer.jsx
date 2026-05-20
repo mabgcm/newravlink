@@ -1,16 +1,50 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useLangPath } from "../Context/LanguageContext";
+import { useLanguage, useLangPath } from "../Context/LanguageContext";
 
 const Footer = () => {
     const { t } = useTranslation();
     const langPath = useLangPath();
+    const { language } = useLanguage();
+    const isTurkish = language === "tr";
     const footerServices = [
         { label: "SEO Services", href: "/services/seo-barrie" },
         { label: "Website Design", href: "/services/website-design-barrie" },
         { label: "Meta Ads Management", href: "/services/meta-ads-management" },
         { label: "Contractor Marketing", href: "/services/contractor-marketing" },
+    ];
+    const footerMarkets = [
+        {
+            label: isTurkish ? "Toronto SEO Ajansı" : "SEO Agency Toronto",
+            href: "/seo-agency-toronto",
+        },
+        {
+            label: isTurkish ? "Toronto Web Tasarım" : "Website Design Toronto",
+            href: "/website-design-toronto",
+        },
+        {
+            label: isTurkish ? "Ontario Contractor Marketing" : "Contractor Marketing Ontario",
+            href: "/contractor-marketing-ontario",
+        },
+        {
+            label: isTurkish ? "Toronto Meta Ads Ajansı" : "Meta Ads Agency Toronto",
+            href: "/meta-ads-agency-toronto",
+        },
+    ];
+    const footerResources = [
+        {
+            label: isTurkish ? "Google Haritalar SEO Rehberi" : "Google Maps Local SEO Guide",
+            href: "/blog/how-toronto-businesses-rank-higher-on-google-maps",
+        },
+        {
+            label: isTurkish ? "Contractor Web Sitesi Dönüşüm Rehberi" : "Contractor Website Conversion Guide",
+            href: "/blog/why-most-contractor-websites-dont-convert",
+        },
+        {
+            label: isTurkish ? "Dijital Büyüme Stratejileri" : "Digital Growth Strategies",
+            href: "/blog/growth-strategies-for-digital-business",
+        },
     ];
 
     return (
@@ -57,11 +91,27 @@ const Footer = () => {
                                                 </li>
                                             ))}
                                         </ul>
+                                        <h5>{isTurkish ? "Hizmet Bölgeleri" : "Markets"}</h5>
+                                        <ul className="footer-list">
+                                            {footerMarkets.map((market) => (
+                                                <li key={market.href}>
+                                                    <NavLink to={langPath(market.href)}>{market.label}</NavLink>
+                                                </li>
+                                            ))}
+                                        </ul>
                                     </div>
                                 </div>
 
                                 <div className="col col-lg-3">
                                     <div className="footer-contact-container">
+                                        <h5>{isTurkish ? "Kaynaklar" : "Resources"}</h5>
+                                        <ul className="footer-list">
+                                            {footerResources.map((resource) => (
+                                                <li key={resource.href}>
+                                                    <NavLink to={langPath(resource.href)}>{resource.label}</NavLink>
+                                                </li>
+                                            ))}
+                                        </ul>
                                         <h5>{t("footer.contactInfo")}</h5>
                                         <ul className="contact-list">
                                             <li><a href="mailto:info@ravlink.ca" data-fbq-label="footer-email">info@ravlink.ca</a></li>

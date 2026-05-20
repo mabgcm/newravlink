@@ -19,10 +19,6 @@ const ChooseUsCard = ({ icon, title, content, speed }) => {
                     <div className="chooseus-content">
                         <h4 className="chooseus-title">{title}</h4>
                         <p>{content}</p>
-                        <div className="link-wrapper">
-                            {/* <a href={link}>Read More</a> */}
-                            {/* <i className="fa-solid fa-arrow-circle-right accent-color"></i> */}
-                        </div>
                     </div>
                 </div>
             </AnimateOnScroll>

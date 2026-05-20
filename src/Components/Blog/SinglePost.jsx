@@ -1302,7 +1302,7 @@ const BlogPostSection = () => {
                                     : "Take your digital marketing to the next level with data-driven strategies and innovative solutions. Let's create something amazing together!"}
                             </p>
                             <div className="link-wrapper">
-                                <a href="/about">{isTurkish ? "Devamını Oku" : "Read More"}</a>
+                                <a href="/about">{isTurkish ? "Rav Link hakkında bilgi alın" : "Learn more about Rav Link"}</a>
                                 <i className="fa-solid fa-circle-arrow-right"></i>
                             </div>
                         </div>

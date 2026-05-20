@@ -1,0 +1,39 @@
+# Rav Link Inc.
+
+> Rav Link Inc. is a digital marketing agency serving Ontario and the Greater Toronto Area with SEO, website design, Meta Ads, Google Ads, and contractor marketing support.
+
+## Primary Pages
+
+- [Home](https://ravlink.ca/): Overview of Rav Link Inc. digital marketing services for Ontario and GTA businesses.
+- [About Rav Link Inc.](https://ravlink.ca/about): Company background, approach, and digital marketing focus.
+- [Digital Marketing Services](https://ravlink.ca/services): Main services overview for SEO, web design, paid ads, and contractor marketing.
+- [Case Studies](https://ravlink.ca/case-studies): Examples of digital marketing work and results.
+- [Digital Marketing Blog](https://ravlink.ca/blog): Practical SEO, website, ads, and local marketing articles.
+- [Contact Rav Link Inc.](https://ravlink.ca/contact): Contact page for strategy calls and marketing inquiries.
+
+## Services
+
+- [SEO Services Barrie](https://ravlink.ca/services/seo-barrie): Local SEO services for Barrie and Ontario businesses.
+- [Website Design Barrie](https://ravlink.ca/services/website-design-barrie): Website design for service-based businesses.
+- [Meta Ads Management](https://ravlink.ca/services/meta-ads-management): Facebook and Instagram ad management for local businesses.
+- [Contractor Marketing](https://ravlink.ca/services/contractor-marketing): SEO, websites, ads, and lead tracking for contractors.
+
+## Location And Market Pages
+
+- [SEO Agency Toronto](https://ravlink.ca/seo-agency-toronto): SEO support for Toronto businesses.
+- [SEO Agency Vaughan](https://ravlink.ca/seo-agency-vaughan): Local SEO strategy for Vaughan service businesses.
+- [SEO Agency Barrie](https://ravlink.ca/seo-agency-barrie): SEO agency support for Barrie and Simcoe County.
+- [Website Design Toronto](https://ravlink.ca/website-design-toronto): Conversion-focused website design for Toronto businesses.
+- [Meta Ads Agency Toronto](https://ravlink.ca/meta-ads-agency-toronto): Meta Ads management for Toronto and GTA businesses.
+- [Contractor Marketing Ontario](https://ravlink.ca/contractor-marketing-ontario): Marketing support for Ontario contractors.
+
+## Articles
+
+- [How Toronto Businesses Rank Higher on Google Maps](https://ravlink.ca/blog/how-toronto-businesses-rank-higher-on-google-maps): Local SEO guide for Google Maps visibility.
+- [Growth Strategies for Digital Business](https://ravlink.ca/blog/growth-strategies-for-digital-business): Digital business growth strategy article.
+- [Why Most Contractor Websites Do Not Convert](https://ravlink.ca/blog/why-most-contractor-websites-dont-convert): Contractor website conversion and lead generation guide.
+
+## Additional Files
+
+- [Sitemap](https://ravlink.ca/sitemap.xml): XML sitemap for indexable pages.
+- [Robots.txt](https://ravlink.ca/robots.txt): Crawler access rules.

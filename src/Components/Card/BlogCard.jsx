@@ -4,7 +4,8 @@ import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 import { trackMetaCustom } from "../../analytics/metaPixel";
 
 function BlogCard({ blog }) {
-    const { t, i18n } = useTranslation();
+    const { i18n } = useTranslation();
+    const isTurkish = i18n.language?.startsWith("tr");
     const imageAlt = i18n.language?.startsWith("tr")
         ? `${blog.title} makale görseli`
         : `${blog.title} article preview`;
@@ -43,7 +44,7 @@ function BlogCard({ blog }) {
                         </a>
                         <p>{blog.excerpt}</p>
                         <a href={blog.link} className="read-more" data-fbq-event="BlogReadMoreClick" data-fbq-label={blog.title}>
-                            {t("common.readMore")}
+                            {isTurkish ? `${blog.title} yazısını oku` : `Read ${blog.title}`}
                         </a>
                     </div>
                 </div>

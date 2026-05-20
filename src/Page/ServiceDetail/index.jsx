@@ -65,7 +65,7 @@ function ServiceDetailPage() {
                                 <ul className="single-service-list">
                                     {page.related.map((link) => (
                                         <li key={link.href}>
-                                            <Link to={link.href}>{link.label}</Link>
+                                            <Link to={langPath(link.href)}>{link.label}</Link>
                                         </li>
                                     ))}
                                 </ul>
