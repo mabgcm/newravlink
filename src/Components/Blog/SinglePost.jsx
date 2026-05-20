@@ -490,7 +490,7 @@ But you're different. You understand that local SEO isn't magic—it's a systema
 
 Not sure where your Google Maps ranking stands? Get a free 10-minute Google Business Profile audit. We'll identify exactly what's holding you back and show you the fastest path to top 3 rankings in Toronto.
 
-Schedule your free audit with Rav Link and let's get your business the local visibility it deserves: https://ravlink.com/seo-agency-toronto.`),
+Schedule your free audit with Rav Link and let's get your business the local visibility it deserves: https://ravlink.ca/seo-agency-toronto.`),
     },
     tr: {
       title: "Toronto İşletmeleri Google Haritalar'da Nasıl Daha Yukarı Çıkar?",
@@ -817,7 +817,7 @@ Destek almanız mantıklı olan alanlar:
 
 Buradaki karar bütçeden önce süreklilikle ilgilidir. Bir işletme profili bir kez düzenleyip aylarca dokunmuyorsa, yorum süreci kurmuyorsa ve web sitesini güncellemiyorsa başlangıç optimizasyonu zamanla etkisini kaybeder. Profesyonel destek, özellikle rekabetli hizmet kategorilerinde sistemi canlı tutmak ve fırsatları düzenli takip etmek için anlamlıdır.
 
-Toronto SEO stratejisi için Rav Link ile başlayabilirsiniz: https://ravlink.com/seo-agency-toronto. Contractor firmaları için özel pazarlama desteği de burada: https://ravlink.com/services/contractor-marketing.
+Toronto SEO stratejisi için Rav Link ile başlayabilirsiniz: https://ravlink.ca/seo-agency-toronto. Contractor firmaları için özel pazarlama desteği de burada: https://ravlink.com/services/contractor-marketing.
 
 ## Google Haritalar'da Daha Yukarı Çıkmaya Hazır mısınız?
 Artık Toronto işletmelerinin Google Haritalar'da nasıl daha yukarı çıkabileceğini biliyorsunuz. Alaka, bilinirlik ve yakınlık sinyallerinin nasıl çalıştığını; Google İşletme Profili'nin neden temel olduğunu; NAP tutarlılığı, yorumlar, web sitesi sinyalleri, backlinkler ve citation çalışmalarının nasıl birleştiğini gördünüz.
@@ -828,7 +828,7 @@ Uygulama emek ister. Ancak sonuç; Google Haritalar üzerinden daha düzenli tel
 
 Google Haritalar sıralamanızın neden zayıf olduğunu bilmiyorsanız küçük bir denetimle başlayın. Profil eksikleri, NAP hataları, yorum temposu, web sitesi sinyalleri ve lokal otorite genellikle en hızlı fırsatları gösterir.
 
-Rav Link ile ücretsiz Google İşletme Profili denetimi planlayın ve Toronto'da ilk üç sıralamaya giden en kısa yolu netleştirin: https://ravlink.com/seo-agency-toronto.`),
+Rav Link ile ücretsiz Google İşletme Profili denetimi planlayın ve Toronto'da ilk üç sıralamaya giden en kısa yolu netleştirin: https://ravlink.ca/seo-agency-toronto.`),
     },
   },
   "growth-strategies-for-digital-business": {

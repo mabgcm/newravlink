@@ -24,6 +24,42 @@ export const locationPages = {
             { label: "Website Design Barrie", href: "/services/website-design-barrie" },
             { label: "Contact Rav Link", href: "/contact" },
         ],
+        tr: {
+            title: "Toronto SEO Ajansı | Yerel Büyüme Odaklı SEO Hizmetleri",
+            description:
+                "Toronto işletmeleri için daha güçlü lokal görünürlük, daha iyi hizmet sayfaları ve daha net dönüşüm yolları sunan SEO desteği.",
+            eyebrow: "Toronto SEO",
+            intro:
+                "Toronto arama sonuçları rekabetlidir; bu yüzden genel içerik ve birkaç anahtar kelime çoğu zaman yeterli olmaz. Rav Link, işletmenizin hizmetlerini netleştirir, teknik SEO temelini güçlendirir ve yerel müşterilerin gerçekten aradığı konulara uygun sayfalar oluşturur.",
+            headline: "Yerel büyüme için stratejik dijital pazarlama desteği",
+            supportTitle: "Rav Link nasıl yardımcı olur?",
+            supportItems: [
+                "Lokal SEO ve hizmet sayfası planlaması",
+                "Web sitesi yapısı ve dönüşüm iyileştirmeleri",
+                "Meta Ads ve Google Ads kampanya desteği",
+                "Lead takibi ve anlaşılır aylık raporlama",
+            ],
+            sections: [
+                {
+                    heading: "Rekabetli Toronto aramaları için hazırlanır",
+                    body: "Sayfa yapısı, meta başlıklar, iç bağlantılar, hizmet içerikleri, Google görünürlüğü ve dönüşüm odaklı aksiyon çağrılarını pratik SEO temelleriyle birlikte ele alırız.",
+                },
+                {
+                    heading: "Pazarlama sisteminizle birlikte çalışır",
+                    body: "SEO en iyi; web sitesi, reklam kampanyaları ve lead yönetimi aynı teklifi desteklediğinde sonuç verir. Arama görünürlüğünü işletmenizin satış süreciyle uyumlu hale getiririz.",
+                },
+            ],
+            relatedTitle: "İlgili hizmetleri inceleyin",
+            links: [
+                { label: "Barrie SEO Hizmetleri", href: "/services/seo-barrie" },
+                { label: "Barrie Web Tasarım", href: "/services/website-design-barrie" },
+                { label: "Rav Link ile İletişime Geçin", href: "/contact" },
+            ],
+            ctaTitle: "Bir sonraki lokal büyüme adımınızı planlayın",
+            ctaBody:
+                "Rav Link, Ontario ve Greater Toronto Area genelindeki işletmelere uzaktan ve yerinde destek verir. Hizmet bölgenizi ve hedeflerinizi paylaşın; sizin için en doğru sonraki adımı netleştirelim.",
+            ctaLink: "Görüşme başlatın",
+        },
     },
     "seo-agency-vaughan": {
         path: "/seo-agency-vaughan",

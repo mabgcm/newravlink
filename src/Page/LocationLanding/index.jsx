@@ -3,18 +3,32 @@ import { Link, Navigate, useLocation, useParams } from "react-router-dom";
 import BannerInnerSection from "../../Components/Banner/Inner";
 import HeadTitle from "../../Components/Head/HeadTitle";
 import { getLocationSeo, locationPages } from "../../Data/locationPages";
-import { useLangPath } from "../../Components/Context/LanguageContext";
+import { useLangPath, useLanguage } from "../../Components/Context/LanguageContext";
+
+const getLocalizedPage = (page, language) => {
+    if (language !== "tr" || !page.tr) return page;
+
+    return {
+        ...page,
+        ...page.tr,
+        path: `/tr${page.path}`,
+    };
+};
 
 function LocationLandingPage() {
     const { slug } = useParams();
     const location = useLocation();
     const langPath = useLangPath();
+    const { language } = useLanguage();
     // Strip /tr prefix before extracting the slug segment
     const cleanPath = location.pathname.replace(/^\/tr/, "");
     const pageSlug = slug || cleanPath.replace(/^\//, "");
-    const page = locationPages[pageSlug];
+    const basePage = locationPages[pageSlug];
 
-    if (!page) return <Navigate to={langPath("/services")} replace />;
+    if (!basePage) return <Navigate to={langPath("/services")} replace />;
+
+    const page = getLocalizedPage(basePage, language);
+    const isTurkish = language === "tr";
 
     return (
         <>
@@ -30,19 +44,25 @@ function LocationLandingPage() {
                                         <i className="fa-regular fa-circle-dot"></i>
                                         <span>{page.eyebrow}</span>
                                     </div>
-                                    <h2 className="title-heading">Digital marketing support for local growth</h2>
+                                    <h2 className="title-heading">
+                                        {page.headline || "Digital marketing support for local growth"}
+                                    </h2>
                                     <p>{page.intro}</p>
                                 </div>
                             </div>
                             <div className="col col-lg-5">
                                 <div className="card service-included">
-                                    <h2>How Rav Link can help</h2>
+                                    <h2>{page.supportTitle || "How Rav Link can help"}</h2>
                                     <div className="underline-accent-short"></div>
                                     <ul className="check-list">
-                                        <li>Local SEO and service page planning</li>
-                                        <li>Website structure and conversion improvements</li>
-                                        <li>Meta Ads and Google Ads campaign support</li>
-                                        <li>Lead tracking and practical monthly reporting</li>
+                                        {(page.supportItems || [
+                                            "Local SEO and service page planning",
+                                            "Website structure and conversion improvements",
+                                            "Meta Ads and Google Ads campaign support",
+                                            "Lead tracking and practical monthly reporting",
+                                        ]).map((item) => (
+                                            <li key={item}>{item}</li>
+                                        ))}
                                     </ul>
                                 </div>
                             </div>
@@ -60,12 +80,12 @@ function LocationLandingPage() {
                         </div>
 
                         <div className="card service-recent">
-                            <h2>Explore related services</h2>
+                            <h2>{page.relatedTitle || "Explore related services"}</h2>
                             <div className="underline-accent-short"></div>
                             <ul className="single-service-list">
                                 {page.links.map((link) => (
                                     <li key={link.href}>
-                                        <Link to={link.href}>{link.label}</Link>
+                                        <Link to={langPath(link.href)}>{link.label}</Link>
                                     </li>
                                 ))}
                             </ul>
@@ -73,13 +93,17 @@ function LocationLandingPage() {
 
                         <div className="cta-service-banner">
                             <div className="spacer"></div>
-                            <h2 className="title-heading">Plan your next local growth move</h2>
+                            <h2 className="title-heading">
+                                {page.ctaTitle || "Plan your next local growth move"}
+                            </h2>
                             <p>
-                                Rav Link serves businesses across Ontario and the Greater Toronto Area remotely and
-                                on-site. Share your service area and goals, and we will recommend the right next step.
+                                {page.ctaBody ||
+                                    "Rav Link serves businesses across Ontario and the Greater Toronto Area remotely and on-site. Share your service area and goals, and we will recommend the right next step."}
                             </p>
                             <div className="link-wrapper">
-                                <Link to={langPath("/contact")}>Start a conversation</Link>
+                                <Link to={langPath("/contact")}>
+                                    {page.ctaLink || (isTurkish ? "Görüşme başlatın" : "Start a conversation")}
+                                </Link>
                                 <i className="fa-solid fa-circle-arrow-right"></i>
                             </div>
                         </div>
