@@ -36,6 +36,7 @@ function PageRoutes() {
             <Route path="testimonial" element={<TestimonialPage />} />
             <Route path="faq" element={<FaqPage />} />
             <Route path="blog" element={<BlogPage />} />
+            <Route path="blog/:slug" element={<SinglePostPage />} />
             <Route path="single_post" element={<SinglePostPage />} />
             <Route path="contact" element={<ContactPage />} />
             <Route path="seo-agency-toronto" element={<LocationLandingPage />} />

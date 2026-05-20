@@ -1,10 +1,16 @@
 import { spawn } from "node:child_process";
+import { readFileSync } from "node:fs";
 import fs from "node:fs/promises";
 import net from "node:net";
 import path from "node:path";
 import process from "node:process";
 import chromium from "@sparticuz/chromium";
 import puppeteer from "puppeteer-core";
+
+const blogDataSource = readFileSync(new URL("../src/Data/BlogPostData.jsx", import.meta.url), "utf8");
+const blogRoutes = [...blogDataSource.matchAll(/link:\s*"([^"]+)"/g)]
+    .map((match) => match[1])
+    .filter((link) => link.startsWith("/blog/"));
 
 const routes = [
     "/",
@@ -16,6 +22,7 @@ const routes = [
     "/services/contractor-marketing",
     "/case-studies",
     "/blog",
+    ...blogRoutes,
     "/contact",
     "/seo-agency-toronto",
     "/seo-agency-vaughan",

@@ -4,7 +4,10 @@ import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 import { trackMetaCustom } from "../../analytics/metaPixel";
 
 function BlogCard({ blog }) {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const imageAlt = i18n.language?.startsWith("tr")
+        ? `${blog.title} makale görseli`
+        : `${blog.title} article preview`;
     const handleClick = () => {
         trackMetaCustom("BlogReadMoreClick", {
             content_name: blog.title,
@@ -22,7 +25,7 @@ function BlogCard({ blog }) {
                     onClick={handleClick}
                 >
                     <div className="blog-image">
-                        <img src={blog.image} alt={`${blog.title} article preview`} loading="lazy" />
+                        <img src={blog.image} alt={imageAlt} loading="lazy" />
                     </div>
                     <div className="card-body">
                         <div className="d-flex flex-row gspace-2">

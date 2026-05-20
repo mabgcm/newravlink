@@ -42,7 +42,7 @@
   },
   "contactForm": {
     "title": "Bir Sonraki Projenizi Konuşalım",
-    "successMessage": "Teşekkürler! Mesajınız başarıyla gönderildi.",
+    "süçcessMessage": "Teşekkürler! Mesajınız başarıyla gönderildi.",
     "errorMessage": "Bir hata oluştu. Lütfen tekrar deneyin.",
     "submit": "Mesaj Gönder",
     "labels": {
@@ -158,7 +158,7 @@
       },
       "email": {
         "label": "E-posta adresi",
-        "placeholder": "isim@isletme.com"
+        "placeholder": "isim@işletme.com"
       },
       "phone": {
         "label": "Telefon numarası",
@@ -219,7 +219,7 @@
           "paid-ads": "Ücretli reklamları başlatmak veya iyileştirmek"
         }
       },
-      "successMetric": {
+      "süçcessMetric": {
         "label": "Başarıyı hangi ölçüte göre değerlendireceksiniz?",
         "options": {
           "lead-count": "Lead sayısı",
@@ -235,8 +235,8 @@
           "yeni-acilis": "Yeni açılış veya lansman",
           "sezon-basliyor": "Sezon başlıyor",
           "rakip-baskisi": "Rakipler baskı yaratıyor",
-          "buyume-hedefi": "Net bir büyüme hedefimiz var",
-          "onceki-ajans-birakti": "Önceki ajans süreci bıraktı",
+          "büyüme-hedefi": "Net bir büyüme hedefimiz var",
+          "önceki-ajans-birakti": "Önceki ajans süreci bıraktı",
           "other": "Diğer"
         }
       },
@@ -264,8 +264,8 @@
         "options": {
           "ben-kendim": "Ben yönetiyorum",
           "ekip-uyesi": "Ekipten biri yönetiyor",
-          "baska-ajans": "Başka bir ajans yönetiyor",
-          "kimse-aktif-degil": "Düzenli yöneten kimse yok"
+          "başka-ajans": "Başka bir ajans yönetiyor",
+          "kimse-aktif-değil": "Düzenli yöneten kimse yok"
         }
       },
       "hasRunAds": {
@@ -278,18 +278,18 @@
       "adsResult": {
         "label": "Bu reklamların sonucu nasıl oldu?",
         "options": {
-          "cok-iyi": "Oldukça iyiydi",
+          "çok-iyi": "Oldukça iyiydi",
           "orta": "Karışıktı / ortaydı",
-          "kotu-para-heba": "Kötüydü, para boşa gitmiş gibi hissettik",
-          "ne-yaptigimi-bilmiyordum": "Net bir strateji olmadan reklam çıktık"
+          "kotu-para-heba": "Kötüydü, para boşa gitmış gibi hissettik",
+          "ne-yaptigimı-bilmıyordum": "Net bir strateji olmadan reklam çıktık"
         }
       },
       "contentAssets": {
         "label": "Elinizde nasıl içerik materyalleri var?",
         "options": {
           "evet-profesyonel": "Profesyonel içerik ve marka materyalleri var",
-          "evet-telefon-cekimi": "Daha çok telefon çekimi içerik var",
-          "cok-az": "Çok sınırlı içerik var",
+          "evet-telefon-cekimı": "Daha çok telefon çekimı içerik var",
+          "çok-az": "Çok sınırlı içerik var",
           "hic-yok": "Neredeyse hiç hazır içerik yok"
         }
       },
@@ -297,7 +297,7 @@
         "label": "Analytics ve takip altyapınız ne durumda?",
         "options": {
           "evet-aktif": "Takip aktif çalışıyor",
-          "kurulu-ama-kullanmiyorum": "Kurulu ama doğru kullanılmıyor",
+          "kurulu-ama-kullanmıyorum": "Kurulu ama doğru kullanılmıyor",
           "hayir": "Hiç kurulu değil"
         }
       },
@@ -337,8 +337,8 @@
       "previousAgencyIssue": {
         "label": "O ajansla yaşadığınız sorunlar nelerdi? Uygun olanların hepsini seçin.",
         "options": {
-          "iletisim-koptu": "İletişim koptu",
-          "sonuc-cikmadi": "Sonuç çıkmadı",
+          "iletişim-koptu": "İletişim koptu",
+          "sonuç-cikmadı": "Sonuç çıkmadı",
           "fiyat-performans-kotuydu": "Fiyat / performans zayıftı",
           "sozlesme-sorunu": "Sözleşme veya süreç sorunu vardı",
           "other": "Diğer"
@@ -493,7 +493,7 @@
     "title": "İşinizi Büyüten Dijital Çözümler",
     "description": "Satış, lead ve uzun vadeli marka değeri yaratan stratejik hizmetlerimizi keşfedin.",
     "overviewTitle": "Genel Bakış",
-    "overviewDescription": "Uçtan uca performans odaklı dijital pazarlama sunuyoruz. Her hizmet işletmenizin hedeflerine göre uyarlanır ve ölçülebilir büyüme üretir.",
+    "overviewDescription": "Uçtan uça performans odaklı dijital pazarlama sunuyoruz. Her hizmet işletmenizin hedeflerine göre uyarlanır ve ölçülebilir büyüme üretir.",
     "services": [
       {
         "title": "Performans Pazarlaması",
@@ -578,7 +578,7 @@
       },
       {
         "id": 4,
-        "question": "Özel bir dijital pazarlama paketi isteyebilir miyim?",
+        "question": "Özel bir dijital pazarlama paketi isteyebilir mıyım?",
         "answer": "Elbette. Hedeflerinize, bütçenize ve zaman planınıza göre özelleştiriyoruz."
       },
       {
@@ -642,7 +642,7 @@
       "currentPage": "Hizmetler"
     },
     "singlePost": {
-      "title": "Dijital İşletmeler İçin Büyüme Stratejileri",
+      "title": "Toronto İşletmeleri Google Haritalar'da Nasıl Daha Yukarı Çıkar?",
       "currentPage": "Blog"
     },
     "singleService": {
@@ -797,7 +797,7 @@
         "content": "Birçok ajansla çalıştık ancak Ravlink yaklaşımıyla net şekilde ayrışıyor. Veri odaklı kararları ve yaratıcı çözümleri sayesinde pazarda gerçek bir rekabet avantajı elde ettik."
       },
       {
-        "title": "Kurucu",
+        "title": "Kurüçu",
         "content": "SEO’dan ücretli reklamlara kadar tüm süreci uçtan uca yönettikleri bir yapı kurdular. Web sitemizin trafiği hızla arttı ve lead üretimi hiç olmadığı kadar güçlü hale geldi."
       },
       {
@@ -813,7 +813,7 @@
         "content": "Sadece kampanya yönetmiyorlar, süreci gerçekten sahipleniyorlar. Test, analiz ve optimizasyon sayesinde performansımız sürekli yükseldi."
       },
       {
-        "title": "Kurucu",
+        "title": "Kurüçu",
         "content": "Ekibimizin bir uzantısı gibi çalıştılar. Trafik artışı, lead kalitesi ve dönüşüm oranlarında çok kısa sürede ciddi fark yarattılar."
       },
       {
@@ -823,16 +823,22 @@
     ],
     "blogs": [
       {
-        "date": "14 Nisan 2025",
-        "category": "Sosyal Medya",
-        "title": "Instagram ve Facebook Reklamlarında Daha Yüksek Dönüşüm Nasıl Sağlanır?",
-        "excerpt": "Bütçenizi boşa harcamadan, Meta reklamlarını daha fazla lead ve satış üretecek şekilde nasıl optimize edebileceğinizi adım adım öğrenin."
+        "date": "20 Mayıs 2026",
+        "category": "Lokal SEO",
+        "title": "Toronto İşletmeleri Google Haritalar'da Nasıl Daha Yukarı Çıkar?",
+        "excerpt": "Google Business Profile, yorumlar, alıntılar ve lokal otorite ile Google Haritalar görünürlüğünü artırmak isteyen işletmeler için pratik bir rehber."
       },
       {
         "date": "14 Nisan 2025",
         "category": "SEO",
         "title": "Dijital İşletmeler İçin Sürdürülebilir Büyüme Stratejileri",
         "excerpt": "SEO’yu sadece trafik değil, gelir üreten bir kanala dönüştüren stratejileri ve uzun vadeli büyüme yaklaşımını keşfedin."
+      },
+      {
+        "date": "20 Mayıs 2026",
+        "category": "Contractor Pazarlama",
+        "title": "Neden Çoğu Contractor Web Sitesi Dönüşüm Getirmez?",
+        "excerpt": "Çoğu contractor web sitesi jenerik göründüğü, güven kanıtlarını sakladığı ve teklif alma adımını zorlaştırdığı için yeterince lead üretmez."
       }
     ],
     "footerServices": [

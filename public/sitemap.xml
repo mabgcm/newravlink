@@ -76,6 +76,21 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ravlink.ca/blog/how-toronto-businesses-rank-higher-on-google-maps</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://ravlink.ca/blog/growth-strategies-for-digital-business</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
+    <loc>https://ravlink.ca/blog/why-most-contractor-websites-dont-convert</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
     <loc>https://ravlink.ca/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

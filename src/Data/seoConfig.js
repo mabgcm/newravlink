@@ -17,6 +17,7 @@ export const areaServed = [
 ];
 
 const canonical = (path) => `${SITE_URL}${path}`;
+const googleMapsArticlePath = "/blog/how-toronto-businesses-rank-higher-on-google-maps";
 
 export const professionalServiceSchema = {
     "@context": "https://schema.org",
@@ -147,6 +148,38 @@ export const seoConfig = {
         ogDescription: "SEO, websites, ads, and local marketing insights.",
         ogImage: DEFAULT_OG_IMAGE,
         schema: pageSchema("Digital Marketing Blog", "/blog", "Digital marketing blog by Rav Link Inc."),
+    },
+    singlePost: {
+        title: "How Toronto Businesses Rank Higher on Google Maps | Rav Link Inc.",
+        description:
+            "Learn how Toronto businesses can improve Google Maps rankings with Google Business Profile optimization, NAP consistency, reviews, citations, and local SEO.",
+        canonical: canonical(googleMapsArticlePath),
+        ogTitle: "How Toronto Businesses Rank Higher on Google Maps",
+        ogDescription: "A practical local SEO guide for Toronto and GTA businesses that want stronger Google Maps visibility.",
+        ogImage: canonical("/assets/images/google-maps-local-seo-toronto.jpg"),
+        schema: {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "How Toronto Businesses Rank Higher on Google Maps",
+            description:
+                "A local SEO guide for improving Google Maps visibility with stronger profiles, reviews, citations, and local authority.",
+            image: canonical("/assets/images/google-maps-local-seo-toronto.jpg"),
+            author: {
+                "@type": "Organization",
+                name: "Rav Link Inc.",
+            },
+            publisher: {
+                "@type": "Organization",
+                name: "Rav Link Inc.",
+                logo: {
+                    "@type": "ImageObject",
+                    url: DEFAULT_OG_IMAGE,
+                },
+            },
+            datePublished: "2026-05-20",
+            dateModified: "2026-05-20",
+            mainEntityOfPage: canonical(googleMapsArticlePath),
+        },
     },
     contact: {
         title: "Contact Rav Link Inc. | Digital Marketing Agency in Ontario",
