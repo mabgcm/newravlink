@@ -325,7 +325,7 @@
       "involvementLevel": {
         "label": "Süreçte ne kadar dahil olmak istersiniz?",
         "options": {
-          "hands-off": "Büyük ölçüde bize bırakmak istiyorum",
+          "hands-off": "Büyük ölçüde size/ajansınıza bırakmak istiyorum",
           "approval-only": "Ana kararları onaylamak isterim",
           "collaborative": "Yakın ve ortak çalışmak isterim"
         }
