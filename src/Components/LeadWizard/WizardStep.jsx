@@ -112,7 +112,6 @@ function WizardStep({ stepMeta, questions, currentQuestion, answers, errors, onA
         <h3 className="title-heading">
           {currentQuestion ? t(`leadWizard.questions.${currentQuestion.id}.label`) : ""}
         </h3>
-        <p className="wizard-step-description">{t(stepMeta.descriptionKey)}</p>
       </div>
 
       <div className="form wizard-form-fields">

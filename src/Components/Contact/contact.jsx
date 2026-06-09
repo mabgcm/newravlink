@@ -1,7 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import LeadWizard from "../LeadWizard/LeadWizard";
 
 const ContactSection = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="section" data-pixel-section="contact">
             <div className="hero-container">
@@ -11,11 +14,11 @@ const ContactSection = () => {
                             <div className="card contact-title">
                                 <div className="sub-heading">
                                     <i className="fa-regular fa-circle-dot"></i>
-                                    <span>Reach out to us</span>
+                                    <span>{t("contactPage.card.subHeading")}</span>
                                 </div>
-                                <h2 className="title-heading">Get in Touch</h2>
+                                <h2 className="title-heading">{t("contactPage.card.title")}</h2>
                                 <p>
-                                    Reach out for tailored SEO, website design, paid ads, and local marketing support across Ontario and the Greater Toronto Area.
+                                    {t("contactPage.card.description")}
                                 </p>
                                 <div className="d-flex flex-column flex-md-row align-items-center text-md-start text-center gspace-2">
                                     <div>
@@ -26,7 +29,7 @@ const ContactSection = () => {
                                         </div>
                                     </div>
                                     <div className="d-grid">
-                                        <span>Phone Number</span>
+                                        <span>{t("contactPage.card.phoneLabel")}</span>
 	                                        <h5>
                                                 <a href="tel:+14372196444" data-fbq-label="contact-card-phone">(437) 219-6444</a>
                                             </h5>
@@ -41,7 +44,7 @@ const ContactSection = () => {
                                         </div>
                                     </div>
                                     <div className="d-grid">
-                                        <span>Email Address</span>
+                                        <span>{t("contactPage.card.emailLabel")}</span>
 	                                        <h5>
                                                 <a href="mailto:info@ravlink.ca" data-fbq-label="contact-card-email">info@ravlink.ca</a>
                                             </h5>
@@ -56,8 +59,8 @@ const ContactSection = () => {
                                         </div>
                                     </div>
                                     <div className="d-grid">
-                                        <span>Office Address</span>
-                                        <h5>Serving businesses across Ontario remotely and on-site, including the GTA, Toronto, Vaughan, Markham, Mississauga, Brampton, Barrie, and Simcoe County.</h5>
+                                        <span>{t("contactPage.card.serviceAreaLabel")}</span>
+                                        <h5>{t("contactPage.card.serviceArea")}</h5>
                                     </div>
                                 </div>
                             </div>

@@ -104,6 +104,17 @@
       }
     }
   },
+  "contactPage": {
+    "card": {
+      "subHeading": "Reach out to us",
+      "title": "Get in Touch",
+      "description": "Reach out for tailored SEO, website design, paid ads, and local marketing support across Ontario and the Greater Toronto Area.",
+      "phoneLabel": "Phone Number",
+      "emailLabel": "Email Address",
+      "serviceAreaLabel": "Service Area",
+      "serviceArea": "Serving businesses across Ontario remotely and on-site, including the GTA, Toronto, Vaughan, Markham, Mississauga, Brampton, Barrie, and Simcoe County."
+    }
+  },
   "leadWizard": {
     "badge": "Lead Intake",
     "requiredBadge": "Required",
@@ -119,6 +130,7 @@
     },
     "errors": {
       "required": "{{field}} is required.",
+      "email": "Please enter a valid email address.",
       "submit": "We could not send your answers right now. Please try again."
     },
     "result": {

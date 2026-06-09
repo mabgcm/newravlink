@@ -7,7 +7,7 @@
     "testimonials": "Müşteri Yorumları",
     "pricing": "Fiyatlar",
     "blog": "Blog",
-    "contact": "Iletisim"
+    "contact": "İletişim"
   },
   "footer": {
     "tagline": "Stratejiyle Büyüyen Markalar",
@@ -42,7 +42,7 @@
   },
   "contactForm": {
     "title": "Bir Sonraki Projenizi Konuşalım",
-    "süçcessMessage": "Teşekkürler! Mesajınız başarıyla gönderildi.",
+    "successMessage": "Teşekkürler! Mesajınız başarıyla gönderildi.",
     "errorMessage": "Bir hata oluştu. Lütfen tekrar deneyin.",
     "submit": "Mesaj Gönder",
     "labels": {
@@ -104,6 +104,17 @@
       }
     }
   },
+  "contactPage": {
+    "card": {
+      "subHeading": "Bize ulaşın",
+      "title": "İşinizi konuşalım",
+      "description": "Ontario ve GTA’daki işletmeler için SEO, web sitesi, reklam ve yerel pazarlama desteği sunuyoruz.",
+      "phoneLabel": "Telefon",
+      "emailLabel": "E-posta",
+      "serviceAreaLabel": "Hizmet bölgemiz",
+      "serviceArea": "Ontario genelinde uzaktan ve yerinde çalışıyoruz. Toronto, Vaughan, Markham, Mississauga, Brampton, Barrie ve Simcoe County dahil."
+    }
+  },
   "leadWizard": {
     "badge": "Ön Görüşme Akışı",
     "requiredBadge": "Zorunlu",
@@ -119,6 +130,7 @@
     },
     "errors": {
       "required": "{{field}} zorunludur.",
+      "email": "Geçerli bir e-posta adresi girin.",
       "submit": "Yanıtlarınız şu anda gönderilemedi. Lütfen tekrar deneyin."
     },
     "result": {
@@ -127,24 +139,24 @@
     },
     "steps": {
       "step1": {
-        "title": "Kimsiniz?",
-        "description": "Önce temel iletişim bilgilerini alalım; bu talebin hangi işletmeye ait olduğunu netleştirelim."
+        "title": "İletişim bilgileri",
+        "description": "Size ulaşabilmemiz ve talebin hangi işletmeye ait olduğunu anlayabilmemiz için."
       },
       "step2": {
-        "title": "Nasıl bir iş modeliniz var?",
-        "description": "İş modeliniz ve pazar yapınız, sonraki aşamada hangi soruların gerçekten gerekli olduğunu belirler."
+        "title": "İşletme profili",
+        "description": "İş modelinizi ve hedef pazarınızı netleştirelim."
       },
       "step3": {
-        "title": "Ne başarmak istiyorsunuz?",
-        "description": "Hedefleriniz, hangi büyüme kanallarına ve önceliklere odaklanmamız gerektiğini gösterir."
+        "title": "Hedefler",
+        "description": "Önceliğinizin lead, satış, görünürlük veya reklam performansı olduğunu anlayalım."
       },
       "step4": {
-        "title": "Mevcut durumunuz ne?",
-        "description": "Şu an neyin kurulu olduğunu, neyin eksik kaldığını ve nerede iyileştirme gerektiğini burada görüyoruz."
+        "title": "Mevcut durum",
+        "description": "Web sitesi, sosyal medya, reklam ve takip altyapınızın durumunu görelim."
       },
       "step5": {
-        "title": "Karar süreciniz nasıl işliyor?",
-        "description": "Bütçe, karar alma biçimi ve önceki ajans deneyimi uyumu ve hazırlık seviyesini anlamamıza yardımcı olur."
+        "title": "Bütçe ve karar",
+        "description": "Size uygun yaklaşımı önerebilmek için bütçe ve karar sürecinizi anlayalım."
       }
     },
     "questions": {
@@ -219,7 +231,7 @@
           "paid-ads": "Ücretli reklamları başlatmak veya iyileştirmek"
         }
       },
-      "süçcessMetric": {
+      "successMetric": {
         "label": "Başarıyı hangi ölçüte göre değerlendireceksiniz?",
         "options": {
           "lead-count": "Lead sayısı",
@@ -230,13 +242,13 @@
         }
       },
       "urgencyReason": {
-        "label": "Bu konunun şimdi öncelikli olmasının sebepleri neler? Uygun olanların hepsini seçin.",
+        "label": "Bu konu neden şimdi öncelikli?",
         "options": {
           "yeni-acilis": "Yeni açılış veya lansman",
           "sezon-basliyor": "Sezon başlıyor",
           "rakip-baskisi": "Rakipler baskı yaratıyor",
-          "büyüme-hedefi": "Net bir büyüme hedefimiz var",
-          "önceki-ajans-birakti": "Önceki ajans süreci bıraktı",
+          "buyume-hedefi": "Net bir büyüme hedefimiz var",
+          "onceki-ajans-birakti": "Önceki ajans süreci bıraktı",
           "other": "Diğer"
         }
       },
@@ -264,8 +276,8 @@
         "options": {
           "ben-kendim": "Ben yönetiyorum",
           "ekip-uyesi": "Ekipten biri yönetiyor",
-          "başka-ajans": "Başka bir ajans yönetiyor",
-          "kimse-aktif-değil": "Düzenli yöneten kimse yok"
+          "baska-ajans": "Başka bir ajans yönetiyor",
+          "kimse-aktif-degil": "Düzenli yöneten kimse yok"
         }
       },
       "hasRunAds": {
@@ -278,18 +290,18 @@
       "adsResult": {
         "label": "Bu reklamların sonucu nasıl oldu?",
         "options": {
-          "çok-iyi": "Oldukça iyiydi",
+          "cok-iyi": "İyiydi",
           "orta": "Karışıktı / ortaydı",
-          "kotu-para-heba": "Kötüydü, para boşa gitmış gibi hissettik",
-          "ne-yaptigimı-bilmıyordum": "Net bir strateji olmadan reklam çıktık"
+          "kotu-para-heba": "Kötüydü, bütçe boşa gitti",
+          "ne-yaptigimi-bilmiyordum": "Net bir strateji yoktu"
         }
       },
       "contentAssets": {
         "label": "Elinizde nasıl içerik materyalleri var?",
         "options": {
           "evet-profesyonel": "Profesyonel içerik ve marka materyalleri var",
-          "evet-telefon-cekimı": "Daha çok telefon çekimı içerik var",
-          "çok-az": "Çok sınırlı içerik var",
+          "evet-telefon-cekimi": "Daha çok telefon çekimi içerik var",
+          "cok-az": "Çok sınırlı içerik var",
           "hic-yok": "Neredeyse hiç hazır içerik yok"
         }
       },
@@ -297,7 +309,7 @@
         "label": "Analytics ve takip altyapınız ne durumda?",
         "options": {
           "evet-aktif": "Takip aktif çalışıyor",
-          "kurulu-ama-kullanmıyorum": "Kurulu ama doğru kullanılmıyor",
+          "kurulu-ama-kullanmiyorum": "Kurulu ama doğru kullanılmıyor",
           "hayir": "Hiç kurulu değil"
         }
       },
@@ -335,10 +347,10 @@
         }
       },
       "previousAgencyIssue": {
-        "label": "O ajansla yaşadığınız sorunlar nelerdi? Uygun olanların hepsini seçin.",
+        "label": "O ajansla yaşadığınız sorunlar nelerdi?",
         "options": {
-          "iletişim-koptu": "İletişim koptu",
-          "sonuç-cikmadı": "Sonuç çıkmadı",
+          "iletisim-koptu": "İletişim koptu",
+          "sonuc-cikmadi": "Sonuç çıkmadı",
           "fiyat-performans-kotuydu": "Fiyat / performans zayıftı",
           "sozlesme-sorunu": "Sözleşme veya süreç sorunu vardı",
           "other": "Diğer"

@@ -21,6 +21,8 @@ const isEmptyAnswer = (question, value) => {
   return typeof value !== "string" || value.trim() === "";
 };
 
+const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
+
 function LeadWizard() {
   const { t } = useTranslation();
   const [currentScreenIndex, setCurrentScreenIndex] = useState(0);
@@ -157,6 +159,11 @@ function LeadWizard() {
 
       if (isEmptyAnswer(question, answers[question.id])) {
         nextErrors[question.id] = "leadWizard.errors.required";
+        return;
+      }
+
+      if (question.type === "email" && !isValidEmail(answers[question.id])) {
+        nextErrors[question.id] = "leadWizard.errors.email";
       }
     });
 
