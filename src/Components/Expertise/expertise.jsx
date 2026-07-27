@@ -2,9 +2,11 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 import CounterOnScroll from "../Hooks/CounterOnScroll";
+import { useLangPath } from "../Context/LanguageContext";
 
 function ExpertiseSection() {
     const { t } = useTranslation();
+    const langPath = useLangPath();
 
     return (
         <>
@@ -30,8 +32,8 @@ function ExpertiseSection() {
                                                     <h4>{t("home.expertise.cardTitle")}</h4>
                                                     <p>{t("home.expertise.cardText")}</p>
                                                     <div className="d-flex align-items-center flex-row gspace-2 expertise-link">
-                                                        <a href="/contact" data-fbq-event="ContactCTA" data-fbq-label="expertise-card">
-                                                            {t("common.getFreeConsultation")}
+                                                        <a href={langPath("/growth-check")} data-fbq-event="GrowthCheckCTA" data-fbq-label="expertise-card">
+                                                            {t("common.startGrowthCheck")}
                                                         </a>
                                                         <i className="fa-solid fa-circle-arrow-right"></i>
                                                     </div>

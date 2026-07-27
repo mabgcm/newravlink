@@ -3,9 +3,11 @@ import { useTranslation } from "react-i18next";
 import { services } from "../../Data/ServiceData";
 import ServiceCard from "../Card/ServiceCard";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
+import { useLangPath } from "../Context/LanguageContext";
 
 function ServiceSection(){
     const { t } = useTranslation();
+    const langPath = useLangPath();
 
     return(
         <>
@@ -44,8 +46,8 @@ function ServiceSection(){
                         <div className="service-link-footer">
                             <p>
                                 {t("home.services.footerText")}
-                                <a href="/contact" data-fbq-event="ContactCTA" data-fbq-label="services-footer">
-                                    {t("common.getFreeStrategyCall")}
+                                <a href={langPath("/growth-check")} data-fbq-event="GrowthCheckCTA" data-fbq-label="services-footer">
+                                    {t("common.findMarketingPriority")}
                                 </a>
                             </p>
                         </div>

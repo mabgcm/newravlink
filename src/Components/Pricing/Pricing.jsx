@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 import { trackMetaCustom, trackMetaStandard } from "../../analytics/metaPixel";
+import { useLangPath } from "../Context/LanguageContext";
 
 const PLAN_META = {
     starter: { name: "Starter", value: 600, currency: "CAD" },
@@ -11,6 +12,7 @@ const PLAN_META = {
 
 function PricingPlanSection() {
     const { t } = useTranslation();
+    const langPath = useLangPath();
     const startCheckout = (plan) => async (e) => {
         e.preventDefault();
         const planMeta = PLAN_META[plan];
@@ -82,8 +84,8 @@ function PricingPlanSection() {
                                         <div className="content">
                                             <h3 className="title-heading">{t("home.pricing.introTitle")}</h3>
                                             <div className="link-wrapper">
-                                                <a href="/contact" data-fbq-event="ContactCTA" data-fbq-label="pricing-intro">
-                                                    {t("common.bookFreeConsultation")}
+                                                <a href={langPath("/growth-check")} data-fbq-event="GrowthCheckCTA" data-fbq-label="pricing-intro">
+                                                    {t("common.startGrowthCheck")}
                                                 </a>
                                                 <i className="fa-solid fa-arrow-circle-right"></i>
                                             </div>

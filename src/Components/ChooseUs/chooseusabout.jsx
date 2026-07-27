@@ -3,9 +3,11 @@ import { useTranslation } from "react-i18next";
 import { whychooseus } from "../../Data/ChooseUsData";
 import ChooseUsCard from "../Card/ChoooseUsCard";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
+import { useLangPath } from "../Context/LanguageContext";
 
 function ChooseUsAboutSection(){
     const { t } = useTranslation();
+    const langPath = useLangPath();
 
     return(
         <>
@@ -48,8 +50,8 @@ function ChooseUsAboutSection(){
                                                     <div className="card card-chooseus-cta">
                                                         <h5>{t("about.coreValues.ctaTitle")}</h5>
                                                         <div className="link-wrapper">
-                                                            <a href="/contact" data-fbq-event="ContactCTA" data-fbq-label="chooseus-about">
-                                                                {t("common.letsTalkStrategy")}
+                                                            <a href={langPath("/growth-check")} data-fbq-event="GrowthCheckCTA" data-fbq-label="chooseus-about">
+                                                                {t("common.findMarketingPriority")}
                                                             </a>
                                                             <i className="fa-solid fa-circle-arrow-right"></i>
                                                         </div>

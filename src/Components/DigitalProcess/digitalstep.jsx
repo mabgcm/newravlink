@@ -4,9 +4,11 @@ import { useTranslation } from "react-i18next";
 import { digitalSteps } from "../../Data/DigitalProcessData";
 import DigitalStepCard from "../Card/DigitalStepCard";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
+import { useLangPath } from "../Context/LanguageContext";
 
 const DigitalProcessSection = () => {
     const { t } = useTranslation();
+    const langPath = useLangPath();
 
     return (
         <div className="section-wrapper-digital-process" id="digital-process">
@@ -33,8 +35,8 @@ const DigitalProcessSection = () => {
                                                 {t("home.digitalProcess.description")}
                                             </p>
                                             <div className="link-wrapper">
-                                                <a href="/contact" data-fbq-event="ContactCTA" data-fbq-label="digital-process">
-                                                    {t("common.getStartedNow")}
+                                                <a href={langPath("/growth-check")} data-fbq-event="GrowthCheckCTA" data-fbq-label="digital-process">
+                                                    {t("common.startGrowthCheck")}
                                                 </a>
                                                 <i className="fa-solid fa-arrow-circle-right"></i>
                                             </div>

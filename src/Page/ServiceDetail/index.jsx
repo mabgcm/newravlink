@@ -4,11 +4,13 @@ import BannerInnerSection from "../../Components/Banner/Inner";
 import HeadTitle from "../../Components/Head/HeadTitle";
 import { servicePages, serviceSchema } from "../../Data/servicePages";
 import { useLangPath } from "../../Components/Context/LanguageContext";
+import { useTranslation } from "react-i18next";
 
 function ServiceDetailPage() {
     const { slug } = useParams();
     const page = servicePages[slug];
     const langPath = useLangPath();
+    const { t } = useTranslation();
 
     if (!page) return <Navigate to={langPath("/services")} replace />;
 
@@ -103,7 +105,7 @@ function ServiceDetailPage() {
                             next practical step for SEO, website, ads, or contractor lead generation.
                         </p>
                         <div className="link-wrapper">
-                            <Link to={langPath("/contact")}>Contact Rav Link</Link>
+                            <Link to={langPath("/growth-check")}>{t("common.startGrowthCheck")}</Link>
                             <i className="fa-solid fa-circle-arrow-right"></i>
                         </div>
                     </div>

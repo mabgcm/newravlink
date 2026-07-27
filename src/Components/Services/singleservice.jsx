@@ -2,9 +2,11 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { services } from "../../Data/ServiceData";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
+import { useLangPath } from "../Context/LanguageContext";
 
 const SingleServiceSection = () => {
     const { t } = useTranslation();
+    const langPath = useLangPath();
     const serviceDetails = t("singleServicePage.services", { returnObjects: true });
     const highlights = t("singleServicePage.highlights", { returnObjects: true });
 
@@ -174,7 +176,7 @@ const SingleServiceSection = () => {
                                     <h3 className="title-heading">{t("singleServicePage.ctaTitle")}</h3>
                                     <p>{t("singleServicePage.ctaDescription")}</p>
                                     <div className="link-wrapper">
-                                        <a href="/contact">{t("singleServicePage.ctaLink")}</a>
+                                        <a href={langPath("/growth-check")}>{t("common.startGrowthCheck")}</a>
                                         <i className="fa-solid fa-circle-arrow-right"></i>
                                     </div>
                                 </div>

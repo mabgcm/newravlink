@@ -103,6 +103,7 @@ function Sidebar() {
                     </li>
                     <li><NavLink to={langPath("/pricing")} onClick={closeSidebar}>{t("nav.pricing")}</NavLink></li>
                     <li><NavLink to={langPath("/blog")} onClick={closeSidebar}>{t("nav.blog")}</NavLink></li>
+                    <li><NavLink to={langPath("/growth-check")} onClick={closeSidebar}>{t("nav.growthCheck")}</NavLink></li>
                     <li><NavLink to={langPath("/contact")} onClick={closeSidebar}>{t("nav.contact")}</NavLink></li>
                     <li className="sidebar-phone">
                         <a href="tel:+14372196444" aria-label="Call +1(437)2196444">

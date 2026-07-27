@@ -22,7 +22,7 @@ export const locationPages = {
         links: [
             { label: "SEO Services Barrie", href: "/services/seo-barrie" },
             { label: "Website Design Barrie", href: "/services/website-design-barrie" },
-            { label: "Contact Rav Link", href: "/contact" },
+            { label: "Free Growth Check", href: "/growth-check" },
         ],
         tr: {
             title: "Toronto SEO Ajansı | Yerel Büyüme Odaklı SEO Hizmetleri",
@@ -53,7 +53,7 @@ export const locationPages = {
             links: [
                 { label: "Barrie SEO Hizmetleri", href: "/services/seo-barrie" },
                 { label: "Barrie Web Tasarım", href: "/services/website-design-barrie" },
-                { label: "Rav Link ile İletişime Geçin", href: "/contact" },
+                { label: "Ücretsiz Büyüme Analizi", href: "/growth-check" },
             ],
             ctaTitle: "Bir sonraki lokal büyüme adımınızı planlayın",
             ctaBody:
@@ -106,7 +106,7 @@ export const locationPages = {
         links: [
             { label: "SEO Services Barrie", href: "/services/seo-barrie" },
             { label: "Website Design Barrie", href: "/services/website-design-barrie" },
-            { label: "Contact", href: "/contact" },
+            { label: "Free Growth Check", href: "/growth-check" },
         ],
     },
     "website-design-toronto": {
@@ -130,7 +130,7 @@ export const locationPages = {
         links: [
             { label: "Website Design Barrie", href: "/services/website-design-barrie" },
             { label: "SEO Agency Toronto", href: "/seo-agency-toronto" },
-            { label: "Contact", href: "/contact" },
+            { label: "Free Growth Check", href: "/growth-check" },
         ],
     },
     "meta-ads-agency-toronto": {
@@ -154,7 +154,7 @@ export const locationPages = {
         links: [
             { label: "Meta Ads Management", href: "/services/meta-ads-management" },
             { label: "Website Design Barrie", href: "/services/website-design-barrie" },
-            { label: "Contact", href: "/contact" },
+            { label: "Free Growth Check", href: "/growth-check" },
         ],
     },
     "contractor-marketing-ontario": {

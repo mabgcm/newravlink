@@ -76,6 +76,7 @@ const Footer = () => {
                                             <li><NavLink to={langPath("/testimonial")}>{t("nav.testimonials")}</NavLink></li>
                                             <li><NavLink to={langPath("/pricing")}>{t("nav.pricing")}</NavLink></li>
                                             <li><NavLink to={langPath("/blog")}>{t("nav.blog")}</NavLink></li>
+                                            <li><NavLink to={langPath("/growth-check")}>{t("nav.growthCheck")}</NavLink></li>
                                             <li><NavLink to={langPath("/contact")}>{t("nav.contact")}</NavLink></li>
                                         </ul>
                                     </div>
