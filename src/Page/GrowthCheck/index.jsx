@@ -224,7 +224,7 @@ export default function GrowthCheckPage() {
                 <div className="growth-check-options">
                   {q[index][2].map((option, optionIndex) => (
                     <button key={option} type="button" className={answers[q[index][0]] === optionIndex ? "is-selected" : ""} onClick={() => select(optionIndex)}>
-                      <span>{String.fromCharCode(65 + optionIndex)}</span>{option}<i className="fa-solid fa-check" />
+                      {option}<i className="fa-solid fa-check" />
                     </button>
                   ))}
                 </div>
