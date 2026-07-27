@@ -134,6 +134,26 @@ export default function GrowthCheckPage() {
   const [complete, setComplete] = useState(false);
   const [error, setError] = useState(false);
   const result = useMemo(() => diagnoses[getDiagnosis(answers)][language], [answers, language]);
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: language === "tr" ? "Rav Link Büyüme Analizi" : "Rav Link Growth Check",
+    url: `https://ravlink.ca${langPath("/growth-check")}`,
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web",
+    inLanguage: language,
+    description: c.metaDescription,
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "CAD",
+    },
+    provider: {
+      "@type": "Organization",
+      name: "Rav Link Inc.",
+      url: "https://ravlink.ca",
+    },
+  };
 
   const select = (value) => {
     setAnswers((prev) => ({ ...prev, [q[index][0]]: value }));
@@ -158,7 +178,12 @@ export default function GrowthCheckPage() {
 
   return (
     <>
-      <Helmet><title>{c.metaTitle}</title><meta name="description" content={c.metaDescription} /></Helmet>
+      <Helmet>
+        <title>{c.metaTitle}</title>
+        <meta name="description" content={c.metaDescription} />
+        <link rel="canonical" href={`https://ravlink.ca${langPath("/growth-check")}`} />
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+      </Helmet>
       <main className="growth-check-page">
         {!started ? (
           <section className="growth-check-hero">
