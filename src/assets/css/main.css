@@ -746,6 +746,55 @@ body.lightmode .form select {
 
 .wizard-result-card {
     margin-bottom: 0;
+    min-height: 260px;
+    justify-content: center;
+    text-align: center;
+}
+
+.wizard-result-card .check-icon {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    margin: 0 auto 6px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    color: var(--secondary);
+}
+
+body.lightmode .wizard-result-card {
+    background-color: #ffffff;
+    color: #17151b;
+    border-color: rgba(94, 23, 235, 0.28);
+    box-shadow: 0 16px 40px rgba(50, 29, 82, 0.1);
+}
+
+body.lightmode .wizard-result-card .title-heading,
+body.lightmode .wizard-result-card p {
+    color: #17151b;
+}
+
+body.lightmode .wizard-result-card .check-icon {
+    background-color: rgba(94, 23, 235, 0.1);
+    color: var(--accent-color);
+}
+
+@media (max-width: 640px) {
+    .wizard-result-card {
+        min-height: 230px;
+        padding: 28px 22px;
+        border-radius: 14px;
+    }
+
+    .wizard-result-card .title-heading {
+        font-size: 1.75rem;
+        line-height: 1.15;
+    }
+
+    .wizard-result-card p {
+        font-size: 1rem;
+        line-height: 1.55;
+    }
 }
 
 /* 7.2 Validation Styles */
