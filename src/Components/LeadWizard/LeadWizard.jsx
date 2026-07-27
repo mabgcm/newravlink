@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 import {
   getQuestionVisibility,
   getQuestionsForScreen,
@@ -25,6 +26,7 @@ const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
 
 function LeadWizard() {
   const { t } = useTranslation();
+  const location = useLocation();
   const [currentScreenIndex, setCurrentScreenIndex] = useState(0);
   const [answers, setAnswers] = useState({});
   const [direction, setDirection] = useState("forward");
@@ -237,7 +239,12 @@ function LeadWizard() {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(answers),
+        body: JSON.stringify({
+          ...answers,
+          ...(new URLSearchParams(location.search).get("growthCheck")
+            ? { growthCheckResult: new URLSearchParams(location.search).get("growthCheck") }
+            : {}),
+        }),
       });
 
       if (!response.ok) {

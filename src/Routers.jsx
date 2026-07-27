@@ -17,6 +17,7 @@ const SingleServicePage = lazy(() => import("./Page/SingleService"));
 const SinglePostPage = lazy(() => import("./Page/SinglePost"));
 const ServiceDetailPage = lazy(() => import("./Page/ServiceDetail"));
 const LocationLandingPage = lazy(() => import("./Page/LocationLanding"));
+const GrowthCheckPage = lazy(() => import("./Page/GrowthCheck"));
 
 // Shared page routes — rendered relative to parent match (/tr/* or /*)
 function PageRoutes() {
@@ -39,6 +40,7 @@ function PageRoutes() {
             <Route path="blog/:slug" element={<SinglePostPage />} />
             <Route path="single_post" element={<SinglePostPage />} />
             <Route path="contact" element={<ContactPage />} />
+            <Route path="growth-check" element={<GrowthCheckPage />} />
             <Route path="seo-agency-toronto" element={<LocationLandingPage />} />
             <Route path="seo-agency-vaughan" element={<LocationLandingPage />} />
             <Route path="seo-agency-barrie" element={<LocationLandingPage />} />

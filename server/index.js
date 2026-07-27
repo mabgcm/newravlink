@@ -19,6 +19,14 @@ const transporter = nodemailer.createTransport({
 app.post("/api/contact", async (req, res) => {
   try {
     const payload = req.body || {};
+
+    // The live site uses the configured mail service. Locally, let the
+    // qualification flow complete without pretending an email was sent.
+    if (!process.env.GMAIL_APP_PASSWORD && process.env.NODE_ENV !== "production") {
+      console.info("[local contact submission]", payload);
+      return res.json({ ok: true, localOnly: true });
+    }
+
     const text = Object.entries(payload)
       .map(([key, value]) => `${key}: ${value}`)
       .join("\n");

@@ -34,6 +34,7 @@ const labelMap = {
   previousAgencyIssue: "Previous Agency Issue",
   competitorAwareness: "Competitor Awareness",
   message: "Message",
+  growthCheckResult: "Growth Check Result",
 };
 
 const MODULE_CATALOG = {

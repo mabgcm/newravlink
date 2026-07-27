@@ -7,7 +7,8 @@
     "testimonials": "Müşteri Yorumları",
     "pricing": "Fiyatlar",
     "blog": "Blog",
-    "contact": "İletişim"
+    "contact": "İletişim",
+    "growthCheck": "Büyüme Analizi"
   },
   "footer": {
     "tagline": "Stratejiyle Büyüyen Markalar",
@@ -116,16 +117,16 @@
     }
   },
   "leadWizard": {
-    "badge": "Ön Görüşme Akışı",
+    "badge": "İşletme Değerlendirmesi",
     "requiredBadge": "Zorunlu",
-    "progressLabel": "Ön Eleme Formu",
-    "progressTitle": "İşinizi daha net anlamamız için birkaç soru",
+    "progressLabel": "İhtiyaç Analizi",
+    "progressTitle": "İşletmenizi daha iyi anlayalım",
     "stepCounter": "Adım {{current}} / {{total}}",
     "stageCounter": "Aşama {{current}} / {{total}}",
     "nav": {
-      "next": "Sonraki",
+      "next": "Devam",
       "back": "Geri",
-      "submit": "Gönder",
+      "submit": "Yanıtlarımı gönder",
       "submitting": "Gönderiliyor..."
     },
     "errors": {
@@ -135,12 +136,12 @@
     },
     "result": {
       "title": "Bilgilerinizi aldık",
-      "message": "İşletmenizle ilgili detaylar bize ulaştı. Akışı inceleyip sizin için doğru sonraki adımla geri döneceğiz."
+      "message": "İşletmenizle ilgili bilgileri inceleyip sizin için en uygun sonraki adımla kısa süre içinde dönüş yapacağız."
     },
     "steps": {
       "step1": {
         "title": "İletişim bilgileri",
-        "description": "Size ulaşabilmemiz ve talebin hangi işletmeye ait olduğunu anlayabilmemiz için."
+        "description": "Size doğru şekilde ulaşabilmemiz için temel iletişim bilgilerinizi alalım."
       },
       "step2": {
         "title": "İşletme profili",
@@ -148,7 +149,7 @@
       },
       "step3": {
         "title": "Hedefler",
-        "description": "Önceliğinizin lead, satış, görünürlük veya reklam performansı olduğunu anlayalım."
+        "description": "Önceliğinizin müşteri talebi, satış, görünürlük veya reklam performansı olup olmadığını anlayalım."
       },
       "step4": {
         "title": "Mevcut durum",
@@ -223,7 +224,7 @@
       "goals": {
         "label": "Şu anda hangi hedefler daha önemli?",
         "options": {
-          "more-leads": "Daha fazla lead toplamak",
+          "more-leads": "Daha fazla müşteri talebi almak",
           "increase-sales": "Satışları artırmak",
           "brand-awareness": "Marka bilinirliği oluşturmak",
           "social-media": "Sosyal medyayı büyütmek",
@@ -234,7 +235,7 @@
       "successMetric": {
         "label": "Başarıyı hangi ölçüte göre değerlendireceksiniz?",
         "options": {
-          "lead-count": "Lead sayısı",
+          "lead-count": "Müşteri talebi sayısı",
           "sales-revenue": "Satış veya ciro",
           "follower-growth": "Takipçi artışı",
           "website-traffic": "Web sitesi trafiği",
@@ -281,7 +282,7 @@
         }
       },
       "hasRunAds": {
-        "label": "Daha önce reklam çıktınız mı?",
+        "label": "Daha önce reklam verdiniz mi?",
         "options": {
           "yes": "Evet",
           "no": "Hayır"
@@ -306,7 +307,7 @@
         }
       },
       "analyticsSetup": {
-        "label": "Analytics ve takip altyapınız ne durumda?",
+        "label": "Ölçüm ve takip altyapınız ne durumda?",
         "options": {
           "evet-aktif": "Takip aktif çalışıyor",
           "kurulu-ama-kullanmiyorum": "Kurulu ama doğru kullanılmıyor",
@@ -314,7 +315,7 @@
         }
       },
       "budgetRange": {
-        "label": "Aylık toplam ne kadar bütçe gerçekçi görünüyor?",
+        "label": "Aylık toplam pazarlama bütçeniz için hangi aralık gerçekçi?",
         "options": {
           "under-500": "Toplam 500 $ altı",
           "500-1500": "Toplam 500 $ - 1.500 $",
@@ -325,7 +326,7 @@
       "involvementLevel": {
         "label": "Süreçte ne kadar dahil olmak istersiniz?",
         "options": {
-          "hands-off": "Büyük ölçüde size/ajansınıza bırakmak istiyorum",
+          "hands-off": "Süreci büyük ölçüde ajansa bırakmak istiyorum",
           "approval-only": "Ana kararları onaylamak isterim",
           "collaborative": "Yakın ve ortak çalışmak isterim"
         }

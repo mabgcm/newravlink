@@ -23,6 +23,7 @@ const englishRoutes = [
     "/case-studies",
     "/blog",
     ...blogRoutes,
+    "/growth-check",
     "/contact",
     "/seo-agency-toronto",
     "/seo-agency-vaughan",

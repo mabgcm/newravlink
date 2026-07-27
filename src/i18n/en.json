@@ -7,7 +7,8 @@
     "testimonials": "Testimonials",
     "pricing": "Pricing",
     "blog": "Blog",
-    "contact": "Contact"
+    "contact": "Contact",
+    "growthCheck": "Growth Check"
   },
   "footer": {
     "tagline": "Driving Digital Growth with Innovation & Strategy",
@@ -118,14 +119,14 @@
   "leadWizard": {
     "badge": "Lead Intake",
     "requiredBadge": "Required",
-    "progressLabel": "Qualification Flow",
-    "progressTitle": "Tell us how your business is growing",
+    "progressLabel": "Business Fit Check",
+    "progressTitle": "Help us understand your business",
     "stepCounter": "Step {{current}} / {{total}}",
     "stageCounter": "Stage {{current}} / {{total}}",
     "nav": {
       "next": "Next",
       "back": "Back",
-      "submit": "Submit",
+      "submit": "Send my answers",
       "submitting": "Sending..."
     },
     "errors": {
@@ -134,21 +135,21 @@
       "submit": "We could not send your answers right now. Please try again."
     },
     "result": {
-      "title": "Your answers are in",
-      "message": "We received your business details. We will review the flow and get back to you with the right next step."
+      "title": "Thank you — we have your answers",
+      "message": "We’ll review your business details and follow up with the most useful next step."
     },
     "steps": {
       "step1": {
         "title": "Who are you?",
-        "description": "Start with the core contact details so we know who this project belongs to."
+        "description": "Start with your contact details so we know who to follow up with."
       },
       "step2": {
         "title": "What kind of business is this?",
-        "description": "We use your business model and market shape to decide which later questions matter."
+        "description": "Your business model and target market help us focus on what matters most."
       },
       "step3": {
         "title": "What do you want to achieve?",
-        "description": "Your goals define which growth channels and priorities should lead the conversation."
+        "description": "Your goals help us identify the right marketing priorities."
       },
       "step4": {
         "title": "What is your current setup?",
@@ -156,7 +157,7 @@
       },
       "step5": {
         "title": "How do you make decisions?",
-        "description": "Budget, ownership, and past agency experience help us understand fit and readiness."
+        "description": "Your budget, decision process, and past experience help us recommend a realistic next step."
       }
     },
     "questions": {
@@ -248,7 +249,7 @@
           "sezon-basliyor": "A season is starting",
           "rakip-baskisi": "Competitors are pushing ahead",
           "buyume-hedefi": "We have a growth target",
-          "onceki-ajans-birakti": "Our previous agency dropped off",
+          "onceki-ajans-birakti": "Our previous agency stopped supporting us",
           "other": "Other"
         }
       },
