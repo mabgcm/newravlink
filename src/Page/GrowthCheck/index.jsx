@@ -176,6 +176,17 @@ export default function GrowthCheckPage() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const preserveGrowthCheck = () => {
+    sessionStorage.setItem(
+      "ravlinkGrowthCheck",
+      JSON.stringify({
+        language,
+        diagnosis: getDiagnosis(answers),
+        answers,
+      }),
+    );
+  };
+
   return (
     <>
       <Helmet>
@@ -250,7 +261,7 @@ export default function GrowthCheckPage() {
                   <p>{c.paidBody}</p>
                   <ul>{c.paidItems.map((item) => <li key={item}><i className="fa-solid fa-check" />{item}</li>)}</ul>
                   <div className="growth-check-price"><strong>{c.price}</strong><span>{c.priceNote}</span></div>
-                  <Link className="btn btn-accent" to={`${langPath("/contact")}?growthCheck=${getDiagnosis(answers)}`}>
+                  <Link className="btn btn-accent" onClick={preserveGrowthCheck} to={`${langPath("/contact")}?growthCheck=${getDiagnosis(answers)}`}>
                     <span className="btn-title">{c.cta}</span>
                     <span className="icon-circle"><i className="fa-solid fa-arrow-right" /></span>
                   </Link>

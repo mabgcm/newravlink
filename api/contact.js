@@ -624,6 +624,138 @@ const buildLeadAnalysisHtml = (analysis) => {
   `;
 };
 
+const GROWTH_CHECK_QUESTIONS = [
+  { id: "goal", label: "90-day priority", options: ["More calls or messages", "More quote or appointment requests", "Better-quality customers", "Convert more existing enquiries"] },
+  { id: "source", label: "Main customer source", options: ["Referrals", "Google Search or Maps", "Social media", "Paid ads", "No consistent source", "Not tracked"] },
+  { id: "google", label: "Local Google visibility", options: ["Appears near the top", "Appears sometimes", "Profile exists but is weak", "No Google Business Profile", "Never checked"] },
+  { id: "presence", label: "Online presence", options: ["Current, professional website", "Old or basic website", "Only social media or Google profile", "Very little current information"] },
+  { id: "conversion", label: "Conversion path", options: ["Consistent calls or forms", "Call-to-action exists but response is low", "Contact details exist but the path is unclear", "No clear next step"] },
+  { id: "followup", label: "Lead follow-up", options: ["Fast response and consistent follow-up", "Replies are sent but follow-up is inconsistent", "Some enquiries are missed", "Most enquiries are low quality", "Not enough enquiries"] },
+  { id: "tracking", label: "Marketing measurement", options: ["Leads and sales tracked by source", "Some results tracked", "Only sales reviewed", "Not tracked"] },
+  { id: "capacity", label: "New-customer capacity", options: ["Can take on more now", "Limited capacity", "Only wants specific customers", "Currently full"] },
+  { id: "budget", label: "Realistic monthly budget", options: ["No budget right now", "Under $500", "$500–$1,500", "$1,500–$3,000", "Over $3,000", "Needs guidance first"] },
+];
+
+const GROWTH_CHECK_DIAGNOSES = {
+  visibility: {
+    title: "Google visibility is the first priority",
+    summary: "The business has room for new customers but is not consistently visible when local buyers are actively searching.",
+    action: "Strengthen the Google Business Profile, reviews, and local service visibility.",
+    avoid: "Do not increase ad spend before the local foundation is measurable.",
+  },
+  foundation: {
+    title: "Build trust before buying traffic",
+    summary: "Potential customers cannot quickly find enough proof, clarity, or a professional path to choose this business.",
+    action: "Clarify the offer, trust signals, and contact path on a focused website.",
+    avoid: "Do not pay for more visitors before the website can convert them.",
+  },
+  conversion: {
+    title: "The conversion system is the first priority",
+    summary: "People can find the business, but too few take the next step. The immediate opportunity is turning interest into enquiries.",
+    action: "Simplify the quote, booking, or call path and track every enquiry.",
+    avoid: "Do not treat traffic volume as the main problem.",
+  },
+  quality: {
+    title: "Better-qualified enquiries are needed, not more volume",
+    summary: "Lead quality or capacity is the constraint. More volume could create noise instead of profitable growth.",
+    action: "Tighten positioning, qualification questions, and service expectations.",
+    avoid: "Do not launch broad campaigns optimized only for lead volume.",
+  },
+  tracking: {
+    title: "Measure before scaling",
+    summary: "Marketing activity exists, but it is not clear which source creates real customers.",
+    action: "Connect calls, forms, and sales to their original marketing source.",
+    avoid: "Do not scale a channel before knowing its customer acquisition result.",
+  },
+};
+
+const humanizeValue = (value) => {
+  if (Array.isArray(value)) {
+    return value.map(humanizeValue).join(", ");
+  }
+
+  if (value === null || value === undefined || value === "") {
+    return "—";
+  }
+
+  return String(value)
+    .replaceAll("-", " ")
+    .replace(/\b\w/g, (letter) => letter.toUpperCase());
+};
+
+const getGrowthCheckData = (payload) => {
+  const saved = payload.growthCheck && typeof payload.growthCheck === "object"
+    ? payload.growthCheck
+    : {};
+  const diagnosisKey = saved.diagnosis || payload.growthCheckResult;
+  const diagnosis = GROWTH_CHECK_DIAGNOSES[diagnosisKey];
+  const answers = saved.answers && typeof saved.answers === "object" ? saved.answers : {};
+
+  return {
+    diagnosisKey,
+    diagnosis,
+    language: saved.language || "unknown",
+    answers: GROWTH_CHECK_QUESTIONS.map((question) => ({
+      label: question.label,
+      value: question.options[answers[question.id]] || "Not available",
+    })),
+  };
+};
+
+const renderResponseRows = (payload) =>
+  Object.entries(payload)
+    .filter(([key]) => !["growthCheck", "growthCheckResult"].includes(key))
+    .map(([key, value]) => {
+      const label = labelMap[key] || humanizeValue(key);
+      return `
+        <tr>
+          <td style="padding:12px 14px; border-bottom:1px solid #ececf2; color:#6b6873; width:38%; vertical-align:top; font-size:13px;"><strong>${escapeHtml(label)}</strong></td>
+          <td style="padding:12px 14px; border-bottom:1px solid #ececf2; color:#17151b; font-size:14px; line-height:1.45;">${escapeHtml(humanizeValue(value))}</td>
+        </tr>
+      `;
+    })
+    .join("");
+
+const renderGrowthCheckHtml = (growthCheck) => {
+  if (!growthCheck.diagnosis) {
+    return "";
+  }
+
+  const answerRows = growthCheck.answers
+    .map(
+      ({ label, value }) => `
+        <tr>
+          <td style="padding:11px 14px; border-bottom:1px solid #ececf2; color:#6b6873; width:42%; vertical-align:top; font-size:13px;"><strong>${escapeHtml(label)}</strong></td>
+          <td style="padding:11px 14px; border-bottom:1px solid #ececf2; color:#17151b; font-size:14px;">${escapeHtml(value)}</td>
+        </tr>
+      `,
+    )
+    .join("");
+
+  return `
+    <div style="padding:24px 24px 0;">
+      <div style="font-size:11px; font-weight:700; letter-spacing:1.4px; text-transform:uppercase; color:#5b2dff; margin-bottom:8px;">Initial Growth Check</div>
+      <div style="background:#f4f0ff; border:1px solid #ddd2ff; border-radius:14px; padding:20px;">
+        <h2 style="margin:0 0 10px; color:#21164d; font-size:22px; line-height:1.25;">${escapeHtml(growthCheck.diagnosis.title)}</h2>
+        <p style="margin:0 0 16px; color:#514c5b; font-size:14px; line-height:1.6;">${escapeHtml(growthCheck.diagnosis.summary)}</p>
+        <div style="background:#fff; border-radius:10px; padding:13px 14px; margin-bottom:9px;">
+          <div style="font-size:10px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#5b2dff; margin-bottom:5px;">Recommended first move</div>
+          <div style="color:#17151b; font-size:14px; line-height:1.5;">${escapeHtml(growthCheck.diagnosis.action)}</div>
+        </div>
+        <div style="background:#fff; border-radius:10px; padding:13px 14px;">
+          <div style="font-size:10px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#b04444; margin-bottom:5px;">Avoid for now</div>
+          <div style="color:#17151b; font-size:14px; line-height:1.5;">${escapeHtml(growthCheck.diagnosis.avoid)}</div>
+        </div>
+      </div>
+
+      <h3 style="margin:26px 0 10px; color:#17151b; font-size:16px;">Growth Check answers</h3>
+      <table style="width:100%; border-collapse:collapse; border:1px solid #ececf2; border-radius:10px; overflow:hidden;">
+        ${answerRows}
+      </table>
+    </div>
+  `;
+};
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ ok: false, message: "Method not allowed" });
@@ -640,36 +772,41 @@ export default async function handler(req, res) {
 
     const payload = req.body || {};
     const analysis = LeadScoringEngine(payload);
-    const rows = Object.entries(payload).map(([key, value]) => {
-      const label = labelMap[key] || key;
-      const safeValue = escapeHtml(formatValue(value));
-      return `
-        <tr>
-          <td style="padding:10px 12px; border-bottom:1px solid #e6e6e6; color:#555; width:35%;"><strong>${label}</strong></td>
-          <td style="padding:10px 12px; border-bottom:1px solid #e6e6e6; color:#111;">${safeValue}</td>
-        </tr>
-      `;
-    });
+    const growthCheck = getGrowthCheckData(payload);
+    const responseRows = renderResponseRows(payload);
 
     const text = Object.entries(payload)
+      .filter(([key]) => key !== "growthCheck")
       .map(([key, value]) => `${key}: ${formatValue(value)}`)
       .join("\n");
     const analysisText = buildLeadAnalysisText(analysis);
     const analysisHtml = buildLeadAnalysisHtml(analysis);
+    const growthCheckHtml = renderGrowthCheckHtml(growthCheck);
+    const leadName = payload.name || payload.fullName || "New lead";
+    const businessName = payload.businessName || "Business not provided";
+    const subjectContext = growthCheck.diagnosis
+      ? `Growth Check — ${growthCheck.diagnosis.title}`
+      : "New qualification form";
 
     const html = `
-      <div style="font-family:Arial, sans-serif; background:#f7f7fb; padding:24px;">
-        <div style="max-width:640px; margin:0 auto; background:#ffffff; border:1px solid #ececf2; border-radius:12px; overflow:hidden;">
-          <div style="padding:16px 20px; background:#5b2dff; color:#fff;">
-            <h2 style="margin:0; font-size:18px; font-weight:600;">New Lead Form Submission</h2>
+      <div style="font-family:Arial,Helvetica,sans-serif; background:#f5f4f8; padding:28px 12px;">
+        <div style="max-width:680px; margin:0 auto; background:#ffffff; border:1px solid #e8e6ed; border-radius:16px; overflow:hidden; box-shadow:0 12px 35px rgba(34,25,55,.08);">
+          <div style="padding:24px; background:#5b2dff; color:#fff;">
+            <div style="font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; opacity:.78; margin-bottom:8px;">Rav Link · New qualified enquiry</div>
+            <h1 style="margin:0 0 8px; font-size:24px; line-height:1.2;">${escapeHtml(leadName)}</h1>
+            <p style="margin:0; font-size:14px; opacity:.9;">${escapeHtml(businessName)}${payload.email ? ` · ${escapeHtml(payload.email)}` : ""}${payload.phone ? ` · ${escapeHtml(payload.phone)}` : ""}</p>
           </div>
-          <div style="padding:8px 20px 20px 20px;">
-            <h3 style="margin:0 0 12px 0; font-size:16px; color:#111;">Lead Responses</h3>
-            <table style="width:100%; border-collapse:collapse; font-size:14px;">
-              ${rows.join("")}
+          ${growthCheckHtml}
+          <div style="padding:24px 24px 6px;">
+            <h3 style="margin:0 0 10px; font-size:16px; color:#17151b;">Qualification form answers</h3>
+            <table style="width:100%; border-collapse:collapse; border:1px solid #ececf2; border-radius:10px; overflow:hidden;">
+              ${responseRows}
             </table>
           </div>
           ${analysisHtml}
+          <div style="padding:18px 24px; background:#f7f6f9; color:#77727f; font-size:11px; line-height:1.5;">
+            Generated from the Rav Link Growth Check and qualification form. Review the customer’s stated answers before making a recommendation.
+          </div>
         </div>
       </div>
     `;
@@ -677,7 +814,7 @@ export default async function handler(req, res) {
     await transporter.sendMail({
       from: "bugucam@gmail.com",
       to: "bugucam@gmail.com",
-      subject: "New Lead Form Submission",
+      subject: `${leadName} · ${subjectContext}`,
       text: `--- LEAD RESPONSES ---\n${text}\n${analysisText}`,
       html,
     });

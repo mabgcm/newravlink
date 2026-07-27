@@ -236,13 +236,24 @@ function LeadWizard() {
     setSubmitError("");
 
     try {
+      let growthCheck = null;
+      try {
+        growthCheck = JSON.parse(sessionStorage.getItem("ravlinkGrowthCheck"));
+      } catch {
+        growthCheck = null;
+      }
+      const growthCheckResult = new URLSearchParams(location.search).get("growthCheck");
+
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...answers,
-          ...(new URLSearchParams(location.search).get("growthCheck")
-            ? { growthCheckResult: new URLSearchParams(location.search).get("growthCheck") }
+          ...(growthCheckResult
+            ? {
+                growthCheckResult,
+                growthCheck: growthCheck || { diagnosis: growthCheckResult },
+              }
             : {}),
         }),
       });
