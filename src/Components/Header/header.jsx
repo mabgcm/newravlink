@@ -74,7 +74,7 @@ function Navbar() {
                             </li>
 
                             <li className="nav-item">
-                                <NavLink to={langPath("/growth-check")} className="nav-link" data-fbq-event="NavClick" data-fbq-label="growth-check">
+                                <NavLink to={langPath("/growth-check")} className="nav-link" data-ga-location="header" data-fbq-event="NavClick" data-fbq-label="growth-check">
                                     {t("nav.growthCheck")}
                                 </NavLink>
                             </li>

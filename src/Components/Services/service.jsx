@@ -46,7 +46,7 @@ function ServiceSection(){
                         <div className="service-link-footer">
                             <p>
                                 {t("home.services.footerText")}
-                                <a href={langPath("/growth-check")} data-fbq-event="GrowthCheckCTA" data-fbq-label="services-footer">
+                                <a href={langPath("/growth-check")} data-ga-location="services" data-fbq-event="GrowthCheckCTA" data-fbq-label="services-footer">
                                     {t("common.findMarketingPriority")}
                                 </a>
                             </p>

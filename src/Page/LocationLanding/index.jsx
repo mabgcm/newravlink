@@ -101,7 +101,7 @@ function LocationLandingPage() {
                                     "Rav Link serves businesses across Ontario and the Greater Toronto Area remotely and on-site. Share your service area and goals, and we will recommend the right next step."}
                             </p>
                             <div className="link-wrapper">
-                                <Link to={langPath("/growth-check")}>
+                                <Link to={langPath("/growth-check")} data-ga-location="location_page">
                                     {isTurkish ? "Ücretsiz Büyüme Analizini Başlatın" : "Start Your Free Growth Check"}
                                 </Link>
                                 <i className="fa-solid fa-circle-arrow-right"></i>

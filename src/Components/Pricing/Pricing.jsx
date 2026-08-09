@@ -84,7 +84,7 @@ function PricingPlanSection() {
                                         <div className="content">
                                             <h3 className="title-heading">{t("home.pricing.introTitle")}</h3>
                                             <div className="link-wrapper">
-                                                <a href={langPath("/growth-check")} data-fbq-event="GrowthCheckCTA" data-fbq-label="pricing-intro">
+                                                <a href={langPath("/growth-check")} data-ga-location="pricing" data-fbq-event="GrowthCheckCTA" data-fbq-label="pricing-intro">
                                                     {t("common.startGrowthCheck")}
                                                 </a>
                                                 <i className="fa-solid fa-arrow-circle-right"></i>

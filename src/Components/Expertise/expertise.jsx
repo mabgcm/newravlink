@@ -32,7 +32,7 @@ function ExpertiseSection() {
                                                     <h4>{t("home.expertise.cardTitle")}</h4>
                                                     <p>{t("home.expertise.cardText")}</p>
                                                     <div className="d-flex align-items-center flex-row gspace-2 expertise-link">
-                                                        <a href={langPath("/growth-check")} data-fbq-event="GrowthCheckCTA" data-fbq-label="expertise-card">
+                                                        <a href={langPath("/growth-check")} data-ga-location="expertise" data-fbq-event="GrowthCheckCTA" data-fbq-label="expertise-card">
                                                             {t("common.startGrowthCheck")}
                                                         </a>
                                                         <i className="fa-solid fa-circle-arrow-right"></i>

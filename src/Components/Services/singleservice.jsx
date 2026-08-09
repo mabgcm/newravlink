@@ -176,7 +176,7 @@ const SingleServiceSection = () => {
                                     <h3 className="title-heading">{t("singleServicePage.ctaTitle")}</h3>
                                     <p>{t("singleServicePage.ctaDescription")}</p>
                                     <div className="link-wrapper">
-                                        <a href={langPath("/growth-check")}>{t("common.startGrowthCheck")}</a>
+                                        <a href={langPath("/growth-check")} data-ga-location="service_detail">{t("common.startGrowthCheck")}</a>
                                         <i className="fa-solid fa-circle-arrow-right"></i>
                                     </div>
                                 </div>

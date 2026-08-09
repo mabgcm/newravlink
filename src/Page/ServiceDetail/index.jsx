@@ -105,7 +105,7 @@ function ServiceDetailPage() {
                             next practical step for SEO, website, ads, or contractor lead generation.
                         </p>
                         <div className="link-wrapper">
-                            <Link to={langPath("/growth-check")}>{t("common.startGrowthCheck")}</Link>
+                            <Link to={langPath("/growth-check")} data-ga-location="service_detail">{t("common.startGrowthCheck")}</Link>
                             <i className="fa-solid fa-circle-arrow-right"></i>
                         </div>
                     </div>

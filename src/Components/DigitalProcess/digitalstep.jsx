@@ -35,7 +35,7 @@ const DigitalProcessSection = () => {
                                                 {t("home.digitalProcess.description")}
                                             </p>
                                             <div className="link-wrapper">
-                                                <a href={langPath("/growth-check")} data-fbq-event="GrowthCheckCTA" data-fbq-label="digital-process">
+                                                <a href={langPath("/growth-check")} data-ga-location="digital_process" data-fbq-event="GrowthCheckCTA" data-fbq-label="digital-process">
                                                     {t("common.startGrowthCheck")}
                                                 </a>
                                                 <i className="fa-solid fa-arrow-circle-right"></i>
