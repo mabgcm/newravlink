@@ -8,5 +8,5 @@ export default function handler(req, res) {
   }
   if (req.method !== "GET") return json(res, 405, { error: "Method not allowed" });
   const user = getSession(req);
-  return user ? json(res, 200, { user }) : json(res, 401, { error: "Oturum gerekli." });
+  return user ? json(res, 200, { user }) : json(res, 401, { error: "Authentication required." });
 }

@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "username": "april.laputan@gmail.com",
+    "name": "April Laputan",
+    "salt": "63cf814580f4c94e0a6053c4096b1397",
+    "passwordHash": "7f53461284446108e25f10f1ba8c0a1f8f5903dbd0db27157b9404d54de4d577089db018d34b52456faa140c3250155aa82a9ef88bc448015edd9136c942184b",
+    "disabled": false
+  }
+]
