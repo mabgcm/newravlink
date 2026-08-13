@@ -10,7 +10,9 @@ export default async function handler(req, res) {
     const snapshot = await (await db()).collection("callRecords").doc(String(req.query.callId)).get();
     return json(res, 200, { record: snapshot.exists ? snapshot.data() : null });
   }
-  const snapshot = await (await db()).collection("callRecords").where("agent", "==", user.sub).limit(30).get();
+  const legacyAgent = user.sub.replace(/[^a-zA-Z0-9_.-]/g, "").slice(0, 64);
+  const agents = [...new Set([user.sub, legacyAgent])];
+  const snapshot = await (await db()).collection("callRecords").where("agent", "in", agents).limit(30).get();
   const records = snapshot.docs.map((doc) => doc.data()).sort((a, b) => String(b.updatedAt).localeCompare(String(a.updatedAt)));
   return json(res, 200, { records });
 }

@@ -14,7 +14,7 @@ export default async function handler(req, res) {
 
   const to = String(body.To || "").trim();
   const callId = String(body.CallId || "").replace(/[^a-zA-Z0-9_-]/g, "");
-  const agent = String(body.Agent || "unknown").replace(/[^a-zA-Z0-9_.-]/g, "").slice(0, 64);
+  const agent = String(body.Agent || "unknown").replace(/[^a-zA-Z0-9@_.-]/g, "").slice(0, 128);
   const response = new twilio.twiml.VoiceResponse();
   if (!/^\+[1-9]\d{7,14}$/.test(to)) {
     response.say("The destination number is invalid.");

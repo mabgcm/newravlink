@@ -37,7 +37,14 @@ function CallerDashboard({ user, onLogout }) {
   const [activeId, setActiveId] = useState(null);
   const [message, setMessage] = useState("");
 
-  const loadRecords = useCallback(async () => { try { const data = await api("/api/caller/recordings"); setRecords(data.records || []); } catch { /* setup may be incomplete */ } }, []);
+  const loadRecords = useCallback(async () => {
+    try {
+      const data = await api("/api/caller/recordings");
+      setRecords(data.records || []);
+    } catch (error) {
+      setMessage(error.message);
+    }
+  }, []);
   useEffect(() => { loadRecords(); return () => { deviceRef.current?.destroy(); clearInterval(timerRef.current); }; }, [loadRecords]);
   useEffect(() => {
     if (!activeId || !["completed", "disconnected"].includes(status)) return;
