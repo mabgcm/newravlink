@@ -51,7 +51,15 @@ function CallerDashboard({ user, onLogout }) {
     let attempts = 0;
     const poll = setInterval(async () => {
       attempts += 1;
-      try { const data = await api(`/api/caller/recordings?callId=${encodeURIComponent(activeId)}`); if (data.record?.recordingUrl) { clearInterval(poll); setMessage("The recording has been uploaded and is ready."); loadRecords(); } }
+      try {
+        const data = await api(`/api/caller/recordings?callId=${encodeURIComponent(activeId)}`);
+        if (data.record?.recordingUrl) {
+          clearInterval(poll);
+          setRecords((current) => [data.record, ...current.filter((record) => record.callId !== data.record.callId)]);
+          setMessage("The recording has been uploaded and is ready.");
+          loadRecords();
+        }
+      }
       catch { /* retry */ }
       if (attempts >= 30) clearInterval(poll);
     }, 3000);
