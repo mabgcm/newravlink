@@ -13,14 +13,19 @@
     "build:spa": "vite build",
     "lint": "eslint .",
     "prerender": "node scripts/prerender.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "caller:add-user": "node scripts/add-caller-user.mjs"
   },
   "dependencies": {
+    "@twilio/voice-sdk": "^2.18.3",
     "@vercel/analytics": "^1.3.1",
+    "@vercel/oidc": "^3.8.4",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.8",
     "cors": "^2.8.5",
     "express": "^4.21.2",
+    "firebase-admin": "^14.2.0",
+    "google-auth-library": "^11.0.2",
     "i18next": "^25.7.3",
     "nodemailer": "^6.9.15",
     "react": "^19.1.0",
@@ -30,7 +35,8 @@
     "react-intersection-observer": "^9.16.0",
     "react-router-dom": "^7.7.1",
     "stripe": "^16.9.0",
-    "swiper": "^11.2.10"
+    "swiper": "^11.2.10",
+    "twilio": "^6.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",

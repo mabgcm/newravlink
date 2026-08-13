@@ -18,6 +18,7 @@ const SinglePostPage = lazy(() => import("./Page/SinglePost"));
 const ServiceDetailPage = lazy(() => import("./Page/ServiceDetail"));
 const LocationLandingPage = lazy(() => import("./Page/LocationLanding"));
 const GrowthCheckPage = lazy(() => import("./Page/GrowthCheck"));
+const CallerPage = lazy(() => import("./Page/Caller"));
 
 // Shared page routes — rendered relative to parent match (/tr/* or /*)
 function PageRoutes() {
@@ -57,6 +58,7 @@ function AppRouter() {
     return (
         <Suspense fallback={null}>
             <Routes>
+                <Route path="caller" element={<CallerPage />} />
                 {/* Turkish routes: /tr/* strips the prefix so PageRoutes sees clean paths */}
                 <Route path="tr/*" element={<PageRoutes />} />
                 {/* English routes: catch-all for all other paths */}

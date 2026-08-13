@@ -12,6 +12,11 @@ import { openWhatsApp } from "./utils/contactLinks";
 function AppLayout() {
     const location = useLocation();
     const hideWhatsApp = location.pathname === "/contact";
+    const isCaller = location.pathname === "/caller";
+
+    if (isCaller) {
+        return <AppRouter />;
+    }
 
     return (
         <LanguageProvider>
