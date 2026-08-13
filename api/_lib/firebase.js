@@ -19,8 +19,9 @@ async function firebaseApp() {
     throw new Error("Firebase OIDC configuration is incomplete");
   }
 
-  const audience = `https://iam.googleapis.com/projects/${projectNumber}/locations/global/workloadIdentityPools/${poolId}/providers/${providerId}`;
-  const token = await getVercelOidcToken({ audience });
+  const providerResource = `//iam.googleapis.com/projects/${projectNumber}/locations/global/workloadIdentityPools/${poolId}/providers/${providerId}`;
+  const tokenAudience = `https:${providerResource}`;
+  const token = await getVercelOidcToken({ audience: tokenAudience });
   const nextTokenPath = `${tokenPath}.next`;
   await writeFile(nextTokenPath, token, { mode: 0o600 });
   await rename(nextTokenPath, tokenPath);
@@ -28,7 +29,7 @@ async function firebaseApp() {
   if (getApps().length) return getApps()[0];
   await writeFile(credentialsPath, JSON.stringify({
     type: "external_account",
-    audience,
+    audience: providerResource,
     subject_token_type: "urn:ietf:params:oauth:token-type:jwt",
     token_url: "https://sts.googleapis.com/v1/token",
     service_account_impersonation_url: `https://iamcredentials.googleapis.com/v1/projects/-/serviceAccounts/${serviceAccountEmail}:generateAccessToken`,
