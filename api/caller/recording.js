@@ -15,7 +15,7 @@ export default async function handler(req, res) {
   if (!callId) return res.status(400).end("Missing callId");
   const base = { callId, to: String(req.query.to || ""), agent: String(req.query.agent || ""), recordingSid: body.RecordingSid || null, duration: Number(body.RecordingDuration || 0), updatedAt: new Date().toISOString() };
   if (body.RecordingStatus !== "completed") {
-    await db().collection("callRecords").doc(callId).set({ ...base, recordingStatus: body.RecordingStatus || "absent" }, { merge: true });
+    await (await db()).collection("callRecords").doc(callId).set({ ...base, recordingStatus: body.RecordingStatus || "absent" }, { merge: true });
     return res.status(204).end();
   }
   const credentials = Buffer.from(`${process.env.TWILIO_ACCOUNT_SID}:${process.env.TWILIO_AUTH_TOKEN}`).toString("base64");
@@ -26,9 +26,10 @@ export default async function handler(req, res) {
   const safeNumber = base.to.replace(/[^+\d]/g, "") || "unknown";
   const fileName = `call-recordings/${timestamp.slice(0, 10)}/${safeNumber}_${timestamp}_${body.RecordingSid}.mp3`;
   const token = crypto.randomUUID();
-  const file = bucket().file(fileName);
+  const storage = await bucket();
+  const file = storage.file(fileName);
   await file.save(audio, { contentType: "audio/mpeg", resumable: false, metadata: { metadata: { firebaseStorageDownloadTokens: token, callId, phoneNumber: base.to, agent: base.agent } } });
-  const recordingUrl = `https://firebasestorage.googleapis.com/v0/b/${encodeURIComponent(bucket().name)}/o/${encodeURIComponent(fileName)}?alt=media&token=${token}`;
-  await db().collection("callRecords").doc(callId).set({ ...base, recordingStatus: "completed", recordingUrl, fileName, completedAt: new Date().toISOString() }, { merge: true });
+  const recordingUrl = `https://firebasestorage.googleapis.com/v0/b/${encodeURIComponent(storage.name)}/o/${encodeURIComponent(fileName)}?alt=media&token=${token}`;
+  await (await db()).collection("callRecords").doc(callId).set({ ...base, recordingStatus: "completed", recordingUrl, fileName, completedAt: new Date().toISOString() }, { merge: true });
   res.status(204).end();
 }

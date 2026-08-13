@@ -1,12 +1,14 @@
 import { getVercelOidcToken } from "@vercel/oidc";
-import { getApps, initializeApp } from "firebase-admin/app";
+import { applicationDefault, getApps, initializeApp } from "firebase-admin/app";
 import { getFirestore } from "firebase-admin/firestore";
 import { getStorage } from "firebase-admin/storage";
-import { ExternalAccountClient } from "google-auth-library";
+import { rename, writeFile } from "node:fs/promises";
 import process from "node:process";
 
-function firebaseApp() {
-  if (getApps().length) return getApps()[0];
+const credentialsPath = `/tmp/ravlink-google-credentials-${process.pid}.json`;
+const tokenPath = `/tmp/ravlink-vercel-oidc-${process.pid}.jwt`;
+
+async function firebaseApp() {
   const projectId = process.env.FIREBASE_PROJECT_ID;
   const storageBucket = process.env.FIREBASE_STORAGE_BUCKET;
   const projectNumber = process.env.GCP_PROJECT_NUMBER;
@@ -18,19 +20,27 @@ function firebaseApp() {
   }
 
   const audience = `https://iam.googleapis.com/projects/${projectNumber}/locations/global/workloadIdentityPools/${poolId}/providers/${providerId}`;
-  const credential = ExternalAccountClient.fromJSON({
+  const token = await getVercelOidcToken({ audience });
+  const nextTokenPath = `${tokenPath}.next`;
+  await writeFile(nextTokenPath, token, { mode: 0o600 });
+  await rename(nextTokenPath, tokenPath);
+
+  if (getApps().length) return getApps()[0];
+  await writeFile(credentialsPath, JSON.stringify({
     type: "external_account",
     audience,
     subject_token_type: "urn:ietf:params:oauth:token-type:jwt",
     token_url: "https://sts.googleapis.com/v1/token",
     service_account_impersonation_url: `https://iamcredentials.googleapis.com/v1/projects/-/serviceAccounts/${serviceAccountEmail}:generateAccessToken`,
-    subject_token_supplier: {
-      getSubjectToken: () => getVercelOidcToken({ audience }),
+    credential_source: {
+      file: tokenPath,
+      format: { type: "text" },
     },
-  });
-  if (!credential) throw new Error("Could not initialize Google OIDC credentials");
-  return initializeApp({ credential, projectId, storageBucket });
+  }), { mode: 0o600 });
+  process.env.GOOGLE_APPLICATION_CREDENTIALS = credentialsPath;
+  process.env.GOOGLE_CLOUD_PROJECT = projectId;
+  return initializeApp({ credential: applicationDefault(), projectId, storageBucket });
 }
 
-export const db = () => getFirestore(firebaseApp());
-export const bucket = () => getStorage(firebaseApp()).bucket();
+export const db = async () => getFirestore(await firebaseApp());
+export const bucket = async () => getStorage(await firebaseApp()).bucket();
