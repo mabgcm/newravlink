@@ -24,6 +24,8 @@ const englishRoutes = [
     "/blog",
     ...blogRoutes,
     "/growth-check",
+    "/careers",
+    "/careers/cold-caller",
     "/contact",
     "/seo-agency-toronto",
     "/seo-agency-vaughan",

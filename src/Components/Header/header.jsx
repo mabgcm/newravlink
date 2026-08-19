@@ -80,6 +80,12 @@ function Navbar() {
                             </li>
 
                             <li className="nav-item">
+                                <NavLink to={langPath("/careers")} className="nav-link" data-fbq-event="NavClick" data-fbq-label="careers">
+                                    Careers
+                                </NavLink>
+                            </li>
+
+                            <li className="nav-item">
                                 <NavLink to={langPath("/contact")} className="nav-link" data-fbq-event="NavClick" data-fbq-label="contact">
                                     {t("nav.contact")}
                                 </NavLink>

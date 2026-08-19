@@ -11,8 +11,9 @@ import { openWhatsApp } from "./utils/contactLinks";
 
 function AppLayout() {
     const location = useLocation();
-    const hideWhatsApp = location.pathname === "/contact";
+    const hideWhatsApp = location.pathname === "/contact" || location.pathname.endsWith("/careers/cold-caller/apply");
     const isCaller = location.pathname === "/caller";
+    const isCareerApplication = location.pathname.endsWith("/careers/cold-caller/apply");
 
     if (isCaller) {
         return <AppRouter />;
@@ -26,7 +27,7 @@ function AppLayout() {
                     <Navbar />
                     <Sidebar />
                     <AppRouter />
-                    <Footer />
+                    {!isCareerApplication && <Footer />}
                     {!hideWhatsApp && (
                         <button
                             type="button"
