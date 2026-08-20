@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { externalRequestUrl } from "./http.js";
+import { decodeCallbackMetadata, encodeCallbackMetadata, externalRequestUrl } from "./http.js";
 
 test("externalRequestUrl restores Twilio callback encoding and parameter order", () => {
   const req = {
@@ -50,4 +50,16 @@ test("externalRequestUrl uses the first forwarded proxy value", () => {
   };
 
   assert.equal(externalRequestUrl(req, "/api/caller/recording"), "https://ravlink.ca/api/caller/recording");
+});
+
+test("callback metadata survives URL-safe encoding", () => {
+  const metadata = {
+    callId: "95d1e084-ed8e-44be-bd70-071457e18586",
+    to: "+14372196444",
+    agent: "tdelainemedel@gmail.com",
+  };
+  const encoded = encodeCallbackMetadata(metadata);
+
+  assert.match(encoded, /^[a-zA-Z0-9_-]+$/);
+  assert.deepEqual(decodeCallbackMetadata(encoded), metadata);
 });

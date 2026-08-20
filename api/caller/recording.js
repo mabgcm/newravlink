@@ -3,15 +3,16 @@ import { Buffer } from "node:buffer";
 import process from "node:process";
 import twilio from "twilio";
 import { bucket, db } from "../_lib/firebase.js";
-import { externalRequestUrl, readBody } from "../_lib/http.js";
+import { decodeCallbackMetadata, externalRequestUrl, readBody } from "../_lib/http.js";
 
 export default async function handler(req, res) {
   const body = await readBody(req);
-  const requestUrl = externalRequestUrl(req, "/api/caller/recording", ["callId", "to", "agent"]);
+  const requestUrl = externalRequestUrl(req, "/api/caller/recording", ["meta"]);
   if (!twilio.validateRequest(process.env.TWILIO_AUTH_TOKEN || "", req.headers["x-twilio-signature"] || "", requestUrl, body)) return res.status(403).end();
-  const callId = String(req.query.callId || "").replace(/[^a-zA-Z0-9_-]/g, "");
+  const metadata = decodeCallbackMetadata(req.query.meta);
+  const callId = String(metadata.callId || "").replace(/[^a-zA-Z0-9_-]/g, "");
   if (!callId) return res.status(400).end("Missing callId");
-  const base = { callId, to: String(req.query.to || ""), agent: String(req.query.agent || ""), recordingSid: body.RecordingSid || null, duration: Number(body.RecordingDuration || 0), updatedAt: new Date().toISOString() };
+  const base = { callId, to: String(metadata.to || ""), agent: String(metadata.agent || ""), recordingSid: body.RecordingSid || null, duration: Number(body.RecordingDuration || 0), updatedAt: new Date().toISOString() };
   if (body.RecordingStatus !== "completed") {
     await (await db()).collection("callRecords").doc(callId).set({ ...base, recordingStatus: body.RecordingStatus || "absent" }, { merge: true });
     return res.status(204).end();

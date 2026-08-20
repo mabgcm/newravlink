@@ -1,6 +1,6 @@
 import twilio from "twilio";
 import process from "node:process";
-import { readBody } from "../_lib/http.js";
+import { encodeCallbackMetadata, readBody } from "../_lib/http.js";
 
 const escapeQuery = (value) => encodeURIComponent(String(value || ""));
 
@@ -19,8 +19,9 @@ export default async function handler(req, res) {
   if (!/^\+[1-9]\d{7,14}$/.test(to)) {
     response.say("The destination number is invalid.");
   } else {
-    const callback = `${protocol}://${host}/api/caller/recording?callId=${escapeQuery(callId)}&to=${escapeQuery(to)}&agent=${escapeQuery(agent)}`;
-    const statusCallback = `${protocol}://${host}/api/caller/status?callId=${escapeQuery(callId)}&to=${escapeQuery(to)}&agent=${escapeQuery(agent)}`;
+    const metadata = encodeCallbackMetadata({ callId, to, agent });
+    const callback = `${protocol}://${host}/api/caller/recording?meta=${escapeQuery(metadata)}`;
+    const statusCallback = `${protocol}://${host}/api/caller/status?meta=${escapeQuery(metadata)}`;
     const dial = response.dial({ callerId: process.env.TWILIO_CALLER_ID, record: "record-from-answer-dual", recordingStatusCallback: callback, recordingStatusCallbackEvent: "completed absent", recordingStatusCallbackMethod: "POST" });
     dial.number({ statusCallback, statusCallbackEvent: "initiated ringing answered completed", statusCallbackMethod: "POST" }, to);
   }

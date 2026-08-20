@@ -30,6 +30,21 @@ export function externalRequestUrl(req, pathname, queryKeys = []) {
   return `${protocol}://${host}${pathname}${query ? `?${query}` : ""}`;
 }
 
+export function encodeCallbackMetadata(metadata) {
+  return Buffer.from(JSON.stringify(metadata)).toString("base64url");
+}
+
+export function decodeCallbackMetadata(value) {
+  const encoded = String(value || "");
+  if (!encoded || encoded.length > 1024 || !/^[a-zA-Z0-9_-]+$/.test(encoded)) return {};
+  try {
+    const parsed = JSON.parse(Buffer.from(encoded, "base64url").toString("utf8"));
+    return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
 export function safeEqual(left, right) {
   const a = Buffer.from(String(left));
   const b = Buffer.from(String(right));
