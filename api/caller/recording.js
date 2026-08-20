@@ -3,13 +3,11 @@ import { Buffer } from "node:buffer";
 import process from "node:process";
 import twilio from "twilio";
 import { bucket, db } from "../_lib/firebase.js";
-import { readBody } from "../_lib/http.js";
+import { externalRequestUrl, readBody } from "../_lib/http.js";
 
 export default async function handler(req, res) {
   const body = await readBody(req);
-  const protocol = req.headers["x-forwarded-proto"] || "https";
-  const host = req.headers["x-forwarded-host"] || req.headers.host;
-  const requestUrl = `${protocol}://${host}${req.url}`;
+  const requestUrl = externalRequestUrl(req, "/api/caller/recording", ["callId", "to", "agent"]);
   if (!twilio.validateRequest(process.env.TWILIO_AUTH_TOKEN || "", req.headers["x-twilio-signature"] || "", requestUrl, body)) return res.status(403).end();
   const callId = String(req.query.callId || "").replace(/[^a-zA-Z0-9_-]/g, "");
   if (!callId) return res.status(400).end("Missing callId");

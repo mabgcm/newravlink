@@ -16,6 +16,20 @@ export async function readBody(req) {
   return Object.fromEntries(new URLSearchParams(raw));
 }
 
+export function externalRequestUrl(req, pathname, queryKeys = []) {
+  const protocol = String(req.headers["x-forwarded-proto"] || "https").split(",")[0].trim();
+  const host = String(req.headers["x-forwarded-host"] || req.headers.host || "").split(",")[0].trim();
+  const query = queryKeys
+    .map((key) => {
+      const value = String(req.query?.[key] || "");
+      let decoded = value;
+      try { decoded = decodeURIComponent(value); } catch { /* preserve malformed input for signature rejection */ }
+      return `${encodeURIComponent(key)}=${encodeURIComponent(decoded)}`;
+    })
+    .join("&");
+  return `${protocol}://${host}${pathname}${query ? `?${query}` : ""}`;
+}
+
 export function safeEqual(left, right) {
   const a = Buffer.from(String(left));
   const b = Buffer.from(String(right));
