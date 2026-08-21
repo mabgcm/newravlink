@@ -42,6 +42,7 @@ export function getSession(req) {
   if (!payload || !signature || !safeEqual(sign(payload), signature)) return null;
   try {
     const session = JSON.parse(Buffer.from(payload, "base64url").toString("utf8"));
-    return session.exp > Date.now() ? session : null;
+    const user = users.find((candidate) => candidate.username === session.sub && !candidate.disabled);
+    return session.exp > Date.now() && user ? session : null;
   } catch { return null; }
 }
