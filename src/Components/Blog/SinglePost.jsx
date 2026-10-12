@@ -1760,4 +1760,154 @@ Dijital varlığını; SEO, web sitesi ve reklamlarla entegre bir büyüme siste
         {
           type: "p",
           text:
-            "Rav L
+            "Rav Link contractor web tasarımı, lokal SEO, Google Business Profile stratejisi ve lead takibini tek bir pratik sisteme bağlar. Siteniz trafik alıyor ama yeterince kaliteli teklif talebi üretmiyorsa sorun genellikle tek bir eksik buton değildir. Tüm dönüşüm yoludur.",
+        },
+        {
+          type: "p",
+          text:
+            "Daha güçlü lead akışı isteyen contractor firmaları https://ravlink.com/services/contractor-marketing üzerinden contractor odaklı pazarlamayla veya https://ravlink.com/website-design-toronto üzerinden dönüşüm odaklı web tasarımı ile başlayabilir.",
+        },
+      ],
+    },
+  },
+};
+
+const getArticleGroup = (slug) => articles[slug] || null;
+const getLocalizedArticle = (articleGroup, language) => (
+  language?.startsWith("tr") ? articleGroup.tr : articleGroup.en
+);
+
+const BlogPostSection = () => {
+  const { t, i18n } = useTranslation();
+  const { slug } = useParams();
+  const articleGroup = getArticleGroup(slug || defaultSlug);
+  const article = articleGroup ? getLocalizedArticle(articleGroup, i18n.language) : null;
+  const isTurkish = i18n.language?.startsWith("tr");
+
+  if (!article) {
+    return (
+      <div className="section" data-pixel-section="blog-article">
+        <div className="hero-container">
+          <div className="d-flex flex-column gspace-2 text-center">
+            <h3>{t("notFound.title", "Page Not Found")}</h3>
+            <p>{t("notFound.description", "The article you are looking for does not exist.")}</p>
+            <div className="link-wrapper justify-content-center">
+              <a href="/blog">{t("nav.blog")}</a>
+              <i className="fa-solid fa-circle-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="section" data-pixel-section="blog-article">
+      <div className="hero-container">
+        <div className="row row-cols-lg-2 row-cols-1 grid-spacer-5">
+          <div className="col col-lg-4 order-2 order-lg-1">
+            <div className="d-flex flex-column flex-md-row flex-lg-column gspace-5">
+              <div className="card recent-post">
+                <h4>{isTurkish ? "Son Bloglar" : "Recent Blog"}</h4>
+                {blogs.map((blog) => (
+                  <div
+                    className="d-flex flex-row w-100 gspace-1"
+                    key={blog.id}
+                  >
+                    <div className="image-container">
+                      <img
+                        src={blog.image}
+                        alt={t(blog.titleKey)}
+                        className="img-fluid"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="d-grid">
+                      <div className="d-flex flex-row gspace-1 align-items-center">
+                        <i className="fa-solid fa-calendar accent-color"></i>
+                        <span className="meta-data-post">{t(blog.dateKey)}</span>
+                      </div>
+                      <a href={blog.link} className="blog-link-post">
+                        {t(blog.titleKey)}
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="cta-service-banner">
+                <div className="spacer"></div>
+                <h3 className="title-heading">
+                  {isTurkish ? "İşinizi Rav Link ile Büyütün!" : "Transform Your Business with Rav Link!"}
+                </h3>
+                <p>
+                  {isTurkish
+                    ? "Veriye dayalı stratejiler ve pratik dijital çözümlerle pazarlama çalışmalarınızı daha güçlü hale getirin."
+                    : "Take your digital marketing to the next level with data-driven strategies and innovative solutions. Let's create something amazing together!"}
+                </p>
+                <div className="link-wrapper">
+                  <a href="/about">{isTurkish ? "Rav Link hakkında bilgi alın" : "Learn more about Rav Link"}</a>
+                  <i className="fa-solid fa-circle-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col col-lg-8 order-1 order-lg-2">
+            <div className="d-flex flex-column gspace-2">
+              <div className="post-image">
+                <img
+                  src={articleGroup.image}
+                  alt={article.alt}
+                  className="img-fluid"
+                  loading="lazy"
+                />
+              </div>
+              <h3>{article.title}</h3>
+              <div className="underline-muted-full"></div>
+              <div className="d-flex flex-row align-items-center justify-content-between">
+                <div className="d-flex flex-row align-items-center gspace-2">
+                  <div className="d-flex flex-row gspace-1 align-items-center">
+                    <i className="fa-solid fa-calendar accent-color"></i>
+                    <span className="meta-data-post">{article.date}</span>
+                  </div>
+                  <div className="d-flex flex-row gspace-1 align-items-center">
+                    <i className="fa-solid fa-folder accent-color"></i>
+                    <span className="meta-data-post">{article.category}</span>
+                  </div>
+                </div>
+                <div className="d-flex flex-row gspace-1 align-items-center">
+                  <i className="fa-solid fa-user accent-color"></i>
+                  <span className="meta-data">Rav Link Inc.</span>
+                </div>
+              </div>
+
+              <div className="d-flex flex-column gspace-2">
+                {article.blocks.slice(0, 9).map(renderBlock)}
+              </div>
+              <div className="quote-container">
+                <div>
+                  <div className="icon-wrapper">
+                    <div className="icon-box">
+                      <i className="fa-solid fa-quote-right"></i>
+                    </div>
+                  </div>
+                </div>
+                <p className="quote">
+                  {article.quote}
+                </p>
+                <div>
+                  <h5>Rav Link Inc.</h5>
+                  <p className="quote-description">{isTurkish ? "Dijital Pazarlama Ekibi" : "Digital Marketing Team"}</p>
+                </div>
+              </div>
+              <div className="d-flex flex-column gspace-2">
+                {article.blocks.slice(9).map(renderBlock)}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BlogPostSection;

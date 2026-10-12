@@ -1,0 +1,25 @@
+name: Production build
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          package-manager-cache: false
+      - name: Install Yarn
+        run: npm install --global yarn@1.22.22
+      - name: Install locked dependencies
+        run: yarn install --frozen-lockfile --non-interactive --production=false
+      - name: Build and validate prerendered pages
+        run: yarn run build
