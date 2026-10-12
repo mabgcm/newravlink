@@ -3382,6 +3382,17 @@ body.lightmode .case-studies-content::before {
     margin-bottom: 0;
 }
 
+.blog-growth-article .blog-roadmap-phase h5 {
+    margin-top: 0;
+    font-size: var(--font-size-2xl);
+}
+
+@media (max-width: 767px) {
+    .blog-growth-post > .hero-container > .row {
+        margin-inline: 0;
+    }
+}
+
 .card-blog {
     position: relative;
     background-color: var(--accent-color-4);
