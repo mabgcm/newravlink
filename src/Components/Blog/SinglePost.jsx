@@ -834,55 +834,334 @@ Rav Link ile ücretsiz Google İşletme Profili denetimi planlayın ve Toronto'd
   "growth-strategies-for-digital-business": {
     image: "/assets/images/servicehero.jpeg",
     en: {
-      title: "Growth Strategies for Digital Business",
-      date: "April 14, 2025",
-      category: "SEO",
-      alt: "Digital marketing strategy planning for business growth",
+
+
+
+
+      title: "Growth Strategies for Digital Business in 2027",
+      date: "October 1, 2026",
+      category: "Digital Strategy",
+      alt: "Digital marketing strategy planning for business growth in 2027",
       quote:
         "The best digital growth systems connect visibility, traffic quality, conversion paths, and reporting into one practical operating rhythm.",
-      blocks: [
-        {
-          type: "p",
-          text:
-            "Growing a digital business requires more than publishing a website and running a few ads. Sustainable growth comes from matching the right audience with the right offer, then improving every step between first visit and customer conversation.",
-        },
-        {
-          type: "p",
-          text:
-            "SEO helps capture people who are already searching. Paid ads help test demand, reach new audiences, and retarget visitors who need more proof. A strong website turns those visits into leads with clear messaging, fast loading pages, and simple calls to action.",
-        },
-        {
-          type: "h",
-          text: "Start with positioning before channels",
-        },
-        {
-          type: "p",
-          text:
-            "Many businesses jump straight into campaigns before they clarify why a customer should choose them. Strong positioning explains the audience, the problem, the result, and the proof. Once that is clear, SEO, Meta Ads, Google Ads, and content become easier to plan.",
-        },
-        {
-          type: "ul",
-          items: [
-            "Define the highest-value customer segments.",
-            "Clarify the services or offers that should drive growth.",
-            "Build pages that answer buying questions instead of only describing features.",
-          ],
-        },
-        {
-          type: "h",
-          text: "Measure the full path to conversion",
-        },
-        {
-          type: "p",
-          text:
-            "Traffic alone does not prove growth. Track where leads come from, which pages they visit, what forms they submit, and which campaigns create qualified opportunities. Better reporting helps you move budget toward the work that actually creates revenue.",
-        },
-        {
-          type: "p",
-          text:
-            "Rav Link helps businesses connect SEO, websites, paid ads, and reporting into a practical system for measurable digital growth.",
-        },
-      ],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      blocks: parseArticleBlocks(`# Growth Strategies for Digital Business in 2027
+
+## What “digital business growth” really means in 2027
+Growth in 2027 is not just “more traffic” or “more followers.” For most small and mid-sized digital businesses, real growth means three things working together:
+
+- Predictable acquisition: a steady flow of the right visitors who match your ideal customer profile.
+- Efficient conversion: websites, funnels, and sales processes that turn a reasonable share of those visitors into revenue.
+- Healthy economics: customer lifetime value that justifies your marketing, sales, and operations costs.
+
+If any of these break, growth feels like pushing a rock uphill. You can have strong traffic but weak margins, a beautiful brand but inconsistent lead flow, or lots of leads but poor close rates. A good 2027 growth strategy aligns SEO, paid media, automation, and retention around these fundamentals instead of chasing vanity metrics.
+
+In this article, we will walk through how modern SEO, AI-assisted marketing, user experience, paid acquisition, email, CRM, and analytics fit into one practical system. The examples focus on service businesses and digital-first companies, but the principles apply broadly.
+
+## Organic search and modern SEO
+Search behaviour evolves, but the core SEO questions stay similar: who are we trying to reach, what are they searching for, and why should they trust us?
+
+### From keywords to problems and journeys
+In 2027, winning in search is less about ranking for one “hero keyword” and more about covering the full decision journey:
+
+- Early research: terms like “how to choose a B2B SEO agency” or “social media strategy ideas for local businesses.”
+- Mid-funnel comparison: “SEO vs Google Ads for small business,” “fractional CMO vs agency.”
+- High-intent: “SEO agency Toronto,” “website redesign for contractors,” “Meta ads management Ontario.”
+
+Map those journeys for your best customer segments and build clusters of pages around them: educational articles, service pages, case studies, and FAQ content that answer real questions instead of repeating buzzwords.
+
+### Technical and UX basics you cannot ignore
+Search engines still need a technically healthy site:
+
+- Fast page load, especially on mobile.
+- Clean URL structure and internal links.
+- Clear headings and metadata that match search intent.
+- No major crawl issues, broken links, or duplicated thin pages.
+
+But in 2027, engagement signals matter just as much. If searchers bounce quickly, never scroll, or never interact, it is a sign that the page does not match what they expected. Strong SEO content is specific, skimmable, and supported by a design that feels trustworthy on both desktop and mobile.
+
+### Content depth and topical authority
+Topical authority means you are not just publishing one post about “SEO” or “digital marketing,” but consistently covering the themes your buyers care about. For a digital agency, that might include:
+
+- Local SEO and Google Business Profile.
+- Website redesign and conversion optimization.
+- Paid social and search.
+- Analytics, tracking, and reporting.
+- Industry-specific playbooks (contractors, clinics, professional services, e‑commerce).
+
+You do not need to publish every day. You do need a clear editorial calendar focused on depth and usefulness. Quality articles that actually help business owners make decisions age far better than thin content written only for algorithms.
+
+## AI-assisted marketing and automation
+AI tools are now part of most modern marketing stacks, but they are not a silver bullet. They work best when they assist human strategy instead of replacing it.
+
+### Where AI adds real value
+AI can reliably help with:
+
+- Drafting content outlines and variants once you provide a clear brief.
+- Turning long-form content into email sequences, ad variations, or social posts.
+- Identifying themes and patterns in customer feedback or call transcripts.
+- Powering basic chat or FAQ experiences when trained on your real content.
+
+These uses help teams move faster while staying anchored to real customer insight. Where AI is weaker is inventing strategy or understanding nuance without guidance. Human judgment is still essential for positioning, prioritization, and brand voice.
+
+### Automation across the funnel
+Automation is not just about email drips. For a digital business, 2027-ready automation might include:
+
+- Lead routing and qualification rules in your CRM.
+- Behaviour-based email or SMS sequences triggered by visits, downloads, or form fills.
+- Automated reminders for sales follow-ups so qualified leads do not go stale.
+- Simple workflows that notify your team when key accounts engage with high‑value content.
+
+The goal is not to automate everything. It is to automate the repetitive work that humans forget or delay, so they can focus on higher‑value conversations.
+
+## Website performance, UX, and conversion optimization
+Your website remains the centre of your digital growth system. In 2027, the table stakes are higher: visitors expect fast, frictionless experiences.
+
+### Speed and stability
+Every extra second of load time still costs you visitors. You do not need a perfect lab score, but you do need:
+
+- Lightweight pages for core funnels (home, services, pricing, key blog posts).
+- Compressed images and optimized video usage.
+- Minimal blocking scripts, especially from unused widgets.
+
+Even if your traffic is modest, an extra 10–20% of visitors staying on the page can be the difference between “marketing is expensive” and “marketing is working.”
+
+### Clear structure and messaging
+Strong UX is mostly clarity:
+
+- Who you serve.
+- What results you help them achieve.
+- How working with you actually works.
+- What the next step is.
+
+Service pages and articles should lead naturally to a relevant call to action: book a consultation, request a proposal, start a growth check, or download a resource. CTAs should be visible without scrolling too far, and repeated contextually—not just once in the footer.
+
+### Conversion optimization as an ongoing habit
+Conversion rate optimization (CRO) in small businesses does not always require heavy A/B testing. Simple, evidence‑based improvements matter:
+
+- Shortening forms while keeping fields that qualify leads.
+- Making phone numbers and email addresses clickable on mobile.
+- Rewriting headlines to focus on outcomes instead of generic labels.
+- Adding proof (logos, testimonials, case snippets) close to key CTAs.
+
+Treat CRO as part of your monthly rhythm: review analytics, watch a few session recordings if available, and fix the obvious friction before chasing new channels.
+
+## Content marketing and topical authority
+Content is still how you earn trust at scale. In 2027, most sectors are saturated with surface‑level posts, so the opportunity is in depth and specificity.
+
+### Content that speaks to decision-makers
+Business owners and leaders are busy. They do not need another “Top 10 SEO Tips” article. They need:
+
+- Clear explanations of trade‑offs (for example, SEO vs paid ads for a local clinic).
+- Industry‑specific examples: what worked for contractors, health businesses, professional services, or local retailers.
+- Practical checklists they can act on or hand to a team member.
+
+Your best content makes someone think “this is exactly my situation” rather than “this could be about any business.”
+
+### Formats that support the funnel
+Mix content types so they support each other:
+
+- Evergreen guides that anchor key topics.
+- Shorter opinion pieces or updates that show how you think.
+- Case‑study style stories where you walk through the problem, approach, and lessons (even without disclosing private numbers).
+- FAQs and comparison pages that handle objections.
+
+As your library grows, link related pieces together and link strategically to key service pages like your SEO services, website design, and contractor marketing offers.
+
+## Local SEO and Google Business Profile for service businesses
+If you serve clients in specific regions—like Ontario and the GTA—local SEO often drives your highest‑intent leads.
+
+### Getting the basics right
+Most of the fundamentals still apply:
+
+- A complete Google Business Profile with clear categories, photos, and service areas.
+- Consistent name, address, and phone (NAP) information across major directories.
+- Location or service‑area pages on your website that match how people search.
+
+For many service businesses, a small number of well‑built local pages plus an actively managed profile outperform dozens of thin, city‑swapped pages.
+
+### Reviews as both ranking and conversion leverage
+You do not need thousands of reviews, but you do need a steady flow of recent, detailed ones. Build a simple review process into your delivery: ask happy clients shortly after projects or key milestones and make it easy for them to respond.
+
+A profile with thoughtful reviews, real project detail, and professional responses to feedback sends stronger signals than a profile with a perfect 5.0 rating and very few comments.
+
+## Paid advertising and customer acquisition
+Paid traffic—through Meta Ads, Google Ads, or other platforms—remains one of the fastest ways to test offers and scale what works.
+
+### When paid makes sense
+Paid acquisition is especially helpful when:
+
+- You are launching a new offer and need data quickly.
+- Your sales process converts well, but organic channels are still ramping up.
+- You have strong proof (testimonials, case studies, social proof) but not enough eyeballs.
+
+However, ads are not a substitute for a weak value proposition. If your offer is unclear or your margins are too thin, performance will struggle even with expert management.
+
+### Building campaigns around intent
+In 2027, the basics still win:
+
+- Use search campaigns for high‑intent queries (for example, “SEO agency Toronto” or “Meta ads management Ontario”).
+- Use paid social to reach and nurture your ideal audience with educational content, not just hard offers.
+- Retarget visitors who engaged with key pages but did not yet convert.
+
+Measure success in qualified leads and closed revenue, not just impressions or clicks.
+
+## Email marketing, CRM, and customer retention
+Most businesses under‑use the customers and leads they already have. A simple email and CRM strategy can stabilize growth even when acquisition channels are noisy.
+
+### Turning contacts into a real asset
+Even a small list—hundreds or low thousands of contacts—can:
+
+- Re‑activate past leads who were not ready before.
+- Announce new offers or resources.
+- Share quarterly insights and case studies that keep you top of mind.
+
+The key is relevance. Instead of generic newsletters, segment by interest or lifecycle stage where possible: prospects, active clients, and past clients may need different messages.
+
+### CRM as your growth memory
+A basic CRM setup does not have to be complex. At minimum, aim to:
+
+- Capture all leads from forms, calls, and key chat channels.
+- Track where each lead came from (SEO, ads, referral, event, etc.).
+- Record simple stages like new, qualified, proposal sent, won, and lost.
+
+This level of structure makes your marketing far easier to evaluate and improves handoff between marketing and sales, even in a very small team.
+
+## Measurement, attribution, KPIs, and ROI
+You do not need enterprise‑grade dashboards to make better decisions. You do need a concise view of what is working.
+
+### Choosing the right KPIs
+For most digital businesses, a practical dashboard includes:
+
+- Traffic by source (organic, paid, direct, referral).
+- Leads or key actions by source.
+- Conversion rates on core pages (contact, quote request, booking).
+- Average deal size and close rate.
+
+If you can connect these dots, you can roughly estimate marketing ROI without pretending every click is perfectly attributed.
+
+### Attribution in the real world
+Attribution in 2027 is still imperfect. People might:
+
+- Discover you via social content.
+- Google your brand later.
+- Click a remarketing ad.
+- Finally convert after a sales call.
+
+Treat numbers as directional, not absolute. Look for patterns over time instead of obsessing over any single week. When in doubt, speak with real customers and ask what they remember about how they found you.
+
+## Practical growth strategies for small businesses
+If you are a small or midsize service business, you likely do not have a full marketing department. You need a focused plan.
+
+### Prioritize high‑leverage basics
+Instead of trying to do everything:
+
+- Make sure your website clearly explains who you serve and how to contact you.
+- Stabilize your local presence with a healthy Google Business Profile.
+- Choose one main acquisition channel to develop first (SEO, paid search, or paid social) based on your sales cycle and budget.
+- Put a simple email/CRM system in place so you do not keep starting from zero.
+
+This foundation often unlocks more progress than a dozen disconnected tactics.
+
+### Budget considerations and channel mix
+Your budget should reflect your sales model and timeline:
+
+- Very small budgets (under a few hundred dollars per month) are usually best invested into better website content, simple SEO foundations, and clarity of offer.
+- Moderate budgets can blend SEO content creation, local optimization, and tightly targeted ad campaigns.
+- Larger budgets can fund more experimentation, multi‑channel remarketing, and creative testing.
+
+Whatever the budget, protect some capacity for strategy, reporting, and continuous improvement—not just media spend.
+
+## Common mistakes and realistic expectations
+A few patterns show up repeatedly across digital businesses:
+
+- Expecting SEO to fix a weak offer or unclear positioning.
+- Launching ads without tracking or a defined conversion goal.
+- Redesigning a website for aesthetics while ignoring messaging and UX.
+- Chasing new tools or trends instead of fixing obvious bottlenecks.
+
+Realistically, organic search and content often need 3–6 months to show clear traction. Paid campaigns can provide data within weeks but still require testing. Retention and referrals compound over quarters and years.
+
+## A practical 90‑day growth roadmap
+You can do a lot in 90 days if you keep the scope focused.
+
+### Days 1–30: Diagnose and stabilize
+- Clarify your ideal customer segments and core offers.
+- Review your website for basic clarity, mobile usability, and working forms.
+- Set up or clean up analytics and simple conversion tracking.
+- Ensure your Google Business Profile or key local listings are accurate.
+
+### Days 31–60: Build your growth engine
+- Publish or update at least 3–5 high‑value pages or articles aligned to core search intents.
+- Launch one focused paid campaign (search or social) around a single offer.
+- Implement a simple email nurture or follow‑up sequence for new leads.
+- Add basic proof elements—testimonials, case snippets, logos—to priority pages.
+
+### Days 61–90: Optimize and decide
+- Review performance data by source and page, not just overall traffic.
+- Improve or pause underperforming campaigns; expand winning ones carefully.
+- Tighten your forms, CTAs, and on‑page copy based on real behaviour.
+- Decide which initiatives become ongoing (SEO content, local optimization, ads, email) and document a simple monthly cadence.
+
+At this stage, many businesses choose to partner with a specialist team so they can keep running the business while their growth system is operated and refined in the background.
+
+## Frequently asked questions
+
+### How should small businesses balance SEO and paid ads in 2027?
+Most small businesses benefit from both. Paid ads provide faster feedback and can generate leads while SEO is ramping up. SEO builds long‑term visibility and can lower acquisition costs over time. The right balance depends on your cash flow, sales cycle, and appetite for experimentation.
+
+### Are AI tools enough to run my marketing?
+AI can speed up content production, research, and basic analysis, but it does not replace strategy or accountability. Use AI to assist with execution while humans own positioning, prioritization, and quality control.
+
+### How long will it take to see results from these strategies?
+Timelines vary by competition and execution, but many businesses see early signs of progress within 60–90 days when they improve their website, clarify offers, set up tracking, and launch at least one focused campaign. More durable organic growth usually takes several months.
+
+### What should I do if my budget is very limited?
+Focus on clarity and foundations: a simple but clear website, a complete Google Business Profile, and a few strong pieces of content that answer your best prospects’ questions. Then add paid campaigns and more complex automation once you have proof that your offer resonates.
+
+For businesses that want support connecting SEO, websites, and paid campaigns into one growth system, a specialized digital marketing partner can shorten the learning curve while keeping strategy grounded in realistic goals.`),
     },
     tr: {
       title: "Dijital İşletmeler İçin Sürdürülebilir Büyüme Stratejileri",
@@ -1260,109 +1539,109 @@ const BlogPostSection = () => {
 
   return (
     <div className="section" data-pixel-section="blog-article">
-        <div className="hero-container">
-            <div className="row row-cols-lg-2 row-cols-1 grid-spacer-5">
-                <div className="col col-lg-4 order-2 order-lg-1">
-                    <div className="d-flex flex-column flex-md-row flex-lg-column gspace-5">
-                        <div className="card recent-post">
-                            <h4>{isTurkish ? "Son Bloglar" : "Recent Blog"}</h4>
-                            {blogs.map((blog) => (
-                                <div
-                                    className="d-flex flex-row w-100 gspace-1"
-                                    key={blog.id}
-                                >
-                                    <div className="image-container">
-                                    <img
-                                        src={blog.image}
-                                        alt={t(blog.titleKey)}
-                                        className="img-fluid"
-                                        loading="lazy"
-                                    />
-                                    </div>
-                                    <div className="d-grid">
-                                        <div className="d-flex flex-row gspace-1 align-items-center">
-                                            <i className="fa-solid fa-calendar accent-color"></i>
-                                            <span className="meta-data-post">{t(blog.dateKey)}</span>
-                                        </div>
-                                        <a href={blog.link} className="blog-link-post">
-                                            {t(blog.titleKey)}
-                                        </a>
-                                    </div>
-                                </div>
-                                ))}
-                        </div>
-                        <div className="cta-service-banner">
-                            <div className="spacer"></div>
-                            <h3 className="title-heading">
-                                {isTurkish ? "İşinizi Rav Link ile Büyütün!" : "Transform Your Business with Rav Link!"}
-                            </h3>
-                            <p>
-                                {isTurkish
-                                    ? "Veriye dayalı stratejiler ve pratik dijital çözümlerle pazarlama çalışmalarınızı daha güçlü hale getirin."
-                                    : "Take your digital marketing to the next level with data-driven strategies and innovative solutions. Let's create something amazing together!"}
-                            </p>
-                            <div className="link-wrapper">
-                                <a href="/about">{isTurkish ? "Rav Link hakkında bilgi alın" : "Learn more about Rav Link"}</a>
-                                <i className="fa-solid fa-circle-arrow-right"></i>
-                            </div>
-                        </div>
+      <div className="hero-container">
+        <div className="row row-cols-lg-2 row-cols-1 grid-spacer-5">
+          <div className="col col-lg-4 order-2 order-lg-1">
+            <div className="d-flex flex-column flex-md-row flex-lg-column gspace-5">
+              <div className="card recent-post">
+                <h4>{isTurkish ? "Son Bloglar" : "Recent Blog"}</h4>
+                {blogs.map((blog) => (
+                  <div
+                    className="d-flex flex-row w-100 gspace-1"
+                    key={blog.id}
+                  >
+                    <div className="image-container">
+                      <img
+                        src={blog.image}
+                        alt={t(blog.titleKey)}
+                        className="img-fluid"
+                        loading="lazy"
+                      />
                     </div>
+                    <div className="d-grid">
+                      <div className="d-flex flex-row gspace-1 align-items-center">
+                        <i className="fa-solid fa-calendar accent-color"></i>
+                        <span className="meta-data-post">{t(blog.dateKey)}</span>
+                      </div>
+                      <a href={blog.link} className="blog-link-post">
+                        {t(blog.titleKey)}
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="cta-service-banner">
+                <div className="spacer"></div>
+                <h3 className="title-heading">
+                  {isTurkish ? "İşinizi Rav Link ile Büyütün!" : "Transform Your Business with Rav Link!"}
+                </h3>
+                <p>
+                  {isTurkish
+                    ? "Veriye dayalı stratejiler ve pratik dijital çözümlerle pazarlama çalışmalarınızı daha güçlü hale getirin."
+                    : "Take your digital marketing to the next level with data-driven strategies and innovative solutions. Let's create something amazing together!"}
+                </p>
+                <div className="link-wrapper">
+                  <a href="/about">{isTurkish ? "Rav Link hakkında bilgi alın" : "Learn more about Rav Link"}</a>
+                  <i className="fa-solid fa-circle-arrow-right"></i>
                 </div>
-                <div className="col col-lg-8 order-1 order-lg-2">
-                    <div className="d-flex flex-column gspace-2">
-                        <div className="post-image">
-                            <img
-                            src={articleGroup.image}
-                            alt={article.alt}
-                            className="img-fluid"
-                            loading="lazy"
-                            />
-                        </div>
-                        <h3>{article.title}</h3>
-                        <div className="underline-muted-full"></div>
-                        <div className="d-flex flex-row align-items-center justify-content-between">
-                            <div className="d-flex flex-row align-items-center gspace-2">
-                                <div className="d-flex flex-row gspace-1 align-items-center">
-                                    <i className="fa-solid fa-calendar accent-color"></i>
-                                    <span className="meta-data-post">{article.date}</span>
-                                </div>
-                                <div className="d-flex flex-row gspace-1 align-items-center">
-                                    <i className="fa-solid fa-folder accent-color"></i>
-                                    <span className="meta-data-post">{article.category}</span>
-                                </div>
-                            </div>
-                            <div className="d-flex flex-row gspace-1 align-items-center">
-                                <i className="fa-solid fa-user accent-color"></i>
-                                <span className="meta-data">Rav Link Inc.</span>
-                            </div>
-                        </div>
-
-                    <div className="d-flex flex-column gspace-2">
-                        {article.blocks.slice(0, 9).map(renderBlock)}
-                    </div>
-                    <div className="quote-container">
-                        <div>
-                        <div className="icon-wrapper">
-                            <div className="icon-box">
-                            <i className="fa-solid fa-quote-right"></i>
-                            </div>
-                        </div>
-                        </div>
-                        <p className="quote">
-                            {article.quote}
-                        </p>
-                        <div>
-                        <h5>Rav Link Inc.</h5>
-                        <p className="quote-description">{isTurkish ? "Dijital Pazarlama Ekibi" : "Digital Marketing Team"}</p>
-                        </div>
-                    </div>
-                    <div className="d-flex flex-column gspace-2">
-                        {article.blocks.slice(9).map(renderBlock)}
-                    </div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+          <div className="col col-lg-8 order-1 order-lg-2">
+            <div className="d-flex flex-column gspace-2">
+              <div className="post-image">
+                <img
+                  src={articleGroup.image}
+                  alt={article.alt}
+                  className="img-fluid"
+                  loading="lazy"
+                />
+              </div>
+              <h3>{article.title}</h3>
+              <div className="underline-muted-full"></div>
+              <div className="d-flex flex-row align-items-center justify-content-between">
+                <div className="d-flex flex-row align-items-center gspace-2">
+                  <div className="d-flex flex-row gspace-1 align-items-center">
+                    <i className="fa-solid fa-calendar accent-color"></i>
+                    <span className="meta-data-post">{article.date}</span>
+                  </div>
+                  <div className="d-flex flex-row gspace-1 align-items-center">
+                    <i className="fa-solid fa-folder accent-color"></i>
+                    <span className="meta-data-post">{article.category}</span>
+                  </div>
+                </div>
+                <div className="d-flex flex-row gspace-1 align-items-center">
+                  <i className="fa-solid fa-user accent-color"></i>
+                  <span className="meta-data">Rav Link Inc.</span>
+                </div>
+              </div>
+
+              <div className="d-flex flex-column gspace-2">
+                {article.blocks.slice(0, 9).map(renderBlock)}
+              </div>
+              <div className="quote-container">
+                <div>
+                  <div className="icon-wrapper">
+                    <div className="icon-box">
+                      <i className="fa-solid fa-quote-right"></i>
+                    </div>
+                  </div>
+                </div>
+                <p className="quote">
+                  {article.quote}
+                </p>
+                <div>
+                  <h5>Rav Link Inc.</h5>
+                  <p className="quote-description">{isTurkish ? "Dijital Pazarlama Ekibi" : "Digital Marketing Team"}</p>
+                </div>
+              </div>
+              <div className="d-flex flex-column gspace-2">
+                {article.blocks.slice(9).map(renderBlock)}
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
   );
 };
