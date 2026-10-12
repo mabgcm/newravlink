@@ -2,21 +2,25 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { blogs } from "../../Data/BlogPostData";
+import { enhanceGrowthArticleBlocks } from "./growthArticleBlocks";
 
 const articleImage = "/assets/images/google-maps-local-seo-toronto.jpg";
 const defaultSlug = "how-toronto-businesses-rank-higher-on-google-maps";
 
 const renderBlock = (block, index) => {
   if (block.type === "figure") {
-    const { src, alt, caption, width, height, loading } = block;
+    const { src, srcSet, sizes, alt, caption, width, height, loading, portrait } = block;
     return (
-      <figure className="blog-figure" key={index}>
+      <figure className={`blog-figure${portrait ? " blog-figure--portrait" : ""}`} key={index}>
         <img
           src={src}
+          srcSet={srcSet}
+          sizes={sizes}
           alt={alt}
           width={width}
           height={height}
           loading={loading || "lazy"}
+          decoding="async"
         />
         {caption && <figcaption className="blog-figure-caption">{caption}</figcaption>}
       </figure>
@@ -62,19 +66,20 @@ const renderBlock = (block, index) => {
   if (block.type === "comparison-table") {
     const { columns, rows } = block;
     return (
-      <div className="blog-comparison-table-wrapper" key={index}>
+      <div className="blog-comparison-table-wrapper" key={index} tabIndex={0} role="region" aria-label={block.caption}>
         <table className="blog-comparison-table">
+          {block.caption && <caption>{block.caption}</caption>}
           <thead>
             <tr>
               {columns.map((col) => (
-                <th key={col}>{col}</th>
+                <th key={col} scope="col">{col}</th>
               ))}
             </tr>
           </thead>
           <tbody>
             {rows.map((row) => (
               <tr key={row.strategy}>
-                <td>{row.strategy}</td>
+                <th scope="row">{row.strategy}</th>
                 <td>{row.objective}</td>
                 <td>{row.horizon}</td>
                 <td>{row.kpi}</td>
@@ -87,11 +92,13 @@ const renderBlock = (block, index) => {
   }
 
   if (block.type === "h2") {
-    return <h4 key={index}>{block.text}</h4>;
+    const Heading = block.headingTag || "h4";
+    return <Heading key={index}>{block.text}</Heading>;
   }
 
   if (block.type === "h3") {
-    return <h5 key={index}>{block.text}</h5>;
+    const Heading = block.headingTag || "h5";
+    return <Heading key={index}>{block.text}</Heading>;
   }
 
   if (block.type === "h") {
@@ -1783,6 +1790,14 @@ const BlogPostSection = () => {
   const articleGroup = getArticleGroup(slug || defaultSlug);
   const article = articleGroup ? getLocalizedArticle(articleGroup, i18n.language) : null;
   const isTurkish = i18n.language?.startsWith("tr");
+  const isGrowthArticle = slug === "growth-strategies-for-digital-business";
+  const blocks = isGrowthArticle && article
+    ? enhanceGrowthArticleBlocks(article.blocks, i18n.language)
+    : article?.blocks || [];
+  const quoteIndex = isGrowthArticle
+    ? blocks.findIndex((block) => block.type === "h2" && block.text === (isTurkish ? "Organik arama ve modern SEO" : "Organic search and modern SEO"))
+    : 9;
+  const bodyClass = isGrowthArticle ? "blog-article-body blog-growth-article" : "d-flex flex-column gspace-2";
 
   if (!article) {
     return (
@@ -1880,8 +1895,8 @@ const BlogPostSection = () => {
                 </div>
               </div>
 
-              <div className="d-flex flex-column gspace-2">
-                {article.blocks.slice(0, 9).map(renderBlock)}
+              <div className={bodyClass}>
+                {blocks.slice(0, quoteIndex).map(renderBlock)}
               </div>
               <div className="quote-container">
                 <div>
@@ -1899,8 +1914,8 @@ const BlogPostSection = () => {
                   <p className="quote-description">{isTurkish ? "Dijital Pazarlama Ekibi" : "Digital Marketing Team"}</p>
                 </div>
               </div>
-              <div className="d-flex flex-column gspace-2">
-                {article.blocks.slice(9).map(renderBlock)}
+              <div className={bodyClass}>
+                {blocks.slice(quoteIndex).map(renderBlock)}
               </div>
             </div>
           </div>

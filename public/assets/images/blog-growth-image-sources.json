@@ -1,0 +1,91 @@
+{
+  "article": "Growth Strategies for Digital Business in 2027",
+  "verifiedOn": "2026-10-12",
+  "usage": "Editorial illustrations in this article; no endorsement by depicted people or brands is implied. Both source providers permit modification and website use under their published licenses.",
+  "images": [
+    {
+      "filename": "blog-digital-growth-strategy.webp",
+      "bytes": 131442,
+      "width": 1200,
+      "height": 801,
+      "mobileFilename": "blog-digital-growth-strategy-600.webp",
+      "mobileBytes": 36640,
+      "photographer": "Mikael Blomkvist",
+      "sourcePage": "https://www.pexels.com/photo/a-group-of-people-with-graphs-and-pie-charts-on-table-6476258/",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "placement": "After the introduction, before Organic search and modern SEO",
+      "note": "Exact requested source photo. Optimized locally without cropping."
+    },
+    {
+      "filename": "blog-seo-analytics-dashboard.webp",
+      "bytes": 19936,
+      "width": 1200,
+      "height": 675,
+      "mobileFilename": "blog-seo-analytics-dashboard-600.webp",
+      "mobileBytes": 6608,
+      "photographer": "1981 Digital",
+      "sourcePage": "https://unsplash.com/photos/bf9sZBcGQl4",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "placement": "After the introductory paragraph in Organic search and modern SEO",
+      "note": "Exact requested source photo. Optimized locally without cropping."
+    },
+    {
+      "filename": "blog-content-social-analytics.webp",
+      "bytes": 73642,
+      "width": 1200,
+      "height": 657,
+      "mobileFilename": "blog-content-social-analytics-600.webp",
+      "mobileBytes": 20468,
+      "photographer": "Walls.io",
+      "sourcePage": "https://unsplash.com/photos/OUysfcaqT3s",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "placement": "After the introductory paragraph in Content marketing and topical authority",
+      "note": "Exact requested source photo. Optimized locally without cropping."
+    },
+    {
+      "filename": "blog-ux-conversion-review.webp",
+      "bytes": 59288,
+      "width": 1200,
+      "height": 675,
+      "mobileFilename": "blog-ux-conversion-review-600.webp",
+      "mobileBytes": 19214,
+      "photographer": "Artem Podrez",
+      "sourcePage": "https://www.pexels.com/photo/man-checking-social-media-during-business-meeting-5716007/",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "placement": "After the introductory paragraph in Website performance, UX, and conversion optimization",
+      "note": "Exact requested source photo. Optimized locally without cropping."
+    },
+    {
+      "filename": "blog-marketing-roi-analytics.webp",
+      "bytes": 49388,
+      "width": 1200,
+      "height": 800,
+      "mobileFilename": "blog-marketing-roi-analytics-600.webp",
+      "mobileBytes": 17056,
+      "photographer": "Blake Wisz",
+      "sourcePage": "https://unsplash.com/photos/PtA6JRXWM1c",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "placement": "After the introductory paragraph in Measurement, attribution, KPIs, and ROI",
+      "note": "Exact requested photo; the downloaded photo shows an ecommerce tracking website rather than the analytics dashboard described in the brief. Alt text describes the actual image."
+    },
+    {
+      "filename": "blog-90-day-growth-roadmap.webp",
+      "bytes": 80898,
+      "width": 1200,
+      "height": 1800,
+      "mobileFilename": "blog-90-day-growth-roadmap-600.webp",
+      "mobileBytes": 31254,
+      "photographer": "Alena Darmel",
+      "sourcePage": "https://www.pexels.com/photo/a-person-pointing-at-a-whiteboard-while-holding-a-pen-7710055/",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "placement": "After the introductory paragraph in A practical 90-day growth roadmap",
+      "note": "Exact requested source photo. Optimized locally without cropping."
+    }
+  ]
+}
