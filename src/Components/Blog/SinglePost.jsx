@@ -6,6 +6,111 @@ import { blogs } from "../../Data/BlogPostData";
 const articleImage = "/assets/images/google-maps-local-seo-toronto.jpg";
 const defaultSlug = "how-toronto-businesses-rank-higher-on-google-maps";
 
+const renderBlock = (block, index) => {
+  if (block.type === "figure") {
+    const { src, alt, caption, width, height, loading } = block;
+    return (
+      <figure className="blog-figure" key={index}>
+        <img
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          loading={loading || "lazy"}
+        />
+        {caption && <figcaption className="blog-figure-caption">{caption}</figcaption>}
+      </figure>
+    );
+  }
+
+  if (block.type === "note" || block.type === "takeaway") {
+    return (
+      <div key={index} className={block.type === "takeaway" ? "blog-takeaway-box" : "blog-note-box"}>
+        {block.title && <h5>{block.title}</h5>}
+        {block.text && <p>{block.text}</p>}
+        {block.items && (
+          <ul>
+            {block.items.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        )}
+      </div>
+    );
+  }
+
+  if (block.type === "roadmap-grid") {
+    return (
+      <div key={index} className="blog-roadmap-grid">
+        {block.phases.map((phase) => (
+          <div key={phase.title} className="blog-roadmap-phase">
+            <h5>{phase.title}</h5>
+            {phase.summary && <p>{phase.summary}</p>}
+            {phase.items && (
+              <ul>
+                {phase.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  if (block.type === "comparison-table") {
+    const { columns, rows } = block;
+    return (
+      <div className="blog-comparison-table-wrapper" key={index}>
+        <table className="blog-comparison-table">
+          <thead>
+            <tr>
+              {columns.map((col) => (
+                <th key={col}>{col}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row) => (
+              <tr key={row.strategy}>
+                <td>{row.strategy}</td>
+                <td>{row.objective}</td>
+                <td>{row.horizon}</td>
+                <td>{row.kpi}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+
+  if (block.type === "h2") {
+    return <h4 key={index}>{block.text}</h4>;
+  }
+
+  if (block.type === "h3") {
+    return <h5 key={index}>{block.text}</h5>;
+  }
+
+  if (block.type === "h") {
+    return <h4 key={index}>{block.text}</h4>;
+  }
+
+  if (block.type === "ul") {
+    return (
+      <ul key={index}>
+        {block.items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    );
+  }
+
+  return <p key={index}>{block.text}</p>;
+};
+
 const parseArticleBlocks = (content) => {
   const blocks = [];
   let listItems = [];
@@ -1117,55 +1222,287 @@ Focus on clarity and foundations: a simple but clear website, a complete Google 
 For businesses that want support connecting SEO, websites, and paid campaigns into one growth system, a specialized digital marketing partner can shorten the learning curve while keeping strategy grounded in realistic goals.`),
     },
     tr: {
-      title: "Dijital İşletmeler İçin Sürdürülebilir Büyüme Stratejileri",
-      date: "14 Nisan 2025",
-      category: "SEO",
-      alt: "Dijital büyüme stratejisi için pazarlama planlama görseli",
+      title: "2027'de Dijital İşletmeler İçin Büyüme Stratejileri",
+      date: "1 Ekim 2026",
+      category: "Dijital Strateji",
+      alt: "2027'de dijital işletme büyüme stratejileri için pazarlama planı görseli",
       quote:
-        "Güçlü dijital büyüme; görünürlük, trafik kalitesi, dönüşüm yolları ve raporlamayı tek bir pratik sistemde birleştirir.",
-      blocks: [
-        {
-          type: "p",
-          text:
-            "Dijital bir işletmeyi büyütmek yalnızca web sitesi yayınlamak veya birkaç reklam açmakla olmaz. Kalıcı büyüme, doğru kitleyi doğru teklif ile buluşturup ilk ziyaretten müşteri görüşmesine kadar olan süreci sürekli iyileştirmekle gelir.",
-        },
-        {
-          type: "p",
-          text:
-            "SEO zaten arama yapan kullanıcıları yakalar. Ücretli reklamlar talebi test eder, yeni kitlelere ulaşır ve daha fazla kanıta ihtiyaç duyan ziyaretçileri yeniden hedefler. Güçlü web sitesi ise bu ziyaretleri net mesaj, hızlı sayfalar ve kolay aksiyonlarla lead'e çevirir.",
-        },
-        {
-          type: "h",
-          text: "Kanaldan önce konumlandırmayı netleştirin",
-        },
-        {
-          type: "p",
-          text:
-            "Birçok işletme, müşterinin neden kendisini seçmesi gerektiğini netleştirmeden kampanyaya başlar. Güçlü konumlandırma kitleyi, problemi, sonucu ve kanıtı açıklar. Bu netlikten sonra SEO, Meta reklamlar, Google reklamlar ve içerik çok daha sağlam planlanır.",
-        },
-        {
-          type: "ul",
-          items: [
-            "En değerli müşteri segmentlerini belirleyin.",
-            "Büyümeyi taşıyacak hizmetleri veya teklifleri netleştirin.",
-            "Sadece özellik anlatan değil, satın alma sorularını cevaplayan sayfalar oluşturun.",
-          ],
-        },
-        {
-          type: "h",
-          text: "Dönüşüme giden yolu ölçün",
-        },
-        {
-          type: "p",
-          text:
-            "Trafik tek başına büyümeyi kanıtlamaz. Lead'lerin nereden geldiğini, hangi sayfaları ziyaret ettiğini, hangi formları doldurduğunu ve hangi kampanyaların kaliteli fırsat yarattığını takip edin. Daha iyi raporlama, bütçeyi gelir üreten çalışmalara yönlendirmenizi sağlar.",
-        },
-        {
-          type: "p",
-          text:
-            "Rav Link, işletmelerin SEO, web sitesi, ücretli reklam ve raporlama çalışmalarını ölçülebilir dijital büyüme sistemi haline getirmesine yardımcı olur.",
-        },
-      ],
+        "En iyi dijital büyüme sistemleri, görünürlük, trafik kalitesi, dönüşüm yolları ve raporlamayı tek bir pratik iş ritminde birleştirir.",
+      blocks: parseArticleBlocks(`# 2027'de Dijital İşletmeler İçin Büyüme Stratejileri
+
+## 2027'de "dijital işletme büyümesi" gerçekte ne anlama geliyor?
+2027'de büyüme, yalnızca "daha fazla trafik" veya "daha fazla takipçi" demek değildir. Çoğu küçük ve orta ölçekli dijital işletme için gerçek büyüme, birlikte çalışan üç unsurdan oluşur:
+
+- Öngörülebilir müşteri kazanımı: İdeal müşteri profilinize uyan doğru ziyaretçilerin istikrarlı bir akışı
+- Verimli dönüşüm: Web siteleri, satış hunileri ve satış süreçlerinin, bu ziyaretçilerin makul bir kısmını gelire dönüştürebilmesi
+- Sağlıklı ekonomi: Pazarlama, satış ve operasyon maliyetlerinizi karşılayan ve kârlılığı koruyan müşteri yaşam boyu değeri
+
+Bu üç ayaktan biri zayıfladığında büyüme yokuş yukarı bir mücadeleye döner. Güçlü trafiğiniz olabilir ama kâr marjlarınız zayıftır; güçlü bir markanız vardır ama tutarlı bir lead akışınız yoktur; çok sayıda lead elde edersiniz ama kapanış oranlarınız düşüktür. 2027 için iyi tasarlanmış bir dijital büyüme stratejisi, SEO, reklam, otomasyon ve müşteri elde tutmayı bu temeller etrafında hizalar; sadece gösteriş amaçlı metriklerin peşinden koşmaz.
+
+Bu yazıda modern SEO, yapay zekâ destekli pazarlama, kullanıcı deneyimi, ücretli müşteri kazanımı, e-posta, CRM ve analitiğin nasıl tek bir pratik büyüme sistemi içinde çalışabileceğini ele alacağız. Örnekler daha çok hizmet işletmeleri ve dijital odaklı şirketler etrafında olacak, ancak prensipler çoğu sektör için geçerlidir.
+
+## Organik arama ve modern SEO
+Arama davranışı değişse de SEO tarafındaki temel sorular benzer kalır: Kime ulaşmaya çalışıyoruz, ne arıyorlar ve neden bize güvenmeliler?
+
+### Anahtar kelimelerden problemlere ve yolculuklara geçiş
+2027'de aramada kazanmak, tek bir "hero keyword" için sıralanmak yerine, karar sürecinin tamamını kapsayan bir yapı kurmayı gerektirir:
+
+- Erken araştırma: "B2B SEO ajansı nasıl seçilir?", "yerel işletmeler için sosyal medya stratejisi fikirleri" gibi üst seviye bilgi aramaları
+- Orta aşama karşılaştırmalar: "Küçük işletmeler için SEO mu Google Ads mi?", "fractional CMO mu ajans mı?" gibi seçenek karşılaştırmaları
+- Yüksek niyetli aramalar: "SEO ajansı Toronto", "müteahhitler için web sitesi yenileme", "Ontario Meta Ads yönetimi" gibi satın almaya yakın aramalar
+
+En değerli müşteri segmentleriniz için bu yolculukları haritalandırın ve etraflarında sayfa kümeleri oluşturun: eğitim odaklı makaleler, hizmet sayfaları, vaka incelemeleri ve SSS içerikleri. Amaç, anahtar kelimeleri tekrarlamaktan çok, gerçek soruları net ve örneklerle yanıtlamaktır.
+
+### Göz ardı edemeyeceğiniz teknik ve UX temelleri
+Arama motorları hâlâ teknik olarak sağlıklı siteleri tercih eder:
+
+- Özellikle mobilde hızlı yüklenen sayfalar
+- Anlaşılır URL yapısı ve tutarlı iç linkleme
+- Arama niyetiyle uyumlu başlık hiyerarşisi ve meta veriler
+- Ciddi tarama hataları, kırık linkler veya çok sayıda kopya / zayıf içerik sayfası olmaması
+
+Ancak 2027'de etkileşim sinyalleri de en az bunlar kadar önemlidir. Kullanıcı sayfaya girip hemen çıkıyorsa, hiç kaydırma yapmıyorsa veya etkileşime girmiyorsa, bu sayfanın bekledikleriyle eşleşmediği anlamına gelir. Güçlü SEO içeriği; spesifik, hızlı taranabilir ve hem masaüstü hem mobilde güven veren bir tasarımla desteklenmelidir.
+
+### İçerik derinliği ve konu otoritesi
+Konu otoritesi, sadece tek bir "SEO" veya "dijital pazarlama" yazısı yayınlamak değil; alıcılarınızın önemsediği temaları tutarlı şekilde işlemeniz anlamına gelir. Bir dijital ajans için bu temalar örneğin şunları kapsayabilir:
+
+- Lokal SEO ve Google Business Profile yönetimi
+- Web sitesi yenileme ve dönüşüm optimizasyonu
+- Sosyal ve arama reklamları
+- Analitik, takip ve raporlama
+- Sektöre özel oyun planları (müteahhitler, klinikler, profesyonel hizmetler, e-ticaret vb.)
+
+Her gün içerik yayınlamak zorunda değilsiniz. Ancak net bir editoryal odak ve takvime ihtiyacınız var. İşletme sahiplerinin gerçekten karar almasına yardım eden kaliteli yazılar, sadece algoritma için yazılmış yüzeysel içeriklerden çok daha uzun ömürlü olur.
+
+## Yapay zekâ destekli pazarlama ve otomasyon
+Yapay zekâ araçları artık çoğu modern pazarlama yığınının parçası, ancak tek başına sihirli çözüm değiller. En iyi sonuç, stratejiyi yöneten insan aklıyla birlikte kullanıldıklarında gelir.
+
+### Yapay zekânın gerçekten değer kattığı alanlar
+Yapay zekâ araçları özellikle şu alanlarda verimlidir:
+
+- Net bir brif verdikten sonra içerik iskeleti veya varyasyon taslakları oluşturmak
+- Uzun formlu içerikleri e-posta serilerine, reklam metinlerine veya sosyal medya postlarına dönüştürmek
+- Müşteri geri bildirimlerinde, anketlerde veya çağrı kayıtlarında tekrar eden tema ve kalıpları tespit etmek
+- Gerçek içeriklerinize dayalı basit sohbet / SSS deneyimlerini desteklemek
+
+Bu kullanım alanları, çalışmaları gerçek müşteri içgörüsüne dayalı tutarken ekibin hızlanmasını sağlar. Yapay zekânın daha zayıf olduğu yer ise; strateji üretmek, nüansı anlamak ve ticari önceliklendirme yapmaktır. Konumlandırma, öncelik sıralaması ve marka tonu gibi kritik kararlar hâlâ insan sorumluluğunda olmalıdır.
+
+### Huninin tamamında otomasyon
+Otomasyon, sadece e-posta serilerinden ibaret değildir. 2027'de sağlıklı bir dijital işletme için otomasyon şunları içerebilir:
+
+- CRM içinde lead yönlendirme ve ön nitelik kuralları
+- Ziyaret, indirme, form doldurma gibi davranışlara göre tetiklenen e-posta veya SMS serileri
+- Satış ekibinin sıcak lead'leri unutup kaçırmaması için hatırlatmalar
+- Hedef hesaplar önemli içeriklerle etkileşime girdiğinde ekibi uyaran basit iş akışları
+
+Amaç, her şeyi otomatikleştirmek değil; insanların unutmaya veya ertelemeye meyilli olduğu tekrarlı işleri sistemin üstlenmesini sağlamaktır. Böylece ekip, yüksek değerli diyalog ve karar alanına daha fazla zaman ayırabilir.
+
+## Web sitesi performansı, kullanıcı deneyimi ve dönüşüm optimizasyonu
+Web siteniz, dijital büyüme sisteminizin merkezinde olmaya devam ediyor. 2027'de çıta daha yüksek: Ziyaretçiler hızlı, anlaşılır ve friksiyonsuz deneyim bekliyor.
+
+### Hız ve stabilite
+Yüklenme süresine eklenen her saniye ziyaretçi kaybettirir. Laboratuvar skorunun mükemmel olması şart değil, fakat en azından:
+
+- Ana sayfa, hizmetler, fiyatlandırma ve kritik blog yazıları gibi temel sayfalar hafif ve hızlı olmalı
+- Görseller sıkıştırılmış olmalı, videolar ölçülü kullanılmalı
+- Kullanılmayan widget'lar, ağır script'ler ve bloklayıcı kaynaklar minimumda tutulmalı
+
+Trafiğiniz çok büyük olmasa bile, sayfada kalan ziyaretçi oranını %10–20 iyileştirmek; "pazarlama masraf üretiyor" ile "pazarlama çalışıyor" algısı arasındaki farkı yaratabilir.
+
+### Net yapı ve mesajlaşma
+Güçlü kullanıcı deneyimi çoğu zaman netlik demektir:
+
+- Kimi hedefliyorsunuz?
+- Onlar için hangi sonucu üretiyorsunuz?
+- Sizinle çalışmanın yolu pratikte nasıl işliyor?
+- Bir sonraki adım tam olarak ne?
+
+Hizmet sayfaları ve blog yazıları, doğal şekilde ilgili aksiyona bağlanmalıdır: Ücretsiz danışmanlık, teklif isteği, büyüme analizi veya kaynak indirme gibi. Bu aksiyonlar (CTA), çok aşağı kaydırmaya gerek kalmadan görünür olmalı ve içerik içinde bağlama uygun noktalarda tekrarlanmalıdır.
+
+### Dönüşüm optimizasyonunu alışkanlık haline getirmek
+Küçük işletmeler için dönüşüm oranı optimizasyonu her zaman ağır A/B test süreçleri gerektirmez. Veriye dayalı basit iyileştirmeler bile ciddi fark yaratabilir:
+
+- Formları kısaltmak ama lead kalitesini ölçmeye yarayan temel alanları korumak
+- Telefon ve e-posta adreslerini mobilde tıklanabilir yapmak
+- Başlıkları, yalnızca "ne yaptığınızı" değil "nasıl sonuç ürettiğinizi" anlatacak şekilde yeniden yazmak
+- Önemli CTA'ların yakınına referanslar, logo geçişleri veya mini vaka örnekleri eklemek
+
+CRO'yu aylık ritminizin doğal bir parçası haline getirin: Analitiği gözden geçirin, mümkünse birkaç oturum kaydı izleyin, bariz sürtünme noktalarını düzeltin ve ardından yeni kanal denemelerine geçin.
+
+## İçerik pazarlaması ve konu otoritesi
+İçerik, hâlâ ölçeklenebilir güven inşa etmenin en güçlü yollarından biridir. 2027'de pek çok sektörde yüzeysel yazılar çoğaldığı için asıl fırsat derinlik ve özgünlüktedir.
+
+### Karar vericilere hitap eden içerik
+İşletme sahipleri ve yöneticiler meşguldür. Onların ihtiyacı bir tane daha "En İyi 10 SEO Tüyosu" yazısı değildir. Şunlara ihtiyaç duyarlar:
+
+- Ödünleşimleri net anlatan içerikler (örneğin, lokal bir klinik için SEO mu reklam mı daha mantıklı?)
+- Sektör bazlı örnekler: Müteahhitler, sağlık işletmeleri, profesyonel hizmetler veya yerel perakendeciler için neyin işe yaradığını gösteren anlatımlar
+- Kendi ekiplerine devredebilecekleri veya doğrudan uygulayabilecekleri pratik kontrol listeleri
+
+En iyi içerikleriniz, okuyucunun "bu tam olarak benim durumumu anlatıyor" demesini sağlamalı; "bu herkes için geçerli olabilir" hissi vermemelidir.
+
+### Huniyi destekleyen formatlar
+İçerik türlerini karıştırarak birbirini besleyen bir yapı kurun:
+
+- Temel konuları derinlemesine ele alan evergreen rehberler
+- Bakış açınızı yansıtan daha kısa yorum yazıları veya güncel trend değerlendirmeleri
+- Problemi, yaklaşımı ve çıkarılan dersleri anlattığınız vaka incelemesi tarzı yazılar (özel rakam paylaşmasanız bile)
+- SSS ve karşılaştırma sayfaları gibi, itirazları ve soru işaretlerini ele alan içerikler
+
+Kütüphaneniz büyüdükçe ilgili içerikleri birbirine bağlayın; ayrıca SEO hizmetleri, web tasarımı ve müteahhit pazarlaması gibi kilit hizmet sayfalarınıza stratejik iç linkler ekleyin.
+
+## Hizmet işletmeleri için lokal SEO ve Google Business Profile
+Ontario ve GTA gibi belirli bölgelerde hizmet veriyorsanız, lokal SEO çoğu zaman en yüksek niyetli lead'leri getirir.
+
+### Temelleri doğru oturtmak
+Bugün hâlâ şu temel noktalar geçerlidir:
+
+- Kategorileri, fotoğrafları ve hizmet alanlarını doğru girilmiş, eksiksiz bir Google Business Profile
+- Önemli dizinlerde tutarlı isim, adres ve telefon (NAP) bilgileri
+- İnsanların arama davranışına uygun lokasyon veya hizmet alanı sayfaları
+
+Birçok hizmet işletmesi için; birkaç iyi tasarlanmış lokal sayfa + aktif yönetilen bir profil, onlarca kopyala-yapıştır şehir sayfasından daha iyi performans gösterir.
+
+### Yorumlar: Hem sıralama hem dönüşüm gücü
+Yüzlerce yoruma ihtiyaç duymasanız da düzenli ve detaylı yorum akışına ihtiyaç duyarsınız. Mutlu müşterilerden, projeden veya kritik bir kilometre taşından kısa süre sonra yorum istemek, süreci doğal kılar. Basit bir yorum isteme sürecini hizmet teslimine entegre etmek, hem Google tarafında hem de insan gözünde güçlü sinyal üretir.
+
+Detaylı, proje odaklı yorumlar; yalnızca yıldız sayısından çok daha ikna edicidir. Profesyonel yanıtlarla birlikte değerlendirildiğinde, profiliniz hem algoritma hem kullanıcı gözünde güvenilir bir kaynak haline gelir.
+
+## Ücretli reklamlar ve müşteri kazanımı
+Meta Ads, Google Ads veya diğer platformlar üzerinden alınan ücretli trafik; doğru kullanıldığında teklifleri test etmenin ve çalışan sistemleri ölçeklemenin en hızlı yollarından biridir.
+
+### Reklamın mantıklı olduğu durumlar
+Ücretli müşteri kazanımı özellikle şu senaryolarda etkilidir:
+
+- Yeni bir teklif veya hizmeti test etmek ve kısa sürede veri toplamak istediğinizde
+- Satış süreciniz güçlüdür ama organik kanallar hâlâ ivme kazanma aşamasındadır
+- Güçlü kanıtlarınız (referanslar, vaka örnekleri, sosyal kanıt) vardır ancak yeterince görünür değilsinizdir
+
+Ancak reklamlar, zayıf bir teklifin veya belirsiz konumlandırmanın yerini tutmaz. Değer öneriniz net değilse veya marjlarınız çok darsa, en iyi yönetilen kampanyalarda bile performans sınırlı kalacaktır.
+
+### Niyete göre kurgulanmış kampanyalar
+2027'de temel prensipler hâlâ geçerlidir:
+
+- "SEO ajansı Toronto" veya "Meta Ads yönetimi Ontario" gibi yüksek niyetli aramalar için arama kampanyaları
+- İdeal kitlenizi eğitici içeriklerle beslemek için sosyal reklamlar; yalnızca sert satış yapan kreatifler değil
+- Önemli sayfalarla etkileşime geçmiş ama henüz dönüşmemiş ziyaretçilere yönelik yeniden hedefleme kampanyaları
+
+Başarıyı; gösterim veya tıklama değil, nitelikli lead ve kapanan iş hacmi üzerinden ölçün.
+
+## E-posta pazarlama, CRM ve müşteri elde tutma
+Birçok işletme, elindeki mevcut müşteri ve lead verisini yeterince kullanmaz. Basit bir e-posta ve CRM stratejisi, yeni müşteri kazanım kanalları dalgalansa bile büyümeyi dengeleyebilir.
+
+### Kişi listenizi gerçek bir varlığa dönüştürmek
+Yüzlerce veya birkaç bin kişiden oluşan mütevazı bir liste bile şunları sağlayabilir:
+
+- Daha önce hazır olmayan lead'leri yeniden harekete geçirmek
+- Yeni teklifler veya kaynakları duyurmak
+- Üç ayda bir paylaşacağınız içgörüler ve vaka notlarıyla akılda kalmak
+
+Buradaki kritik nokta, alaka düzeyidir. Herkese aynı genel bülteni göndermek yerine; mümkün olduğunca ilgi alanlarına veya müşteri yaşam döngüsüne göre segment oluşturun. Yeni lead'ler, aktif müşteriler ve eski müşteriler için farklı mesajlar gerekebilir.
+
+### CRM'i büyüme hafızanız haline getirmek
+Temel bir CRM kurulumunun karmaşık olması gerekmez. Minimumda hedefiniz şu olmalıdır:
+
+- Formlar, çağrılar ve kritik sohbet kanallarından gelen tüm lead'leri yakalamak
+- Her lead'in kaynağını takip etmek (SEO, reklam, yönlendirme, etkinlik vb.)
+- Yeni, ön nitelikli, teklif gönderildi, kazanıldı ve kaybedildi gibi basit aşamalarla süreci işlemek
+
+Bu seviye bir yapı; pazarlamayı ölçmeyi kolaylaştırır, satış ve pazarlama arasındaki paslaşmayı iyileştirir ve küçük ekiplerde bile odaklanmayı artırır.
+
+## Ölçüm, atıf, KPI'lar ve ROI
+Daha iyi kararlar alabilmek için kurumsal seviye panellere ihtiyacınız yoktur. Ancak neyin çalıştığını görmenizi sağlayan net bir görünüme ihtiyacınız vardır.
+
+### Doğru KPI'ları seçmek
+Çoğu dijital işletme için pratik bir gösterge paneli şunları içerir:
+
+- Kaynağa göre trafik (organik, ücretli, direkt, yönlendirme)
+- Kaynağa göre lead veya kritik aksiyon sayısı
+- Önemli sayfalardaki dönüşüm oranları (iletişim, teklif isteği, rezervasyon vb.)
+- Ortalama iş büyüklüğü ve kapanış oranı
+
+Bu noktaları birbirine bağlayabildiğinizde; her tıklamayı %100 doğru atfetmeseniz bile pazarlama ROI'nizi anlamlı bir doğruluk payıyla tahmin edebilirsiniz.
+
+### Gerçek dünyada atıf
+2027'de bile atıf kusursuz değildir. İnsanlar çoğu zaman şöyle davranır:
+
+- Sizi sosyal medyada keşfeder
+- Daha sonra markanızı Google'lar
+- Yeniden hedefleme reklamına tıklar
+- Son aşamada satış görüşmesi sonrası dönüşür
+
+Bu yüzden sayılara mutlak değil, yön gösterici veri olarak bakın. Haftalık dalgalanmalar yerine zaman içindeki kalıplara odaklanın. Tereddütte kaldığınızda, gerçek müşterilere nasıl bulduklarını sorun; çoğu zaman veriyle birleştiğinde önemli içgörüler sunar.
+
+## Küçük işletmeler için pratik büyüme stratejileri
+Eğer küçük veya orta ölçekli bir hizmet işletmesiyseniz, tam zamanlı bir pazarlama departmanınız olmayabilir. Bu durumda odaklı bir plana ihtiyaç duyarsınız.
+
+### Yüksek kaldıraçlı temellere öncelik verin
+Her kanalı denemeye çalışmak yerine:
+
+- Web sitenizin kime hitap ettiğini ve nasıl iletişime geçileceğini çok net anlattığından emin olun
+- Sağlıklı bir Google Business Profile ile lokal varlığınızı stabilize edin
+- Satış döngünüz ve bütçenize göre önce geliştireceğiniz ana müşteri kazanım kanalını seçin (SEO, arama reklamları veya sosyal reklamlar)
+- Sürekli sıfırdan başlamamak için basit bir e-posta/CRM düzeni kurun
+
+Bu temel, dağınık bir sürü taktikten genellikle daha fazla ilerleme sağlar.
+
+### Bütçe planı ve kanal karması
+Bütçeniz; satış modeliniz ve zaman ufkunuzla uyumlu olmalıdır:
+
+- Çok sınırlı bütçelerde (aylık birkaç yüz dolar altı); en iyi yatırım, teklif netliği, temel SEO altyapısı ve web sitesi içeriğinin güçlendirilmesidir
+- Orta ölçekli bütçeler; SEO içerik üretimi, lokal optimizasyon ve dar hedefli reklam kampanyalarının bileşimiyle iyi çalışır
+- Daha büyük bütçeler; çok kanallı remarketing, kreatif testler ve yeni formatları deneme alanı yaratır
+
+Hangi bütçe seviyesinde olursanız olun; harcamanın bir kısmını mutlaka strateji, raporlama ve sürekli iyileştirme için ayırın. Yalnızca medya satın almaya para harcamak, sürdürülebilir büyüme getirmez.
+
+## Yaygın hatalar ve gerçekçi beklentiler
+Farklı dijital işletmelerde tekrar tekrar görülen bazı paternler şunlardır:
+
+- Zayıf teklif veya belirsiz konumlandırmayı SEO ile düzeltmeye çalışmak
+- Takip kurulmadan veya net bir dönüşüm hedefi belirlenmeden reklam kampanyası başlatmak
+- Web sitesini yalnızca görsel olarak yenileyip mesajlaşma ve UX tarafını göz ardı etmek
+- Bariz darboğazlar dururken yeni araçlar veya trendlerin peşinden koşmak
+
+Gerçekçi olmak gerekirse; organik arama ve içerik çalışmalarının net ivme göstermesi çoğu zaman 3–6 ay alır. Reklam kampanyaları haftalar içinde veri üretse bile test ve optimizasyon ister. Müşteri elde tutma ve tavsiye kanalları ise çeyrekler ve yıllar içinde bileşik şekilde büyür.
+
+## Pratik bir 90 günlük büyüme yol haritası
+Kapsamı odaklı tuttuğunuzda 90 günde çok şey başarabilirsiniz.
+
+### Gün 1–30: Teşhis ve stabilizasyon
+- İdeal müşteri segmentlerinizi ve çekirdek tekliflerinizi netleştirin
+- Web sitenizi temel netlik, mobil kullanılabilirlik ve formların çalışırlığı açısından gözden geçirin
+- Analitik ve temel dönüşüm takibini kurun veya temizleyin
+- Google Business Profile ve kritik lokal listelerinizin doğru olduğundan emin olun
+
+### Gün 31–60: Büyüme motorunu kurmak
+- Temel arama niyetlerine göre hizalanmış en az 3–5 yüksek değerli sayfa veya makale yayınlayın ya da güncelleyin
+- Tek bir teklif etrafında odaklı bir reklam kampanyası (arama veya sosyal) başlatın
+- Yeni lead'ler için basit bir e-posta nurturu veya takip serisi kurun
+- Öncelikli sayfalara mini vaka örnekleri, logolar veya referanslar gibi kanıt unsurları ekleyin
+
+### Gün 61–90: Optimize et ve karar ver
+- Trafiği yalnızca toplam rakamla değil; kaynağa ve sayfaya göre analiz edin
+- Zayıf performans gösteren kampanyaları iyileştirin veya durdurun; kazananları kontrollü şekilde ölçekleyin
+- Davranış verilerine göre formları, CTA'ları ve sayfa metinlerini sıkılaştırın
+- Hangi girişimlerin sürekli hale geleceğine karar verin (SEO içeriği, lokal optimizasyon, reklamlar, e-posta) ve bunlar için basit bir aylık ritim dokümante edin
+
+Bu aşamadan sonra pek çok işletme, operasyonu yürütürken büyüme motorunu kurup optimize edecek uzman bir ekiple çalışmayı tercih eder.
+
+## Sık sorulan sorular
+
+### Küçük işletmeler 2027'de SEO ve reklam dengesini nasıl kurmalı?
+Çoğu küçük işletme her ikisinden de fayda görür. Reklamlar daha hızlı geri bildirim sağlar ve SEO ivme kazanırken lead üretir. SEO ise uzun vadede görünürlük inşa eder ve müşteri kazanım maliyetini aşağı çeker. Doğru denge; nakit akışınız, satış döngünüz ve deneme iştahınızla ilgilidir.
+
+### Yapay zekâ araçları pazarlamayı tek başına yönetmeye yeter mi?
+Yapay zekâ; içerik üretimi, araştırma ve temel analizleri hızlandırabilir, ancak stratejinin ve hesap verebilirliğin yerini alamaz. Yapay zekâyı yürütmeyi destekleyen bir yardımcı olarak kullanın; konumlandırma, önceliklendirme ve kalite kontrolden sorumlu olan taraf yine insandır.
+
+### Bu stratejilerle sonuç görmem ne kadar sürer?
+Rekabet ve uygulama kalitesine göre değişmekle birlikte; web sitenizi iyileştirdiğinizde, tekliflerinizi netleştirdiğinizde, takip altyapısını kurup en az bir odaklı kampanya çalıştırdığınızda 60–90 gün içinde ilk ilerleme sinyallerini görmek mümkündür. Daha kalıcı organik büyüme ise genellikle birkaç ay alır.
+
+### Bütçem çok sınırlıysa ne yapmalıyım?
+Teklif ve mesaj netliğine, basit ama anlaşılır bir web sitesine, eksiksiz bir Google Business Profile'a ve en değerli potansiyel müşterilerinizin sorularını yanıtlayan birkaç güçlü içeriğe odaklanın. Bu temeli kurduktan sonra, reklam ve daha gelişmiş otomasyonlara geçmek daha anlamlı ve verimli olacaktır.
+
+Dijital varlığını; SEO, web sitesi ve reklamlarla entegre bir büyüme sistemine dönüştürmek isteyen işletmeler için, bu alanları aynı çatı altında yöneten bir ortakla çalışmak öğrenme süresini kısaltabilir ve hedeflere daha stratejik şekilde ilerlemenizi sağlar.`),
     },
   },
   "why-most-contractor-websites-dont-convert": {
@@ -1423,180 +1760,4 @@ For businesses that want support connecting SEO, websites, and paid campaigns in
         {
           type: "p",
           text:
-            "Rav Link contractor web tasarımı, lokal SEO, Google Business Profile stratejisi ve lead takibini tek bir pratik sisteme bağlar. Siteniz trafik alıyor ama yeterince kaliteli teklif talebi üretmiyorsa sorun genellikle tek bir eksik buton değildir. Tüm dönüşüm yoludur.",
-        },
-        {
-          type: "p",
-          text:
-            "Daha güçlü lead akışı isteyen contractor firmaları https://ravlink.com/services/contractor-marketing üzerinden contractor odaklı pazarlamayla veya https://ravlink.com/website-design-toronto üzerinden dönüşüm odaklı web tasarımı ile başlayabilir.",
-        },
-      ],
-    },
-  },
-};
-
-const getArticleGroup = (slug) => articles[slug] || null;
-const getLocalizedArticle = (articleGroup, language) => (
-  language?.startsWith("tr") ? articleGroup.tr : articleGroup.en
-);
-
-const renderBlock = (block, index) => {
-  if (block.type === "h2") {
-    return <h4 key={index}>{block.text}</h4>;
-  }
-
-  if (block.type === "h3") {
-    return <h5 key={index}>{block.text}</h5>;
-  }
-
-  if (block.type === "h") {
-    return <h4 key={index}>{block.text}</h4>;
-  }
-
-  if (block.type === "ul") {
-    return (
-      <ul key={index}>
-        {block.items.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-    );
-  }
-
-  return <p key={index}>{block.text}</p>;
-};
-
-const BlogPostSection = () => {
-  const { t, i18n } = useTranslation();
-  const { slug } = useParams();
-  const articleGroup = getArticleGroup(slug || defaultSlug);
-  const article = articleGroup ? getLocalizedArticle(articleGroup, i18n.language) : null;
-  const isTurkish = i18n.language?.startsWith("tr");
-
-  if (!article) {
-    return (
-      <div className="section" data-pixel-section="blog-article">
-        <div className="hero-container">
-          <div className="d-flex flex-column gspace-2 text-center">
-            <h3>{t("notFound.title", "Page Not Found")}</h3>
-            <p>{t("notFound.description", "The article you are looking for does not exist.")}</p>
-            <div className="link-wrapper justify-content-center">
-              <a href="/blog">{t("nav.blog")}</a>
-              <i className="fa-solid fa-circle-arrow-right"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="section" data-pixel-section="blog-article">
-      <div className="hero-container">
-        <div className="row row-cols-lg-2 row-cols-1 grid-spacer-5">
-          <div className="col col-lg-4 order-2 order-lg-1">
-            <div className="d-flex flex-column flex-md-row flex-lg-column gspace-5">
-              <div className="card recent-post">
-                <h4>{isTurkish ? "Son Bloglar" : "Recent Blog"}</h4>
-                {blogs.map((blog) => (
-                  <div
-                    className="d-flex flex-row w-100 gspace-1"
-                    key={blog.id}
-                  >
-                    <div className="image-container">
-                      <img
-                        src={blog.image}
-                        alt={t(blog.titleKey)}
-                        className="img-fluid"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="d-grid">
-                      <div className="d-flex flex-row gspace-1 align-items-center">
-                        <i className="fa-solid fa-calendar accent-color"></i>
-                        <span className="meta-data-post">{t(blog.dateKey)}</span>
-                      </div>
-                      <a href={blog.link} className="blog-link-post">
-                        {t(blog.titleKey)}
-                      </a>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="cta-service-banner">
-                <div className="spacer"></div>
-                <h3 className="title-heading">
-                  {isTurkish ? "İşinizi Rav Link ile Büyütün!" : "Transform Your Business with Rav Link!"}
-                </h3>
-                <p>
-                  {isTurkish
-                    ? "Veriye dayalı stratejiler ve pratik dijital çözümlerle pazarlama çalışmalarınızı daha güçlü hale getirin."
-                    : "Take your digital marketing to the next level with data-driven strategies and innovative solutions. Let's create something amazing together!"}
-                </p>
-                <div className="link-wrapper">
-                  <a href="/about">{isTurkish ? "Rav Link hakkında bilgi alın" : "Learn more about Rav Link"}</a>
-                  <i className="fa-solid fa-circle-arrow-right"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col col-lg-8 order-1 order-lg-2">
-            <div className="d-flex flex-column gspace-2">
-              <div className="post-image">
-                <img
-                  src={articleGroup.image}
-                  alt={article.alt}
-                  className="img-fluid"
-                  loading="lazy"
-                />
-              </div>
-              <h3>{article.title}</h3>
-              <div className="underline-muted-full"></div>
-              <div className="d-flex flex-row align-items-center justify-content-between">
-                <div className="d-flex flex-row align-items-center gspace-2">
-                  <div className="d-flex flex-row gspace-1 align-items-center">
-                    <i className="fa-solid fa-calendar accent-color"></i>
-                    <span className="meta-data-post">{article.date}</span>
-                  </div>
-                  <div className="d-flex flex-row gspace-1 align-items-center">
-                    <i className="fa-solid fa-folder accent-color"></i>
-                    <span className="meta-data-post">{article.category}</span>
-                  </div>
-                </div>
-                <div className="d-flex flex-row gspace-1 align-items-center">
-                  <i className="fa-solid fa-user accent-color"></i>
-                  <span className="meta-data">Rav Link Inc.</span>
-                </div>
-              </div>
-
-              <div className="d-flex flex-column gspace-2">
-                {article.blocks.slice(0, 9).map(renderBlock)}
-              </div>
-              <div className="quote-container">
-                <div>
-                  <div className="icon-wrapper">
-                    <div className="icon-box">
-                      <i className="fa-solid fa-quote-right"></i>
-                    </div>
-                  </div>
-                </div>
-                <p className="quote">
-                  {article.quote}
-                </p>
-                <div>
-                  <h5>Rav Link Inc.</h5>
-                  <p className="quote-description">{isTurkish ? "Dijital Pazarlama Ekibi" : "Digital Marketing Team"}</p>
-                </div>
-              </div>
-              <div className="d-flex flex-column gspace-2">
-                {article.blocks.slice(9).map(renderBlock)}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default BlogPostSection;
+            "Rav L

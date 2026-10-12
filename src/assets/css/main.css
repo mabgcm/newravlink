@@ -3188,6 +3188,116 @@ body.lightmode .case-studies-content::before {
 
 /* ================== 32. Blog Components ================== */
 
+.blog-article-body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.blog-article-body>*+* {
+    margin-top: 4px;
+}
+
+.blog-article-body h4,
+.blog-article-body h5 {
+    margin-top: 26px;
+}
+
+.blog-article-body ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+.blog-article-body li {
+    margin-bottom: 6px;
+}
+
+.blog-figure {
+    margin: 26px 0;
+    border-radius: var(--global-border-radius);
+    overflow: hidden;
+    border: 1px solid var(--accent-color-3);
+    background: radial-gradient(at top left, var(--accent-color-3), var(--accent-color-4) 60%);
+}
+
+.blog-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.blog-figure-caption {
+    padding: 12px 18px 16px 18px;
+    font-size: var(--font-size-sm);
+    color: var(--text-color);
+    opacity: 0.85;
+}
+
+.blog-note-box,
+.blog-roadmap-phase,
+.blog-takeaway-box {
+    border-radius: var(--global-border-radius);
+    border: 1px solid var(--accent-color-3);
+    background: radial-gradient(at top left, var(--accent-color-3), var(--accent-color-4) 60%);
+    padding: 20px 22px;
+}
+
+.blog-note-box h5,
+.blog-roadmap-phase h5,
+.blog-takeaway-box h5 {
+    margin-bottom: 10px;
+}
+
+.blog-note-box p,
+.blog-roadmap-phase p,
+.blog-takeaway-box p {
+    margin-bottom: 8px;
+}
+
+.blog-roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+@media (max-width: 992px) {
+    .blog-roadmap-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.blog-comparison-table-wrapper {
+    border-radius: var(--global-border-radius);
+    border: 1px solid var(--accent-color-3);
+    overflow: hidden;
+    background: radial-gradient(at top left, var(--accent-color-3), var(--accent-color-4) 60%);
+}
+
+.blog-comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--font-size-sm);
+}
+
+.blog-comparison-table thead {
+    background-color: var(--accent-color-4);
+}
+
+.blog-comparison-table th,
+.blog-comparison-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--accent-color-3);
+    text-align: left;
+}
+
+.blog-comparison-table th {
+    font-weight: var(--font-weight-semibold);
+}
+
+.blog-comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
 .card-blog {
     position: relative;
     background-color: var(--accent-color-4);
@@ -4598,304 +4708,4 @@ body.lightmode .newsletter-layout {
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23D1D1D1" class="bi bi-dash" viewBox="0 0 16 16"><path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/></svg>');
 }
 
-body.lightmode .accordion-button::after {
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23000000" class="bi bi-plus" viewBox="0 0 16 16"><path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/></svg>');
-}
-
-body.lightmode .accordion-button:not(.collapsed)::after {
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23000000" class="bi bi-dash" viewBox="0 0 16 16"><path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/></svg>');
-}
-
-.accordion .accordion-button:not(.collapsed) {
-    font-weight: 700;
-    color: var(--primary);
-    outline: none;
-    box-shadow: none;
-    line-height: var(--line-height-snug);
-}
-
-.faq-title-container {
-    position: sticky;
-    top: 6em;
-    z-index: 1;
-}
-
-/* ================== 51. Maps Components ================== */
-
-.maps {
-    max-width: 100%;
-    width: 100%;
-    line-height: 1;
-    height: 400px;
-    filter: brightness(69%) contrast(200%) saturate(0%) blur(0px) hue-rotate(0deg);
-    border-radius: var(--global-border-radius);
-    overflow: hidden;
-}
-
-/* ================== 52. Single Service Components ================== */
-
-.single-service-list {
-    list-style: none;
-    padding: 0;
-    text-align: start;
-}
-
-.single-service-list li {
-    position: relative;
-    padding-left: 24px;
-    margin-bottom: 8px;
-}
-
-.single-service-list a {
-    color: var(--primary);
-    font-size: var(--font-size-lg);
-    font-weight: 700;
-    transition: all 0.2s;
-}
-
-.single-service-list a:hover {
-    color: var(--text-color);
-}
-
-.single-service-list li::before {
-    content: "\f058";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 500;
-    position: absolute;
-    left: 0;
-    color: var(--accent-color);
-    font-size: var(--font-size-lg);
-}
-
-/* ================== 53. CTA Service Banner Components ================== */
-
-.cta-service-banner {
-    background-image: url('/assets/images/ctabg.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    display: flex;
-    flex-direction: column;
-    gap: 30px 30px;
-    width: 100%;
-    height: 100%;
-    border: 1px solid var(--accent-color-3);
-    border-radius: 25px 25px 25px 25px;
-    padding: 30px 30px 30px 30px;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-body.lightmode .cta-service-banner {
-    border: 1px solid var(--accent-color-3);
-}
-
-.cta-service-banner::before {
-    content: '';
-    position: absolute;
-    background-color: transparent;
-    background-image: linear-gradient(180deg, var(--accent-transparent) 0%, var(--secondary) 100%);
-    opacity: 1;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-body.lightmode .cta-service-banner::before {
-    background-image: linear-gradient(180deg, var(--accent-color-7) 0%, var(--accent-color-3) 100%);
-}
-
-.cta-service-banner .spacer {
-    height: 100px;
-}
-
-/* ================== 54. Animate Components ================== */
-
-.animate-box {
-    opacity: 0;
-}
-
-.animate__animated {
-    animation-duration: 1.25s;
-    animation-duration: var(--animation-normal, 1.25s);
-}
-
-.animate__animated.animate__fast {
-    animation-duration: 0.75s;
-    animation-duration: var(--animation-fast, 0.75s);
-}
-
-.animate__animated.animate__slow {
-    animation-duration: 2s;
-    animation-duration: var(--animation-slow, 2s);
-}
-
-/* ================== 55. CustomText Container Components ================== */
-
-.heading-container-short {
-    max-width: 70%;
-}
-
-.heading-container {
-    align-self: center;
-    text-align: center;
-}
-
-.heading-container-medium {
-    max-width: 75%;
-}
-
-.heading-container-wide {
-    max-width: 85%;
-    text-align: center;
-}
-
-/* ================== 56. Footer Components ================== */
-
-/* 56.1 Footer Layout */
-
-.footer {
-    border-radius: 10px;
-}
-
-/* 56.2 Footer List */
-
-.footer-list {
-    list-style: none;
-    padding-left: 0;
-}
-
-.footer-list li {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
-    gap: 1em;
-    margin-bottom: 15px;
-    color: var(--text-color);
-}
-
-.footer-list li:last-child {
-    margin-bottom: 0px;
-}
-
-.footer-list a {
-    font-size: var(--font-size-base);
-    font-weight: 500;
-    color: var(--text-color);
-    transition: all 0.2s;
-}
-
-.footer-list a:hover {
-    color: var(--primary);
-}
-
-/* 56.3 Contact List */
-
-.contact-list {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 0px;
-}
-
-.contact-list li {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    justify-content: start;
-    font-size: var(--font-size-base);
-    font-weight: 500;
-    margin-bottom: 15px;
-    color: var(--primary);
-}
-
-.contact-list li:last-child {
-    margin-bottom: 0px;
-}
-
-/* 56.4 Footer Logo Container */
-
-.footer-logo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    gap: 30px 30px;
-}
-
-/* 56.5 Footer Quick Links */
-
-.footer-quick-links {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    gap: 30px 30px;
-}
-
-/* 56.6 Footer Services Container */
-
-.footer-services-container {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    gap: 30px 30px;
-}
-
-/* 56.7 Footer Contact Container */
-
-.footer-contact-container {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    gap: 30px 30px;
-}
-
-/* 56.8 Copyright Container */
-
-.copyright-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 50px 50px;
-    border-top: 1px solid var(--accent-color-3);
-    padding: 20px 0px 20px 0px;
-}
-
-.copyright {
-    font-size: var(--font-size-base);
-    color: var(--text-color);
-    font-weight: 500;
-    line-height: var(--line-height-loose);
-}
-
-/* 56.9 Legal Link */
-
-.legal-link {
-    font-size: var(--font-size-base);
-    font-weight: 500;
-    color: var(--text-color);
-    transition: all 0.2s;
-    line-height: var(--line-height-loose);
-}
-
-.legal-link:hover {
-    color: var(--primary);
-}
-
-/* 56.10 Footer Spacer */
-
-.footer-spacer {
-    width: initial;
-    height: 3px;
-    align-self: center;
-    background-color: transparent;
-    background-image: radial-gradient(at center center, var(--accent-color-6) 0%, var(--accent-transparent) 70%);
-}
+body.lig
