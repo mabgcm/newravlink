@@ -834,59 +834,12 @@ Rav Link ile ücretsiz Google İşletme Profili denetimi planlayın ve Toronto'd
   "growth-strategies-for-digital-business": {
     image: "/assets/images/servicehero.jpeg",
     en: {
-
-
-
-
       title: "Growth Strategies for Digital Business in 2027",
       date: "October 1, 2026",
       category: "Digital Strategy",
       alt: "Digital marketing strategy planning for business growth in 2027",
       quote:
         "The best digital growth systems connect visibility, traffic quality, conversion paths, and reporting into one practical operating rhythm.",
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       blocks: parseArticleBlocks(`# Growth Strategies for Digital Business in 2027
 
 ## What “digital business growth” really means in 2027

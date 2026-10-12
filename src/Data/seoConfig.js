@@ -162,20 +162,30 @@ export const seoConfig = {
         schema: pageSchema("Digital Marketing Blog", "/blog", "Digital marketing blog by Rav Link Inc."),
     },
     singlePost: {
-        title: "How Toronto Businesses Rank Higher on Google Maps | Rav Link Inc.",
+
+        title: "Growth Strategies for Digital Business in 2027 | Rav Link Inc.",
         description:
-            "Learn how Toronto businesses can improve Google Maps rankings with Google Business Profile optimization, NAP consistency, reviews, citations, and local SEO.",
-        canonical: canonical(googleMapsArticlePath),
-        ogTitle: "How Toronto Businesses Rank Higher on Google Maps",
-        ogDescription: "A practical local SEO guide for Toronto and GTA businesses that want stronger Google Maps visibility.",
-        ogImage: canonical("/assets/images/google-maps-local-seo-toronto.jpg"),
+
+
+
+
+
+            "A practical 2027 guide for digital businesses on SEO, AI-assisted marketing, automation, UX, paid acquisition, retention, analytics, and a 90-day growth roadmap.",
+        canonical: canonical("/blog/growth-strategies-for-digital-business"),
+        ogTitle: "Growth Strategies for Digital Business in 2027",
+        ogDescription:
+            "Learn how to connect SEO, AI marketing, websites, ads, and analytics into a realistic growth system for digital businesses in 2027.",
+        ogImage: canonical("/assets/images/servicehero.jpeg"),
         schema: {
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "How Toronto Businesses Rank Higher on Google Maps",
+
+            headline: "Growth Strategies for Digital Business in 2027",
             description:
-                "A local SEO guide for improving Google Maps visibility with stronger profiles, reviews, citations, and local authority.",
-            image: canonical("/assets/images/google-maps-local-seo-toronto.jpg"),
+
+
+                "A practical, owner-friendly guide to SEO, AI marketing, automation, UX, customer acquisition, retention, and measurement in 2027.",
+            image: canonical("/assets/images/servicehero.jpeg"),
             author: {
                 "@type": "Organization",
                 name: "Rav Link Inc.",
@@ -188,9 +198,12 @@ export const seoConfig = {
                     url: DEFAULT_OG_IMAGE,
                 },
             },
-            datePublished: "2026-05-20",
-            dateModified: "2026-05-20",
-            mainEntityOfPage: canonical(googleMapsArticlePath),
+
+
+
+            datePublished: "2026-10-01",
+            dateModified: "2026-10-01",
+            mainEntityOfPage: canonical("/blog/growth-strategies-for-digital-business"),
         },
     },
     contact: {
