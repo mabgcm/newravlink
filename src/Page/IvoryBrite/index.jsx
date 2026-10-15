@@ -24,6 +24,35 @@ const pkgGrid = { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(
 const input = { width: "100%", boxSizing: "border-box", padding: "10px 12px", fontSize: 14, border: "1px solid #d9d6e2", borderRadius: 8, marginBottom: 10 };
 const money = (n) => `$${Number(n).toLocaleString("en-CA")}`;
 
+const tooltipCss = `
+.info-i { position: relative; display: inline-flex; vertical-align: middle; }
+.info-i .info-dot {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 17px; height: 17px; border-radius: 50%;
+  background: #ece9fb; color: #5b2dff; font-size: 11px; font-weight: 700;
+  cursor: help; font-style: normal; line-height: 1;
+}
+.info-i .info-bubble {
+  visibility: hidden; opacity: 0; transition: opacity .15s;
+  position: absolute; z-index: 50; bottom: 135%; left: 50%; transform: translateX(-50%);
+  width: 230px; background: #17151b; color: #fff;
+  font-size: 12px; line-height: 1.55; font-weight: 400; text-align: left;
+  padding: 9px 12px; border-radius: 8px; pointer-events: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,.18); white-space: normal;
+}
+.info-i:hover .info-bubble, .info-i:focus-within .info-bubble { visibility: visible; opacity: 1; }
+`;
+
+function Info({ text }) {
+  if (!text) return null;
+  return (
+    <span className="info-i" style={{ marginLeft: 7 }} tabIndex={0}>
+      <span className="info-dot" title={text}>i</span>
+      <span className="info-bubble">{text}</span>
+    </span>
+  );
+}
+
 function totalsFor(state) {
   let setup = 0;
   let monthly = 0;
@@ -136,6 +165,7 @@ export default function IvoryBritePage() {
 
   return (
     <div style={page}>
+      <style>{tooltipCss}</style>
       <div style={wrap}>
         <div style={{ ...card, background: ACCENT, border: "none", color: "#fff" }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", opacity: 0.8, marginBottom: 8 }}>
@@ -176,6 +206,7 @@ export default function IvoryBritePage() {
                     <input type="radio" checked={active} readOnly style={{ marginTop: 4 }} />
                     <div>
                       <strong style={{ color: INK, fontSize: 16 }}>{pkg.name}</strong>
+                      <Info text={pkg.desc} />
                       <div style={{ fontSize: 13, color: INK, marginTop: 6 }}>
                         Setup {money(pkg.setupPrice)} + {money(pkg.monthlyPrice)}/mo
                       </div>
@@ -195,7 +226,7 @@ export default function IvoryBritePage() {
             {SELECTION_CATALOG.setup.map((item) => (
               <label key={item.id} style={{ display: "flex", gap: 10, alignItems: "center", padding: "8px 0", borderBottom: "1px solid #f0eef4", fontSize: 14, color: INK, cursor: "pointer" }}>
                 <input type="checkbox" checked={setupIds.includes(item.id)} onChange={() => toggle(setupIds, setSetupIds, item.id)} />
-                <span style={{ flex: 1 }}>{item.label}</span>
+                <span style={{ flex: 1 }}>{item.label}<Info text={item.desc} /></span>
                 <strong>{money(item.price)}</strong>
               </label>
             ))}
@@ -203,11 +234,14 @@ export default function IvoryBritePage() {
             {SELECTION_CATALOG.monthly.map((item) => (
               <label key={item.id} style={{ display: "flex", gap: 10, alignItems: "center", padding: "8px 0", borderBottom: "1px solid #f0eef4", fontSize: 14, color: INK, cursor: "pointer" }}>
                 <input type="checkbox" checked={monthlyIds.includes(item.id)} onChange={() => toggle(monthlyIds, setMonthlyIds, item.id)} />
-                <span style={{ flex: 1 }}>{item.label}</span>
+                <span style={{ flex: 1 }}>{item.label}<Info text={item.desc} /></span>
                 <strong>{money(item.price)}/mo</strong>
               </label>
             ))}
-            <p style={{ fontSize: 13, color: MUTED, marginTop: 12 }}>Website Build is included automatically — $800.</p>
+            <p style={{ fontSize: 13, color: MUTED, marginTop: 12 }}>
+              Website Build is included automatically — $800.
+              <Info text={SELECTION_CATALOG.website.find((w) => w.id === "web-itemized").desc} />
+            </p>
           </div>
         )}
 
@@ -217,7 +251,9 @@ export default function IvoryBritePage() {
             <label style={{ display: "flex", gap: 10, alignItems: "flex-start", fontSize: 14, color: INK, cursor: "pointer" }}>
               <input type="checkbox" checked={socialAddon} onChange={(e) => setSocialAddon(e.target.checked)} style={{ marginTop: 3 }} />
               <span>
-                <strong>Social Media management</strong> — setup $500 + $440/mo
+                <strong>Social Media management</strong>
+                <Info text={SELECTION_CATALOG.monthly.find((i) => i.id === "social-mo").desc} />
+                {" "}— setup $500 + $440/mo
                 <div style={{ fontSize: 13, color: MUTED }}>Not included in packages; billed at list price.</div>
               </span>
             </label>
