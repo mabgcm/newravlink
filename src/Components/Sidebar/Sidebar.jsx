@@ -106,11 +106,11 @@ function Sidebar() {
                     <li><NavLink to={langPath("/growth-check")} onClick={closeSidebar} data-ga-location="sidebar">{t("nav.growthCheck")}</NavLink></li>
                     <li><NavLink to={langPath("/contact")} onClick={closeSidebar}>{t("nav.contact")}</NavLink></li>
                     <li className="sidebar-phone">
-                        <a href="tel:+14372196444" aria-label="Call +1(437)2196444">
+                        <a href="tel:+13653605011" aria-label="Call +1(365)3605011">
                             <span className="icon-circle">
                                 <i className="fa-solid fa-phone-volume"></i>
                             </span>
-                            <span>+1(437) 219-6444</span>
+                            <span>+1(365) 360-5011</span>
                         </a>
                     </li>
                 </ul>

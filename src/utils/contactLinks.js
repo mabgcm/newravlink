@@ -1,6 +1,6 @@
 import { trackMetaStandard } from "../analytics/metaPixel";
 
-export const WHATSAPP_PHONE = "14372196444";
+export const WHATSAPP_PHONE = "13653605011";
 export const WHATSAPP_MESSAGE =
     "Merhaba, ABD / Kanada'da işletmem var. İngilizce reklam ve online tanıtım için bilgi almak istiyorum.";
 const WHATSAPP_HOST = ["wa", "me"].join(".");

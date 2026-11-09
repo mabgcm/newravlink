@@ -31,7 +31,7 @@ const ContactSection = () => {
                                     <div className="d-grid">
                                         <span>{t("contactPage.card.phoneLabel")}</span>
 	                                        <h5>
-                                                <a href="tel:+14372196444" data-fbq-label="contact-card-phone">(437) 219-6444</a>
+                                                <a href="tel:+13653605011" data-fbq-label="contact-card-phone">(365) 360-5011</a>
                                             </h5>
                                     </div>
                                 </div>

@@ -117,7 +117,7 @@ const Footer = () => {
                                         <h5>{t("footer.contactInfo")}</h5>
                                         <ul className="contact-list">
                                             <li><a href="mailto:info@ravlink.ca" data-fbq-label="footer-email">info@ravlink.ca</a></li>
-                                            <li><a href="tel:+14372196444" data-fbq-label="footer-phone">+1(437) 219-6444</a></li>
+                                            <li><a href="tel:+13653605011" data-fbq-label="footer-phone">+1(365) 360-5011</a></li>
                                             <li>Serving businesses across Ontario remotely and on-site.</li>
                                             <li>GTA, Toronto, Vaughan, Richmond Hill, Markham, Mississauga, Brampton, North York, Scarborough, Barrie, and Simcoe County.</li>
                                         </ul>
