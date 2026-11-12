@@ -11,6 +11,14 @@ function PrivacyPolicyPage() {
             <HeadTitle
                 title="Privacy Policy | Rav Link Inc."
                 description="How Rav Link Inc. collects, uses, and protects your personal information when you use ravlink.ca, contact us, or submit a lead form."
+                schema={{
+                    "@context": "https://schema.org",
+                    "@type": "WebPage",
+                    name: "Privacy Policy | Rav Link Inc.",
+                    url: "https://ravlink.ca/privacy-policy",
+                    description:
+                        "How Rav Link Inc. collects, uses, and protects your personal information when you use ravlink.ca, contact us, or submit a lead form.",
+                }}
             />
             <BannerInnerSection
                 title={t("footer.privacy")}
