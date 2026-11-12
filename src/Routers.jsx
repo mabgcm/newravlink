@@ -23,6 +23,7 @@ const CareersPage = lazy(() => import("./Page/Careers"));
 const ColdCallerPositionPage = lazy(() => import("./Page/Careers/ColdCaller"));
 const ColdCallerApplicationPage = lazy(() => import("./Page/Careers/Apply"));
 const IvoryBritePage = lazy(() => import("./Page/IvoryBrite"));
+const PrivacyPolicyPage = lazy(() => import("./Page/PrivacyPolicy"));
 
 // Shared page routes — rendered relative to parent match (/tr/* or /*)
 function PageRoutes() {
@@ -45,6 +46,7 @@ function PageRoutes() {
             <Route path="blog/:slug" element={<SinglePostPage />} />
             <Route path="single_post" element={<SinglePostPage />} />
             <Route path="contact" element={<ContactPage />} />
+            <Route path="privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="growth-check" element={<GrowthCheckPage />} />
             <Route path="ivory-brite" element={<IvoryBritePage />} />
             <Route path="careers" element={<CareersPage />} />

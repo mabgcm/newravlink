@@ -152,7 +152,7 @@ const Footer = () => {
                             <span className="copyright">{t("footer.copyright", { year: new Date().getFullYear() })}</span>
                             <div className="d-flex flex-row gspace-2">
                                 <span className="legal-link" aria-disabled="true">{t("footer.terms")}</span>
-                                <span className="legal-link" aria-disabled="true">{t("footer.privacy")}</span>
+                                <NavLink to={langPath("/privacy-policy")} className="legal-link">{t("footer.privacy")}</NavLink>
                             </div>
                         </div>
 
