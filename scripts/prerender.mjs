@@ -27,6 +27,7 @@ const englishRoutes = [
     "/careers",
     "/careers/cold-caller",
     "/contact",
+    "/privacy-policy",
     "/seo-agency-toronto",
     "/seo-agency-vaughan",
     "/seo-agency-barrie",
