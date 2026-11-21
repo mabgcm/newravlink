@@ -29,4 +29,14 @@ export const blogs = [
 		excerptKey: "data.blogs.2.excerpt",
 		link: "/blog/why-most-contractor-websites-dont-convert",
 	},
+	{
+		id: 4,
+		slug: "why-your-competitor-shows-up-on-google-maps-and-you-dont",
+		image: "https://images.pexels.com/photos/35969/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1200",
+		dateKey: "data.blogs.3.date",
+		categoryKey: "data.blogs.3.category",
+		titleKey: "data.blogs.3.title",
+		excerptKey: "data.blogs.3.excerpt",
+		link: "/blog/why-your-competitor-shows-up-on-google-maps-and-you-dont",
+	},
 ];  

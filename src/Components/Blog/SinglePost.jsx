@@ -168,6 +168,22 @@ const parseArticleBlocks = (content) => {
   return blocks;
 };
 
+const insertBlocksAfterHeading = (blocks, headingText, newBlocks) => {
+  const index = blocks.findIndex(
+    (block) => block.type === "h2" && block.text === headingText,
+  );
+  if (index === -1) return blocks;
+  return [...blocks.slice(0, index + 1), ...newBlocks, ...blocks.slice(index + 1)];
+};
+
+const insertBlocksBeforeHeading = (blocks, headingText, newBlocks) => {
+  const index = blocks.findIndex(
+    (block) => block.type === "h2" && block.text === headingText,
+  );
+  if (index === -1) return blocks;
+  return [...blocks.slice(0, index), ...newBlocks, ...blocks.slice(index)];
+};
+
 const articles = {
   "how-toronto-businesses-rank-higher-on-google-maps": {
     image: articleImage,
@@ -1775,6 +1791,233 @@ Dijital varlığını; SEO, web sitesi ve reklamlarla entegre bir büyüme siste
             "Daha güçlü lead akışı isteyen contractor firmaları https://ravlink.com/services/contractor-marketing üzerinden contractor odaklı pazarlamayla veya https://ravlink.com/website-design-toronto üzerinden dönüşüm odaklı web tasarımı ile başlayabilir.",
         },
       ],
+    },
+  },
+  "why-your-competitor-shows-up-on-google-maps-and-you-dont": {
+    image: "https://images.pexels.com/photos/35969/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1200",
+    en: {
+      title: "Why Your Competitor Shows Up on Google Maps and You Don't",
+      date: "November 20, 2026",
+      category: "Local SEO",
+      alt: "Hands holding a smartphone showing Google Maps navigation with a route",
+      quote:
+        "You cannot buy a better spot on the map. You can only make it easier for Google — and for customers — to understand what you do and why you are worth choosing.",
+      blocks: insertBlocksAfterHeading(
+        insertBlocksAfterHeading(
+          insertBlocksBeforeHeading(
+            parseArticleBlocks(`## The short answer: three things decide your Maps ranking
+
+You search for your own service on Google Maps, and there it is: your competitor, in the top three, with the map pin and the phone number. You run a better business — better work, happier customers, fairer prices — and yet Google shows them first. It feels unfair, and it is worth asking why.
+
+Here is the short answer, in Google's own words: local results rest on three things — relevance, distance, and prominence. Relevance is how well your profile matches what the person searched for. Distance is how close you are to the searcher. Prominence is how well known and trusted your business looks. That is the whole list. And Google says one more thing plainly: there is no way to pay for a better local ranking. Anyone selling you a guaranteed top-three spot is selling something Google says does not exist.
+
+## Why the top 3 changes from street to street
+
+The three results you see are called the map pack, and Google recalculates it around every searcher. Move two streets over and the top three can change completely — because the distance changed, not because the businesses did. That is why "my competitor ranks and I don't" is often just geography: their address is closer to the person searching.
+
+You cannot move your business closer to every searcher, and you do not need to. The honest reframe is this: win the searches near you. Distance is fixed, but relevance and prominence are work you can do — and they are exactly where most local businesses fall behind.
+
+## Fix 1: your primary category is the two-minute win
+
+Of everything you can change, your primary Business Profile category carries the most weight. In Whitespark's 2026 Local Search Ranking Factors survey, 47 local-search experts scored 187 factors — and the primary category came out number one for the map pack. It takes two minutes to check, and most businesses have it wrong: too broad, too vague, or describing what they wish they did instead of what they actually do.
+
+Once the primary category is right, complete the rest of the profile the same way: two or three secondary categories, your real services, correct hours, and a website page that says the same thing your profile says. When Google reads the same clear story in your profile and on your website, it can match you to more searches.
+
+## Fix 2: reviews are a habit, not a one-time push
+
+Reviews are the second half of the work — and they reward patience. A steady flow of recent reviews beats an old pile every time: a few honest, detailed reviews each month do more than 200 reviews from three years ago followed by silence. Google reads recency, and so do customers.
+
+Aim for a genuine average around 4.0 or above, and treat every review as a conversation: reply to them, thank people, and answer concerns in a friendly way. Short, specific reviews help most — "fixed our leaking tap the same day" tells the next customer far more than "great service." What you never want is the shortcut: bought or fake reviews get removed, and they can restrict your profile.
+
+## The myth: posting every week lifts your ranking
+
+Many business owners were told to post on their Google Business Profile every week to climb the rankings. A controlled test by Sterling Sky says otherwise: three dormant profiles, weekly posts for nine weeks, 441 keywords tracked — and no measurable impact on local-pack rankings. In Whitespark's survey, post frequency sits near the bottom of 187 factors.
+
+Posts are still worth doing — as a shop window. When someone has already found you, a fresh offer or a new photo helps them choose you. They are just not a ranking lever. If weekly posts felt like a chore, here is the good news: you can stop doing them for rankings, and spend that time on the two fixes above.
+
+## Keep it safe: three things that can hurt your profile
+
+While you fix what helps, avoid the things that hurt. Adding keywords to your business name may show up in the data — it is the number-three factor in the Whitespark survey — but it breaks Google's rules, it is a common reason for suspension, and competitors can suggest an edit to your listing. Use your real name, exactly as it appears on your signage and paperwork, and put the keywords in your description and services instead.
+
+Fake or bought reviews get removed, and they can restrict your profile. The same goes for a virtual office or a PO box listed as your address, a duplicate listing for the same business, a map pin in the wrong place, or hours that are not true. Keep the listing honest and it stays safe.
+
+## Frequently asked questions
+
+### How does Google decide the top 3 on Maps?
+
+Google ranks Business Profiles on relevance, distance, and prominence: how well your profile matches the search, how close you are to the searcher, and how well known and trusted your business looks. The map pack ranks profiles, not web pages — which is why a complete profile matters as much as a good website.
+
+### Do Google Business Profile posts help my ranking?
+
+No measurable impact, according to a controlled Sterling Sky test: three profiles, weekly posts for nine weeks, 441 keywords tracked, and no change in local-pack rankings. Posts are still useful as a shop window for people who already found you — they help a searcher choose you, they just do not move your ranking.
+
+### Can I add keywords or my city to my business name?
+
+It is better not to. A keyword-stuffed name ranks well in the data but violates Google's guidelines, it is a common suspension cause, and competitors can suggest an edit to your listing. Keep your real business name and put keywords in your description, services, and posts instead.
+
+### How long does it take to see results?
+
+The category fix is fast — minutes to change, and Google picks it up quickly. Reviews are the slow part: a steady flow builds over months, and there is no overnight fix. That is normal, and it is also why starting the habit now matters more than any single change.
+
+## Your five-point checklist
+
+- Is your primary category the one that best describes what you actually do?
+- Is your profile complete — services, hours, photos, and a website page that matches?
+- Is there a steady flow of recent, detailed reviews — and are you replying to them?
+- Is your business name exactly as it appears on your signage and paperwork?
+- Are your address, map pin, and hours true and up to date?
+
+If you want a second pair of eyes on your profile, book a free Growth Check with Rav Link: https://ravlink.ca/growth-check — we will show you exactly what is holding your Maps ranking back and the fastest way to fix it. You can also message us on LinkedIn or Instagram with the word START.`),
+            "Keep it safe: three things that can hurt your profile",
+            [
+              {
+                type: "takeaway",
+                title: "Key takeaway",
+                text: "Posts are a shop window, not a ranking lever. Your category and your reviews do the ranking work.",
+              },
+            ],
+          ),
+          "Fix 1: your primary category is the two-minute win",
+          [
+            {
+              type: "figure",
+              src: "https://images.pexels.com/photos/9762890/pexels-photo-9762890.jpeg?auto=compress&cs=tinysrgb&w=1200",
+              alt: "A colourful local shop storefront with a striped awning",
+              caption:
+                "A complete profile starts with the real business — the same name, address, and hours customers see on the street.",
+              width: 1200,
+              height: 1800,
+              portrait: true,
+              loading: "lazy",
+            },
+          ],
+        ),
+        "Fix 2: reviews are a habit, not a one-time push",
+        [
+          {
+            type: "figure",
+            src: "https://images.pexels.com/photos/3974770/pexels-photo-3974770.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            alt: "A happy customer checking his phone on a city street",
+            caption:
+              "A steady flow of recent reviews is the habit that keeps a profile visible.",
+            width: 1200,
+            height: 800,
+            loading: "lazy",
+          },
+        ],
+      ),
+    },
+    tr: {
+      title: "Rakibiniz Google Haritalar'da Çıkıyor, Siz Neden Çıkmıyorsunuz?",
+      date: "20 Kasım 2026",
+      category: "Lokal SEO",
+      alt: "Google Haritalar'da yol tarifi gösteren bir akıllı telefonu tutan eller",
+      quote:
+        "Haritalar'da daha iyi bir yer satın alınmaz. Google'ın — ve müşterilerinizin — ne yaptığınızı ve neden tercih edilmeniz gerektiğini net anlamasını sağlayabilirsiniz.",
+      blocks: insertBlocksAfterHeading(
+        insertBlocksAfterHeading(
+          insertBlocksBeforeHeading(
+            parseArticleBlocks(`## Kısa cevap: Haritalar sıralamasını üç şey belirler
+
+Kendi hizmetinizi Google Haritalar'da arıyorsunuz ve karşınızda rakibiniz var: ilk üçte, harita pini ve telefon numarasıyla. Siz daha iyi iş yapıyorsunuz — daha iyi hizmet, daha mutlu müşteriler, daha adil fiyatlar — ama Google önce onu gösteriyor. Haksızlık gibi geliyor ve nedenini sormak hakkınız.
+
+Kısa cevap, Google'ın kendi sözleriyle şöyle: yerel sonuçlar üç şeye dayanır — alaka, mesafe ve bilinirlik. Alaka, profilinizin aranan şeyle ne kadar uyuştuğudur. Mesafe, arayan kişiye ne kadar yakın olduğunuzdur. Bilinirlik, işletmenizin ne kadar tanınır ve güvenilir göründüğüdür. Liste bu kadar. Google bir şeyi daha açıkça söylüyor: yerel sıralamada daha iyi bir yer satın alınmaz. Size ilk üç sırayı garanti eden herkes, Google'ın var olmadığını söylediği bir şeyi satıyordur.
+
+## İlk 3 neden sokaktan sokağa değişiyor?
+
+Ekranda gördüğünüz üç sonuç, harita sonuçları olarak bilinir ve Google bunu her arayan kişinin konumuna göre yeniden hesaplar. İki sokak öteye gidin, ilk üç tamamen değişebilir — çünkü işletmeler değil, mesafe değişti. Bu yüzden "rakibim çıkıyor, ben çıkmıyorum" çoğu zaman sadece coğrafyadır: rakibin adresi, arayan kişiye daha yakındır.
+
+İşletmenizi her arayan kişiye yaklaştıramazsınız ve buna gerek de yok. Dürüst bakış açısı şudur: size yakın yerlerdeki aramaları kazanın. Mesafe sabittir ama alaka ve bilinirlik üzerinde çalışabilirsiniz — ve çoğu yerel işletme tam da burada geride kalır.
+
+## Düzeltme 1: ana kategori, iki dakikalık kazanç
+
+Değiştirebileceğiniz her şey arasında, Google İşletme Profili'ndeki ana kategoriniz en fazla ağırlığa sahiptir. Whitespark'ın 2026 Yerel Arama Sıralama Faktörleri araştırmasında 47 yerel arama uzmanı 187 faktörü puanladı — ve ana kategori, harita sonuçları için birinci sırada çıktı. Kontrol etmesi iki dakika sürer ve çoğu işletmede yanlıştır: çok geniş, çok belirsiz ya da aslında yaptığınız işi değil, yapmak istediğiniz işi anlatır.
+
+Ana kategori doğru olduktan sonra profilin geri kalanını da aynı özenle tamamlayın: iki veya üç ikincil kategori, gerçek hizmetleriniz, doğru çalışma saatleri ve profilinizle aynı şeyi söyleyen bir web sayfası. Google profilinizde ve web sitenizde aynı net hikâyeyi okuduğunda, sizi daha fazla aramayla eşleştirebilir.
+
+## Düzeltme 2: yorumlar bir alışkanlıktır, tek seferlik iş değil
+
+Yorumlar işin ikinci yarısıdır — ve sabrı ödüllendirir. Düzenli gelen yeni yorumlar, eski bir yığından her zaman daha etkilidir: her ay gelen birkaç dürüst ve ayrıntılı yorum, üç yıl öncesinden kalma 200 yorumdan ve ardından gelen sessizlikten daha fazla işe yarar. Google güncelliğe bakar, müşteriler de öyle.
+
+Gerçek bir ortalamayla 4.0 ve üzerinde olmayı hedefleyin ve her yorumu bir sohbet olarak görün: cevap verin, teşekkür edin, endişelere dostça yanıt verin. Kısa ve somut yorumlar en çok işe yarar — "sızdıran musluğumuzu aynı gün tamir ettiler" cümlesi, bir sonraki müşteriye "harika hizmet" cümlesinden çok daha fazlasını anlatır. Asla istemeyeceğiniz kısayol ise şudur: satın alınmış veya sahte yorumlar silinir ve profilinizi kısıtlayabilir.
+
+## Efsane: her hafta paylaşım yapmak sıralamayı yükseltir
+
+Birçok işletme sahibine, sıralamada yükselmek için Google İşletme Profili'nde her hafta paylaşım yapması söylendi. Sterling Sky'ın kontrollü testi bunun aksini söylüyor: üç pasif profil, dokuz hafta boyunca haftalık paylaşımlar, takip edilen 441 anahtar kelime — ve harita sonuçlarında ölçülebilir bir etki yok. Whitespark araştırmasında paylaşım sıklığı 187 faktör arasında en alt sıralarda yer alıyor.
+
+Paylaşımlar yine de işe yarar — bir vitrin olarak. Biri sizi zaten bulmuşsa, yeni bir teklif veya yeni bir fotoğraf onun sizi seçmesine yardımcı olur. Sadece sıralama için bir kaldıraç değildir. Haftalık paylaşımlar size angarya gibi geliyorsa iyi haber şu: sıralama için bunları yapmayı bırakabilir ve o zamanı yukarıdaki iki düzeltmeye ayırabilirsiniz.
+
+## Güvende kalın: profilinize zarar verebilecek üç şey
+
+İşinize yarayanları düzeltirken, zarar verenlerden kaçının. İşletme adınıza anahtar kelime eklemek verilerde işe yarıyor gibi görünebilir — Whitespark araştırmasında üçüncü sırada yer alır — ama Google kurallarını ihlal eder, sık görülen bir askıya alma nedenidir ve rakipler listenizde düzeltme önerebilir. Gerçek adınızı, tabela ve evraklarınızdaki haliyle kullanın; anahtar kelimeleri açıklama ve hizmetler bölümüne yazın.
+
+Sahte veya satın alınmış yorumlar silinir ve profilinizi kısıtlayabilir. Aynı şey sanal ofis veya posta kutusunu adres olarak göstermek, aynı işletme için yinelenen liste oluşturmak, harita pininin yanlış yerde olması veya doğru olmayan çalışma saatleri için de geçerlidir. Listenizi dürüst tutun, güvende kalır.
+
+## Sık sorulan sorular
+
+### Google Haritalar'da ilk 3 nasıl belirleniyor?
+
+Google, İşletme Profillerini alaka, mesafe ve bilinirliğe göre sıralar: profilinizin aramayla ne kadar uyuştuğu, arayan kişiye ne kadar yakın olduğunuz ve işletmenizin ne kadar tanınır ve güvenilir göründüğü. Harita sonuçları web sayfalarını değil profilleri sıralar — bu yüzden eksiksiz bir profil, iyi bir web sitesi kadar önemlidir.
+
+### Google İşletme Profili paylaşımları sıralamama yardımcı olur mu?
+
+Ölçülebilir bir etkisi yok: Sterling Sky'ın kontrollü testinde üç profil, dokuz hafta boyunca haftalık paylaşımlar yaptı, 441 anahtar kelime takip edildi ve harita sonuçlarında değişiklik olmadı. Paylaşımlar, sizi zaten bulan kişiler için bir vitrin olarak yine de faydalıdır — arayan kişinin sizi seçmesine yardımcı olur, sadece sıralamanızı değiştirmez.
+
+### İşletme adıma anahtar kelime veya şehir ekleyebilir miyim?
+
+Eklememeniz daha iyi olur. Anahtar kelimeyle doldurulmuş bir ad, verilerde iyi sıralanır ama Google kurallarını ihlal eder, sık görülen bir askıya alma nedenidir ve rakipler listenizde düzeltme önerebilir. Gerçek işletme adınızı koruyun; anahtar kelimeleri açıklama, hizmetler ve paylaşımlar bölümünde kullanın.
+
+### Sonuç görmek ne kadar sürer?
+
+Kategori düzeltmesi hızlıdır — değiştirmesi dakikalar sürer ve Google bunu çabuk fark eder. Yorumlar ise yavaş ilerler: düzenli bir akış aylar içinde oluşur ve bir gecede sonuç alınmaz. Bu normaldir ve alışkanlığa şimdi başlamanın tek bir değişiklikten daha önemli olmasının nedeni de budur.
+
+## Beş maddelik kontrol listesi
+
+- Ana kategoriniz, aslında ne yaptığınızı en iyi anlatan kategori mi?
+- Profiliniz eksiksiz mi — hizmetler, çalışma saatleri, fotoğraflar ve profilinizle uyumlu bir web sayfası var mı?
+- Düzenli ve ayrıntılı yeni yorumlar geliyor mu — ve onlara cevap veriyor musunuz?
+- İşletme adınız, tabela ve evraklarınızdaki haliyle birebir aynı mı?
+- Adresiniz, harita pininiz ve çalışma saatleriniz doğru ve güncel mi?
+
+Profilinize bir de başka gözle bakılmasını isterseniz, Rav Link ile ücretsiz Büyüme Analizi için randevu alın: https://ravlink.ca/growth-check — Haritalar sıralamanızı neyin geride tuttuğunu ve en hızlı düzeltme yolunu size gösterelim. İsterseniz LinkedIn veya Instagram üzerinden START yazarak da bize ulaşabilirsiniz.`),
+            "Güvende kalın: profilinize zarar verebilecek üç şey",
+            [
+              {
+                type: "takeaway",
+                title: "Temel çıkarım",
+                text: "Paylaşımlar bir vitrindir, sıralama kaldıracı değil. Sıralamayı kategoriniz ve yorumlarınız yapar.",
+              },
+            ],
+          ),
+          "Düzeltme 1: ana kategori, iki dakikalık kazanç",
+          [
+            {
+              type: "figure",
+              src: "https://images.pexels.com/photos/9762890/pexels-photo-9762890.jpeg?auto=compress&cs=tinysrgb&w=1200",
+              alt: "Çizgili tenteli, renkli bir yerel dükkân cephesi",
+              caption:
+                "Eksiksiz bir profil gerçek işletmeden başlar — müşterilerin sokakta gördüğü ad, adres ve çalışma saatleriyle aynı.",
+              width: 1200,
+              height: 1800,
+              portrait: true,
+              loading: "lazy",
+            },
+          ],
+        ),
+        "Düzeltme 2: yorumlar bir alışkanlıktır, tek seferlik iş değil",
+        [
+          {
+            type: "figure",
+            src: "https://images.pexels.com/photos/3974770/pexels-photo-3974770.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            alt: "Şehir sokağında telefonuna bakarak sevinen mutlu bir müşteri",
+            caption:
+              "Düzenli gelen yeni yorumlar, profilinizi görünür tutan alışkanlıktır.",
+            width: 1200,
+            height: 800,
+            loading: "lazy",
+          },
+        ],
+      ),
     },
   },
 };
