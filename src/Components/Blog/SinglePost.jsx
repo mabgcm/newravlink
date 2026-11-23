@@ -9,20 +9,43 @@ const defaultSlug = "how-toronto-businesses-rank-higher-on-google-maps";
 
 const renderInlineLinks = (text) => {
   if (!text) return text;
-  return String(text)
-    .split(/(https?:\/\/[^\s]+)/g)
-    .map((part, index) => {
-      if (!/^https?:\/\//.test(part)) return part;
-      const trailing = part.match(/[.,;:!?)]+$/);
-      const url = trailing ? part.slice(0, -trailing[0].length) : part;
-      const suffix = trailing ? trailing[0] : "";
-      return (
-        <React.Fragment key={index}>
-          <a href={url}>{url}</a>
-          {suffix}
-        </React.Fragment>
-      );
-    });
+  const nodes = [];
+  const mdPattern = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+  const source = String(text);
+  let lastIndex = 0;
+  let key = 0;
+  let match;
+  const pushBareLinks = (segment) => {
+    String(segment)
+      .split(/(https?:\/\/[^\s]+)/g)
+      .forEach((part) => {
+        if (!part) return;
+        if (!/^https?:\/\//.test(part)) {
+          nodes.push(part);
+          return;
+        }
+        const trailing = part.match(/[.,;:!?)]+$/);
+        const url = trailing ? part.slice(0, -trailing[0].length) : part;
+        const suffix = trailing ? trailing[0] : "";
+        nodes.push(
+          <a key={key++} href={url}>
+            {url}
+          </a>
+        );
+        if (suffix) nodes.push(suffix);
+      });
+  };
+  while ((match = mdPattern.exec(source)) !== null) {
+    pushBareLinks(source.slice(lastIndex, match.index));
+    nodes.push(
+      <a key={key++} href={match[2]}>
+        {match[1]}
+      </a>
+    );
+    lastIndex = match.index + match[0].length;
+  }
+  pushBareLinks(source.slice(lastIndex));
+  return nodes;
 };
 
 const renderBlock = (block, index) => {
@@ -485,7 +508,7 @@ Google sees all these signals and thinks: "This is a legitimate, trustworthy loc
 
 The compound effect is powerful. A strong website boosts your Maps ranking. A strong Maps presence drives traffic to your website. Together, they create a flywheel of local visibility.
 
-If you need help building a website that supports your local SEO strategy, strategic web design that converts local customers can make a significant difference in how Google perceives your business: https://ravlink.com/website-design-toronto.
+If you need help building a website that supports your local SEO strategy, [strategic web design that converts local customers](https://ravlink.ca/website-design-toronto) can make a significant difference in how Google perceives your business.
 
 Now let's talk about building authority beyond your own website.
 
@@ -617,7 +640,7 @@ Consider hiring help, like working with Toronto's leading SEO agency:
 
 The reality? Most Toronto business owners don't have time to do all of this consistently. If you're a contractor running a business, you're focused on serving customers—not auditing citations and building backlinks.
 
-That's where contractor-specific marketing strategies can help you stay competitive without sacrificing time you should be spending on your business: https://ravlink.com/services/contractor-marketing.
+That's where [contractor-specific marketing strategies](https://ravlink.ca/services/contractor-marketing) can help you stay competitive without sacrificing time you should be spending on your business.
 
 The key is knowing what you can realistically maintain yourself and where expert help accelerates results.
 
@@ -636,7 +659,7 @@ But you're different. You understand that local SEO isn't magic—it's a systema
 
 Not sure where your Google Maps ranking stands? Get a free 10-minute Google Business Profile audit. We'll identify exactly what's holding you back and show you the fastest path to top 3 rankings in Toronto.
 
-Schedule your free audit with Rav Link and let's get your business the local visibility it deserves: https://ravlink.ca/seo-agency-toronto.`),
+[Schedule your free audit with Rav Link](https://ravlink.ca/seo-agency-toronto) and let's get your business the local visibility it deserves.`),
     },
     tr: {
       title: "Toronto İşletmeleri Google Haritalar'da Nasıl Daha Yukarı Çıkar?",
@@ -858,7 +881,7 @@ Web sitenizde schema, lokasyon sayfaları ve lokal anahtar kelimeler vardır. Go
 
 Güçlü web sitesi Haritalar sıralamasını destekler. Güçlü Haritalar görünürlüğü web sitesine trafik taşır. İkisi birlikte lokal görünürlük döngüsü oluşturur.
 
-Web siteniz lokal SEO stratejisini desteklemiyorsa dönüşüm odaklı web tasarımı ciddi fark yaratabilir: https://ravlink.com/website-design-toronto.
+Web siteniz lokal SEO stratejisini desteklemiyorsa [dönüşüm odaklı web tasarımı](https://ravlink.ca/website-design-toronto) ciddi fark yaratabilir.
 
 ## Backlink ve Citation ile Lokal Otorite Kurmak
 ### Citation Nedir?
@@ -963,7 +986,7 @@ Destek almanız mantıklı olan alanlar:
 
 Buradaki karar bütçeden önce süreklilikle ilgilidir. Bir işletme profili bir kez düzenleyip aylarca dokunmuyorsa, yorum süreci kurmuyorsa ve web sitesini güncellemiyorsa başlangıç optimizasyonu zamanla etkisini kaybeder. Profesyonel destek, özellikle rekabetli hizmet kategorilerinde sistemi canlı tutmak ve fırsatları düzenli takip etmek için anlamlıdır.
 
-Toronto SEO stratejisi için Rav Link ile başlayabilirsiniz: https://ravlink.ca/seo-agency-toronto. Contractor firmaları için özel pazarlama desteği de burada: https://ravlink.com/services/contractor-marketing.
+Toronto SEO stratejisi için [Rav Link ile başlayabilirsiniz](https://ravlink.ca/seo-agency-toronto). Contractor firmaları için [özel pazarlama desteği de burada](https://ravlink.ca/services/contractor-marketing).
 
 ## Google Haritalar'da Daha Yukarı Çıkmaya Hazır mısınız?
 Artık Toronto işletmelerinin Google Haritalar'da nasıl daha yukarı çıkabileceğini biliyorsunuz. Alaka, bilinirlik ve yakınlık sinyallerinin nasıl çalıştığını; Google İşletme Profili'nin neden temel olduğunu; NAP tutarlılığı, yorumlar, web sitesi sinyalleri, backlinkler ve citation çalışmalarının nasıl birleştiğini gördünüz.
@@ -974,7 +997,7 @@ Uygulama emek ister. Ancak sonuç; Google Haritalar üzerinden daha düzenli tel
 
 Google Haritalar sıralamanızın neden zayıf olduğunu bilmiyorsanız küçük bir denetimle başlayın. Profil eksikleri, NAP hataları, yorum temposu, web sitesi sinyalleri ve lokal otorite genellikle en hızlı fırsatları gösterir.
 
-Rav Link ile ücretsiz Google İşletme Profili denetimi planlayın ve Toronto'da ilk üç sıralamaya giden en kısa yolu netleştirin: https://ravlink.ca/seo-agency-toronto.`),
+[Rav Link ile ücretsiz Google İşletme Profili denetimi planlayın](https://ravlink.ca/seo-agency-toronto) ve Toronto'da ilk üç sıralamaya giden en kısa yolu netleştirin.`),
     },
   },
   "growth-strategies-for-digital-business": {
@@ -1675,7 +1698,7 @@ Dijital varlığını; SEO, web sitesi ve reklamlarla entegre bir büyüme siste
         {
           type: "p",
           text:
-            "Contractors that want stronger lead flow can start with contractor-specific marketing at https://ravlink.com/services/contractor-marketing or conversion-focused website design at https://ravlink.com/website-design-toronto.",
+            "Contractors that want stronger lead flow can start with [contractor-specific marketing](https://ravlink.ca/services/contractor-marketing) or [conversion-focused website design](https://ravlink.ca/website-design-toronto).",
         },
       ],
     },
@@ -1806,7 +1829,7 @@ Dijital varlığını; SEO, web sitesi ve reklamlarla entegre bir büyüme siste
         {
           type: "p",
           text:
-            "Daha güçlü lead akışı isteyen contractor firmaları https://ravlink.com/services/contractor-marketing üzerinden contractor odaklı pazarlamayla veya https://ravlink.com/website-design-toronto üzerinden dönüşüm odaklı web tasarımı ile başlayabilir.",
+            "Daha güçlü lead akışı isteyen contractor firmaları [contractor odaklı pazarlamayla](https://ravlink.ca/services/contractor-marketing) veya [dönüşüm odaklı web tasarımı](https://ravlink.ca/website-design-toronto) ile başlayabilir.",
         },
       ],
     },
@@ -1885,7 +1908,7 @@ The category fix is fast — minutes to change, and Google picks it up quickly. 
 - Is your business name exactly as it appears on your signage and paperwork?
 - Are your address, map pin, and hours true and up to date?
 
-If you want a second pair of eyes on your profile, book a free Growth Check with Rav Link: https://ravlink.ca/growth-check — we will show you exactly what is holding your Maps ranking back and the fastest way to fix it. You can also message us on LinkedIn or Instagram with the word START.`),
+If you want a second pair of eyes on your profile, [book a free Growth Check with Rav Link](https://ravlink.ca/growth-check) — we will show you exactly what is holding your Maps ranking back and the fastest way to fix it. You can also message us on LinkedIn or Instagram with the word START.`),
             "Keep it safe: three things that can hurt your profile",
             [
               {
@@ -1997,7 +2020,7 @@ Kategori düzeltmesi hızlıdır — değiştirmesi dakikalar sürer ve Google b
 - İşletme adınız, tabela ve evraklarınızdaki haliyle birebir aynı mı?
 - Adresiniz, harita pininiz ve çalışma saatleriniz doğru ve güncel mi?
 
-Profilinize bir de başka gözle bakılmasını isterseniz, Rav Link ile ücretsiz Büyüme Analizi için randevu alın: https://ravlink.ca/tr/growth-check — Haritalar sıralamanızı neyin geride tuttuğunu ve en hızlı düzeltme yolunu size gösterelim. İsterseniz LinkedIn veya Instagram üzerinden START yazarak da bize ulaşabilirsiniz.`),
+Profilinize bir de başka gözle bakılmasını isterseniz, [Rav Link ile ücretsiz Büyüme Analizi için randevu alın](https://ravlink.ca/tr/growth-check) — Haritalar sıralamanızı neyin geride tuttuğunu ve en hızlı düzeltme yolunu size gösterelim. İsterseniz LinkedIn veya Instagram üzerinden START yazarak da bize ulaşabilirsiniz.`),
             "Güvende kalın: profilinize zarar verebilecek üç şey",
             [
               {
