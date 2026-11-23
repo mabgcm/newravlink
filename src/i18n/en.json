@@ -677,6 +677,11 @@
     "subHeading": "Client & Partnership",
     "heading": "Strong Partnerships, Proven Success"
   },
+  "blog": {
+    "searchPlaceholder": "Search articles...",
+    "all": "All",
+    "noResults": "No articles found. Try a different search or category."
+  },
   "data": {
     "chooseUs": [
       {

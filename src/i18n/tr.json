@@ -677,6 +677,11 @@
     "subHeading": "Müşteri ve İş Ortaklığı",
     "heading": "Güçlü Ortaklıklar, Kanıtlanmış Başarı"
   },
+  "blog": {
+    "searchPlaceholder": "Yazılarda ara...",
+    "all": "Tümü",
+    "noResults": "Yazı bulunamadı. Farklı bir arama ya da kategori deneyin."
+  },
   "data": {
     "chooseUs": [
       {

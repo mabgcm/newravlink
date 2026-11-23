@@ -14,7 +14,7 @@ function BlogPage(){
                 title={t("pageBanners.blog.title")}
                 currentPage={t("pageBanners.blog.currentPage")}
             />
-            <BlogSection />            
+            <BlogSection showFilters />
         </>
     );
 }

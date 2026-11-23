@@ -2,6 +2,7 @@ export const blogs = [
 	{
 		id: 1,
 		slug: "how-toronto-businesses-rank-higher-on-google-maps",
+		sortDate: "2026-05-20",
 		image: "/assets/images/google-maps-local-seo-toronto.jpg",
 		dateKey: "data.blogs.0.date",
 		categoryKey: "data.blogs.0.category",
@@ -12,6 +13,7 @@ export const blogs = [
 	{
 		id: 2,
 		slug: "growth-strategies-for-digital-business",
+		sortDate: "2025-04-14",
 		image: "/assets/images/servicehero.jpeg",
 		dateKey: "data.blogs.1.date",
 		categoryKey: "data.blogs.1.category",
@@ -22,6 +24,7 @@ export const blogs = [
 	{
 		id: 3,
 		slug: "why-most-contractor-websites-dont-convert",
+		sortDate: "2026-05-20",
 		image: "/assets/images/construction.jpg",
 		dateKey: "data.blogs.2.date",
 		categoryKey: "data.blogs.2.category",
@@ -32,6 +35,7 @@ export const blogs = [
 	{
 		id: 4,
 		slug: "why-your-competitor-shows-up-on-google-maps-and-you-dont",
+		sortDate: "2026-11-20",
 		image: "https://images.pexels.com/photos/35969/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1200",
 		dateKey: "data.blogs.3.date",
 		categoryKey: "data.blogs.3.category",

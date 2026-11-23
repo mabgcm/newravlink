@@ -7,6 +7,24 @@ import { enhanceGrowthArticleBlocks } from "./growthArticleBlocks";
 const articleImage = "/assets/images/google-maps-local-seo-toronto.jpg";
 const defaultSlug = "how-toronto-businesses-rank-higher-on-google-maps";
 
+const renderInlineLinks = (text) => {
+  if (!text) return text;
+  return String(text)
+    .split(/(https?:\/\/[^\s]+)/g)
+    .map((part, index) => {
+      if (!/^https?:\/\//.test(part)) return part;
+      const trailing = part.match(/[.,;:!?)]+$/);
+      const url = trailing ? part.slice(0, -trailing[0].length) : part;
+      const suffix = trailing ? trailing[0] : "";
+      return (
+        <React.Fragment key={index}>
+          <a href={url}>{url}</a>
+          {suffix}
+        </React.Fragment>
+      );
+    });
+};
+
 const renderBlock = (block, index) => {
   if (block.type === "figure") {
     const { src, srcSet, sizes, alt, caption, width, height, loading, portrait } = block;
@@ -31,11 +49,11 @@ const renderBlock = (block, index) => {
     return (
       <div key={index} className={block.type === "takeaway" ? "blog-takeaway-box" : "blog-note-box"}>
         {block.title && <h5>{block.title}</h5>}
-        {block.text && <p>{block.text}</p>}
+        {block.text && <p>{renderInlineLinks(block.text)}</p>}
         {block.items && (
           <ul>
             {block.items.map((item) => (
-              <li key={item}>{item}</li>
+              <li key={item}>{renderInlineLinks(item)}</li>
             ))}
           </ul>
         )}
@@ -109,13 +127,13 @@ const renderBlock = (block, index) => {
     return (
       <ul key={index}>
         {block.items.map((item) => (
-          <li key={item}>{item}</li>
+          <li key={item}>{renderInlineLinks(item)}</li>
         ))}
       </ul>
     );
   }
 
-  return <p key={index}>{block.text}</p>;
+  return <p key={index}>{renderInlineLinks(block.text)}</p>;
 };
 
 const parseArticleBlocks = (content) => {
@@ -1979,7 +1997,7 @@ Kategori düzeltmesi hızlıdır — değiştirmesi dakikalar sürer ve Google b
 - İşletme adınız, tabela ve evraklarınızdaki haliyle birebir aynı mı?
 - Adresiniz, harita pininiz ve çalışma saatleriniz doğru ve güncel mi?
 
-Profilinize bir de başka gözle bakılmasını isterseniz, Rav Link ile ücretsiz Büyüme Analizi için randevu alın: https://ravlink.ca/growth-check — Haritalar sıralamanızı neyin geride tuttuğunu ve en hızlı düzeltme yolunu size gösterelim. İsterseniz LinkedIn veya Instagram üzerinden START yazarak da bize ulaşabilirsiniz.`),
+Profilinize bir de başka gözle bakılmasını isterseniz, Rav Link ile ücretsiz Büyüme Analizi için randevu alın: https://ravlink.ca/tr/growth-check — Haritalar sıralamanızı neyin geride tuttuğunu ve en hızlı düzeltme yolunu size gösterelim. İsterseniz LinkedIn veya Instagram üzerinden START yazarak da bize ulaşabilirsiniz.`),
             "Güvende kalın: profilinize zarar verebilecek üç şey",
             [
               {
