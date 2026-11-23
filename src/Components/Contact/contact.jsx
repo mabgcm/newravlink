@@ -24,21 +24,6 @@ const ContactSection = () => {
                                     <div>
                                         <div className="icon-wrapper">
                                             <div className="icon-box">
-                                                <i className="fa-solid fa-phone-volume accent-color"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="d-grid">
-                                        <span>{t("contactPage.card.phoneLabel")}</span>
-	                                        <h5>
-                                                <a href="tel:+13653605011" data-fbq-label="contact-card-phone">(365) 360-5011</a>
-                                            </h5>
-                                    </div>
-                                </div>
-                                <div className="d-flex flex-column flex-md-row align-items-center text-md-start text-center gspace-2">
-                                    <div>
-                                        <div className="icon-wrapper">
-                                            <div className="icon-box">
                                                 <i className="fa-solid fa-envelope accent-color"></i>
                                             </div>
                                         </div>

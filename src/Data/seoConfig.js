@@ -34,7 +34,6 @@ export const professionalServiceSchema = {
     url: SITE_URL,
     image: DEFAULT_OG_IMAGE,
     email: "info@ravlink.ca",
-    telephone: "+1-365-360-5011",
     address: {
         "@type": "PostalAddress",
         addressRegion: "Ontario",

@@ -134,7 +134,7 @@ function PrivacyPolicyPage() {
                         <h2>11. Contact Us</h2>
                         <p>
                             Questions about this policy or your personal information? Contact us at{" "}
-                            <a href="mailto:info@ravlink.ca">info@ravlink.ca</a> or +1 (365) 360-5011.
+                            <a href="mailto:info@ravlink.ca">info@ravlink.ca</a>.
                             Rav Link Inc., Ontario, Canada.
                         </p>
                     </div>
