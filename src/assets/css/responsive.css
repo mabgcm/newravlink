@@ -770,6 +770,23 @@
         width: 100%;
     }
 
+    .cta-service-banner {
+        text-align: center;
+    }
+
+    .cta-service-banner .link-wrapper {
+        justify-content: center;
+    }
+
+    .service-included {
+        align-items: center;
+        text-align: center;
+    }
+
+    .service-included .check-list {
+        text-align: left;
+    }
+
     .copyright,
     .legal-link {
         font-size: var(--font-size-xs);
