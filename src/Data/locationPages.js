@@ -180,6 +180,53 @@ export const locationPages = {
             { label: "Meta Ads Management", href: "/services/meta-ads-management" },
             { label: "SEO Services Barrie", href: "/services/seo-barrie" },
         ],
+    },    "website-redesign-toronto": {
+        path: "/website-redesign-toronto",
+        title: "Website Redesign Toronto | Rebuild Your Site to Convert",
+        description:
+            "Website redesign services in Toronto for businesses whose sites look dated, load slowly, or fail to turn visitors into leads — without losing existing Google rankings.",
+        eyebrow: "Toronto Website Redesign",
+        intro:
+            "A website redesign rebuilds your site's design, structure, and messaging while protecting the search rankings you have already earned. Rav Link redesigns Toronto business websites to load faster, explain the offer clearly, and convert more visitors into calls and inquiries.",
+        sections: [
+            {
+                heading: "Redesign without losing your rankings",
+                body: "A careless rebuild can wipe out years of SEO progress. We plan URL structure, redirects, metadata, and content migration before launch, so your redesigned site keeps its Google visibility — and has a stronger structure to grow it.",
+            },
+            {
+                heading: "Built to convert, not just to look new",
+                body: "Most redesign requests start with 'our site looks old', but the real problem is usually conversion: unclear services, weak calls to action, and no trust signals. We rebuild around the actions you want visitors to take, with tracking in place to prove the improvement.",
+            },
+        ],
+        links: [
+            { label: "Website Design Toronto", href: "/website-design-toronto" },
+            { label: "SEO Agency Toronto", href: "/seo-agency-toronto" },
+            { label: "Free Growth Check", href: "/growth-check" },
+        ],
+    },
+    "meta-ads-agency-brampton": {
+        path: "/meta-ads-agency-brampton",
+        title: "Meta Ads Agency Brampton | Facebook & Instagram Ads Management",
+        description:
+            "Meta Ads management for Brampton businesses that need targeted Facebook and Instagram campaigns, creative testing, and clear lead tracking.",
+        eyebrow: "Brampton Meta Ads",
+        intro:
+            "Brampton businesses compete for attention across Facebook and Instagram every day. Rav Link manages Meta Ads campaigns built around your service area, your offer, and measurable lead actions — not vanity metrics — so ad spend turns into calls, bookings, and inquiries.",
+        sections: [
+            {
+                heading: "Campaigns built around Brampton buyers",
+                body: "We structure campaigns by audience, neighbourhood, and offer, then test creative angles against each other so budget moves toward the ads that produce real inquiries from Brampton and the surrounding Peel Region market.",
+            },
+            {
+                heading: "Connected to your website and follow-up",
+                body: "Ads only work when the landing page and follow-up process do their part. We align targeting, page messaging, and lead tracking so you can see exactly which campaigns produce customers.",
+            },
+        ],
+        links: [
+            { label: "Meta Ads Management", href: "/services/meta-ads-management" },
+            { label: "Meta Ads Agency Toronto", href: "/meta-ads-agency-toronto" },
+            { label: "Free Growth Check", href: "/growth-check" },
+        ],
     },
 };
 

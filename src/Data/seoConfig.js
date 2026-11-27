@@ -140,6 +140,33 @@ export const seoConfig = {
         ogDescription: "Lead generation, SEO, websites, and ads for Ontario contractors.",
         ogImage: DEFAULT_OG_IMAGE,
     },
+    linkBuildingBarrie: {
+        title: "Link Building Services Barrie | Rav Link Inc.",
+        description:
+            "White-hat link building services in Barrie that earn real backlinks, strengthen local rankings, and close the authority gap with competitors.",
+        canonical: canonical("/services/link-building-barrie"),
+        ogTitle: "Link Building Services in Barrie",
+        ogDescription: "Relevant, white-hat backlinks for Barrie and Simcoe County businesses.",
+        ogImage: DEFAULT_OG_IMAGE,
+    },
+    localSeoBarrie: {
+        title: "Local SEO Barrie | Google Maps & 'Near Me' Rankings | Rav Link Inc.",
+        description:
+            "Local SEO services in Barrie for Google Maps rankings, Google Business Profile optimization, reviews, and 'near me' visibility.",
+        canonical: canonical("/services/local-seo-barrie"),
+        ogTitle: "Local SEO Services in Barrie",
+        ogDescription: "Google Maps, Google Business Profile, and local search strategy for Barrie businesses.",
+        ogImage: DEFAULT_OG_IMAGE,
+    },
+    legalSeoBarrie: {
+        title: "Legal SEO Barrie | SEO for Law Firms | Rav Link Inc.",
+        description:
+            "SEO for Barrie law firms: practice-area pages, Google Maps visibility, and trust content that turns searches into consultation requests.",
+        canonical: canonical("/services/legal-seo-barrie"),
+        ogTitle: "SEO for Law Firms in Barrie",
+        ogDescription: "Practice-area SEO and local visibility for Barrie law firms.",
+        ogImage: DEFAULT_OG_IMAGE,
+    },
     caseStudies: {
         title: "Case Studies | Rav Link Digital Marketing Results",
         description:

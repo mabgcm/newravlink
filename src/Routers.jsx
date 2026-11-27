@@ -58,6 +58,8 @@ function PageRoutes() {
             <Route path="website-design-toronto" element={<LocationLandingPage />} />
             <Route path="meta-ads-agency-toronto" element={<LocationLandingPage />} />
             <Route path="contractor-marketing-ontario" element={<LocationLandingPage />} />
+            <Route path="website-redesign-toronto" element={<LocationLandingPage />} />
+            <Route path="meta-ads-agency-brampton" element={<LocationLandingPage />} />
             <Route path="404_page" element={<NotFoundPage />} />
             <Route path="*" element={<NotFoundPage />} />
         </Routes>

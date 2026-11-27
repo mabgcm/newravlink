@@ -36,6 +36,21 @@
     <priority>0.95</priority>
   </url>
   <url>
+    <loc>https://ravlink.ca/services/link-building-barrie</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ravlink.ca/services/local-seo-barrie</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ravlink.ca/services/legal-seo-barrie</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://ravlink.ca/seo-agency-toronto</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -64,6 +79,16 @@
     <loc>https://ravlink.ca/contractor-marketing-ontario</loc>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://ravlink.ca/website-redesign-toronto</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://ravlink.ca/meta-ads-agency-brampton</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ravlink.ca/case-studies</loc>
