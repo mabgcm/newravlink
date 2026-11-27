@@ -787,6 +787,12 @@
         text-align: left;
     }
 
+    .footer-list,
+    .footer-contact-container .contact-list,
+    .service-included .check-list {
+        padding-left: 0;
+    }
+
     .copyright,
     .legal-link {
         font-size: var(--font-size-xs);
