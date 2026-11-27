@@ -4868,6 +4868,7 @@ body.lightmode .newsletter-layout {
 }
 
 /* === Service page readability fixes (2026-11-26) === */
+.card-service h2,
 .card-service h3 {
     color: var(--primary);
 }

@@ -20,6 +20,9 @@ const englishRoutes = [
     "/services/website-design-barrie",
     "/services/meta-ads-management",
     "/services/contractor-marketing",
+    "/services/link-building-barrie",
+    "/services/local-seo-barrie",
+    "/services/legal-seo-barrie",
     "/case-studies",
     "/blog",
     ...blogRoutes,
@@ -34,6 +37,8 @@ const englishRoutes = [
     "/website-design-toronto",
     "/meta-ads-agency-toronto",
     "/contractor-marketing-ontario",
+    "/website-redesign-toronto",
+    "/meta-ads-agency-brampton",
 ];
 const turkishRoutes = englishRoutes.map((route) => (route === "/" ? "/tr/" : `/tr${route}`));
 const routes = [...englishRoutes, ...turkishRoutes];
