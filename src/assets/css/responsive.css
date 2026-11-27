@@ -711,9 +711,19 @@
     }
 
     .footer-logo-container {
+        display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
+    }
+
+    .logo-container-footer {
+        margin-inline: auto;
+    }
+
+    .footer-contact-container .social-container {
+        justify-content: center;
     }
 
     .footer-quick-links {
@@ -749,9 +759,15 @@
     }
 
     .copyright-container {
+        display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    .copyright-container > .d-flex {
+        justify-content: center;
+        width: 100%;
     }
 
     .copyright,
