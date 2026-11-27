@@ -4876,3 +4876,7 @@ body.lightmode .newsletter-layout {
 .service-recent .underline-accent-short {
     align-self: center;
 }
+
+.service-recent .single-service-list {
+    padding-left: 0;
+}
